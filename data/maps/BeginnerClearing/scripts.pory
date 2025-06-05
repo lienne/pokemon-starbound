@@ -1,11 +1,27 @@
 mapscripts BeginnerClearing_MapScripts {
-    MAP_SCRIPT_ON_LOAD: MapScript_IntroCutscene
+    
 }
 
-script MapScript_IntroCutscene {
+movement BeginnerClearing_ExclamationMark {
+    emote_exclamation_mark
+}
+
+movement BeginnerClearing_QuestionMark {
+    emote_question_mark
+}
+
+script BeginnerClearing_EventScript_ExclamationMark {
     lockall
-    msgbox("Welcome to the Beginner Clearing!")
-    msgbox("This is where your adventure begins.")
-    msgbox("Prepare yourself for the journey ahead.")
+    applymovement(LOCALID_PLAYER, BeginnerClearing_ExclamationMark)
+    delay(10)
+    releaseall
+}
+
+script EventScript_JirachiIntroEncounter {
+    lockall
+    msgbox("Help... they're coming after me...")
+    applymovement(LOCALID_PLAYER, BeginnerClearing_QuestionMark)
+    delay(10)
+    msgbox("They took my friend... help...")
     releaseall
 }

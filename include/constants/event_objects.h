@@ -252,6 +252,8 @@
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
 #define NUM_OBJ_EVENT_GFX                        242
 
+#define OBJ_EVENT_GFX_JIRACHI OBJ_EVENT_GFX_SPECIES(JIRACHI)
+
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.

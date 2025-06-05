@@ -1,31 +1,47 @@
 BeginnerClearing_MapScripts::
-# 2 "data/maps/BeginnerClearing/scripts.pory"
-	map_script MAP_SCRIPT_ON_LOAD, MapScript_IntroCutscene
 	.byte 0
 
 
-MapScript_IntroCutscene::
+# 5 "data/maps/BeginnerClearing/scripts.pory"
+BeginnerClearing_ExclamationMark:
 # 6 "data/maps/BeginnerClearing/scripts.pory"
-	lockall
-# 7 "data/maps/BeginnerClearing/scripts.pory"
-	msgbox MapScript_IntroCutscene_Text_0
-# 8 "data/maps/BeginnerClearing/scripts.pory"
-	msgbox MapScript_IntroCutscene_Text_1
-# 9 "data/maps/BeginnerClearing/scripts.pory"
-	msgbox MapScript_IntroCutscene_Text_2
+	emote_exclamation_mark
+	step_end
+
+BeginnerClearing_EventScript_ExclamationMark::
 # 10 "data/maps/BeginnerClearing/scripts.pory"
+	lockall
+# 11 "data/maps/BeginnerClearing/scripts.pory"
+	applymovement LOCALID_PLAYER, BeginnerClearing_ExclamationMark
+# 12 "data/maps/BeginnerClearing/scripts.pory"
+	waitmovement 0
+# 13 "data/maps/BeginnerClearing/scripts.pory"
+	delay 10
+# 14 "data/maps/BeginnerClearing/scripts.pory"
 	releaseall
 	return
 
 
-MapScript_IntroCutscene_Text_0:
-# 7 "data/maps/BeginnerClearing/scripts.pory"
-	.string "Welcome to the Beginner Clearing!$"
+EventScript_JirachiIntroEncounter::
+# 18 "data/maps/BeginnerClearing/scripts.pory"
+	lockall
+# 19 "data/maps/BeginnerClearing/scripts.pory"
+	applymovement jirachi, BeginnerClearing_ExclamationMark
+# 20 "data/maps/BeginnerClearing/scripts.pory"
+	msgbox EventScript_JirachiIntroEncounter_Text_0
+# 21 "data/maps/BeginnerClearing/scripts.pory"
+	delay 10
+# 22 "data/maps/BeginnerClearing/scripts.pory"
+	msgbox EventScript_JirachiIntroEncounter_Text_1
+# 23 "data/maps/BeginnerClearing/scripts.pory"
+	releaseall
+	return
 
-MapScript_IntroCutscene_Text_1:
-# 8 "data/maps/BeginnerClearing/scripts.pory"
-	.string "This is where your adventure begins.$"
 
-MapScript_IntroCutscene_Text_2:
-# 9 "data/maps/BeginnerClearing/scripts.pory"
-	.string "Prepare yourself for the journey ahead.$"
+EventScript_JirachiIntroEncounter_Text_0:
+# 20 "data/maps/BeginnerClearing/scripts.pory"
+	.string "Help... they're coming after me...$"
+
+EventScript_JirachiIntroEncounter_Text_1:
+# 22 "data/maps/BeginnerClearing/scripts.pory"
+	.string "They took my friend... help...$"
