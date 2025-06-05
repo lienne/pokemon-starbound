@@ -23,8 +23,8 @@
     {
       "local_id": "jirachi",
       "graphics_id": "OBJ_EVENT_GFX_JIRACHI",
-      "x": 12,
-      "y": 10,
+      "x": 13,
+      "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -36,14 +36,42 @@
     },
     {
       "local_id": "ProfMyra",
-      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
-      "x": -7,
+      "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
+      "x": 4,
       "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "local_id": "GruntA",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
+      "x": 3,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "local_id": "GruntB",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "x": 2,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "0"
@@ -58,7 +86,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "BeginnerClearing_EventScript_JirachiIntro"
+      "script": "BeginnerClearing_EventScript_WalkFromA"
     },
     {
       "type": "trigger",
@@ -67,7 +95,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "BeginnerClearing_EventScript_JirachiIntro"
+      "script": "BeginnerClearing_EventScript_WalkFromB"
     },
     {
       "type": "trigger",
