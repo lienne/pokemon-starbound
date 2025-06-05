@@ -1079,7 +1079,7 @@ static void Task_HandleMainMenuAPressed(u8 taskId)
             default:
                 gPlttBufferUnfaded[0] = RGB_BLACK;
                 gPlttBufferFaded[0] = RGB_BLACK;
-                gTasks[taskId].func = Task_NewGameBirchSpeech_Init;
+                gTasks[taskId].func = Task_NewGameBirchSpeech_Cleanup;
                 break;
             case ACTION_CONTINUE:
                 gPlttBufferUnfaded[0] = RGB_BLACK;
@@ -1282,7 +1282,7 @@ static void HighlightSelectedMainMenuItem(u8 menuType, u8 selectedMenuItem, s16 
 #define tBrendanSpriteId data[10]
 #define tMaySpriteId data[11]
 
-static void Task_NewGameBirchSpeech_Init(u8 taskId)
+/* static void Task_NewGameBirchSpeech_Init(u8 taskId)
 {
     SetGpuReg(REG_OFFSET_DISPCNT, 0);
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
@@ -1313,7 +1313,7 @@ static void Task_NewGameBirchSpeech_Init(u8 taskId)
     PlayBGM(MUS_ROUTE122);
     ShowBg(0);
     ShowBg(1);
-}
+} */
 
 static void Task_NewGameBirchSpeech_WaitToShowBirch(u8 taskId)
 {

@@ -10,6 +10,24 @@ movement BeginnerClearing_QuestionMark {
     emote_question_mark
 }
 
+script BeginnerClearing_EventScript_GoBack {
+	if (!flag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)) {
+		lockall
+		msgbox("You can't ignore the cries of\n"
+				"a hurt Pokémon!")
+		applymovement(LOCALID_PLAYER, moves(walk_right))
+		waitmovement(0)
+		releaseall
+	}
+}
+
+script BeginnerClearing_EventScript_ExclamationMark {
+    lockall
+    applymovement(LOCALID_PLAYER, BeginnerClearing_ExclamationMark)
+    delay(10)
+    releaseall
+}
+
 movement BeginnerClearing_WalkUpToJirachi {
     walk_fast_right * 4
     walk_fast_up * 4
