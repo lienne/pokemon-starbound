@@ -28,9 +28,11 @@ movement BeginnerClearing_WalkUpToJirachiFromB {
     face_right
 }
 
-movement BeginnerClearing_MyraRunsIn {
+movement BeginnerClearing_MyraRunsInA {
     walk_fast_right * 3
-    emote_exclamation_mark
+}
+
+movement BeginnerClearing_MyraRunsInB {
     walk_fast_right * 6
     walk_fast_up * 1
 }
@@ -94,9 +96,13 @@ script BeginnerClearing_EventScript_JirachiIntro {
     msgbox(format("They took my friend... help..."))
     delay(10)
     addobject(ProfMyra)
-    applymovement(ProfMyra, BeginnerClearing_MyraRunsIn)
+    applymovement(ProfMyra, BeginnerClearing_MyraRunsInA)
     waitmovement(0)
-    msgbox(format("Is that a Jirachi? Quick, I have a potion!"))
+    applymovement(ProfMyra, BeginnerClearing_ExclamationMark)
+    delay(100)
+    applymovement(ProfMyra, BeginnerClearing_MyraRunsInB)
+    waitmovement(0)
+    msgbox(format("Is that a Jirachi? Oh, it's hurt. Quick, I have a potion!"))
     msgbox(format("It should be ok for now, but it needs rest."))
     msgbox(format("The poor thing's definitely in bad shape."))
     msgbox(format("I wonder what happened..."))
@@ -136,5 +142,14 @@ script BeginnerClearing_EventScript_JirachiIntro {
     msgbox(format("Hmmm, I see. I think this situation calls for special circumstances."))
     msgbox(format("I will lend you one of my Pokémon so we can defend this Jirachi together."))
     msgbox(format("Please grab a Pokéball from my bag."))
+    clearflag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)
+    releaseall
+}
+
+script BeginnerClearing_EventScript_MyrasBag {
+    lockall
+    fadescreen(FADE_TO_BLACK)
+    setflag(FLAG_SYS_POKEMON_GET)
+    special(ChooseStarter)
     releaseall
 }
