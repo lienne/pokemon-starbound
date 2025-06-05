@@ -4415,7 +4415,7 @@
       "id": "LAYOUT_LUMEN_VILLAGE",
       "name": "LumenVillage_Layout",
       "width": 28,
-      "height": 28,
+      "height": 27,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/LumenVillage/border.bin",

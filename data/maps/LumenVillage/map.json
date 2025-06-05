@@ -23,7 +23,7 @@
   "warp_events": [
     {
       "x": 5,
-      "y": 5,
+      "y": 4,
       "elevation": 0,
       "dest_map": "MAP_LUMEN_VILLAGE_PROFESSOR_MYRAS_LAB",
       "dest_warp_id": "0"
@@ -34,7 +34,7 @@
     {
       "type": "sign",
       "x": 8,
-      "y": 5,
+      "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "LumenVillage_EventScript_ProfLabSign"
@@ -42,7 +42,7 @@
     {
       "type": "sign",
       "x": 19,
-      "y": 19,
+      "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LumenVillage_EventScript_CassiansHouseSign"
