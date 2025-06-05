@@ -1,5 +1,11 @@
 mapscripts BeginnerClearing_MapScripts {
-    
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE [
+        1, 1 {
+            removeobject(GruntA)
+            removeobject(GruntB)
+            removeobject(ProfMyra)
+        }
+    ]
 }
 
 movement BeginnerClearing_ExclamationMark {
@@ -89,7 +95,7 @@ script BeginnerClearing_EventScript_JirachiIntro {
     waitmovement(0)
     msgbox(format("They took my friend... help..."))
     delay(10)
-    showobjectat(ProfMyra, MAP_BEGINNER_CLEARING)
+    addobject(ProfMyra)
     applymovement(ProfMyra, BeginnerClearing_MyraRunsInA)
     waitmovement(0)
     applymovement(ProfMyra, BeginnerClearing_ExclamationMark)
@@ -109,6 +115,8 @@ script BeginnerClearing_EventScript_JirachiIntro {
     msgbox(format("We should take it somewhere to recover."))
     msgbox(format("..."))
     msgbox(format("You said Jirachi spoke to you? And that it said it's being chased?"))
+    addobject(GruntA)
+    addobject(GruntB)
     applymovement(GruntA, BeginnerClearing_GruntAWalksIn)
     applymovement(GruntB, BeginnerClearing_GruntBWalksIn)
     waitmovement(0)
