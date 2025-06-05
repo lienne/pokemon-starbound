@@ -28,11 +28,49 @@ script BeginnerClearing_EventScript_ExclamationMark {
     releaseall
 }
 
-script EventScript_JirachiIntroEncounter {
+movement BeginnerClearing_WalkUpToJirachi {
+    walk_fast_right * 4
+    walk_fast_up * 4
+    face_right
+}
+
+movement BeginnerClearing_MyraRunsIn {
+    walk_fast_right * 15
+    emote_exclamation_mark
+    walk_fast_right * 4
+    walk_fast_up * 3
+}
+
+movement BeginnerClearing_MyraTurnsToYou {
+    face_left
+}
+
+script BeginnerClearing_EventScript_JirachiIntro {
     lockall
+    applymovement(LOCALID_PLAYER, BeginnerClearing_ExclamationMark)
+    delay(10)
+    applymovement(LOCALID_PLAYER, BeginnerClearing_WalkUpToJirachi)
+    delay(10)
     msgbox("Help... they're coming after me...")
+    delay(10)
     applymovement(LOCALID_PLAYER, BeginnerClearing_QuestionMark)
     delay(10)
     msgbox("They took my friend... help...")
+    delay(10)
+    applymovement(ProfMyra, BeginnerClearing_MyraRunsIn)
+    delay(10)
+    msgbox("Is that a Jirachi? Quick, I have a potion!")
+    msgbox("It should be ok for now, but it needs rest.")
+    msgbox(" The poor thing's definitely in bad shape.")
+    msgbox("I wonder what happened...")
+    applymovement(ProfMyra, BeginnerClearing_MyraTurnsToYou)
+    delay(10)
+    msgbox("What's your name?")
+    msgbox("...")
+    msgbox("{PLAYER}, is it?")
+    msgbox(" We are lucky you found it so quickly.")
+    msgbox("We should take it somewhere to recover.")
+    msgbox("...")
+    msgbox("You said Jirachi spoke to you? And that it said it's being chased?")
     releaseall
 }
