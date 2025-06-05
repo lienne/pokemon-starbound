@@ -1,0 +1,11 @@
+mapscripts BeginnerClearing_MapScripts {
+    MAP_SCRIPT_ON_LOAD: MapScript_IntroCutscene
+}
+
+script MapScript_IntroCutscene {
+    lockall
+    msgbox("Welcome to the Beginner Clearing!")
+    msgbox("This is where your adventure begins.")
+    msgbox("Prepare yourself for the journey ahead.")
+    releaseall
+}

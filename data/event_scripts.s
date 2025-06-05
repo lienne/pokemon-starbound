@@ -1157,3 +1157,21 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/dexnav.inc"
+
+	.include "data/maps/LumenVillage/scripts.inc"
+
+	.include "data/maps/StarlitPath/scripts.inc"
+
+	.include "data/maps/BeginnerClearing/scripts.inc"
+
+	.include "data/maps/StarseaPassage/scripts.inc"
+
+	.include "data/maps/LumenVillage_ProfessorMyrasLab/scripts.inc"
+
+	.include "data/maps/LumenVillage_LyrasHouse_1F/scripts.inc"
+
+	.include "data/maps/LumenVillage_LyrasHouse_2F/scripts.inc"
+
+	.include "data/maps/LumenVillage_CassiansHouse_1F/scripts.inc"
+
+	.include "data/maps/LumenVillage_CassiansHouse_2F/scripts.inc"

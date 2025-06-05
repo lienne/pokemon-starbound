@@ -4410,6 +4410,96 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_LUMEN_VILLAGE",
+      "name": "LumenVillage_Layout",
+      "width": 28,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/LumenVillage/border.bin",
+      "blockdata_filepath": "data/layouts/LumenVillage/map.bin"
+    },
+    {
+      "id": "LAYOUT_STARLIT_PATH",
+      "name": "StarlitPath_Layout",
+      "width": 30,
+      "height": 29,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/StarlitPath/border.bin",
+      "blockdata_filepath": "data/layouts/StarlitPath/map.bin"
+    },
+    {
+      "id": "LAYOUT_BEGINNER_CLEARING",
+      "name": "BeginnerClearing_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/BeginnerClearing/border.bin",
+      "blockdata_filepath": "data/layouts/BeginnerClearing/map.bin"
+    },
+    {
+      "id": "LAYOUT_STARSEA_PASSAGE",
+      "name": "StarseaPassage_Layout",
+      "width": 20,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/StarseaPassage/border.bin",
+      "blockdata_filepath": "data/layouts/StarseaPassage/map.bin"
+    },
+    {
+      "id": "LAYOUT_LUMEN_VILLAGE_PROFESSOR_MYRAS_LAB",
+      "name": "LumenVillage_ProfessorMyrasLab_Layout",
+      "width": 13,
+      "height": 13,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/LumenVillage_ProfessorMyrasLab/border.bin",
+      "blockdata_filepath": "data/layouts/LumenVillage_ProfessorMyrasLab/map.bin"
+    },
+    {
+      "id": "LAYOUT_LUMEN_VILLAGE_LYRAS_HOUSE_1F",
+      "name": "LumenVillage_LyrasHouse_1F_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/LumenVillage_LyrasHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/LumenVillage_LyrasHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LUMEN_VILLAGE_LYRAS_HOUSE_2F",
+      "name": "LumenVillage_LyrasHouse_2F_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/LumenVillage_LyrasHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/LumenVillage_LyrasHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LUMEN_VILLAGE_CASSIANS_HOUSE_1F",
+      "name": "LumenVillage_CassiansHouse_1F_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/LumenVillage_CassiansHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/LumenVillage_CassiansHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LUMEN_VILLAGE_CASSIANS_HOUSE_2F",
+      "name": "LumenVillage_CassiansHouse_2F_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/LumenVillage_CassiansHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/LumenVillage_CassiansHouse_2F/map.bin"
     }
   ]
 }

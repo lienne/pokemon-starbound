@@ -1,0 +1,27 @@
+mapscripts LumenVillage_MapScripts {
+
+}
+
+script LumenVillage_EventScript_ProfLabSign {
+    lockall
+    msgbox("Prof. Myra's Lab")
+    releaseall
+}
+
+script LumenVillage_EventScript_LyrasHouseSign {
+    lockall
+    msgbox("Lyra's House")
+    releaseall
+}
+
+script LumenVillage_EventScript_CassiansHouseSign {
+    lockall
+    msgbox("Cassian's House")
+    releaseall
+}
+
+script LumenVillage_EventScript_VillageSign {
+    lockall
+    msgbox("Lumen Village")
+    releaseall
+}
