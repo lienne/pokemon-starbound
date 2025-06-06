@@ -534,6 +534,9 @@ BeginnerClearing_EventScript_GruntABattle_1:
 # 268 "data/maps/BeginnerClearing/scripts.pory"
 	trainerbattle_single TRAINER_GRUNT_MAGMA_HIDEOUT_14, BeginnerClearing_EventScript_GruntABattle_Text_0, BeginnerClearing_EventScript_GruntABattle_Text_1, FALSE
 # 269 "data/maps/BeginnerClearing/scripts.pory"
+# 215 "data/maps/BeginnerClearing/scripts.pory"
+	trainerbattle_single TRAINER_GRUNT_MAGMA_HIDEOUT_14, BeginnerClearing_EventScript_GruntABattle_Text_0, BeginnerClearing_EventScript_GruntABattle_Text_1, BeginnerClearing_EventScript_AfterBattle
+# 216 "data/maps/BeginnerClearing/scripts.pory"
 	releaseall
 	return
 
@@ -558,6 +561,38 @@ BeginnerClearing_EventScript_GruntABattle_6:
 	goto BeginnerClearing_EventScript_GruntABattle_1
 
 
+BeginnerClearing_EventScript_AfterBattle::
+# 220 "data/maps/BeginnerClearing/scripts.pory"
+	lockall
+# 221 "data/maps/BeginnerClearing/scripts.pory"
+	msgbox BeginnerClearing_EventScript_AfterBattle_Text_0
+# 223 "data/maps/BeginnerClearing/scripts.pory"
+	playse SE_SELECT
+# 224 "data/maps/BeginnerClearing/scripts.pory"
+	msgbox BeginnerClearing_EventScript_AfterBattle_Text_1
+# 225 "data/maps/BeginnerClearing/scripts.pory"
+	playse SE_SELECT
+# 226 "data/maps/BeginnerClearing/scripts.pory"
+	applymovement GruntA, BeginnerClearing_EventScript_AfterBattle_Movement_0
+# 227 "data/maps/BeginnerClearing/scripts.pory"
+	applymovement GruntB, BeginnerClearing_EventScript_AfterBattle_Movement_0
+# 228 "data/maps/BeginnerClearing/scripts.pory"
+	waitmovement 0
+# 229 "data/maps/BeginnerClearing/scripts.pory"
+	applymovement ProfMyra, BeginnerClearing_EventScript_AfterBattle_Movement_1
+# 230 "data/maps/BeginnerClearing/scripts.pory"
+	waitmovement 0
+# 231 "data/maps/BeginnerClearing/scripts.pory"
+	msgbox BeginnerClearing_EventScript_AfterBattle_Text_2
+# 234 "data/maps/BeginnerClearing/scripts.pory"
+	playse SE_SELECT
+# 235 "data/maps/BeginnerClearing/scripts.pory"
+	warpsilent MAP_LUMEN_VILLAGE_PROFESSOR_MYRAS_LAB, 6, 7
+# 236 "data/maps/BeginnerClearing/scripts.pory"
+	releaseall
+	return
+
+
 # 66 "data/maps/BeginnerClearing/scripts.pory"
 TestSound_Movement_0:
 # 66 "data/maps/BeginnerClearing/scripts.pory"
@@ -574,6 +609,36 @@ BeginnerClearing_EventScript_GoBack_Movement_0:
 BeginnerClearing_EventScript_JirachiIntro_Movement_0:
 # 162 "data/maps/BeginnerClearing/scripts.pory"
 	face_left
+	step_end
+
+# 226 "data/maps/BeginnerClearing/scripts.pory"
+BeginnerClearing_EventScript_AfterBattle_Movement_0:
+# 226 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 226 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 226 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 226 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 226 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 226 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 226 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 226 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 226 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 226 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+	step_end
+
+# 229 "data/maps/BeginnerClearing/scripts.pory"
+BeginnerClearing_EventScript_AfterBattle_Movement_1:
+# 229 "data/maps/BeginnerClearing/scripts.pory"
+	face_up
 	step_end
 
 TestSound_Text_0:
@@ -699,3 +764,21 @@ BeginnerClearing_EventScript_GruntABattle_Text_0:
 BeginnerClearing_EventScript_GruntABattle_Text_1:
 # 268 "data/maps/BeginnerClearing/scripts.pory"
 	.string "Impossible...$"
+
+BeginnerClearing_EventScript_AfterBattle_Text_0:
+# 221 "data/maps/BeginnerClearing/scripts.pory"
+	.string "Grunt 1: How is this possible??\l"
+	.string "You little brat... You'll regret this!$"
+
+BeginnerClearing_EventScript_AfterBattle_Text_1:
+# 224 "data/maps/BeginnerClearing/scripts.pory"
+	.string "Grunt 2: You don't mess with Team\n"
+	.string "Eclipse and get away with it!$"
+
+BeginnerClearing_EventScript_AfterBattle_Text_2:
+# 231 "data/maps/BeginnerClearing/scripts.pory"
+	.string "Prof. Myra: {PLAYER}, you were\n"
+	.string "amazing!\l"
+	.string "I'm so glad you were here.\l"
+	.string "Now let's take this Jirachi back to my\l"
+	.string "lab so it can rest.$"

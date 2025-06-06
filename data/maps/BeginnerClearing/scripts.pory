@@ -265,6 +265,26 @@ script BeginnerClearing_EventScript_GruntABattle {
             applymovement(LOCALID_PLAYER, BeginnerClearing_WalkToGruntA_BottomSideOfBag)
     }
     waitmovement(LOCALID_PLAYER)
-    trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_14, "You're going down, kid!", "Impossible...", FALSE)
+    trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_14, "You're going down, kid!", "Impossible...", BeginnerClearing_EventScript_AfterBattle)
+    releaseall
+}
+
+script BeginnerClearing_EventScript_AfterBattle {
+    lockall
+    msgbox(format("Grunt 1: How is this possible??\l"
+        "You little brat... You'll regret this!"))
+    playse(SE_SELECT)
+    msgbox(format("Grunt 2: You don't mess with Team Eclipse and get away with it!"))
+    playse(SE_SELECT)
+    applymovement(GruntA, moves(walk_fast_left * 10))
+    applymovement(GruntB, moves(walk_fast_left * 10))
+    waitmovement(0)
+    applymovement(ProfMyra, moves(face_up))
+    waitmovement(0)
+    msgbox(format("Prof. Myra: {PLAYER}, you were amazing!\l"
+        "I'm so glad you were here.\l"
+        "Now let's take this Jirachi back to my lab so it can rest."))
+    playse(SE_SELECT)
+    warpsilent(MAP_LUMEN_VILLAGE_PROFESSOR_MYRAS_LAB, 6, 7)
     releaseall
 }
