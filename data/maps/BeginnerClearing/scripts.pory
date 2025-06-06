@@ -57,8 +57,13 @@ movement BeginnerClearing_ProfMyraWalksToPlayer {
     walk_left
 }
 
+movement BeginnerClearing_GruntARunsToPlayer {
+    walk_fast_right * 2
+}
+
 script TestSound {
     lockall
+    applymovement(test_npc, moves(face_player))
     msgbox("Does this play a sound?\l"
         "If it does, then the sound system is\nworking!\l"
         "If it doesn't, then something is wrong.\l"
@@ -195,5 +200,13 @@ script BeginnerClearing_EventScript_MyrasBag {
     fadescreen(FADE_TO_BLACK)
     setflag(FLAG_SYS_POKEMON_GET)
     special(ChooseStarter)
+    call(BeginnerClearing_EventScript_GruntABattle)
     releaseall
+}
+
+script BeginnerClearing_EventScript_GruntABattle {
+    lockall
+    applymovement(GruntA, BeginnerClearing_GruntARunsToPlayer)
+    waitmovement(0)
+    trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_14, "Intro Text", "Defeat Text", FALSE)
 }

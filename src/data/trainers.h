@@ -33720,12 +33720,12 @@ F_TRAINER_FEMALE |
         {
             {
 #line 13456
-            .species = SPECIES_MIGHTYENA,
+            .species = SPECIES_POOCHYENA,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 13458
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
 #line 13457
-            .lvl = 29,
+            .lvl = 2,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             },
