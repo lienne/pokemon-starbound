@@ -31,7 +31,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "BeginnerClearing_EventScript_JirachiNPC",
       "flag": "0"
     },
     {
@@ -45,7 +45,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "BeginnerClearing_EventScript_ProfMyra",
       "flag": "FLAG_HIDE_CLEARING_NPCS"
     },
     {
@@ -59,7 +59,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "BeginnerClearing_EventScript_GruntA",
       "flag": "FLAG_HIDE_CLEARING_NPCS"
     },
     {
@@ -73,7 +73,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "BeginnerClearing_EventScript_GruntB",
       "flag": "FLAG_HIDE_CLEARING_NPCS"
     },
     {

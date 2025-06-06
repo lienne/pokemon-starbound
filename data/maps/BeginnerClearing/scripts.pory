@@ -85,6 +85,8 @@ script BeginnerClearing_EventScript_GoBack {
 
 script BeginnerClearing_EventScript_WalkFromA {
     lockall
+    playmoncry(SPECIES_JIRACHI, CRY_MODE_NORMAL)
+    waitmoncry()
     applymovement(LOCALID_PLAYER, BeginnerClearing_ExclamationMark)
     playse(SE_PIN)
     waitmovement(0)
@@ -97,6 +99,8 @@ script BeginnerClearing_EventScript_WalkFromA {
 
 script BeginnerClearing_EventScript_WalkFromB {
     lockall
+    playmoncry(SPECIES_JIRACHI, CRY_MODE_NORMAL)
+    waitmoncry()
     applymovement(LOCALID_PLAYER, BeginnerClearing_ExclamationMark)
     playse(SE_PIN)
     waitmovement(0)
@@ -105,6 +109,24 @@ script BeginnerClearing_EventScript_WalkFromB {
     waitmovement(0)
     call(BeginnerClearing_EventScript_JirachiIntro)
     releaseall
+}
+
+script BeginnerClearing_EventScript_ProfMyra {
+    msgbox("I will lend you one of my Pokémon so\nwe can defend this Jirachi together.\l"
+        "Please grab a Pokéball from my bag.", type=MSGBOX_NPC)
+}
+
+script BeginnerClearing_EventScript_GruntA {
+    msgbox(format("Fool! Hand Jirachi over and don't interfere!"), type=MSGBOX_NPC)
+}
+
+script BeginnerClearing_EventScript_GruntB {
+    msgbox(format("Don't meddle where you aren't supposed to!"), type=MSGBOX_NPC)
+}
+
+script BeginnerClearing_EventScript_JirachiNPC {
+    playmoncry(SPECIES_JIRACHI, CRY_MODE_NORMAL)
+    waitmoncry()
 }
 
 script BeginnerClearing_EventScript_JirachiIntro {
@@ -130,7 +152,7 @@ script BeginnerClearing_EventScript_JirachiIntro {
     addobject(MyrasBag)
     msgbox(format("Prof. Myra: Is that a Jirachi? Oh, it's hurt!"))
     playse(SE_SELECT)
-    msgbox(format("Quick, I have a potion!"))
+    msgbox(format("Quick, I have a Potion!"))
     playse(SE_USE_ITEM)
     waitse()
     msgbox(format("It should be okay for now, but it needs rest.\l"
@@ -199,6 +221,26 @@ script BeginnerClearing_EventScript_JirachiIntro {
     releaseall
 }
 
+movement BeginnerClearing_WalkToGruntA_LeftSideOfBag {
+    walk_down
+    walk_left * 4
+}
+
+movement BeginnerClearing_WalkToGruntA_TopSideOfBag {
+    walk_left
+    walk_down * 2
+    walk_left * 4
+}
+
+movement BeginnerClearing_WalkToGruntA_RightSideOfBag {
+    walk_down
+    walk_left * 6
+}
+
+movement BeginnerClearing_WalkToGruntA_BottomSideOfBag {
+    walk_left * 4
+}
+
 script BeginnerClearing_EventScript_MyrasBag {
     lockall
     fadescreen(FADE_TO_BLACK)
@@ -212,6 +254,17 @@ script BeginnerClearing_EventScript_GruntABattle {
     lockall
     applymovement(GruntA, BeginnerClearing_GruntARunsToPlayer)
     waitmovement(0)
+    switch (var(VAR_FACING)) {
+        case DIR_EAST: // facing east, player is left of bag
+            applymovement(LOCALID_PLAYER, BeginnerClearing_WalkToGruntA_LeftSideOfBag)
+        case DIR_SOUTH: // facing south, player is above bag
+            applymovement(LOCALID_PLAYER, BeginnerClearing_WalkToGruntA_TopSideOfBag)
+        case DIR_WEST: // facing west, player is right of bag
+            applymovement(LOCALID_PLAYER, BeginnerClearing_WalkToGruntA_RightSideOfBag)
+        case DIR_NORTH: // facing north, player is below bag
+            applymovement(LOCALID_PLAYER, BeginnerClearing_WalkToGruntA_BottomSideOfBag)
+    }
+    waitmovement(LOCALID_PLAYER)
     trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_14, "You're going down, kid!", "Impossible...", FALSE)
     releaseall
 }
