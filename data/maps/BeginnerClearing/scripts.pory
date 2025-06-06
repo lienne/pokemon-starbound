@@ -132,7 +132,8 @@ script BeginnerClearing_EventScript_JirachiIntro {
     playse(SE_SELECT)
     msgbox(format("Quick, I have a potion!"))
     playse(SE_USE_ITEM)
-    msgbox(format("It should be ok for now, but it needs rest.\l"
+    waitse()
+    msgbox(format("It should be okay for now, but it needs rest.\l"
         "The poor thing's definitely in bad shape.\l"
         "I wonder what happened..."))
     playse(SE_SELECT)
@@ -158,6 +159,8 @@ script BeginnerClearing_EventScript_JirachiIntro {
     playse(SE_PIN)
     waitmovement(0)
     delay(50)
+    applymovement(LOCALID_PLAYER, moves(face_left))
+    applymovement(ProfMyra, moves(face_left))
     msgbox(format("Grunt 1: Here it is! Grab it!"))
     playse(SE_SELECT)
     msgbox(format("Grunt 2: You! Hand over that Jirachi!"))
@@ -183,8 +186,9 @@ script BeginnerClearing_EventScript_JirachiIntro {
     playse(SE_SELECT)
     applymovement(ProfMyra, BeginnerClearing_ProfMyraWalksToPlayer)
     waitmovement(0)
-    msgbox(format("Prof. Myra: {PLAYER}, do you have any Pokémon?\l"
-        "..."))
+    msgbox(format("Prof. Myra: {PLAYER}, do you have any Pokémon?"))
+    playse(SE_SELECT)
+    msgbox(format("..."))
     playse(SE_SELECT)
     msgbox(format("Hmmm, I see. I think this situation\ncalls for special circumstances."))
     playse(SE_SELECT)
@@ -208,5 +212,6 @@ script BeginnerClearing_EventScript_GruntABattle {
     lockall
     applymovement(GruntA, BeginnerClearing_GruntARunsToPlayer)
     waitmovement(0)
-    trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_14, "Intro Text", "Defeat Text", FALSE)
+    trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_14, "You're going down, kid!", "Impossible...", FALSE)
+    releaseall
 }
