@@ -2,7 +2,7 @@
   "id": "MAP_BEGINNER_CLEARING",
   "name": "BeginnerClearing",
   "layout": "LAYOUT_BEGINNER_CLEARING",
-  "music": "MUS_LITTLEROOT",
+  "music": "MUS_NONE",
   "region_map_section": "MAPSEC_INSIDE_OF_TRUCK",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
