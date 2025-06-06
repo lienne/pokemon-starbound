@@ -71,8 +71,7 @@ script BeginnerClearing_EventScript_GoBack {
 		lockall
 		msgbox("You can't ignore the cries of\n"
 				"a hurt Pokémon!")
-        // playse(SE_SELECT)
-        playbgm(SE_SELECT, FALSE)
+        playse(SE_SELECT)
 		applymovement(LOCALID_PLAYER, moves(walk_right))
 		waitmovement(0)
 		releaseall
@@ -125,7 +124,6 @@ script BeginnerClearing_EventScript_JirachiIntro {
     waitmovement(0)
     addobject(MyrasBag)
     msgbox(format("Is that a Jirachi? Oh, it's hurt.\nQuick, I have a potion!"))
-    // playse(MUS_HEAL)
     playse(SE_USE_ITEM)
     msgbox(format("It should be ok for now, but it needs rest.\l"
         "The poor thing's definitely in bad shape.\l"

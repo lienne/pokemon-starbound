@@ -170,228 +170,228 @@ BeginnerClearing_EventScript_GoBack_1:
 	lockall
 # 72 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_GoBack_Text_0
+# 74 "data/maps/BeginnerClearing/scripts.pory"
+	playse SE_SELECT
 # 75 "data/maps/BeginnerClearing/scripts.pory"
-	playbgm SE_SELECT, FALSE
-# 76 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement LOCALID_PLAYER, BeginnerClearing_EventScript_GoBack_Movement_0
-# 77 "data/maps/BeginnerClearing/scripts.pory"
+# 76 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
-# 78 "data/maps/BeginnerClearing/scripts.pory"
+# 77 "data/maps/BeginnerClearing/scripts.pory"
 	releaseall
 	return
 
 
 BeginnerClearing_EventScript_WalkFromA::
-# 83 "data/maps/BeginnerClearing/scripts.pory"
+# 82 "data/maps/BeginnerClearing/scripts.pory"
 	lockall
-# 84 "data/maps/BeginnerClearing/scripts.pory"
+# 83 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement LOCALID_PLAYER, BeginnerClearing_ExclamationMark
-# 85 "data/maps/BeginnerClearing/scripts.pory"
+# 84 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_PIN
+# 85 "data/maps/BeginnerClearing/scripts.pory"
+	waitmovement 0
 # 86 "data/maps/BeginnerClearing/scripts.pory"
-	waitmovement 0
-# 87 "data/maps/BeginnerClearing/scripts.pory"
 	delay 50
-# 88 "data/maps/BeginnerClearing/scripts.pory"
+# 87 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement LOCALID_PLAYER, BeginnerClearing_WalkUpToJirachiFromA
-# 89 "data/maps/BeginnerClearing/scripts.pory"
+# 88 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
-# 90 "data/maps/BeginnerClearing/scripts.pory"
+# 89 "data/maps/BeginnerClearing/scripts.pory"
 	call BeginnerClearing_EventScript_JirachiIntro
-# 91 "data/maps/BeginnerClearing/scripts.pory"
+# 90 "data/maps/BeginnerClearing/scripts.pory"
 	releaseall
 	return
 
 
 BeginnerClearing_EventScript_WalkFromB::
-# 95 "data/maps/BeginnerClearing/scripts.pory"
+# 94 "data/maps/BeginnerClearing/scripts.pory"
 	lockall
-# 96 "data/maps/BeginnerClearing/scripts.pory"
+# 95 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement LOCALID_PLAYER, BeginnerClearing_ExclamationMark
-# 97 "data/maps/BeginnerClearing/scripts.pory"
+# 96 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_PIN
+# 97 "data/maps/BeginnerClearing/scripts.pory"
+	waitmovement 0
 # 98 "data/maps/BeginnerClearing/scripts.pory"
-	waitmovement 0
-# 99 "data/maps/BeginnerClearing/scripts.pory"
 	delay 50
-# 100 "data/maps/BeginnerClearing/scripts.pory"
+# 99 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement LOCALID_PLAYER, BeginnerClearing_WalkUpToJirachiFromB
-# 101 "data/maps/BeginnerClearing/scripts.pory"
+# 100 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
-# 102 "data/maps/BeginnerClearing/scripts.pory"
+# 101 "data/maps/BeginnerClearing/scripts.pory"
 	call BeginnerClearing_EventScript_JirachiIntro
-# 103 "data/maps/BeginnerClearing/scripts.pory"
+# 102 "data/maps/BeginnerClearing/scripts.pory"
 	releaseall
 	return
 
 
 BeginnerClearing_EventScript_JirachiIntro::
-# 107 "data/maps/BeginnerClearing/scripts.pory"
+# 106 "data/maps/BeginnerClearing/scripts.pory"
 	lockall
-# 108 "data/maps/BeginnerClearing/scripts.pory"
+# 107 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_0
+# 108 "data/maps/BeginnerClearing/scripts.pory"
+	playse SE_SELECT
 # 109 "data/maps/BeginnerClearing/scripts.pory"
-	playse SE_SELECT
-# 110 "data/maps/BeginnerClearing/scripts.pory"
 	delay 10
-# 111 "data/maps/BeginnerClearing/scripts.pory"
+# 110 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement LOCALID_PLAYER, BeginnerClearing_QuestionMark
+# 111 "data/maps/BeginnerClearing/scripts.pory"
+	playse SE_PIN
 # 112 "data/maps/BeginnerClearing/scripts.pory"
-	playse SE_PIN
+	waitmovement 0
 # 113 "data/maps/BeginnerClearing/scripts.pory"
-	waitmovement 0
+	delay 50
 # 114 "data/maps/BeginnerClearing/scripts.pory"
-	delay 50
-# 115 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_1
+# 115 "data/maps/BeginnerClearing/scripts.pory"
+	playse SE_SELECT
 # 116 "data/maps/BeginnerClearing/scripts.pory"
-	playse SE_SELECT
-# 117 "data/maps/BeginnerClearing/scripts.pory"
 	addobject ProfMyra
-# 118 "data/maps/BeginnerClearing/scripts.pory"
+# 117 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement ProfMyra, BeginnerClearing_MyraRunsInA
+# 118 "data/maps/BeginnerClearing/scripts.pory"
+	waitmovement 0
 # 119 "data/maps/BeginnerClearing/scripts.pory"
-	waitmovement 0
-# 120 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement ProfMyra, BeginnerClearing_ExclamationMark
+# 120 "data/maps/BeginnerClearing/scripts.pory"
+	playse SE_PIN
 # 121 "data/maps/BeginnerClearing/scripts.pory"
-	playse SE_PIN
+	waitmovement 0
 # 122 "data/maps/BeginnerClearing/scripts.pory"
-	waitmovement 0
+	delay 50
 # 123 "data/maps/BeginnerClearing/scripts.pory"
-	delay 50
-# 124 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement ProfMyra, BeginnerClearing_MyraRunsInB
+# 124 "data/maps/BeginnerClearing/scripts.pory"
+	waitmovement 0
 # 125 "data/maps/BeginnerClearing/scripts.pory"
-	waitmovement 0
-# 126 "data/maps/BeginnerClearing/scripts.pory"
 	addobject MyrasBag
-# 127 "data/maps/BeginnerClearing/scripts.pory"
+# 126 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_2
-# 129 "data/maps/BeginnerClearing/scripts.pory"
+# 127 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_USE_ITEM
-# 130 "data/maps/BeginnerClearing/scripts.pory"
+# 128 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_3
-# 133 "data/maps/BeginnerClearing/scripts.pory"
+# 131 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_SELECT
-# 134 "data/maps/BeginnerClearing/scripts.pory"
+# 132 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement ProfMyra, BeginnerClearing_EventScript_JirachiIntro_Movement_0
-# 135 "data/maps/BeginnerClearing/scripts.pory"
+# 133 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
-# 136 "data/maps/BeginnerClearing/scripts.pory"
+# 134 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_4
-# 143 "data/maps/BeginnerClearing/scripts.pory"
+# 141 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_SELECT
-# 144 "data/maps/BeginnerClearing/scripts.pory"
+# 142 "data/maps/BeginnerClearing/scripts.pory"
 	addobject GruntA
-# 145 "data/maps/BeginnerClearing/scripts.pory"
+# 143 "data/maps/BeginnerClearing/scripts.pory"
 	addobject GruntB
-# 146 "data/maps/BeginnerClearing/scripts.pory"
+# 144 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement GruntA, BeginnerClearing_GruntAWalksIn
-# 147 "data/maps/BeginnerClearing/scripts.pory"
+# 145 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement GruntB, BeginnerClearing_GruntBWalksIn
-# 148 "data/maps/BeginnerClearing/scripts.pory"
+# 146 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
-# 149 "data/maps/BeginnerClearing/scripts.pory"
+# 147 "data/maps/BeginnerClearing/scripts.pory"
 	delay 40
-# 150 "data/maps/BeginnerClearing/scripts.pory"
+# 148 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement GruntA, BeginnerClearing_ExclamationMark
-# 151 "data/maps/BeginnerClearing/scripts.pory"
+# 149 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement GruntB, BeginnerClearing_ExclamationMark
-# 152 "data/maps/BeginnerClearing/scripts.pory"
+# 150 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_PIN
-# 153 "data/maps/BeginnerClearing/scripts.pory"
+# 151 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
-# 154 "data/maps/BeginnerClearing/scripts.pory"
+# 152 "data/maps/BeginnerClearing/scripts.pory"
 	delay 50
-# 155 "data/maps/BeginnerClearing/scripts.pory"
+# 153 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_5
+# 154 "data/maps/BeginnerClearing/scripts.pory"
+	playse SE_SELECT
+# 155 "data/maps/BeginnerClearing/scripts.pory"
+	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_6
 # 156 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_SELECT
 # 157 "data/maps/BeginnerClearing/scripts.pory"
-	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_6
-# 158 "data/maps/BeginnerClearing/scripts.pory"
-	playse SE_SELECT
-# 159 "data/maps/BeginnerClearing/scripts.pory"
 	delay 10
-# 160 "data/maps/BeginnerClearing/scripts.pory"
+# 158 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement LOCALID_PLAYER, BeginnerClearing_ExclamationMark
-# 161 "data/maps/BeginnerClearing/scripts.pory"
+# 159 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement ProfMyra, BeginnerClearing_ExclamationMark
-# 162 "data/maps/BeginnerClearing/scripts.pory"
+# 160 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_PIN
+# 161 "data/maps/BeginnerClearing/scripts.pory"
+	waitmovement 0
+# 162 "data/maps/BeginnerClearing/scripts.pory"
+	delay 50
 # 163 "data/maps/BeginnerClearing/scripts.pory"
-	waitmovement 0
-# 164 "data/maps/BeginnerClearing/scripts.pory"
-	delay 50
-# 165 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement LOCALID_PLAYER, BeginnerClearing_PlayerRunsInFrontOfGrunts
-# 166 "data/maps/BeginnerClearing/scripts.pory"
+# 164 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
-# 167 "data/maps/BeginnerClearing/scripts.pory"
+# 165 "data/maps/BeginnerClearing/scripts.pory"
 	delay 50
-# 168 "data/maps/BeginnerClearing/scripts.pory"
+# 166 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_7
+# 167 "data/maps/BeginnerClearing/scripts.pory"
+	playse SE_SELECT
+# 168 "data/maps/BeginnerClearing/scripts.pory"
+	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_8
 # 169 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_SELECT
 # 170 "data/maps/BeginnerClearing/scripts.pory"
-	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_8
+	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_9
 # 171 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_SELECT
 # 172 "data/maps/BeginnerClearing/scripts.pory"
-	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_9
+	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_10
 # 173 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_SELECT
 # 174 "data/maps/BeginnerClearing/scripts.pory"
-	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_10
+	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_11
 # 175 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_SELECT
 # 176 "data/maps/BeginnerClearing/scripts.pory"
-	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_11
-# 177 "data/maps/BeginnerClearing/scripts.pory"
-	playse SE_SELECT
-# 178 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement ProfMyra, BeginnerClearing_ProfMyraWalksToPlayer
-# 179 "data/maps/BeginnerClearing/scripts.pory"
+# 177 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
-# 180 "data/maps/BeginnerClearing/scripts.pory"
+# 178 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_12
-# 183 "data/maps/BeginnerClearing/scripts.pory"
+# 181 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_SELECT
-# 184 "data/maps/BeginnerClearing/scripts.pory"
+# 182 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_13
-# 186 "data/maps/BeginnerClearing/scripts.pory"
+# 184 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_SELECT
-# 187 "data/maps/BeginnerClearing/scripts.pory"
+# 185 "data/maps/BeginnerClearing/scripts.pory"
 	clearflag FLAG_CAN_LEAVE_BEGINNER_CLEARING
-# 188 "data/maps/BeginnerClearing/scripts.pory"
+# 186 "data/maps/BeginnerClearing/scripts.pory"
 	releaseall
 	return
 
 
 BeginnerClearing_EventScript_MyrasBag::
-# 192 "data/maps/BeginnerClearing/scripts.pory"
+# 190 "data/maps/BeginnerClearing/scripts.pory"
 	lockall
-# 193 "data/maps/BeginnerClearing/scripts.pory"
+# 191 "data/maps/BeginnerClearing/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 194 "data/maps/BeginnerClearing/scripts.pory"
+# 192 "data/maps/BeginnerClearing/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
-# 195 "data/maps/BeginnerClearing/scripts.pory"
+# 193 "data/maps/BeginnerClearing/scripts.pory"
 	special ChooseStarter
-# 196 "data/maps/BeginnerClearing/scripts.pory"
+# 194 "data/maps/BeginnerClearing/scripts.pory"
 	releaseall
 	return
 
 
-# 76 "data/maps/BeginnerClearing/scripts.pory"
+# 75 "data/maps/BeginnerClearing/scripts.pory"
 BeginnerClearing_EventScript_GoBack_Movement_0:
-# 76 "data/maps/BeginnerClearing/scripts.pory"
+# 75 "data/maps/BeginnerClearing/scripts.pory"
 	walk_right
 	step_end
 
-# 134 "data/maps/BeginnerClearing/scripts.pory"
+# 132 "data/maps/BeginnerClearing/scripts.pory"
 BeginnerClearing_EventScript_JirachiIntro_Movement_0:
-# 134 "data/maps/BeginnerClearing/scripts.pory"
+# 132 "data/maps/BeginnerClearing/scripts.pory"
 	face_left
 	step_end
 
@@ -408,20 +408,20 @@ BeginnerClearing_EventScript_GoBack_Text_0:
 	.string "a hurt Pokémon!$"
 
 BeginnerClearing_EventScript_JirachiIntro_Text_0:
-# 108 "data/maps/BeginnerClearing/scripts.pory"
+# 107 "data/maps/BeginnerClearing/scripts.pory"
 	.string "Help... they're coming after me...$"
 
 BeginnerClearing_EventScript_JirachiIntro_Text_1:
-# 115 "data/maps/BeginnerClearing/scripts.pory"
+# 114 "data/maps/BeginnerClearing/scripts.pory"
 	.string "They took my friend... help...$"
 
 BeginnerClearing_EventScript_JirachiIntro_Text_2:
-# 127 "data/maps/BeginnerClearing/scripts.pory"
+# 126 "data/maps/BeginnerClearing/scripts.pory"
 	.string "Is that a Jirachi? Oh, it's hurt.\n"
 	.string "Quick, I have a potion!$"
 
 BeginnerClearing_EventScript_JirachiIntro_Text_3:
-# 130 "data/maps/BeginnerClearing/scripts.pory"
+# 128 "data/maps/BeginnerClearing/scripts.pory"
 	.string "It should be ok for now, but it needs\n"
 	.string "rest.\l"
 	.string "The poor thing's definitely in bad\l"
@@ -429,7 +429,7 @@ BeginnerClearing_EventScript_JirachiIntro_Text_3:
 	.string "I wonder what happened...$"
 
 BeginnerClearing_EventScript_JirachiIntro_Text_4:
-# 136 "data/maps/BeginnerClearing/scripts.pory"
+# 134 "data/maps/BeginnerClearing/scripts.pory"
 	.string "What's your name?\l"
 	.string "...\l"
 	.string "{PLAYER}, is it?\l"
@@ -440,45 +440,45 @@ BeginnerClearing_EventScript_JirachiIntro_Text_4:
 	.string "that it said it's being chased?$"
 
 BeginnerClearing_EventScript_JirachiIntro_Text_5:
-# 155 "data/maps/BeginnerClearing/scripts.pory"
+# 153 "data/maps/BeginnerClearing/scripts.pory"
 	.string "Here it is! Grab it!$"
 
 BeginnerClearing_EventScript_JirachiIntro_Text_6:
-# 157 "data/maps/BeginnerClearing/scripts.pory"
+# 155 "data/maps/BeginnerClearing/scripts.pory"
 	.string "You! Hand over that Jirachi!$"
 
 BeginnerClearing_EventScript_JirachiIntro_Text_7:
-# 168 "data/maps/BeginnerClearing/scripts.pory"
+# 166 "data/maps/BeginnerClearing/scripts.pory"
 	.string "Huh? Who are you?$"
 
 BeginnerClearing_EventScript_JirachiIntro_Text_8:
-# 170 "data/maps/BeginnerClearing/scripts.pory"
+# 168 "data/maps/BeginnerClearing/scripts.pory"
 	.string "You think a little dweeb like you can\n"
 	.string "get in our way?$"
 
 BeginnerClearing_EventScript_JirachiIntro_Text_9:
-# 172 "data/maps/BeginnerClearing/scripts.pory"
+# 170 "data/maps/BeginnerClearing/scripts.pory"
 	.string "And who are you? What do you want with\n"
 	.string "this Jirachi?$"
 
 BeginnerClearing_EventScript_JirachiIntro_Text_10:
-# 174 "data/maps/BeginnerClearing/scripts.pory"
+# 172 "data/maps/BeginnerClearing/scripts.pory"
 	.string "That's none of your business, lady!$"
 
 BeginnerClearing_EventScript_JirachiIntro_Text_11:
-# 176 "data/maps/BeginnerClearing/scripts.pory"
+# 174 "data/maps/BeginnerClearing/scripts.pory"
 	.string "Just hand over the Jirachi and no one\n"
 	.string "gets hurt!$"
 
 BeginnerClearing_EventScript_JirachiIntro_Text_12:
-# 180 "data/maps/BeginnerClearing/scripts.pory"
+# 178 "data/maps/BeginnerClearing/scripts.pory"
 	.string "{PLAYER}, do you have any Pokémon?\l"
 	.string "...\l"
 	.string "Hmmm, I see. I think this situation\n"
 	.string "calls for special circumstances.$"
 
 BeginnerClearing_EventScript_JirachiIntro_Text_13:
-# 184 "data/maps/BeginnerClearing/scripts.pory"
+# 182 "data/maps/BeginnerClearing/scripts.pory"
 	.string "I will lend you one of my Pokémon so\n"
 	.string "we can defend this Jirachi together.\l"
 	.string "Please grab a Pokéball from my bag.$"
