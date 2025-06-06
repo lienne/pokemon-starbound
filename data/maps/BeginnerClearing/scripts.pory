@@ -72,6 +72,7 @@ script BeginnerClearing_EventScript_GoBack {
 		msgbox("You can't ignore the cries of\n"
 				"a hurt Pokémon!")
         playse(SE_SELECT)
+        waitse()
 		applymovement(LOCALID_PLAYER, moves(walk_right))
 		waitmovement(0)
 		releaseall
@@ -132,12 +133,12 @@ script BeginnerClearing_EventScript_JirachiIntro {
     applymovement(ProfMyra, moves(face_left))
     waitmovement(0)
     msgbox(format("What's your name?\l"
-    "...\l"
-    "{PLAYER}, is it?\l"
-    "We are lucky you found it so quickly.\l"
-    "We should take it somewhere to recover.\l"
-    "...\l"
-    "You said Jirachi spoke to you? And\nthat it said it's being chased?"))
+        "...\l"
+        "{PLAYER}, is it?\l"
+        "We are lucky you found it so quickly.\l"
+        "We should take it somewhere to recover.\l"
+        "...\l"
+        "You said Jirachi spoke to you? And\nthat it said it's being chased?"))
     playse(SE_SELECT)
     addobject(GruntA)
     addobject(GruntB)

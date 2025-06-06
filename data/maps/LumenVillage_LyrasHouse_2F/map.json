@@ -3,7 +3,7 @@
   "name": "LumenVillage_LyrasHouse_2F",
   "layout": "LAYOUT_LUMEN_VILLAGE_LYRAS_HOUSE_2F",
   "music": "MUS_LITTLEROOT",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -20,7 +20,7 @@
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_LUMEN_VILLAGE_LYRAS_HOUSE_1F",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],

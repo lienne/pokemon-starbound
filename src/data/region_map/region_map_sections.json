@@ -2,7 +2,7 @@
   "map_sections": [
     {
       "id": "MAPSEC_LITTLEROOT_TOWN",
-      "name": "LUMEN VILLAGE",
+      "name": "Lumen Village",
       "x": 4,
       "y": 11,
       "width": 1,
@@ -314,7 +314,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_124",
-      "name": "Prof. Myra's Lab",
+      "name": "Starsea Passage",
       "x": 20,
       "y": 3,
       "width": 4,
@@ -490,7 +490,7 @@
     },
     {
       "id": "MAPSEC_ABANDONED_SHIP",
-      "name": "Starfall Clearing",
+      "name": "Prof Myra's Lab",
       "x": 6,
       "y": 14,
       "width": 1,
@@ -674,7 +674,7 @@
     },
     {
       "id": "MAPSEC_INSIDE_OF_TRUCK",
-      "name": "INSIDE OF TRUCK",
+      "name": "Starfall Clearing",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -809,7 +809,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_1",
-      "name": "Starfall Clearing",
+      "name": "Starlit Path",
       "x": 0,
       "y": 0,
       "width": 1,
