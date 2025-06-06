@@ -4,6 +4,7 @@ mapscripts BeginnerClearing_MapScripts {
             removeobject(GruntA)
             removeobject(GruntB)
             removeobject(ProfMyra)
+            removeobject(MyrasBag)
         }
     ]
 }
@@ -56,11 +57,22 @@ movement BeginnerClearing_ProfMyraWalksToPlayer {
     walk_left
 }
 
+script TestSound {
+    lockall
+    msgbox("Does this play a sound?\l"
+        "If it does, then the sound system is\nworking!\l"
+        "If it doesn't, then something is wrong.\l"
+        "This is a test message.")
+    releaseall
+}
+
 script BeginnerClearing_EventScript_GoBack {
 	if (!flag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)) {
 		lockall
 		msgbox("You can't ignore the cries of\n"
 				"a hurt Pokémon!")
+        // playse(SE_SELECT)
+        playbgm(SE_SELECT, FALSE)
 		applymovement(LOCALID_PLAYER, moves(walk_right))
 		waitmovement(0)
 		releaseall
@@ -70,6 +82,8 @@ script BeginnerClearing_EventScript_GoBack {
 script BeginnerClearing_EventScript_WalkFromA {
     lockall
     applymovement(LOCALID_PLAYER, BeginnerClearing_ExclamationMark)
+    playse(SE_PIN)
+    waitmovement(0)
     delay(50)
     applymovement(LOCALID_PLAYER, BeginnerClearing_WalkUpToJirachiFromA)
     waitmovement(0)
@@ -80,6 +94,8 @@ script BeginnerClearing_EventScript_WalkFromA {
 script BeginnerClearing_EventScript_WalkFromB {
     lockall
     applymovement(LOCALID_PLAYER, BeginnerClearing_ExclamationMark)
+    playse(SE_PIN)
+    waitmovement(0)
     delay(50)
     applymovement(LOCALID_PLAYER, BeginnerClearing_WalkUpToJirachiFromB)
     waitmovement(0)
@@ -90,61 +106,84 @@ script BeginnerClearing_EventScript_WalkFromB {
 script BeginnerClearing_EventScript_JirachiIntro {
     lockall
     msgbox(format("Help... they're coming after me..."))
+    playse(SE_SELECT)
+    delay(10)
     applymovement(LOCALID_PLAYER, BeginnerClearing_QuestionMark)
+    playse(SE_PIN)
     waitmovement(0)
     delay(50)
     msgbox(format("They took my friend... help..."))
+    playse(SE_SELECT)
     addobject(ProfMyra)
     applymovement(ProfMyra, BeginnerClearing_MyraRunsInA)
     waitmovement(0)
     applymovement(ProfMyra, BeginnerClearing_ExclamationMark)
+    playse(SE_PIN)
+    waitmovement(0)
     delay(50)
     applymovement(ProfMyra, BeginnerClearing_MyraRunsInB)
     waitmovement(0)
-    msgbox(format("Is that a Jirachi? Oh, it's hurt. Quick, I have a potion!"))
-    msgbox(format("It should be ok for now, but it needs rest."))
-    msgbox(format("The poor thing's definitely in bad shape."))
-    msgbox(format("I wonder what happened..."))
+    addobject(MyrasBag)
+    msgbox(format("Is that a Jirachi? Oh, it's hurt.\nQuick, I have a potion!"))
+    // playse(MUS_HEAL)
+    playse(SE_USE_ITEM)
+    msgbox(format("It should be ok for now, but it needs rest.\l"
+        "The poor thing's definitely in bad shape.\l"
+        "I wonder what happened..."))
+    playse(SE_SELECT)
     applymovement(ProfMyra, moves(face_left))
     waitmovement(0)
-    msgbox(format("What's your name?"))
-    msgbox(format("..."))
-    msgbox(format("{PLAYER}, is it?"))
-    msgbox(format("We are lucky you found it so quickly."))
-    msgbox(format("We should take it somewhere to recover."))
-    msgbox(format("..."))
-    msgbox(format("You said Jirachi spoke to you? And that it said it's being chased?"))
+    msgbox(format("What's your name?\l"
+    "...\l"
+    "{PLAYER}, is it?\l"
+    "We are lucky you found it so quickly.\l"
+    "We should take it somewhere to recover.\l"
+    "...\l"
+    "You said Jirachi spoke to you? And\nthat it said it's being chased?"))
+    playse(SE_SELECT)
     addobject(GruntA)
     addobject(GruntB)
     applymovement(GruntA, BeginnerClearing_GruntAWalksIn)
     applymovement(GruntB, BeginnerClearing_GruntBWalksIn)
     waitmovement(0)
-    delay(50)
+    delay(40)
     applymovement(GruntA, BeginnerClearing_ExclamationMark)
     applymovement(GruntB, BeginnerClearing_ExclamationMark)
+    playse(SE_PIN)
     waitmovement(0)
     delay(50)
     msgbox(format("Here it is! Grab it!"))
+    playse(SE_SELECT)
     msgbox(format("You! Hand over that Jirachi!"))
+    playse(SE_SELECT)
+    delay(10)
     applymovement(LOCALID_PLAYER, BeginnerClearing_ExclamationMark)
     applymovement(ProfMyra, BeginnerClearing_ExclamationMark)
+    playse(SE_PIN)
     waitmovement(0)
     delay(50)
     applymovement(LOCALID_PLAYER, BeginnerClearing_PlayerRunsInFrontOfGrunts)
     waitmovement(0)
     delay(50)
     msgbox(format("Huh? Who are you?"))
+    playse(SE_SELECT)
     msgbox(format("You think a little dweeb like you can get in our way?"))
+    playse(SE_SELECT)
     msgbox(format("And who are you? What do you want with this Jirachi?"))
+    playse(SE_SELECT)
     msgbox(format("That's none of your business, lady!"))
+    playse(SE_SELECT)
     msgbox(format("Just hand over the Jirachi and no one gets hurt!"))
+    playse(SE_SELECT)
     applymovement(ProfMyra, BeginnerClearing_ProfMyraWalksToPlayer)
     waitmovement(0)
-    msgbox(format("{PLAYER}, do you have any Pokémon?"))
-    msgbox(format("..."))
-    msgbox(format("Hmmm, I see. I think this situation calls for special circumstances."))
-    msgbox(format("I will lend you one of my Pokémon so we can defend this Jirachi together."))
-    msgbox(format("Please grab a Pokéball from my bag."))
+    msgbox(format("{PLAYER}, do you have any Pokémon?\l"
+        "...\l"
+        "Hmmm, I see. I think this situation\ncalls for special circumstances."))
+    playse(SE_SELECT)
+    msgbox(format("I will lend you one of my Pokémon so\nwe can defend this Jirachi together.\l"
+        "Please grab a Pokéball from my bag."))
+    playse(SE_SELECT)
     clearflag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)
     releaseall
 }
