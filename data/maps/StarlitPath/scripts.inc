@@ -14,62 +14,53 @@ StarlitPath_EventScript_RouteSign::
 
 StarlitPath_LittleGirl_Dialogue::
 # 13 "data/maps/StarlitPath/scripts.pory"
-	lockall
-# 14 "data/maps/StarlitPath/scripts.pory"
 	applymovement StarlitPath_LittleGirl, StarlitPath_LittleGirl_Dialogue_Movement_0
-# 15 "data/maps/StarlitPath/scripts.pory"
-	msgbox StarlitPath_LittleGirl_Dialogue_Text_0
-# 17 "data/maps/StarlitPath/scripts.pory"
-	releaseall
+# 14 "data/maps/StarlitPath/scripts.pory"
+	msgbox StarlitPath_LittleGirl_Dialogue_Text_0, type = MSGBOX_NPC
 	return
 
 
 StarlitPath_Youngster_Dialogue::
-# 21 "data/maps/StarlitPath/scripts.pory"
-	lockall
-# 22 "data/maps/StarlitPath/scripts.pory"
+# 19 "data/maps/StarlitPath/scripts.pory"
 	applymovement StarlitPath_Youngster, StarlitPath_LittleGirl_Dialogue_Movement_0
-# 23 "data/maps/StarlitPath/scripts.pory"
-	msgbox StarlitPath_Youngster_Dialogue_Text_0
-# 25 "data/maps/StarlitPath/scripts.pory"
-	releaseall
+# 20 "data/maps/StarlitPath/scripts.pory"
+	msgbox StarlitPath_Youngster_Dialogue_Text_0, type = MSGBOX_NPC
 	return
 
 
 StarlitPath_OldWoman_Dialogue::
-# 29 "data/maps/StarlitPath/scripts.pory"
-	lockall
-# 30 "data/maps/StarlitPath/scripts.pory"
+# 25 "data/maps/StarlitPath/scripts.pory"
 	applymovement StarlitPath_OldWoman, StarlitPath_LittleGirl_Dialogue_Movement_0
-# 31 "data/maps/StarlitPath/scripts.pory"
-	msgbox StarlitPath_OldWoman_Dialogue_Text_0
-# 33 "data/maps/StarlitPath/scripts.pory"
-	releaseall
+# 26 "data/maps/StarlitPath/scripts.pory"
+	msgbox StarlitPath_OldWoman_Dialogue_Text_0, type = MSGBOX_NPC
 	return
 
 
-# 14 "data/maps/StarlitPath/scripts.pory"
+# 13 "data/maps/StarlitPath/scripts.pory"
 StarlitPath_LittleGirl_Dialogue_Movement_0:
-# 14 "data/maps/StarlitPath/scripts.pory"
+# 13 "data/maps/StarlitPath/scripts.pory"
 	face_player
 	step_end
 
 StarlitPath_EventScript_RouteSign_Text_0:
 # 7 "data/maps/StarlitPath/scripts.pory"
 	.string "Starlit Path\n"
-	.string "Where the stars walk with you$"
+	.string "“Where the stars walk with you”$"
 
 StarlitPath_LittleGirl_Dialogue_Text_0:
-# 15 "data/maps/StarlitPath/scripts.pory"
+# 14 "data/maps/StarlitPath/scripts.pory"
 	.string "The flowers here glow at night...\l"
-	.string "Grandma says it's because\nthe stars shine on them!$"
+	.string "Grandma says it's because\n"
+	.string "the stars shine on them!$"
 
 StarlitPath_Youngster_Dialogue_Text_0:
-# 23 "data/maps/StarlitPath/scripts.pory"
-	.string "If your Pokémon get tired, take them to\na Pokémon Center.\l"
-	.string "There's a Pokémon Center in Solstice\nTown nearby.$"
+# 20 "data/maps/StarlitPath/scripts.pory"
+	.string "If your Pokémon get tired, take them to\n"
+	.string "a Pokémon Center.\l"
+	.string "There's a Pokémon Center in Solstice\l"
+	.string "Town nearby.$"
 
 StarlitPath_OldWoman_Dialogue_Text_0:
-# 31 "data/maps/StarlitPath/scripts.pory"
+# 26 "data/maps/StarlitPath/scripts.pory"
 	.string "I love looking at the stars!\l"
 	.string "They make me feel so small...$"

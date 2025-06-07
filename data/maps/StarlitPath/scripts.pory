@@ -5,30 +5,24 @@ mapscripts StarlitPath_MapScripts {
 script StarlitPath_EventScript_RouteSign {
     lockall
     msgbox("Starlit Path\n"
-        "Where the stars walk with you")
+        "“Where the stars walk with you”")
     releaseall
 }
 
 script StarlitPath_LittleGirl_Dialogue {
-    lockall
     applymovement(StarlitPath_LittleGirl, moves(face_player))
-    msgbox("The flowers here glow at night...\l"
-        "Grandma says it's because\nthe stars shine on them!")
-    releaseall
+    msgbox(format("The flowers here glow at night...\l"
+        "Grandma says it's because\nthe stars shine on them!"), type=MSGBOX_NPC)
 }
 
 script StarlitPath_Youngster_Dialogue {
-    lockall
     applymovement(StarlitPath_Youngster, moves(face_player))
-    msgbox("If your Pokémon get tired, take them to\na Pokémon Center.\l"
-        "There's a Pokémon Center in Solstice\nTown nearby.")
-    releaseall
+    msgbox(format("If your Pokémon get tired, take them to a Pokémon Center.\l"
+        "There's a Pokémon Center in Solstice Town nearby."), type=MSGBOX_NPC)
 }
 
 script StarlitPath_OldWoman_Dialogue {
-    lockall
     applymovement(StarlitPath_OldWoman, moves(face_player))
-    msgbox("I love looking at the stars!\l"
-        "They make me feel so small...")
-    releaseall
+    msgbox(format("I love looking at the stars!\l"
+        "They make me feel so small..."), type=MSGBOX_NPC)
 }

@@ -1,0 +1,24 @@
+mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE [
+        VAR_TEMP_0, 0 {
+            turnobject(LOCALID_PLAYER, DIR_NORTH)
+        }
+    ]
+    MAP_SCRIPT_ON_FRAME_TABLE[
+        VAR_ENTER_LAB_AFTER_INTRO_SCENE, 0 {
+            setvar(VAR_ENTER_LAB_AFTER_INTRO_SCENE, 1)
+            applymovement(LOCALID_PLAYER, moves(walk_up * 7))
+            waitmovement(0)
+            msgbox(format("Jirachi seems to be doing a bit better now, thanks to you, {PLAYER}."))
+            playmoncry(SPECIES_JIRACHI, CRY_MODE_NORMAL)
+            waitmoncry()
+            msgbox(format("However, I think it's best if we get it some more potent medicine.\l"
+                "I know you've done a lot already, but would you be willing to go to Solstice Town to pick it up?\l"
+                "It's just the next town over.\l"
+                "You can take the Pokémon I lent you, of course.\l"
+                "The PokéMart attendant will have it ready for you at my request.\l"
+                "Thank you, {PLAYER}. We'll see you when you get back!"), MSGBOX_AUTOCLOSE)
+            end
+        }
+    ]
+}

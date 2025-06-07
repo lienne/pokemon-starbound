@@ -44,19 +44,15 @@ LumenVillage_EventScript_VillageSign::
 
 LumenVillage_FatMan_Dialogue::
 # 31 "data/maps/LumenVillage/scripts.pory"
-	lockall
-# 32 "data/maps/LumenVillage/scripts.pory"
 	applymovement LumenVillage_FatMan, LumenVillage_FatMan_Dialogue_Movement_0
-# 33 "data/maps/LumenVillage/scripts.pory"
-	msgbox LumenVillage_FatMan_Dialogue_Text_0
-# 35 "data/maps/LumenVillage/scripts.pory"
-	releaseall
+# 32 "data/maps/LumenVillage/scripts.pory"
+	msgbox LumenVillage_FatMan_Dialogue_Text_0, type = MSGBOX_NPC
 	return
 
 
-# 32 "data/maps/LumenVillage/scripts.pory"
+# 31 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_FatMan_Dialogue_Movement_0:
-# 32 "data/maps/LumenVillage/scripts.pory"
+# 31 "data/maps/LumenVillage/scripts.pory"
 	face_player
 	step_end
 
@@ -78,6 +74,7 @@ LumenVillage_EventScript_VillageSign_Text_0:
 	.string "“A quiet place beneath the stars”$"
 
 LumenVillage_FatMan_Dialogue_Text_0:
-# 33 "data/maps/LumenVillage/scripts.pory"
-	.string "Technology is amazing!\l"
-	.string "You can now use sattelites to chart\nthe stars in Astrea!$"
+# 32 "data/maps/LumenVillage/scripts.pory"
+	.string "Technology is amazing! You can now use\n"
+	.string "sattelites to chart the stars in\l"
+	.string "Astrea!$"
