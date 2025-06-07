@@ -53,6 +53,17 @@ void DoWaldaNamingScreen(void)
     DoNamingScreen(NAMING_SCREEN_WALDA, gStringVar2, 0, 0, 0, CB2_HandleGivenWaldaPhrase);
 }
 
+static void CB2_HandlePlayerNameInput(void)
+{
+    gFieldCallback = FieldCB_ContinueScriptHandleMusic;
+    SetMainCallback2(CB2_ReturnToField);
+}
+
+void DoPlayerNamingScreen(void)
+{
+    DoNamingScreen(NAMING_SCREEN_PLAYER, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->playerGender, 0, 0, CB2_HandlePlayerNameInput);
+}
+
 static void CB2_HandleGivenWaldaPhrase(void)
 {
     gSpecialVar_0x8004 = GetWaldaPhraseInputCase(gStringVar2);
