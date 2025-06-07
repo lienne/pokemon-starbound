@@ -22,6 +22,15 @@ script LumenVillage_EventScript_CassiansHouseSign {
 
 script LumenVillage_EventScript_VillageSign {
     lockall
-    msgbox("Lumen Village")
+    msgbox("Lumen Village\n"
+        "“A quiet place beneath the stars”")
+    releaseall
+}
+
+script LumenVillage_FatMan_Dialogue {
+    lockall
+    applymovement(LumenVillage_FatMan, moves(face_player))
+    msgbox("Technology is amazing!\l"
+        "You can now use sattelites to chart\nthe stars in Astrea!")
     releaseall
 }

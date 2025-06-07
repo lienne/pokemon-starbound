@@ -12,45 +12,68 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": [
+    {
+      "map": "MAP_LUMEN_VILLAGE",
+      "offset": -8,
+      "direction": "down"
+    }
+  ],
   "object_events": [
     {
+      "local_id": "StarlitPath_LittleGirl",
       "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
-      "x": 4,
-      "y": 10,
+      "x": 1,
+      "y": 29,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_RIGHT_AND_LEFT",
-      "movement_range_x": 0,
+      "movement_range_x": 1,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "StarlitPath_LittleGirl_Dialogue",
       "flag": "0"
     },
     {
+      "local_id": "StarlitPath_OldWoman",
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
-      "x": 16,
-      "y": 20,
+      "x": 10,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_DOWN_AND_UP",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_range_x": 2,
+      "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "StarlitPath_OldWoman_Dialogue",
       "flag": "0"
     },
     {
+      "local_id": "StarlitPath_Item",
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 1,
-      "y": 4,
+      "x": 0,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_POTION",
+      "script": "Common_EventScript_FindItem",
+      "flag": "0"
+    },
+    {
+      "local_id": "StarlitPath_Youngster",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 22,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "StarlitPath_Youngster_Dialogue",
       "flag": "0"
     }
   ],
@@ -58,12 +81,12 @@
   "coord_events": [],
   "bg_events": [
     {
-      "type": "hidden_item",
-      "x": 1,
-      "y": 4,
+      "type": "sign",
+      "x": 3,
+      "y": 24,
       "elevation": 0,
-      "item": "ITEM_POTION",
-      "flag": "FLAG_TEMP_1"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "StarlitPath_EventScript_RouteSign"
     }
   ]
 }

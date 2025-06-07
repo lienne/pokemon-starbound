@@ -5,6 +5,7 @@ mapscripts BeginnerClearing_MapScripts {
             removeobject(GruntB)
             removeobject(ProfMyra)
             removeobject(MyrasBag)
+            turnobject(LOCALID_PLAYER, DIR_EAST)
         }
     ]
 }
@@ -54,21 +55,39 @@ movement BeginnerClearing_PlayerRunsInFrontOfGrunts {
 
 movement BeginnerClearing_ProfMyraWalksToPlayer {
     walk_down * 2
-    walk_left
+    walk_left * 2
 }
 
 movement BeginnerClearing_GruntARunsToPlayer {
-    walk_fast_right * 2
+    walk_fast_right * 4
 }
 
-script TestSound {
-    lockall
-    applymovement(test_npc, moves(face_player))
-    msgbox("Does this play a sound?\l"
-        "If it does, then the sound system is\nworking!\l"
-        "If it doesn't, then something is wrong.\l"
-        "This is a test message.")
-    releaseall
+movement BeginnerClearing_GruntBRunsToProfMyra {
+    walk_fast_right * 3
+}
+
+movement BeginnerClearing_WalkToGruntA_LeftSideOfBag {
+    walk_fast_down
+    walk_fast_left
+}
+
+movement BeginnerClearing_WalkToGruntA_TopSideOfBag {
+    walk_fast_right
+    walk_fast_down * 2
+    walk_fast_left * 3
+}
+
+movement BeginnerClearing_WalkToGruntA_RightSideOfBag {
+    walk_fast_down
+    walk_fast_left * 3
+}
+
+movement BeginnerClearing_WalkToGruntA_BottomSideOfBag {
+    walk_fast_left * 2
+}
+
+script BeginnerClearing_SetPlayerFacingDir {
+    applymovement(LOCALID_PLAYER, moves(face_right))
 }
 
 script BeginnerClearing_EventScript_GoBack {
@@ -167,7 +186,7 @@ script BeginnerClearing_EventScript_JirachiIntro {
         "We are lucky you found it so quickly.\l"
         "We should take it somewhere to recover.\l"
         "...\l"
-        "You said Jirachi spoke to you? And\nthat it said it's being chased?"))
+        "You said Jirachi spoke to you? And\nthat it said it's being chased?"), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     addobject(GruntA)
     addobject(GruntB)
@@ -221,26 +240,6 @@ script BeginnerClearing_EventScript_JirachiIntro {
     releaseall
 }
 
-movement BeginnerClearing_WalkToGruntA_LeftSideOfBag {
-    walk_down
-    walk_left * 4
-}
-
-movement BeginnerClearing_WalkToGruntA_TopSideOfBag {
-    walk_left
-    walk_down * 2
-    walk_left * 4
-}
-
-movement BeginnerClearing_WalkToGruntA_RightSideOfBag {
-    walk_down
-    walk_left * 6
-}
-
-movement BeginnerClearing_WalkToGruntA_BottomSideOfBag {
-    walk_left * 4
-}
-
 script BeginnerClearing_EventScript_MyrasBag {
     lockall
     fadescreen(FADE_TO_BLACK)
@@ -253,6 +252,7 @@ script BeginnerClearing_EventScript_MyrasBag {
 script BeginnerClearing_EventScript_GruntABattle {
     lockall
     applymovement(GruntA, BeginnerClearing_GruntARunsToPlayer)
+    applymovement(GruntB, BeginnerClearing_GruntBRunsToProfMyra)
     waitmovement(0)
     switch (var(VAR_FACING)) {
         case DIR_EAST: // facing east, player is left of bag
@@ -274,12 +274,16 @@ script BeginnerClearing_EventScript_AfterBattle {
     msgbox(format("Grunt 1: How is this possible??\l"
         "You little brat... You'll regret this!"))
     playse(SE_SELECT)
+    applymovement(GruntA, moves(walk_fast_left * 10))
+    waitmovement(0)
     msgbox(format("Grunt 2: You don't mess with Team Eclipse and get away with it!"))
     playse(SE_SELECT)
-    applymovement(GruntA, moves(walk_fast_left * 10))
     applymovement(GruntB, moves(walk_fast_left * 10))
     waitmovement(0)
-    applymovement(ProfMyra, moves(face_up))
+    applymovement(ProfMyra, moves(
+        walk_right
+        face_up))
+    applymovement(LOCALID_PLAYER, moves(face_down))
     waitmovement(0)
     msgbox(format("Prof. Myra: {PLAYER}, you were amazing!\l"
         "I'm so glad you were here.\l"

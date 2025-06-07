@@ -1,0 +1,38 @@
+mapscripts StarlitPath_MapScripts {
+
+}
+
+script StarlitPath_EventScript_RouteSign {
+    lockall
+    msgbox("Starlit Path\n"
+        "Where the stars walk with you")
+    releaseall
+}
+
+script StarlitPath_LittleGirl_Dialogue {
+    lockall
+    applymovement(StarlitPath_LittleGirl, moves(face_player))
+    msgbox("The flowers here glow at night...\l"
+        "Grandma says it's because\nthe stars shine on them!")
+    releaseall
+}
+
+script StarlitPath_Youngster_Dialogue {
+    lockall
+    applymovement(StarlitPath_Youngster, moves(face_player))
+    msgbox("If your Pokémon get tired, take them to\na Pokémon Center.\l"
+        "There's a Pokémon Center in Solstice\nTown nearby.")
+    releaseall
+}
+
+script StarlitPath_OldWoman_Dialogue {
+    lockall
+    applymovement(StarlitPath_OldWoman, moves(face_player))
+    msgbox("I love looking at the stars!\l"
+        "They make me feel so small...")
+    releaseall
+}
+
+script StarlitPath_HideItem {
+    removeobject(StarlitPath_Item)
+}

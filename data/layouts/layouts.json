@@ -4424,8 +4424,8 @@
     {
       "id": "LAYOUT_STARLIT_PATH",
       "name": "StarlitPath_Layout",
-      "width": 30,
-      "height": 29,
+      "width": 26,
+      "height": 36,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/StarlitPath/border.bin",
