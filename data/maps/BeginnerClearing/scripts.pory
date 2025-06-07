@@ -86,10 +86,6 @@ movement BeginnerClearing_WalkToGruntA_BottomSideOfBag {
     walk_fast_left * 2
 }
 
-script BeginnerClearing_SetPlayerFacingDir {
-    applymovement(LOCALID_PLAYER, moves(face_right))
-}
-
 script BeginnerClearing_EventScript_GoBack {
 	if (!flag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)) {
 		lockall
@@ -157,7 +153,7 @@ script BeginnerClearing_EventScript_JirachiIntro {
     playse(SE_PIN)
     waitmovement(0)
     delay(50)
-    msgbox(format("They took my friend... help..."))
+    msgbox(format("They took my friend... help..."), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     addobject(ProfMyra)
     applymovement(ProfMyra, BeginnerClearing_MyraRunsInA)
@@ -204,7 +200,7 @@ script BeginnerClearing_EventScript_JirachiIntro {
     applymovement(ProfMyra, moves(face_left))
     msgbox(format("Grunt 1: Here it is! Grab it!"))
     playse(SE_SELECT)
-    msgbox(format("Grunt 2: You! Hand over that Jirachi!"))
+    msgbox(format("Grunt 2: You! Hand over that Jirachi!"), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     delay(10)
     applymovement(LOCALID_PLAYER, BeginnerClearing_ExclamationMark)
@@ -223,19 +219,15 @@ script BeginnerClearing_EventScript_JirachiIntro {
     playse(SE_SELECT)
     msgbox(format("Grunt 2: That's none of your business, lady!"))
     playse(SE_SELECT)
-    msgbox(format("Grunt 1: Just hand over the Jirachi and no one gets hurt!"))
+    msgbox(format("Grunt 1: Just hand over the Jirachi and no one gets hurt!"), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     applymovement(ProfMyra, BeginnerClearing_ProfMyraWalksToPlayer)
     waitmovement(0)
-    msgbox(format("Prof. Myra: {PLAYER}, do you have any Pokémon?"))
-    playse(SE_SELECT)
-    msgbox(format("..."))
-    playse(SE_SELECT)
-    msgbox(format("Hmmm, I see. I think this situation\ncalls for special circumstances."))
-    playse(SE_SELECT)
-    msgbox(format("I will lend you one of my Pokémon so\nwe can defend this Jirachi together.\l"
+    msgbox(format("Prof. Myra: {PLAYER}, do you have any Pokémon?\p"
+        "...\p"
+        "Hmmm, I see. I think this situation calls for special circumstances.\l"
+        "I will lend you one of my Pokémon so we can defend this Jirachi together.\l"
         "Please grab a Pokéball from my bag."))
-    playse(SE_SELECT)
     clearflag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)
     releaseall
 }
@@ -265,6 +257,7 @@ script BeginnerClearing_EventScript_GruntABattle {
             applymovement(LOCALID_PLAYER, BeginnerClearing_WalkToGruntA_BottomSideOfBag)
     }
     waitmovement(LOCALID_PLAYER)
+    applymovement(ProfMyra, moves(face_left))
     trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_14, "You're going down, kid!", "Impossible...", BeginnerClearing_EventScript_AfterBattle)
     releaseall
 }
@@ -272,11 +265,11 @@ script BeginnerClearing_EventScript_GruntABattle {
 script BeginnerClearing_EventScript_AfterBattle {
     lockall
     msgbox(format("Grunt 1: How is this possible??\l"
-        "You little brat... You'll regret this!"))
+        "You little brat... You'll regret this!"), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     applymovement(GruntA, moves(walk_fast_left * 10))
     waitmovement(0)
-    msgbox(format("Grunt 2: You don't mess with Team Eclipse and get away with it!"))
+    msgbox(format("Grunt 2: You don't mess with Team Eclipse and get away with it!"), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     applymovement(GruntB, moves(walk_fast_left * 10))
     waitmovement(0)

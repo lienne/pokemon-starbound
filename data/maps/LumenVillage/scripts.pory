@@ -28,9 +28,7 @@ script LumenVillage_EventScript_VillageSign {
 }
 
 script LumenVillage_FatMan_Dialogue {
-    lockall
     applymovement(LumenVillage_FatMan, moves(face_player))
-    msgbox("Technology is amazing!\l"
-        "You can now use sattelites to chart\nthe stars in Astrea!")
-    releaseall
+    msgbox(format("Technology is amazing!"
+        "You can now use sattelites to chart the stars in Astrea!"), type=MSGBOX_NPC)
 }
