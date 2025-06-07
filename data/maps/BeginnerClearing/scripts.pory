@@ -282,6 +282,6 @@ script BeginnerClearing_EventScript_AfterBattle {
         "I'm so glad you were here.\l"
         "Now let's take this Jirachi back to my lab so it can rest."))
     playse(SE_SELECT)
-    warpsilent(MAP_LUMEN_VILLAGE_PROFESSOR_MYRAS_LAB, 6, 7)
+    warpsilent(MAP_LUMEN_VILLAGE_PROFESSOR_MYRAS_LAB, 6, 12)
     releaseall
 }

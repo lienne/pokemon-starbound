@@ -566,7 +566,7 @@ BeginnerClearing_EventScript_AfterBattle::
 # 284 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_SELECT
 # 285 "data/maps/BeginnerClearing/scripts.pory"
-	warpsilent MAP_LUMEN_VILLAGE_PROFESSOR_MYRAS_LAB, 6, 7
+	warpsilent MAP_LUMEN_VILLAGE_PROFESSOR_MYRAS_LAB, 6, 12
 # 286 "data/maps/BeginnerClearing/scripts.pory"
 	releaseall
 	return

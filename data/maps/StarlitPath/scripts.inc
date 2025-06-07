@@ -45,7 +45,7 @@ StarlitPath_LittleGirl_Dialogue_Movement_0:
 StarlitPath_EventScript_RouteSign_Text_0:
 # 7 "data/maps/StarlitPath/scripts.pory"
 	.string "Starlit Path\n"
-	.string "Where the stars walk with you$"
+	.string "“Where the stars walk with you”$"
 
 StarlitPath_LittleGirl_Dialogue_Text_0:
 # 14 "data/maps/StarlitPath/scripts.pory"
