@@ -176,8 +176,10 @@ script BeginnerClearing_EventScript_JirachiIntro {
     playse(SE_SELECT)
     applymovement(ProfMyra, moves(face_left))
     waitmovement(0)
-    msgbox(format("What's your name?\l"
-        "...\l"
+    msgbox(format("What's your name?"))
+    special(DoPlayerNamingScreen)
+    waitstate()
+    msgbox(format(
         "{PLAYER}, is it?\l"
         "We are lucky you found it so quickly.\l"
         "We should take it somewhere to recover.\l"
