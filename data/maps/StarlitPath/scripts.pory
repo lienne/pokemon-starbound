@@ -32,7 +32,3 @@ script StarlitPath_OldWoman_Dialogue {
         "They make me feel so small...")
     releaseall
 }
-
-script StarlitPath_HideItem {
-    removeobject(StarlitPath_Item)
-}

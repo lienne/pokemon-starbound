@@ -48,12 +48,6 @@ StarlitPath_OldWoman_Dialogue::
 	return
 
 
-StarlitPath_HideItem::
-# 37 "data/maps/StarlitPath/scripts.pory"
-	removeobject StarlitPath_Item
-	return
-
-
 # 14 "data/maps/StarlitPath/scripts.pory"
 StarlitPath_LittleGirl_Dialogue_Movement_0:
 # 14 "data/maps/StarlitPath/scripts.pory"

@@ -75,7 +75,7 @@ LumenVillage_EventScript_CassiansHouseSign_Text_0:
 LumenVillage_EventScript_VillageSign_Text_0:
 # 25 "data/maps/LumenVillage/scripts.pory"
 	.string "Lumen Village\n"
-	.string "'A quiet place beneath the stars'$"
+	.string "“A quiet place beneath the stars”$"
 
 LumenVillage_FatMan_Dialogue_Text_0:
 # 33 "data/maps/LumenVillage/scripts.pory"
