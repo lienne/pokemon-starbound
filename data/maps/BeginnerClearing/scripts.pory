@@ -86,43 +86,35 @@ movement BeginnerClearing_WalkToGruntA_BottomSideOfBag {
     walk_fast_left * 2
 }
 
-script BeginnerClearing_EventScript_GoBack {
-	if (!flag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)) {
-		lockall
-		msgbox("You can't ignore the cries of\n"
-				"a hurt Pokémon!")
-        playse(SE_SELECT)
-		applymovement(LOCALID_PLAYER, moves(walk_right))
-		waitmovement(0)
-		releaseall
-	}
-}
-
 script BeginnerClearing_EventScript_WalkFromA {
     lockall
-    playmoncry(SPECIES_JIRACHI, CRY_MODE_NORMAL)
-    waitmoncry()
-    applymovement(LOCALID_PLAYER, BeginnerClearing_ExclamationMark)
-    playse(SE_PIN)
-    waitmovement(0)
-    delay(50)
-    applymovement(LOCALID_PLAYER, BeginnerClearing_WalkUpToJirachiFromA)
-    waitmovement(0)
-    call(BeginnerClearing_EventScript_JirachiIntro)
+    if (!flag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)) {
+        playmoncry(SPECIES_JIRACHI, CRY_MODE_FAINT)
+        waitmoncry()
+        applymovement(LOCALID_PLAYER, BeginnerClearing_ExclamationMark)
+        playse(SE_PIN)
+        waitmovement(0)
+        delay(50)
+        applymovement(LOCALID_PLAYER, BeginnerClearing_WalkUpToJirachiFromA)
+        waitmovement(0)
+        call(BeginnerClearing_EventScript_JirachiIntro)
+    }
     releaseall
 }
 
 script BeginnerClearing_EventScript_WalkFromB {
     lockall
-    playmoncry(SPECIES_JIRACHI, CRY_MODE_NORMAL)
-    waitmoncry()
-    applymovement(LOCALID_PLAYER, BeginnerClearing_ExclamationMark)
-    playse(SE_PIN)
-    waitmovement(0)
-    delay(50)
-    applymovement(LOCALID_PLAYER, BeginnerClearing_WalkUpToJirachiFromB)
-    waitmovement(0)
-    call(BeginnerClearing_EventScript_JirachiIntro)
+    if (!flag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)) {
+        playmoncry(SPECIES_JIRACHI, CRY_MODE_FAINT)
+        waitmoncry()
+        applymovement(LOCALID_PLAYER, BeginnerClearing_ExclamationMark)
+        playse(SE_PIN)
+        waitmovement(0)
+        delay(50)
+        applymovement(LOCALID_PLAYER, BeginnerClearing_WalkUpToJirachiFromB)
+        waitmovement(0)
+        call(BeginnerClearing_EventScript_JirachiIntro)
+    }
     releaseall
 }
 
@@ -140,7 +132,7 @@ script BeginnerClearing_EventScript_GruntB {
 }
 
 script BeginnerClearing_EventScript_JirachiNPC {
-    playmoncry(SPECIES_JIRACHI, CRY_MODE_NORMAL)
+    playmoncry(SPECIES_JIRACHI, CRY_MODE_FAINT)
     waitmoncry()
 }
 
@@ -230,7 +222,7 @@ script BeginnerClearing_EventScript_JirachiIntro {
         "Hmmm, I see. I think this situation calls for special circumstances.\l"
         "I will lend you one of my Pokémon so we can defend this Jirachi together.\l"
         "Please grab a Pokéball from my bag."))
-    clearflag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)
+    // clearflag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)
     releaseall
 }
 
@@ -284,6 +276,7 @@ script BeginnerClearing_EventScript_AfterBattle {
         "I'm so glad you were here.\l"
         "Now let's take this Jirachi back to my lab so it can rest."))
     playse(SE_SELECT)
+    setflag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)
     warpsilent(MAP_LUMEN_VILLAGE_PROFESSOR_MYRAS_LAB, 6, 12)
     releaseall
 }

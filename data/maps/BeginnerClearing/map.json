@@ -114,38 +114,20 @@
     {
       "type": "trigger",
       "x": 4,
-      "y": 15,
+      "y": 11,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "BeginnerClearing_EventScript_GoBack"
+      "script": "BeginnerClearing_EventScript_GoBack_UpTrigger"
     },
     {
       "type": "trigger",
       "x": 5,
-      "y": 15,
+      "y": 11,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "BeginnerClearing_EventScript_GoBack"
-    },
-    {
-      "type": "trigger",
-      "x": 5,
-      "y": 16,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "BeginnerClearing_EventScript_GoBack"
-    },
-    {
-      "type": "trigger",
-      "x": 5,
-      "y": 17,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "BeginnerClearing_EventScript_GoBack"
+      "script": "BeginnerClearing_EventScript_GoBack_UpTrigger"
     }
   ],
   "bg_events": []

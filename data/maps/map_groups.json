@@ -627,7 +627,8 @@
     "LumenVillage",
     "StarlitPath",
     "BeginnerClearing",
-    "StarseaPassage"
+    "StarseaPassage",
+    "SolsticeTown"
   ],
   "gMapGroup_IndoorLumenVillage": [
     "LumenVillage_ProfessorMyrasLab",

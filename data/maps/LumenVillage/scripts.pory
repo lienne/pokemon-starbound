@@ -1,5 +1,58 @@
 mapscripts LumenVillage_MapScripts {
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE [
+        1, 1 {
+            turnobject(LOCALID_PLAYER, DIR_EAST)
+        }
+    ]
 
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_INTRO_SCENE, 1 {
+            setvar(VAR_INTRO_SCENE, 2)
+            addobject(LumenVillage_Rival_Intro)
+            applymovement(LumenVillage_Rival_Intro, moves(emote_exclamation_mark))
+            playse(SE_PIN)
+            waitmovement(0)
+            delay(50)
+            applymovement(LumenVillage_Rival_Intro, moves(walk_fast_left *3
+                                                        walk_fast_up * 3))
+            waitmovement(0)
+            msgbox(format("Cassian: Hey, {PLAYER}! What are you doing out here?\l"
+                "WHOA - hold up! You've got a Pokémon?!\l"
+                "Wait a second... you SERIOUSLY already got a Pokémon??\l"
+                "I can't believe this! After all these years training together, and you didn't even tell me??\l"
+                "Tch... classic {PLAYER}. Always one step ahead, huh?\l"
+                "Well, guess what - I'm not letting you leave me in the dust!\l"
+                "I'll get my own Pokémon too, you'll see!"), MSGBOX_AUTOCLOSE)
+            applymovement(LumenVillage_Rival_Intro, moves(walk_fast_down * 8))
+            waitmovement(0)
+            removeobject(LumenVillage_Rival_Intro)
+            end
+        }
+    ]
+}
+
+script BeginnerClearing_EventScript_GoBack_LeftTrigger {
+	if (!flag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)) {
+		lockall
+		msgbox("You can't ignore the cries of\n"
+				"a hurt Pokémon!")
+        playse(SE_SELECT)
+		applymovement(LOCALID_PLAYER, moves(walk_right))
+		waitmovement(0)
+		releaseall
+	}
+}
+
+script BeginnerClearing_EventScript_GoBack_UpTrigger {
+	if (!flag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)) {
+		lockall
+		msgbox("You can't ignore the cries of\n"
+				"a hurt Pokémon!")
+        playse(SE_SELECT)
+		applymovement(LOCALID_PLAYER, moves(walk_down))
+		waitmovement(0)
+		releaseall
+	}
 }
 
 script LumenVillage_EventScript_ProfLabSign {

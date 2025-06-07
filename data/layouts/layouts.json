@@ -4500,6 +4500,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/LumenVillage_CassiansHouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/LumenVillage_CassiansHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SOLSTICE_TOWN",
+      "name": "SolsticeTown_Layout",
+      "width": 25,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/SolsticeTown/border.bin",
+      "blockdata_filepath": "data/layouts/SolsticeTown/map.bin"
     }
   ]
 }

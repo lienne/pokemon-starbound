@@ -1175,3 +1175,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/LumenVillage_CassiansHouse_1F/scripts.inc"
 
 	.include "data/maps/LumenVillage_CassiansHouse_2F/scripts.inc"
+
+	.include "data/maps/SolsticeTown/scripts.inc"
