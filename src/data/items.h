@@ -12849,7 +12849,7 @@ const struct Item gItemsInfo[] =
         .price = 0,
         .description = COMPOUND_STRING(
             "A parcel for Prof.\n"
-            "Oak from a Pokémon\n"
+            "Myra from a Pokémon\n"
             "Mart's clerk."),
         .importance = 2,
         .pocket = POCKET_KEY_ITEMS,

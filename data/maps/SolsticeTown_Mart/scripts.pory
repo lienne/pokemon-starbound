@@ -1,0 +1,33 @@
+mapscripts SolsticeTown_Mart_MapScripts {
+    
+}
+
+script SolsticeTown_Mart_Employee_Dialogue {
+    if (!flag(FLAG_RECEIVED_JIRACHI_MEDICINE) && var(VAR_INTRO_SCENE) == 2) {
+        applymovement(SolsticeTown_Mart_Employee, moves(face_player))
+        msgbox(format("Hi! Are you {PLAYER}?\l"
+            "Prof. Myra called ahead of time to say you'd come by.\l"
+            "I have your package here for you."), MSGBOX_AUTOCLOSE)
+        giveitem(ITEM_PARCEL, MSGBOX_AUTOCLOSE)
+        setflag(FLAG_RECEIVED_JIRACHI_MEDICINE)
+        setvar(VAR_INTRO_SCENE, 3)
+    } elif (flag(FLAG_RECEIVED_JIRACHI_MEDICINE) && !flag(FLAG_DELIVERED_JIRACHI_MEDICINE)) {
+        applymovement(SolsticeTown_Mart_Employee, moves(face_player))
+        msgbox(format("Hi {PLAYER}!\l"
+            "Did you deliver the package to Prof. Myra yet?\l"
+            "You should go do that now!"), type=MSGBOX_NPC)
+    } else {
+        applymovement(SolsticeTown_Mart_Employee, moves(face_player))
+        msgbox(format("Welcome to the Solstice Town Mart!"), type=MSGBOX_NPC)
+        waitmessage()
+        pokemart(SolsticeTown_Mart_Items)
+        msgbox(format("Thank you for shopping with us!"), type=MSGBOX_NPC)
+    }
+}
+
+mart SolsticeTown_Mart_Items {
+    ITEM_POTION
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+}

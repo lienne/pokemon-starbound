@@ -222,7 +222,6 @@ script BeginnerClearing_EventScript_JirachiIntro {
         "Hmmm, I see. I think this situation calls for special circumstances.\l"
         "I will lend you one of my Pokémon so we can defend this Jirachi together.\l"
         "Please grab a Pokéball from my bag."))
-    // clearflag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)
     releaseall
 }
 

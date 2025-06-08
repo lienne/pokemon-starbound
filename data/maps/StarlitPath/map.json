@@ -15,12 +15,12 @@
   "connections": [
     {
       "map": "MAP_LUMEN_VILLAGE",
-      "offset": -8,
+      "offset": -12,
       "direction": "down"
     },
     {
       "map": "MAP_SOLSTICE_TOWN",
-      "offset": 16,
+      "offset": 14,
       "direction": "up"
     }
   ],

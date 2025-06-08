@@ -1,6 +1,7 @@
 mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
     MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE [
         VAR_TEMP_0, 0 {
+            removeobject(ProfMyrasLab_Rival_Intro_2)
             turnobject(LOCALID_PLAYER, DIR_NORTH)
         }
     ]
@@ -20,17 +21,95 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
                 "Thank you, {PLAYER}. We'll see you when you get back!"), MSGBOX_AUTOCLOSE)
             end
         }
+
+        VAR_INTRO_SCENE, 3 {
+            setvar(VAR_INTRO_SCENE, 4)
+            addobject(ProfMyrasLab_Rival_Intro_2)
+            applymovement(LOCALID_PLAYER, moves(emote_exclamation_mark))
+            waitmovement(0)
+            playse(SE_PIN)
+            delay(50)
+            applymovement(LOCALID_PLAYER, moves(walk_up * 6))
+            msgbox(format("Professor Myra! I want a Pokémon too!\l"
+                "{PLAYER} already got one! It's not fair that only {PLAYER} gets one!\l"
+                "I'll treat it well! We'll get strong together! Please believe me!\l"))
+            msgbox(format("Hmmm... These Pokémon were part of a special research assignment.\l"
+                "They weren't meant for trainers... not yet.\l"
+                "But I see it in yours eyes - you're serious.\l"
+                "This isn't about catching up, is it?\l"
+                "It's about proving you're ready."))
+            msgbox(format("I've ALWAYS been ready!\l"
+                "If {PLAYER} is out there, then I should be too!\l"
+                "Please, Professor! I want to be a Pokémon Trainer!"))
+            msgbox(format("...very well.\l"
+                "But know this: once you take this step, there's no going back.\l"
+                "This journey will challenge more than just your strength.\l"
+                "Choose carefully."))
+            msgbox(format("Thank you, Professor Myra!!\l"
+                "I promise I won't let you down!"), MSGBOX_AUTOCLOSE)
+            playse(MUS_OBTAIN_ITEM)
+            msgbox(format("Rival received a Pokémon!"), MSGBOX_AUTOCLOSE)
+            waitse()
+            applymovement(ProfMyrasLab_Rival_Intro_2, moves(face_down))
+            waitmovement(0)
+            applymovement(ProfMyrasLab_Rival_Intro_2, moves(emote_exclamation_mark))
+            playse(SE_PIN)
+            waitmovement(0)
+            msgbox(format("{PLAYER}!\l"
+                "I told you I'd get a Pokémon too!\l"
+                "Now we're even. Don't think you'll stay one step ahead for long!\l"
+                "...but, uh, I'm still glad we're doing this together.\l"
+                "Even if I AM gonna beat you!\l"
+                "Catch you later!"), MSGBOX_AUTOCLOSE)
+            applymovement(ProfMyrasLab_Rival_Intro_2, moves(walk_fast_right))
+            applymovement(LOCALID_PLAYER, moves(face_right))
+            applymovement(ProfMyrasLab_Rival_Intro_2, moves(walk_fast_down * 2))
+            applymovement(LOCALID_PLAYER, moves(face_down))
+            applymovement(ProfMyrasLab_Rival_Intro_2, moves(walk_fast_down * 5))
+            waitmovement(0)
+            playse(SE_DOOR)
+            waitse()
+            removeobject(ProfMyrasLab_Rival_Intro_2)
+            applymovement(LOCALID_PLAYER, moves(walk_up))
+            waitmovement(0)
+            msgbox(format("Hi {PLAYER}!\l"
+                "You came at just the right time.\l"
+                "I ended up giving your friend a Pokémon.\l"
+                "For the sake of being fair, I think you should keep the one I lent you earlier.\l"
+                "After all, it looks like you two have already started bonding."))
+            playse(MUS_OBTAIN_ITEM)
+            msgbox(format("You received a Pokémon!"), MSGBOX_AUTOCLOSE)
+            waitse()
+            msgbox(format("Would you like to give a nickname to the Pokémon?"))
+            // Set up pokemon nickname screen here, MSGBOX_YESNO
+            msgbox(format("I see you've also retrieved the medicine from Solstice Town.\l"
+                "Thank you for that, {PLAYER}\l"
+                "I think Jirachi will be able to recover now."))
+            setflag(FLAG_DELIVERED_JIRACHI_MEDICINE)
+            removeitem(ITEM_PARCEL)
+            msgbox(format("Since you're keeping the Pokémon I lent you, I think it's only fair that you take this as well.\l"
+                "It's a Pokédex, a device that records data on all Pokémon you encounter.\l"
+                "I hope you'll use it to learn more about the world of Pokémon.\l"
+                "And of course, if you ever need anything, feel free to come back here.\l"
+                "Good luck on your journey, {PLAYER}!"), MSGBOX_AUTOCLOSE)
+            end
+        }
     ]
 }
 
 script ProfMyrasLab_EventScript_ProfMyra_Dialogue {
-    msgbox(format("Jirachi seems to be doing a bit better now, thanks to you, {PLAYER}.\l"
-        "However, I think it's best if we get it some more potent medicine.\l"
-        "I know you've done a lot already, but would you be willing to go to Solstice Town to pick it up?\l"
-        "It's just the next town over.\l"
-        "You can take the Pokémon I lent you, of course.\l"
-        "The PokéMart attendant will have it ready for you at my request.\l"
-        "Thank you, {PLAYER}. We'll see you when you get back!"), type=MSGBOX_NPC)
+    if (!flag(FLAG_RECEIVED_JIRACHI_MEDICINE)) {
+        msgbox(format("Jirachi seems to be doing a bit better now, thanks to you, {PLAYER}.\l"
+            "However, I think it's best if we get it some more potent medicine.\l"
+            "I know you've done a lot already, but would you be willing to go to Solstice Town to pick it up?\l"
+            "It's just the next town over.\l"
+            "You can take the Pokémon I lent you, of course.\l"
+            "The PokéMart attendant will have it ready for you at my request.\l"
+            "Thank you, {PLAYER}. We'll see you when you get back!"), type=MSGBOX_NPC)
+    } else {
+        msgbox(format("Welcome back, {PLAYER}!\l"
+            "Jirachi is doing much better now, thanks to you!"), type=MSGBOX_NPC)
+    }
 }
 
 script ProfMyrasLab_EventScript_JirachiNPC {

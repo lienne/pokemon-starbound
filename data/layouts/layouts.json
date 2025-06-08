@@ -4415,7 +4415,7 @@
       "id": "LAYOUT_LUMEN_VILLAGE",
       "name": "LumenVillage_Layout",
       "width": 28,
-      "height": 27,
+      "height": 26,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/LumenVillage/border.bin",
@@ -4444,7 +4444,7 @@
     {
       "id": "LAYOUT_STARSEA_PASSAGE",
       "name": "StarseaPassage_Layout",
-      "width": 20,
+      "width": 42,
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -4504,7 +4504,7 @@
     {
       "id": "LAYOUT_SOLSTICE_TOWN",
       "name": "SolsticeTown_Layout",
-      "width": 25,
+      "width": 27,
       "height": 24,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
