@@ -1,0 +1,27 @@
+mapscripts SolsticeTown_MapScripts {
+    
+}
+
+script SolsticeTown_EventScript_TownSign {
+    lockall
+    msgbox(format("Solstice Town\n"
+        "“The balance point between light and shadow”"))
+    releaseall
+}
+
+script SolsticeTown_EventScript_Girl1_Dialogue {
+    applymovement(SolsticeTown_Girl1, moves(face_player))
+    msgbox(format("Did you know you can press Start to check your Pokémon summary?"), type=MSGBOX_NPC)
+    applymovement(SolsticeTown_Girl1, moves(face_right))
+}
+
+script SolsticeTown_EventScript_Boy1_Dialogue {
+    applymovement(SolsticeTown_Boy1, moves(face_player))
+    msgbox(format("I use the Pokémon Summary screen to check my Pokémon's nature."), type=MSGBOX_NPC)
+    applymovement(SolsticeTown_Boy1, moves(face_left))
+}
+
+script SolsticeTown_EventScript_Girl2_Dialogue {
+    applymovement(SolsticeTown_Girl2, moves(face_player))
+    msgbox(format("I want to take a rest, so I'm saving my progress."), type=MSGBOX_NPC)
+}

@@ -4505,11 +4505,61 @@
       "id": "LAYOUT_SOLSTICE_TOWN",
       "name": "SolsticeTown_Layout",
       "width": 25,
-      "height": 25,
+      "height": 24,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/SolsticeTown/border.bin",
       "blockdata_filepath": "data/layouts/SolsticeTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_SOLSTICE_TOWN_POKEMON_CENTER_1F",
+      "name": "SolsticeTown_PokemonCenter_1F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/SolsticeTown_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SolsticeTown_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SOLSTICE_TOWN_MART",
+      "name": "SolsticeTown_Mart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/SolsticeTown_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/SolsticeTown_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_SOLSTICE_TOWN_HOUSE2",
+      "name": "SolsticeTown_House2_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SolsticeTown_House2/border.bin",
+      "blockdata_filepath": "data/layouts/SolsticeTown_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_SOLSTICE_TOWN_HOUSE1",
+      "name": "SolsticeTown_House1_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SolsticeTown_House1/border.bin",
+      "blockdata_filepath": "data/layouts/SolsticeTown_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_SOLSTICE_TOWN_HOUSE3",
+      "name": "SolsticeTown_House3_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SolsticeTown_House3/border.bin",
+      "blockdata_filepath": "data/layouts/SolsticeTown_House3/map.bin"
     }
   ]
 }

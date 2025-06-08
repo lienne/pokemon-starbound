@@ -1177,3 +1177,13 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/LumenVillage_CassiansHouse_2F/scripts.inc"
 
 	.include "data/maps/SolsticeTown/scripts.inc"
+
+	.include "data/maps/SolsticeTown_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/SolsticeTown_Mart/scripts.inc"
+
+	.include "data/maps/SolsticeTown_House2/scripts.inc"
+
+	.include "data/maps/SolsticeTown_House1/scripts.inc"
+
+	.include "data/maps/SolsticeTown_House3/scripts.inc"

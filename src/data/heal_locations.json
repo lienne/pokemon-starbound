@@ -143,6 +143,12 @@
       "map": "MAP_BEGINNER_CLEARING",
       "x": 12,
       "y": 12
+    },
+    {
+      "id": "HEAL_LOCATION_SOLSTICE_TOWN",
+      "map": "MAP_SOLSTICE_TOWN",
+      "x": 3,
+      "y": 21
     }
   ]
 }

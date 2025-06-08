@@ -35,7 +35,8 @@
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124",
     "gMapGroup_AstreaTownsAndRoutes",
-    "gMapGroup_IndoorLumenVillage"
+    "gMapGroup_IndoorLumenVillage",
+    "gMapGroup_IndoorSolstice"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -636,5 +637,12 @@
     "LumenVillage_LyrasHouse_2F",
     "LumenVillage_CassiansHouse_1F",
     "LumenVillage_CassiansHouse_2F"
+  ],
+  "gMapGroup_IndoorSolstice": [
+    "SolsticeTown_PokemonCenter_1F",
+    "SolsticeTown_Mart",
+    "SolsticeTown_House1",
+    "SolsticeTown_House2",
+    "SolsticeTown_House3"
   ]
 }
