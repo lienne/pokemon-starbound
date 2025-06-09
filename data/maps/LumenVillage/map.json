@@ -57,6 +57,34 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_HIDE_RIVAL_INTRO_NPC"
+    },
+    {
+      "local_id": "LumenVillage_OldLady",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
+      "x": 13,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 2,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LumenVillage_OldLady_Dialogue",
+      "flag": "0"
+    },
+    {
+      "local_id": "LumenVillage_LittleGirl",
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
+      "x": 6,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LumenVillage_LittleGirl_Dialogue",
+      "flag": "0"
     }
   ],
   "warp_events": [

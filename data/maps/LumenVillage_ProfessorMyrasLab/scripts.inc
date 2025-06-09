@@ -123,27 +123,37 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1:
 # 89 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	removeitem ITEM_PARCEL
 # 90 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_11, MSGBOX_AUTOCLOSE
+	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_11
+# 92 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 93 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	waitfanfare
+# 94 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	setflag FLAG_SYS_POKEDEX_GET
+# 95 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	special SetUnlockedPokedexFlags
+# 96 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_12, MSGBOX_AUTOCLOSE
 	end
 
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue::
-# 101 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 106 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_JIRACHI_MEDICINE, ProfMyrasLab_EventScript_ProfMyra_Dialogue_1
-# 110 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 109 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_1, type = MSGBOX_NPC
 	return
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue_1:
-# 102 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 107 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_0, type = MSGBOX_NPC
 	return
 
 
 ProfMyrasLab_EventScript_JirachiNPC::
-# 116 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 115 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	playmoncry SPECIES_JIRACHI, CRY_MODE_NORMAL
-# 117 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 116 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	waitmoncry
 	return
 
@@ -334,7 +344,7 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_10:
 # 85 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	.string "I see you've also retrieved the\n"
 	.string "medicine from Solstice Town.\l"
-	.string "Thank you for that, {PLAYER}\l"
+	.string "Thank you for that, {PLAYER}.\l"
 	.string "I think Jirachi will be able to recover\l"
 	.string "now.$"
 
@@ -345,31 +355,24 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_11:
 	.string "this as well.\l"
 	.string "It's a Pokédex, a device that records\l"
 	.string "data on all Pokémon you encounter.\l"
-	.string "I hope you'll use it to learn more about\l"
+	.string "$"
+
+LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_12:
+# 97 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	.string "I hope you'll use it to learn more about\n"
 	.string "the world of Pokémon.\l"
 	.string "And of course, if you ever need\l"
 	.string "anything, feel free to come back here.\l"
 	.string "Good luck on your journey, {PLAYER}!$"
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_0:
-# 102 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	.string "Jirachi seems to be doing a bit better\n"
-	.string "now, thanks to you, {PLAYER}.\l"
-	.string "However, I think it's best if we get it\l"
-	.string "some more potent medicine.\l"
-	.string "I know you've done a lot already, but\l"
-	.string "would you be willing to go to Solstice\l"
-	.string "Town to pick it up?\l"
-	.string "It's just the next town over.\l"
-	.string "You can take the Pokémon I lent you, of\l"
-	.string "course.\l"
-	.string "The PokéMart attendant will have it\l"
-	.string "ready for you at my request.\l"
-	.string "Thank you, {PLAYER}. We'll see you\l"
-	.string "when you get back!$"
+# 107 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	.string "Thank you for agreeing to get the\n"
+	.string "medicine from Solstice Town for Jirachi.\l"
+	.string "It's imperative we help it recover.$"
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_1:
-# 110 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 109 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	.string "Welcome back, {PLAYER}!\l"
 	.string "Jirachi is doing much better now,\l"
 	.string "thanks to you!$"

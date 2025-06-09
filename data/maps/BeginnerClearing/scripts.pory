@@ -1,10 +1,6 @@
 mapscripts BeginnerClearing_MapScripts {
     MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE [
         1, 1 {
-            removeobject(GruntA)
-            removeobject(GruntB)
-            removeobject(ProfMyra)
-            removeobject(MyrasBag)
             turnobject(LOCALID_PLAYER, DIR_EAST)
         }
     ]
@@ -138,6 +134,7 @@ script BeginnerClearing_EventScript_JirachiNPC {
 
 script BeginnerClearing_EventScript_JirachiIntro {
     lockall
+    clearflag(FLAG_HIDE_CLEARING_NPCS)
     msgbox(format("Jirachi: Help... they're coming after me..."))
     playse(SE_SELECT)
     delay(10)
@@ -145,7 +142,7 @@ script BeginnerClearing_EventScript_JirachiIntro {
     playse(SE_PIN)
     waitmovement(0)
     delay(50)
-    msgbox(format("They took my friend... help..."), MSGBOX_AUTOCLOSE)
+    msgbox(format("They took my friend... Help..."), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     addobject(ProfMyra)
     applymovement(ProfMyra, BeginnerClearing_MyraRunsInA)
@@ -207,7 +204,7 @@ script BeginnerClearing_EventScript_JirachiIntro {
     delay(50)
     msgbox(format("Grunt 1: Huh? Who are you?"))
     playse(SE_SELECT)
-    msgbox(format("Grunt 2: You think a little dweeb like you can get in our way?"))
+    msgbox(format("Grunt 2: You think a dweeb like you can get in our way?"))
     playse(SE_SELECT)
     msgbox(format("Prof. Myra: And who are you? What do you want with this Jirachi?"))
     playse(SE_SELECT)
@@ -222,6 +219,9 @@ script BeginnerClearing_EventScript_JirachiIntro {
         "Hmmm, I see. I think this situation calls for special circumstances.\l"
         "I will lend you one of my Pokémon so we can defend this Jirachi together.\l"
         "Please grab a Pokéball from my bag."))
+    setobjectxyperm(GruntA, 7, 14)
+    setobjectxyperm(GruntB, 7, 15)
+    setobjectxyperm(ProfMyra, 11, 15)
     releaseall
 }
 
@@ -257,7 +257,7 @@ script BeginnerClearing_EventScript_GruntABattle {
 
 script BeginnerClearing_EventScript_AfterBattle {
     lockall
-    msgbox(format("Grunt 1: How is this possible??\l"
+    msgbox(format("Grunt 1: How is this possible!?\l"
         "You little brat... You'll regret this!"), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     applymovement(GruntA, moves(walk_fast_left * 10))
@@ -276,6 +276,8 @@ script BeginnerClearing_EventScript_AfterBattle {
         "Now let's take this Jirachi back to my lab so it can rest."))
     playse(SE_SELECT)
     setflag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)
+    setflag(FLAG_HIDE_CLEARING_NPCS)
+    setflag(FLAG_HIDE_CLEARING_JIRACHI)
     warpsilent(MAP_LUMEN_VILLAGE_PROFESSOR_MYRAS_LAB, 6, 12)
     releaseall
 }

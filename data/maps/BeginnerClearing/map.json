@@ -32,7 +32,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BeginnerClearing_EventScript_JirachiNPC",
-      "flag": "0"
+      "flag": "FLAG_HIDE_CLEARING_JIRACHI"
     },
     {
       "local_id": "ProfMyra",
@@ -54,7 +54,7 @@
       "x": 3,
       "y": 14,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -68,7 +68,7 @@
       "x": 2,
       "y": 15,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -110,24 +110,6 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "BeginnerClearing_EventScript_WalkFromB"
-    },
-    {
-      "type": "trigger",
-      "x": 4,
-      "y": 11,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "BeginnerClearing_EventScript_GoBack_UpTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 5,
-      "y": 11,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "BeginnerClearing_EventScript_GoBack_UpTrigger"
     }
   ],
   "bg_events": []
