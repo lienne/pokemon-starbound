@@ -84,12 +84,17 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             msgbox(format("Would you like to give a nickname to the Pokémon?"))
             // Set up pokemon nickname screen here, MSGBOX_YESNO
             msgbox(format("I see you've also retrieved the medicine from Solstice Town.\l"
-                "Thank you for that, {PLAYER}\l"
+                "Thank you for that, {PLAYER}.\l"
                 "I think Jirachi will be able to recover now."))
             setflag(FLAG_DELIVERED_JIRACHI_MEDICINE)
             removeitem(ITEM_PARCEL)
             msgbox(format("Since you're keeping the Pokémon I lent you, I think it's only fair that you take this as well.\l"
-                "It's a Pokédex, a device that records data on all Pokémon you encounter.\l"
+                "It's a Pokédex, a device that records data on all Pokémon you encounter.\l"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            waitfanfare()
+    	    setflag(FLAG_SYS_POKEDEX_GET)
+	        special(SetUnlockedPokedexFlags)
+            msgbox(format(
                 "I hope you'll use it to learn more about the world of Pokémon.\l"
                 "And of course, if you ever need anything, feel free to come back here.\l"
                 "Good luck on your journey, {PLAYER}!"), MSGBOX_AUTOCLOSE)
@@ -100,13 +105,7 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
 
 script ProfMyrasLab_EventScript_ProfMyra_Dialogue {
     if (!flag(FLAG_RECEIVED_JIRACHI_MEDICINE)) {
-        msgbox(format("Jirachi seems to be doing a bit better now, thanks to you, {PLAYER}.\l"
-            "However, I think it's best if we get it some more potent medicine.\l"
-            "I know you've done a lot already, but would you be willing to go to Solstice Town to pick it up?\l"
-            "It's just the next town over.\l"
-            "You can take the Pokémon I lent you, of course.\l"
-            "The PokéMart attendant will have it ready for you at my request.\l"
-            "Thank you, {PLAYER}. We'll see you when you get back!"), type=MSGBOX_NPC)
+        msgbox(format("Thank you for agreeing to get the medicine from Solstice Town for Jirachi. It's imperative we help it recover."), type=MSGBOX_NPC)
     } else {
         msgbox(format("Welcome back, {PLAYER}!\l"
             "Jirachi is doing much better now, thanks to you!"), type=MSGBOX_NPC)

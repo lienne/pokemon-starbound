@@ -16,8 +16,7 @@ script SolsticeTown_Mart_Employee_Dialogue {
     } elif (flag(FLAG_RECEIVED_JIRACHI_MEDICINE) && !flag(FLAG_DELIVERED_JIRACHI_MEDICINE)) {
         applymovement(SolsticeTown_Mart_Employee, moves(face_player))
         msgbox(format("Hi {PLAYER}!\l"
-            "Did you deliver the package to Prof. Myra yet?\l"
-            "You should go do that now!"), type=MSGBOX_NPC)
+            "Did you deliver the package to Prof. Myra yet?"), type=MSGBOX_NPC)
     } else {
         applymovement(SolsticeTown_Mart_Employee, moves(face_player))
         msgbox(format("Welcome to the Solstice Town Mart!"), type=MSGBOX_NPC)
