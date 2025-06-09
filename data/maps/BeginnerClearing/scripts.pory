@@ -278,6 +278,7 @@ script BeginnerClearing_EventScript_AfterBattle {
     setflag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)
     setflag(FLAG_HIDE_CLEARING_NPCS)
     setflag(FLAG_HIDE_CLEARING_JIRACHI)
+    special(HealPlayerParty)
     warpsilent(MAP_LUMEN_VILLAGE_PROFESSOR_MYRAS_LAB, 6, 12)
     releaseall
 }

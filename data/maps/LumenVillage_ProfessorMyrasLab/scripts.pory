@@ -54,7 +54,7 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             waitmovement(0)
             applymovement(ProfMyrasLab_Rival_Intro_2, moves(emote_exclamation_mark))
             playse(SE_PIN)
-            waitmovement(0)
+            waitmovement()
             msgbox(format("{PLAYER}!\l"
                 "I told you I'd get a Pokémon too!\l"
                 "Now we're even. Don't think you'll stay one step ahead for long!\l"
@@ -66,7 +66,8 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             applymovement(ProfMyrasLab_Rival_Intro_2, moves(walk_fast_down * 2))
             applymovement(LOCALID_PLAYER, moves(face_down))
             applymovement(ProfMyrasLab_Rival_Intro_2, moves(walk_fast_down * 5))
-            waitmovement(0)
+            waitmovement(ProfMyrasLab_Rival_Intro_2)
+            waitmovement(LOCALID_PLAYER)
             playse(SE_DOOR)
             waitse()
             removeobject(ProfMyrasLab_Rival_Intro_2)

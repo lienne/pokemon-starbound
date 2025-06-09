@@ -106,13 +106,12 @@ LumenVillage_EventScript_ProfLabSign::
 	releaseall
 	return
 
-
-LumenVillage_EventScript_LyrasHouseSign::
-# 68 "data/maps/LumenVillage/scripts.pory"
+LumenVillage_EventScript_SelenesHouseSign::
+# 65 "data/maps/LumenVillage/scripts.pory"
 	lockall
-# 69 "data/maps/LumenVillage/scripts.pory"
-	msgbox LumenVillage_EventScript_LyrasHouseSign_Text_0
-# 70 "data/maps/LumenVillage/scripts.pory"
+# 66 "data/maps/LumenVillage/scripts.pory"
+	msgbox LumenVillage_EventScript_SelenesHouseSign_Text_0
+# 67 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
@@ -246,9 +245,9 @@ LumenVillage_EventScript_ProfLabSign_Text_0:
 # 63 "data/maps/LumenVillage/scripts.pory"
 	.string "Prof. Myra's Lab$"
 
-LumenVillage_EventScript_LyrasHouseSign_Text_0:
-# 69 "data/maps/LumenVillage/scripts.pory"
-	.string "Lyra's House$"
+LumenVillage_EventScript_SelenesHouseSign_Text_0:
+# 66 "data/maps/LumenVillage/scripts.pory"
+	.string "Selene's House$"
 
 LumenVillage_EventScript_CassiansHouseSign_Text_0:
 # 75 "data/maps/LumenVillage/scripts.pory"

@@ -635,10 +635,10 @@
   ],
   "gMapGroup_IndoorLumenVillage": [
     "LumenVillage_ProfessorMyrasLab",
-    "LumenVillage_LyrasHouse_1F",
-    "LumenVillage_LyrasHouse_2F",
     "LumenVillage_CassiansHouse_1F",
-    "LumenVillage_CassiansHouse_2F"
+    "LumenVillage_CassiansHouse_2F",
+    "LumenVillage_SelenesHouse_1F",
+    "LumenVillage_SelenesHouse_2F"
   ],
   "gMapGroup_IndoorSolstice": [
     "SolsticeTown_PokemonCenter_1F",

@@ -64,9 +64,9 @@ script LumenVillage_EventScript_ProfLabSign {
     releaseall
 }
 
-script LumenVillage_EventScript_LyrasHouseSign {
+script LumenVillage_EventScript_SelenesHouseSign {
     lockall
-    msgbox("Lyra's House")
+    msgbox("Selene's House")
     releaseall
 }
 

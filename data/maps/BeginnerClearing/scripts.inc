@@ -569,6 +569,10 @@ BeginnerClearing_EventScript_AfterBattle::
 # 281 "data/maps/BeginnerClearing/scripts.pory"
 	warpsilent MAP_LUMEN_VILLAGE_PROFESSOR_MYRAS_LAB, 6, 12
 # 282 "data/maps/BeginnerClearing/scripts.pory"
+	special HealPlayerParty
+# 280 "data/maps/BeginnerClearing/scripts.pory"
+	warpsilent MAP_LUMEN_VILLAGE_PROFESSOR_MYRAS_LAB, 6, 12
+# 281 "data/maps/BeginnerClearing/scripts.pory"
 	releaseall
 	return
 

@@ -11569,28 +11569,28 @@
             "mons": [
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "max_level": 7,
+                "species": "SPECIES_HOOTHOOT"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "max_level": 7,
+                "species": "SPECIES_BUDEW"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "max_level": 7,
+                "species": "SPECIES_JIGGLYPUFF"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "max_level": 7,
+                "species": "SPECIES_CATERPIE"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "max_level": 7,
+                "species": "SPECIES_PIDGEY"
               },
               {
                 "min_level": 5,
@@ -11665,7 +11665,17 @@
               {
                 "min_level": 5,
                 "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
                 "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -11680,7 +11690,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
@@ -11690,17 +11700,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,

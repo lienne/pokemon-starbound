@@ -1168,10 +1168,6 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/LumenVillage_ProfessorMyrasLab/scripts.inc"
 
-	.include "data/maps/LumenVillage_LyrasHouse_1F/scripts.inc"
-
-	.include "data/maps/LumenVillage_LyrasHouse_2F/scripts.inc"
-
 	.include "data/maps/LumenVillage_CassiansHouse_1F/scripts.inc"
 
 	.include "data/maps/LumenVillage_CassiansHouse_2F/scripts.inc"
@@ -1191,3 +1187,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/WhisperingGrove/scripts.inc"
 
 	.include "data/maps/Route2_Sunfade_Trail/scripts.inc"
+
+	.include "data/maps/LumenVillage_SelenesHouse_1F/scripts.inc"
+
+	.include "data/maps/LumenVillage_SelenesHouse_2F/scripts.inc"
