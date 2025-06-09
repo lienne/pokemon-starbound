@@ -27,7 +27,7 @@ SolsticeTown_Mart_Employee_Dialogue_1:
 # 8 "data/maps/SolsticeTown_Mart/scripts.pory"
 	msgbox SolsticeTown_Mart_Employee_Dialogue_Text_0, MSGBOX_AUTOCLOSE
 # 11 "data/maps/SolsticeTown_Mart/scripts.pory"
-	giveitem ITEM_PARCEL, MSGBOX_AUTOCLOSE
+	giveitem ITEM_PARCEL
 # 12 "data/maps/SolsticeTown_Mart/scripts.pory"
 	setflag FLAG_RECEIVED_JIRACHI_MEDICINE
 # 13 "data/maps/SolsticeTown_Mart/scripts.pory"

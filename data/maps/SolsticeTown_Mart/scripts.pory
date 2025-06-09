@@ -8,7 +8,7 @@ script SolsticeTown_Mart_Employee_Dialogue {
         msgbox(format("Hi! Are you {PLAYER}?\l"
             "Prof. Myra called ahead of time to say you'd come by.\l"
             "I have your package here for you."), MSGBOX_AUTOCLOSE)
-        giveitem(ITEM_PARCEL, MSGBOX_AUTOCLOSE)
+        giveitem(ITEM_PARCEL)
         setflag(FLAG_RECEIVED_JIRACHI_MEDICINE)
         setvar(VAR_INTRO_SCENE, 3)
     } elif (flag(FLAG_RECEIVED_JIRACHI_MEDICINE) && !flag(FLAG_DELIVERED_JIRACHI_MEDICINE)) {

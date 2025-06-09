@@ -4574,10 +4574,10 @@
     {
       "id": "LAYOUT_ROUTE2_SUNFADE_TRAIL",
       "name": "Route2_Sunfade_Trail_Layout",
-      "width": 30,
-      "height": 12,
+      "width": 80,
+      "height": 50,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Route2_Sunfade_Trail/border.bin",
       "blockdata_filepath": "data/layouts/Route2_Sunfade_Trail/map.bin"
     }

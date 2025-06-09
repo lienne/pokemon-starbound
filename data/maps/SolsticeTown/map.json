@@ -17,6 +17,11 @@
       "map": "MAP_ROUTE1_STARLIT_PATH",
       "offset": -14,
       "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE2_SUNFADE_TRAIL",
+      "offset": 16,
+      "direction": "up"
     }
   ],
   "object_events": [
