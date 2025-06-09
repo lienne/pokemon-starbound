@@ -81,7 +81,7 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1:
 # 56 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	playse SE_PIN
 # 57 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	waitmovement 0
+	waitmovement
 # 58 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_6, MSGBOX_AUTOCLOSE
 # 64 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
@@ -95,55 +95,57 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1:
 # 68 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	applymovement ProfMyrasLab_Rival_Intro_2, LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Movement_6
 # 69 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	waitmovement 0
+	waitmovement ProfMyrasLab_Rival_Intro_2
 # 70 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	playse SE_DOOR
+	waitmovement LOCALID_PLAYER
 # 71 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	waitse
+	playse SE_DOOR
 # 72 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	removeobject ProfMyrasLab_Rival_Intro_2
-# 73 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	applymovement LOCALID_PLAYER, LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Movement_7
-# 74 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	waitmovement 0
-# 75 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_7
-# 80 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	playse MUS_OBTAIN_ITEM
-# 81 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_8, MSGBOX_AUTOCLOSE
-# 82 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	waitse
+# 73 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	removeobject ProfMyrasLab_Rival_Intro_2
+# 74 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	applymovement LOCALID_PLAYER, LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Movement_7
+# 75 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	waitmovement 0
+# 76 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_7
+# 81 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	playse MUS_OBTAIN_ITEM
+# 82 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_8, MSGBOX_AUTOCLOSE
 # 83 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	waitse
+# 84 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_9
-# 85 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 86 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_10
-# 88 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	setflag FLAG_DELIVERED_JIRACHI_MEDICINE
 # 89 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	removeitem ITEM_PARCEL
+	setflag FLAG_DELIVERED_JIRACHI_MEDICINE
 # 90 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	removeitem ITEM_PARCEL
+# 91 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_11, MSGBOX_AUTOCLOSE
 	end
 
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue::
-# 101 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 102 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_JIRACHI_MEDICINE, ProfMyrasLab_EventScript_ProfMyra_Dialogue_1
-# 110 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 111 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_1, type = MSGBOX_NPC
 	return
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue_1:
-# 102 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 103 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_0, type = MSGBOX_NPC
 	return
 
 
 ProfMyrasLab_EventScript_JirachiNPC::
-# 116 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	playmoncry SPECIES_JIRACHI, CRY_MODE_NORMAL
 # 117 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	playmoncry SPECIES_JIRACHI, CRY_MODE_NORMAL
+# 118 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	waitmoncry
 	return
 
@@ -228,9 +230,9 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Movement_6
 	walk_fast_down
 	step_end
 
-# 73 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 74 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Movement_7:
-# 73 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 74 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	walk_up
 	step_end
 
@@ -312,7 +314,7 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_6:
 	.string "Catch you later!$"
 
 LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_7:
-# 75 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 76 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	.string "Hi {PLAYER}!\l"
 	.string "You came at just the right time.\l"
 	.string "I ended up giving your friend a Pokémon.\l"
@@ -322,16 +324,16 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_7:
 	.string "already started bonding.$"
 
 LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_8:
-# 81 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 82 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	.string "You received a Pokémon!$"
 
 LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_9:
-# 83 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 84 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	.string "Would you like to give a nickname to the\n"
 	.string "Pokémon?$"
 
 LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_10:
-# 85 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 86 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	.string "I see you've also retrieved the\n"
 	.string "medicine from Solstice Town.\l"
 	.string "Thank you for that, {PLAYER}\l"
@@ -339,7 +341,7 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_10:
 	.string "now.$"
 
 LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_11:
-# 90 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 91 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	.string "Since you're keeping the Pokémon I lent\n"
 	.string "you, I think it's only fair that you take\l"
 	.string "this as well.\l"
@@ -352,7 +354,7 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_11:
 	.string "Good luck on your journey, {PLAYER}!$"
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_0:
-# 102 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 103 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	.string "Jirachi seems to be doing a bit better\n"
 	.string "now, thanks to you, {PLAYER}.\l"
 	.string "However, I think it's best if we get it\l"
@@ -369,7 +371,7 @@ ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_0:
 	.string "when you get back!$"
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_1:
-# 110 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 111 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	.string "Welcome back, {PLAYER}!\l"
 	.string "Jirachi is doing much better now,\l"
 	.string "thanks to you!$"

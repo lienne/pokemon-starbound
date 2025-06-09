@@ -4462,26 +4462,6 @@
       "blockdata_filepath": "data/layouts/LumenVillage_ProfessorMyrasLab/map.bin"
     },
     {
-      "id": "LAYOUT_LUMEN_VILLAGE_LYRAS_HOUSE_1F",
-      "name": "LumenVillage_LyrasHouse_1F_Layout",
-      "width": 11,
-      "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BrendansMaysHouse",
-      "border_filepath": "data/layouts/LumenVillage_LyrasHouse_1F/border.bin",
-      "blockdata_filepath": "data/layouts/LumenVillage_LyrasHouse_1F/map.bin"
-    },
-    {
-      "id": "LAYOUT_LUMEN_VILLAGE_LYRAS_HOUSE_2F",
-      "name": "LumenVillage_LyrasHouse_2F_Layout",
-      "width": 9,
-      "height": 8,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BrendansMaysHouse",
-      "border_filepath": "data/layouts/LumenVillage_LyrasHouse_2F/border.bin",
-      "blockdata_filepath": "data/layouts/LumenVillage_LyrasHouse_2F/map.bin"
-    },
-    {
       "id": "LAYOUT_LUMEN_VILLAGE_CASSIANS_HOUSE_1F",
       "name": "LumenVillage_CassiansHouse_1F_Layout",
       "width": 11,
@@ -4580,6 +4560,26 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Route2_Sunfade_Trail/border.bin",
       "blockdata_filepath": "data/layouts/Route2_Sunfade_Trail/map.bin"
+    },
+    {
+      "id": "LAYOUT_LUMEN_VILLAGE_SELENES_HOUSE_1F",
+      "name": "LumenVillage_SelenesHouse_1F_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/LumenVillage_SelenesHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/LumenVillage_SelenesHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LUMEN_VILLAGE_SELENES_HOUSE_2F",
+      "name": "LumenVillage_SelenesHouse_2F_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/LumenVillage_SelenesHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/LumenVillage_SelenesHouse_2F/map.bin"
     }
   ]
 }
