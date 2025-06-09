@@ -11493,7 +11493,7 @@
           }
         },
         {
-          "map": "MAP_STARLIT_PATH",
+          "map": "MAP_ROUTE1_STARLIT_PATH",
           "base_label": "gStarlitPath",
           "land_mons": {
             "encounter_rate": 10,

@@ -474,7 +474,7 @@
     },
     {
       "id": "MAPSEC_PETALBURG_WOODS",
-      "name": "PETALBURG WOODS",
+      "name": "Whispering Grove",
       "x": 0,
       "y": 8,
       "width": 1,
@@ -817,7 +817,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_2",
-      "name": "ROUTE 2",
+      "name": "Sunfade Trail",
       "x": 0,
       "y": 0,
       "width": 1,

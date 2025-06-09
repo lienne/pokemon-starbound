@@ -1160,7 +1160,7 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/LumenVillage/scripts.inc"
 
-	.include "data/maps/StarlitPath/scripts.inc"
+	.include "data/maps/Route1_StarlitPath/scripts.inc"
 
 	.include "data/maps/BeginnerClearing/scripts.inc"
 
@@ -1187,3 +1187,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/SolsticeTown_House1/scripts.inc"
 
 	.include "data/maps/SolsticeTown_House3/scripts.inc"
+
+	.include "data/maps/WhisperingGrove/scripts.inc"
+
+	.include "data/maps/Route2_Sunfade_Trail/scripts.inc"

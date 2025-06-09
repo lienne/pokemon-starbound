@@ -4422,14 +4422,14 @@
       "blockdata_filepath": "data/layouts/LumenVillage/map.bin"
     },
     {
-      "id": "LAYOUT_STARLIT_PATH",
-      "name": "StarlitPath_Layout",
+      "id": "LAYOUT_ROUTE1_STARLIT_PATH",
+      "name": "Route1_StarlitPath_Layout",
       "width": 26,
       "height": 36,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/StarlitPath/border.bin",
-      "blockdata_filepath": "data/layouts/StarlitPath/map.bin"
+      "border_filepath": "data/layouts/Route1_StarlitPath/border.bin",
+      "blockdata_filepath": "data/layouts/Route1_StarlitPath/map.bin"
     },
     {
       "id": "LAYOUT_BEGINNER_CLEARING",
@@ -4560,6 +4560,26 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/SolsticeTown_House3/border.bin",
       "blockdata_filepath": "data/layouts/SolsticeTown_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHISPERING_GROVE",
+      "name": "WhisperingGrove_Layout",
+      "width": 50,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/WhisperingGrove/border.bin",
+      "blockdata_filepath": "data/layouts/WhisperingGrove/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE2_SUNFADE_TRAIL",
+      "name": "Route2_Sunfade_Trail_Layout",
+      "width": 30,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route2_Sunfade_Trail/border.bin",
+      "blockdata_filepath": "data/layouts/Route2_Sunfade_Trail/map.bin"
     }
   ]
 }

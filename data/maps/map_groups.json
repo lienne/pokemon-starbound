@@ -36,7 +36,8 @@
     "gMapGroup_IndoorRoute124",
     "gMapGroup_AstreaTownsAndRoutes",
     "gMapGroup_IndoorLumenVillage",
-    "gMapGroup_IndoorSolstice"
+    "gMapGroup_IndoorSolstice",
+    "gMapGroup_AstreaDungeons"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -626,10 +627,11 @@
   ],
   "gMapGroup_AstreaTownsAndRoutes": [
     "LumenVillage",
-    "StarlitPath",
+    "Route1_StarlitPath",
     "BeginnerClearing",
     "StarseaPassage",
-    "SolsticeTown"
+    "SolsticeTown",
+    "Route2_Sunfade_Trail"
   ],
   "gMapGroup_IndoorLumenVillage": [
     "LumenVillage_ProfessorMyrasLab",
@@ -644,5 +646,8 @@
     "SolsticeTown_House1",
     "SolsticeTown_House2",
     "SolsticeTown_House3"
+  ],
+  "gMapGroup_AstreaDungeons": [
+    "WhisperingGrove"
   ]
 }
