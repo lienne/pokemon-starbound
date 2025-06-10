@@ -32,3 +32,9 @@ mart SolsticeTown_Mart_Items {
     ITEM_PARALYZE_HEAL
     ITEM_AWAKENING
 }
+
+script SolsticeTown_Boy1_Dialogue {
+    applymovement(SolsticeTown_Mart_Boy1, moves(face_player))
+    msgbox(format("Don't forget to grab Pokéballs! You never know what you'll run into out there."), type=MSGBOX_NPC)
+    applymovement(SolsticeTown_Mart_Boy1, moves(face_left))
+}

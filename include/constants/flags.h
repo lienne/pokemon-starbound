@@ -49,8 +49,8 @@
 #define FLAG_RECEIVED_JIRACHI_MEDICINE      0x23
 #define FLAG_DELIVERED_JIRACHI_MEDICINE     0x24
 #define FLAG_HIDE_RIVAL_IN_LAB              0x25
-#define FLAG_HIDE_CLEARING_JIRACHI    0x26
-#define FLAG_GOT_POKEBALL_SOLSTICE 0x27
+#define FLAG_HIDE_CLEARING_JIRACHI          0x26
+#define FLAG_GOT_POKEBALL_SOLSTICE          0x27
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag

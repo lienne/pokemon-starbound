@@ -201,7 +201,7 @@ script BeginnerClearing_EventScript_JirachiIntro {
     delay(50)
     applymovement(LOCALID_PLAYER, BeginnerClearing_PlayerRunsInFrontOfGrunts)
     waitmovement(0)
-    delay(50)
+    delay(30)
     msgbox(format("Grunt 1: Huh? Who are you?"))
     playse(SE_SELECT)
     msgbox(format("Grunt 2: You think a dweeb like you can get in our way?"))

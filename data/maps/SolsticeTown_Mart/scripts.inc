@@ -70,10 +70,26 @@ SolsticeTown_Mart_Items:
 	.2byte ITEM_AWAKENING
 	.2byte ITEM_NONE
 
+SolsticeTown_Boy1_Dialogue::
+# 37 "data/maps/SolsticeTown_Mart/scripts.pory"
+	applymovement SolsticeTown_Mart_Boy1, SolsticeTown_Mart_Employee_Dialogue_Movement_0
+# 38 "data/maps/SolsticeTown_Mart/scripts.pory"
+	msgbox SolsticeTown_Boy1_Dialogue_Text_0, type = MSGBOX_NPC
+# 39 "data/maps/SolsticeTown_Mart/scripts.pory"
+	applymovement SolsticeTown_Mart_Boy1, SolsticeTown_Boy1_Dialogue_Movement_0
+	return
+
+
 # 8 "data/maps/SolsticeTown_Mart/scripts.pory"
 SolsticeTown_Mart_Employee_Dialogue_Movement_0:
 # 8 "data/maps/SolsticeTown_Mart/scripts.pory"
 	face_player
+	step_end
+
+# 39 "data/maps/SolsticeTown_Mart/scripts.pory"
+SolsticeTown_Boy1_Dialogue_Movement_0:
+# 39 "data/maps/SolsticeTown_Mart/scripts.pory"
+	face_left
 	step_end
 
 SolsticeTown_Mart_Employee_Dialogue_Text_0:
@@ -96,3 +112,9 @@ SolsticeTown_Mart_Employee_Dialogue_Text_2:
 SolsticeTown_Mart_Employee_Dialogue_Text_3:
 # 25 "data/maps/SolsticeTown_Mart/scripts.pory"
 	.string "Thank you for shopping with us!$"
+
+SolsticeTown_Boy1_Dialogue_Text_0:
+# 38 "data/maps/SolsticeTown_Mart/scripts.pory"
+	.string "Don't forget to grab Pokéballs! You\n"
+	.string "never know what you'll run into out\l"
+	.string "there.$"

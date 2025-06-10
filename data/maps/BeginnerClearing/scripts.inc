@@ -426,7 +426,7 @@ BeginnerClearing_EventScript_JirachiIntro::
 # 203 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
 # 204 "data/maps/BeginnerClearing/scripts.pory"
-	delay 50
+	delay 30
 # 205 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_9
 # 206 "data/maps/BeginnerClearing/scripts.pory"

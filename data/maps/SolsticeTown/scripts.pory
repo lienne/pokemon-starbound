@@ -25,3 +25,92 @@ script SolsticeTown_EventScript_Girl2_Dialogue {
     applymovement(SolsticeTown_Girl2, moves(face_player))
     msgbox(format("I want to take a rest, so I'm saving my progress."), type=MSGBOX_NPC)
 }
+
+script SolsticeTown_EventScript_Boy2_Dialogue_SpotA {
+    if (!flag(FLAG_DELIVERED_JIRACHI_MEDICINE)) {
+        applymovement(SolsticeTown_Boy2, SolsticeTown_ExclamationMark)
+        playse(SE_PIN)
+        waitse()
+        waitmovement(0)
+        applymovement(SolsticeTown_Boy2, SolsticeTown_Boy2_RunsToPlayer_SpotA)
+        applymovement(LOCALID_PLAYER, moves(face_right))
+        msgbox(SolsticeTown_Boy2_Dialogue_PreDelivery, MSGBOX_AUTOCLOSE)
+        applymovement(LOCALID_PLAYER, moves(walk_down))
+        waitmovement(0)
+        applymovement(SolsticeTown_Boy2, SolsticeTown_Boy2_RunsBack_SpotA)
+        waitmovement(0)
+    }
+}
+
+script SolsticeTown_EventScript_Boy2_Dialogue_SpotB {
+    if (!flag(FLAG_DELIVERED_JIRACHI_MEDICINE)) {
+        applymovement(SolsticeTown_Boy2, SolsticeTown_ExclamationMark)
+        playse(SE_PIN)
+        waitse()
+        waitmovement(0)
+        applymovement(SolsticeTown_Boy2, SolsticeTown_Boy2_RunsToPlayer_SpotB)
+        applymovement(LOCALID_PLAYER, moves(face_right))
+        msgbox(SolsticeTown_Boy2_Dialogue_PreDelivery, MSGBOX_AUTOCLOSE)
+        applymovement(LOCALID_PLAYER, moves(walk_down))
+        waitmovement(0)
+        applymovement(SolsticeTown_Boy2, SolsticeTown_Boy2_RunsBack_SpotB)
+        waitmovement(0)
+    }
+}
+
+script SolsticeTown_EventScript_Boy2_Dialogue_SpotC {
+    if (!flag(FLAG_DELIVERED_JIRACHI_MEDICINE)) {
+        applymovement(SolsticeTown_Boy2, SolsticeTown_ExclamationMark)
+        playse(SE_PIN)
+        waitse()
+        waitmovement(0)
+        applymovement(LOCALID_PLAYER, moves(face_right))
+        msgbox(SolsticeTown_Boy2_Dialogue_PreDelivery, MSGBOX_AUTOCLOSE)
+        applymovement(LOCALID_PLAYER, moves(walk_down))
+        waitmovement(0)
+    }
+}
+
+script SolsticeTown_EventScript_Boy2_Dialogue {
+    if (!flag(FLAG_DELIVERED_JIRACHI_MEDICINE)) {
+        applymovement(SolsticeTown_Boy2, moves(face_player))
+        msgbox(SolsticeTown_Boy2_Dialogue_PreDelivery, type=MSGBOX_NPC)
+    } else {
+        applymovement(SolsticeTown_Boy2, moves(face_player))
+        msgbox(SolsticeTown_Boy2_Dialogue_PostDelivery, type=MSGBOX_NPC)
+    }
+}
+
+text SolsticeTown_Boy2_Dialogue_PreDelivery {
+    format("WHOA there, superstar! The road ahead's closed.\l"
+    "Not by law or anything, I'm just standing here real confidently.\l"
+    "You look like you've got something important to do back home anyway.")
+}
+
+text SolsticeTown_Boy2_Dialogue_PostDelivery {
+    format("Ahh, the hero returns!\n"
+        "I'd move out of the way dramatically, but my back's acting up.\l"
+        "Just pretend I did a cool spin or something.")
+}
+
+movement SolsticeTown_ExclamationMark {
+    emote_exclamation_mark
+}
+
+movement SolsticeTown_Boy2_RunsToPlayer_SpotA {
+    walk_fast_left * 2
+}
+
+movement SolsticeTown_Boy2_RunsBack_SpotA {
+    walk_right * 2
+    face_left
+}
+
+movement SolsticeTown_Boy2_RunsToPlayer_SpotB {
+    walk_fast_left
+}
+
+movement SolsticeTown_Boy2_RunsBack_SpotB {
+    walk_right
+    face_left
+}
