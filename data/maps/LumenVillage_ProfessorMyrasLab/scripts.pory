@@ -31,22 +31,23 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             playbgm(MUS_RG_ENCOUNTER_RIVAL, FALSE)
             delay(50)
             applymovement(LOCALID_PLAYER, moves(walk_up * 6))
-            msgbox(format("Professor Myra! I want a Pokémon too!\l"
+            waitmovement(0)
+            msgbox(format("Professor Myra! I want a Pokémon too!\n"
                 "{PLAYER} already got one! It's not fair that only {PLAYER} gets one!\l"
-                "I'll treat it well! We'll get strong together! Please believe me!\l"))
+                "I'll treat it well! We'll get strong together! Please believe me!"))
             msgbox(format("Hmmm... These Pokémon were part of a special research assignment.\l"
                 "They weren't meant for trainers... not yet.\l"
                 "But I see it in yours eyes - you're serious.\l"
                 "This isn't about catching up, is it?\l"
                 "It's about proving you're ready."))
-            msgbox(format("I've ALWAYS been ready!\l"
+            msgbox(format("I've ALWAYS been ready!\n"
                 "If {PLAYER} is out there, then I should be too!\l"
                 "Please, Professor! I want to be a Pokémon Trainer!"))
-            msgbox(format("...very well.\l"
+            msgbox(format("...very well.\n"
                 "But know this: once you take this step, there's no going back.\l"
                 "This journey will challenge more than just your strength.\l"
                 "Choose carefully."))
-            msgbox(format("Thank you, Professor Myra!!\l"
+            msgbox(format("Thank you, Professor Myra!!\n"
                 "I promise I won't let you down!"), MSGBOX_AUTOCLOSE)
             playse(MUS_OBTAIN_ITEM)
             msgbox(format("Rival received a Pokémon!"), MSGBOX_AUTOCLOSE)
@@ -56,7 +57,7 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             applymovement(ProfMyrasLab_Rival_Intro_2, moves(emote_exclamation_mark))
             playse(SE_PIN)
             waitmovement()
-            msgbox(format("{PLAYER}!\l"
+            msgbox(format("{PLAYER}!\n"
                 "I told you I'd get a Pokémon too!\l"
                 "Now we're even. Don't think you'll stay one step ahead for long!\l"
                 "...but, uh, I'm still glad we're doing this together.\l"
@@ -75,7 +76,7 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             fadedefaultbgm()
             applymovement(LOCALID_PLAYER, moves(walk_up))
             waitmovement(0)
-            msgbox(format("Hi {PLAYER}!\l"
+            msgbox(format("Hi {PLAYER}!\n"
                 "You came at just the right time.\l"
                 "I ended up giving your friend a Pokémon.\l"
                 "For the sake of being fair, I think you should keep the one I lent you earlier.\l"
@@ -91,7 +92,7 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             setflag(FLAG_DELIVERED_JIRACHI_MEDICINE)
             removeitem(ITEM_PARCEL)
             msgbox(format("Since you're keeping the Pokémon I lent you, I think it's only fair that you take this as well.\l"
-                "It's a Pokédex, a device that records data on all Pokémon you encounter.\l"))
+                "It's a Pokédex, a device that records data on all Pokémon you encounter."))
             playfanfare(MUS_OBTAIN_ITEM)
             waitfanfare()
     	    setflag(FLAG_SYS_POKEDEX_GET)

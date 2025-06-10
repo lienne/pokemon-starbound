@@ -78,14 +78,14 @@ SolsticeTown_Mart_Employee_Dialogue_Movement_0:
 
 SolsticeTown_Mart_Employee_Dialogue_Text_0:
 # 9 "data/maps/SolsticeTown_Mart/scripts.pory"
-	.string "Hi! Are you {PLAYER}?\l"
+	.string "Hi! Are you {PLAYER}?\n"
 	.string "Prof. Myra called ahead of time to say\l"
 	.string "you'd come by.\l"
 	.string "I have your package here for you.$"
 
 SolsticeTown_Mart_Employee_Dialogue_Text_1:
 # 18 "data/maps/SolsticeTown_Mart/scripts.pory"
-	.string "Hi {PLAYER}!\l"
+	.string "Hi {PLAYER}!\n"
 	.string "Did you deliver the package to Prof.\l"
 	.string "Myra yet?$"
 

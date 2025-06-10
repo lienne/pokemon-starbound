@@ -17,7 +17,7 @@
     {
       "local_id": "SolsticeTown_House1_Woman",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
-      "x": 6,
+      "x": 4,
       "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -25,7 +25,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SolsticeTown_House1_EventScript_Woman_Dialogue",
       "flag": "0"
     }
   ],
