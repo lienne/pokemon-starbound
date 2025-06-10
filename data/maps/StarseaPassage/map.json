@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_LUMEN_VILLAGE",
-      "offset": 6,
+      "offset": 0,
       "direction": "up"
     }
   ],

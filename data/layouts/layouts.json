@@ -4414,7 +4414,7 @@
     {
       "id": "LAYOUT_LUMEN_VILLAGE",
       "name": "LumenVillage_Layout",
-      "width": 28,
+      "width": 40,
       "height": 26,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -4435,7 +4435,7 @@
       "id": "LAYOUT_BEGINNER_CLEARING",
       "name": "BeginnerClearing_Layout",
       "width": 20,
-      "height": 20,
+      "height": 27,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/BeginnerClearing/border.bin",
