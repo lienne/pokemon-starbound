@@ -1,0 +1,14 @@
+mapscripts SolsticeTown_House1_MapScripts {
+
+}
+
+script SolsticeTown_House1_EventScript_Woman_Dialogue {
+    applymovement(SolsticeTown_House1_Woman, moves(face_player))
+    msgbox(format("I used to send Mail on my Pidove to a friend in Astridale... but lately, they haven't sent anything back!\lDo you think they don't like me anymore!?"), type=MSGBOX_NPC)
+}
+
+script SolsticeTown_House1_EventScript_Pidove {
+    applymovement(SolsticeTown_House1_Pidove, moves(face_player))
+    playmoncry(SPECIES_PIDOVE, CRY_MODE_NORMAL)
+    waitmoncry()
+}
