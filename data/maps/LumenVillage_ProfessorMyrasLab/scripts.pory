@@ -5,6 +5,9 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             turnobject(LOCALID_PLAYER, DIR_NORTH)
         }
     ]
+    MAP_SCRIPT_ON_TRANSITION {
+        call(Common_EventScript_SetupRivalGfxId)
+    }
     MAP_SCRIPT_ON_FRAME_TABLE[
         VAR_INTRO_SCENE, 0 {
             setvar(VAR_INTRO_SCENE, 1)
@@ -49,9 +52,9 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
                 "Choose carefully."))
             msgbox(format("Thank you, Professor Myra!!\n"
                 "I promise I won't let you down!"), MSGBOX_AUTOCLOSE)
-            playse(MUS_OBTAIN_ITEM)
+            playfanfare(MUS_OBTAIN_ITEM)
             msgbox(format("Rival received a Pokémon!"), MSGBOX_AUTOCLOSE)
-            waitse()
+            waitfanfare()
             applymovement(ProfMyrasLab_Rival_Intro_2, moves(face_down))
             waitmovement(0)
             applymovement(ProfMyrasLab_Rival_Intro_2, moves(emote_exclamation_mark))
@@ -81,9 +84,9 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
                 "I ended up giving your friend a Pokémon.\l"
                 "For the sake of being fair, I think you should keep the one I lent you earlier.\l"
                 "After all, it looks like you two have already started bonding."))
-            playse(MUS_OBTAIN_ITEM)
+            playfanfare(MUS_OBTAIN_ITEM)
             msgbox(format("You received a Pokémon!"), MSGBOX_AUTOCLOSE)
-            waitse()
+            waitfanfare()
             msgbox(format("Would you like to give a nickname to the Pokémon?"))
             // Set up pokemon nickname screen here, MSGBOX_YESNO
             msgbox(format("I see you've also retrieved the medicine from Solstice Town.\l"

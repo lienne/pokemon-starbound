@@ -8,6 +8,10 @@ mapscripts LumenVillage_MapScripts {
         }
     ]
 
+    MAP_SCRIPT_ON_TRANSITION {
+        call(Common_EventScript_SetupRivalGfxId)
+    }
+
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_INTRO_SCENE, 1 {
             setvar(VAR_INTRO_SCENE, 2)
