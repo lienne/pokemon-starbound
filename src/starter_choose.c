@@ -114,7 +114,7 @@ static const u16 sStarterMon[STARTER_MON_COUNT] =
 {
     SPECIES_BELDUM,
     SPECIES_DEINO,
-    SPECIES_LITWICK,
+    SPECIES_JANGMO_O,
 };
 
 static const struct BgTemplate sBgTemplates[3] =

@@ -28,6 +28,7 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             applymovement(LOCALID_PLAYER, moves(emote_exclamation_mark))
             waitmovement(0)
             playse(SE_PIN)
+            playbgm(MUS_RG_ENCOUNTER_RIVAL, FALSE)
             delay(50)
             applymovement(LOCALID_PLAYER, moves(walk_up * 6))
             msgbox(format("Professor Myra! I want a Pokémon too!\l"
@@ -71,6 +72,7 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             playse(SE_DOOR)
             waitse()
             removeobject(ProfMyrasLab_Rival_Intro_2)
+            fadedefaultbgm()
             applymovement(LOCALID_PLAYER, moves(walk_up))
             waitmovement(0)
             msgbox(format("Hi {PLAYER}!\l"
