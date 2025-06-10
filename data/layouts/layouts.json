@@ -4444,7 +4444,7 @@
     {
       "id": "LAYOUT_STARSEA_PASSAGE",
       "name": "StarseaPassage_Layout",
-      "width": 40,
+      "width": 42,
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
