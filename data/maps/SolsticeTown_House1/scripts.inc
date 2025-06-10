@@ -10,14 +10,6 @@ SolsticeTown_House1_EventScript_Woman_Dialogue::
 	return
 
 
-SolsticeTown_House1_EventScript_Pidove::
-# 11 "data/maps/SolsticeTown_House1/scripts.pory"
-	playmoncry SPECIES_PIDOVE, CRY_MODE_NORMAL
-# 12 "data/maps/SolsticeTown_House1/scripts.pory"
-	waitmoncry
-	return
-
-
 # 6 "data/maps/SolsticeTown_House1/scripts.pory"
 SolsticeTown_House1_EventScript_Woman_Dialogue_Movement_0:
 # 6 "data/maps/SolsticeTown_House1/scripts.pory"
