@@ -361,8 +361,7 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_11:
 	.string "you, I think it's only fair that you take\l"
 	.string "this as well.\l"
 	.string "It's a Pokédex, a device that records\l"
-	.string "data on all Pokémon you encounter.\l"
-	.string "$"
+	.string "data on all Pokémon you encounter.$"
 
 LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_12:
 # 101 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
