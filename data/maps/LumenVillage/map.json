@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_BEGINNER_CLEARING",
-      "offset": 9,
+      "offset": 8,
       "direction": "right"
     },
     {

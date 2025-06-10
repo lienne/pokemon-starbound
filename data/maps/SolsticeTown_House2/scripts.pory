@@ -1,0 +1,8 @@
+mapscripts SolsticeTown_House2_MapScripts {
+    
+}
+
+script SolsticeTown_House2_EventScript_Man_Dialogue {
+    applymovement(SolsticeTown_House2_Man, moves(face_player))
+    msgbox(format("I'm a teacher.\nWe used to have a 'bring your Pokémon to school' day.\lNowadays, kids bring their Pokémon to school every day..."), type=MSGBOX_NPC)
+}
