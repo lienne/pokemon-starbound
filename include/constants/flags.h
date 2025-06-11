@@ -43,18 +43,18 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_CAN_LEAVE_BEGINNER_CLEARING    0x20
-#define FLAG_HIDE_CLEARING_NPCS             0x21
-#define FLAG_HIDE_RIVAL_INTRO_NPC           0x22
-#define FLAG_RECEIVED_JIRACHI_MEDICINE      0x23
-#define FLAG_DELIVERED_JIRACHI_MEDICINE     0x24
-#define FLAG_HIDE_RIVAL_IN_LAB              0x25
-#define FLAG_HIDE_CLEARING_JIRACHI          0x26
-#define FLAG_GOT_POKEBALL_SOLSTICE          0x27
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
+#define FLAG_CAN_LEAVE_BEGINNER_CLEARING                    0x20
+#define FLAG_HIDE_CLEARING_NPCS                             0x21
+#define FLAG_HIDE_RIVAL_INTRO_NPC                           0x22
+#define FLAG_RECEIVED_JIRACHI_MEDICINE                      0x23
+#define FLAG_DELIVERED_JIRACHI_MEDICINE                     0x24
+#define FLAG_HIDE_RIVAL_IN_LAB                              0x25
+#define FLAG_HIDE_CLEARING_JIRACHI                          0x26
+#define FLAG_GOT_POKEBALL_SOLSTICE                          0x27
+#define FLAG_HIDE_LUMEN_VILLAGE_CASSIANS_HOUSE_MOM          0x28
+#define FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_MOM           0x29
+#define FLAG_HIDE_LUMEN_VILLAGE_CASSIANS_HOUSE_RIVAL_MOM    0x2A
+#define FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_RIVAL_MOM     0x2B
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag

@@ -61,22 +61,24 @@ SolsticeTown_Mart_Employee_Dialogue_7:
 # 29 "data/maps/SolsticeTown_Mart/scripts.pory"
 SolsticeTown_Mart_Items:
 # 30 "data/maps/SolsticeTown_Mart/scripts.pory"
-	.2byte ITEM_POTION
+	.2byte ITEM_POKE_BALL
 # 31 "data/maps/SolsticeTown_Mart/scripts.pory"
-	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_POTION
 # 32 "data/maps/SolsticeTown_Mart/scripts.pory"
-	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_ANTIDOTE
 # 33 "data/maps/SolsticeTown_Mart/scripts.pory"
+	.2byte ITEM_PARALYZE_HEAL
+# 34 "data/maps/SolsticeTown_Mart/scripts.pory"
 	.2byte ITEM_AWAKENING
 	.2byte ITEM_NONE
 
-SolsticeTown_Boy1_Dialogue::
-# 37 "data/maps/SolsticeTown_Mart/scripts.pory"
-	applymovement SolsticeTown_Mart_Boy1, SolsticeTown_Mart_Employee_Dialogue_Movement_0
+SolsticeTown_Mart_Boy1_Dialogue::
 # 38 "data/maps/SolsticeTown_Mart/scripts.pory"
-	msgbox SolsticeTown_Boy1_Dialogue_Text_0, type = MSGBOX_NPC
+	applymovement SolsticeTown_Mart_Boy1, SolsticeTown_Mart_Employee_Dialogue_Movement_0
 # 39 "data/maps/SolsticeTown_Mart/scripts.pory"
-	applymovement SolsticeTown_Mart_Boy1, SolsticeTown_Boy1_Dialogue_Movement_0
+	msgbox SolsticeTown_Mart_Boy1_Dialogue_Text_0, type = MSGBOX_NPC
+# 40 "data/maps/SolsticeTown_Mart/scripts.pory"
+	applymovement SolsticeTown_Mart_Boy1, SolsticeTown_Mart_Boy1_Dialogue_Movement_0
 	return
 
 
@@ -86,9 +88,9 @@ SolsticeTown_Mart_Employee_Dialogue_Movement_0:
 	face_player
 	step_end
 
-# 39 "data/maps/SolsticeTown_Mart/scripts.pory"
-SolsticeTown_Boy1_Dialogue_Movement_0:
-# 39 "data/maps/SolsticeTown_Mart/scripts.pory"
+# 40 "data/maps/SolsticeTown_Mart/scripts.pory"
+SolsticeTown_Mart_Boy1_Dialogue_Movement_0:
+# 40 "data/maps/SolsticeTown_Mart/scripts.pory"
 	face_left
 	step_end
 
@@ -113,8 +115,8 @@ SolsticeTown_Mart_Employee_Dialogue_Text_3:
 # 25 "data/maps/SolsticeTown_Mart/scripts.pory"
 	.string "Thank you for shopping with us!$"
 
-SolsticeTown_Boy1_Dialogue_Text_0:
-# 38 "data/maps/SolsticeTown_Mart/scripts.pory"
+SolsticeTown_Mart_Boy1_Dialogue_Text_0:
+# 39 "data/maps/SolsticeTown_Mart/scripts.pory"
 	.string "Don't forget to grab Pokéballs! You\n"
 	.string "never know what you'll run into out\l"
 	.string "there.$"

@@ -135,8 +135,8 @@
     {
       "id": "HEAL_LOCATION_LUMEN_VILLAGE",
       "map": "MAP_LUMEN_VILLAGE",
-      "x": 32,
-      "y": 7
+      "x": 21,
+      "y": 13
     },
     {
       "id": "HEAL_LOCATION_BEGINNER_CLEARING",

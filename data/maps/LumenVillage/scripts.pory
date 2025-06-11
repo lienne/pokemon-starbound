@@ -40,7 +40,7 @@ mapscripts LumenVillage_MapScripts {
     ]
 }
 
-script BeginnerClearing_EventScript_GoBack_LeftTrigger {
+script LumenVillage_EventScript_GoBack_LeftTrigger {
 	if (!flag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)) {
 		lockall
 		msgbox("You can't ignore the cries of\n"
@@ -52,7 +52,7 @@ script BeginnerClearing_EventScript_GoBack_LeftTrigger {
 	}
 }
 
-script BeginnerClearing_EventScript_GoBack_UpTrigger {
+script LumenVillage_EventScript_GoBack_UpTrigger {
 	if (!flag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)) {
 		lockall
 		msgbox("You can't ignore the cries of\n"
@@ -64,6 +64,34 @@ script BeginnerClearing_EventScript_GoBack_UpTrigger {
 	}
 }
 
+script LumenVillage_EventScript_SetIntroFlags {
+    lockall
+    checkplayergender()
+    if (var(VAR_RESULT) == MALE) {
+        call(LumenVillage_EventScript_SetIntroFlags_Male)
+    } else {
+        call(LumenVillage_EventScript_SetIntroFlags_Female)
+    }
+}
+
+script LumenVillage_EventScript_SetIntroFlags_Male {
+    setrespawn(HEAL_LOCATION_LUMEN_VILLAGE)
+    clearflag(FLAG_HIDE_LUMEN_VILLAGE_CASSIANS_HOUSE_MOM)
+    clearflag(FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_RIVAL_MOM)
+    addobject(Cassians_House_Mom)
+    addobject(Selenes_House_Rival_Mom)
+    releaseall
+}
+
+script LumenVillage_EventScript_SetIntroFlags_Female {
+    setrespawn(HEAL_LOCATION_LUMEN_VILLAGE)
+    clearflag(FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_MOM)
+    clearflag(FLAG_HIDE_LUMEN_VILLAGE_CASSIANS_HOUSE_RIVAL_MOM)
+    addobject(Selenes_House_Mom)
+    addobject(Cassians_House_Rival_Mom)
+    releaseall
+}
+
 script LumenVillage_EventScript_ProfLabSign {
     lockall
     msgbox("Prof. Myra's Lab")
@@ -72,13 +100,23 @@ script LumenVillage_EventScript_ProfLabSign {
 
 script LumenVillage_EventScript_SelenesHouseSign {
     lockall
-    msgbox("Selene's House")
+    checkplayergender()
+    if (var(VAR_RESULT) == FEMALE) {
+        msgbox(LumenVillage_Text_PlayersHouse_Sign)
+    } else {
+        msgbox(format("Selene's House"))
+    }
     releaseall
 }
 
 script LumenVillage_EventScript_CassiansHouseSign {
     lockall
-    msgbox("Cassian's House")
+    checkplayergender()
+    if (var(VAR_RESULT) == MALE) {
+        msgbox(LumenVillage_Text_PlayersHouse_Sign)
+    } else {
+        msgbox(format("Cassian's House"))
+    }
     releaseall
 }
 
@@ -104,4 +142,8 @@ script LumenVillage_LittleGirl_Dialogue {
     applymovement(LumenVillage_LittleGirl, moves(face_player))
     msgbox(format("The water looks so nice!\n"
                     "But I'm not allowed to swim yet..."), type=MSGBOX_NPC)
+}
+
+text LumenVillage_Text_PlayersHouse_Sign {
+    format("{PLAYER}'s House")
 }

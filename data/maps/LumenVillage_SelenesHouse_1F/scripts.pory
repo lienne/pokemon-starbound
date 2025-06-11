@@ -1,0 +1,10 @@
+mapscripts LumenVillage_SelenesHouse_1F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        call(LumenVillage_SelenesHouse_1F_EventScript_SpawnMom)
+    }
+}
+
+script LumenVillage_SelenesHouse_1F_EventScript_SpawnMom {
+    setobjectxyperm(Selenes_House_Mom, 8, 6)
+    // setobjectmovementtype(Selenes_House_Mom, MOVEMENT_TYPE_FACE_LEFT)
+}

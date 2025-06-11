@@ -1,0 +1,10 @@
+mapscripts LumenVillage_CassiansHouse_1F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        call(LumenVillage_CassiansHouse_1F_EventScript_SpawnMom)
+    }
+}
+
+script LumenVillage_CassiansHouse_1F_EventScript_SpawnMom {
+    setobjectxyperm(Cassians_House_Mom, 2, 6)
+    // setobjectmovementtype(Cassians_House_Mom, MOVEMENT_TYPE_FACE_RIGHT)
+}
