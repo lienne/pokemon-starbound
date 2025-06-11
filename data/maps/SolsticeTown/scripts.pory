@@ -5,7 +5,7 @@ mapscripts SolsticeTown_MapScripts {
 script SolsticeTown_EventScript_TownSign {
     lockall
     msgbox(format("Solstice Town\n"
-        "“The balance point between light and shadow”"))
+        "“The balance between light and shadow”"))
     releaseall
 }
 

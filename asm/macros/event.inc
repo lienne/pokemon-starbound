@@ -1735,6 +1735,12 @@
 	formatwarp \map, \a, \b, \c
 	.endm
 
+	@ Sets the text of the name box in the next-shown message box.
+	.macro speakername text:req
+	.byte SCR_OP_SETSPEAKER
+	.4byte \text
+	.endm
+
 	@ Changes the location where the player caught the Pokemon in the specified slot of their party.
 	.macro setmonmetlocation slot:req, location:req
 	.byte SCR_OP_SETMONMETLOCATION
