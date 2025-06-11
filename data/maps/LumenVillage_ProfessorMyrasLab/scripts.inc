@@ -161,18 +161,23 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1:
 	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_11
 # 110 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 111 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 100 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_12
+# 101 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	waitfanfare
-# 112 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 102 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	setflag FLAG_SYS_POKEDEX_GET
-# 113 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 103 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	special SetUnlockedPokedexFlags
-# 114 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_12, MSGBOX_AUTOCLOSE
+# 104 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_13, MSGBOX_AUTOCLOSE
 	end
 
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue::
+# 114 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	goto_if_unset FLAG_RECEIVED_JIRACHI_MEDICINE, ProfMyrasLab_EventScript_ProfMyra_Dialogue_1
+# 117 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 # 128 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_JIRACHI_MEDICINE, ProfMyrasLab_EventScript_ProfMyra_Dialogue_1
 # 132 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
@@ -182,9 +187,6 @@ ProfMyrasLab_EventScript_ProfMyra_Dialogue::
 	return
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue_1:
-# 129 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	speakername ProfMyraName
-# 130 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_0, type = MSGBOX_NPC
 	return
 
@@ -315,9 +317,9 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_1:
 # 44 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	.string "Hmmm... These Pokémon were part of a\n"
 	.string "special research assignment.\l"
-	.string "They weren't meant for trainers... not\l"
+	.string "They weren't meant for trainers - not\l"
 	.string "yet.\l"
-	.string "But I see it in yours eyes - you're\l"
+	.string "But I see it in your eyes... you're\l"
 	.string "serious.\l"
 	.string "This isn't about catching up, is it?\l"
 	.string "It's about proving you're ready.$"
