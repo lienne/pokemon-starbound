@@ -39,8 +39,8 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
                 "{PLAYER} already got one! It's not fair that only {PLAYER} gets one!\l"
                 "I'll treat it well! We'll get strong together! Please believe me!"))
             msgbox(format("Hmmm... These Pokémon were part of a special research assignment.\l"
-                "They weren't meant for trainers... not yet.\l"
-                "But I see it in yours eyes - you're serious.\l"
+                "They weren't meant for trainers - not yet.\l"
+                "But I see it in your eyes... you're serious.\l"
                 "This isn't about catching up, is it?\l"
                 "It's about proving you're ready."))
             msgbox(format("I've ALWAYS been ready!\n"
@@ -97,6 +97,7 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             msgbox(format("Since you're keeping the Pokémon I lent you, I think it's only fair that you take this as well.\l"
                 "It's a Pokédex, a device that records data on all Pokémon you encounter."))
             playfanfare(MUS_OBTAIN_ITEM)
+            msgbox(format("{PLAYER} received the Pokédex!"))
             waitfanfare()
     	    setflag(FLAG_SYS_POKEDEX_GET)
 	        special(SetUnlockedPokedexFlags)
@@ -113,7 +114,7 @@ script ProfMyrasLab_EventScript_ProfMyra_Dialogue {
     if (!flag(FLAG_RECEIVED_JIRACHI_MEDICINE)) {
         msgbox(format("Thank you for agreeing to get the medicine from Solstice Town for Jirachi. It's imperative we help it recover."), type=MSGBOX_NPC)
     } else {
-        msgbox(format("Welcome back, {PLAYER}!\l"
+        msgbox(format("Welcome back, {PLAYER}!\n"
             "Jirachi is doing much better now, thanks to you!"), type=MSGBOX_NPC)
     }
 }
