@@ -142,33 +142,35 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1:
 # 99 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
 # 100 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	waitfanfare
+	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_12
 # 101 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	setflag FLAG_SYS_POKEDEX_GET
+	waitfanfare
 # 102 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	special SetUnlockedPokedexFlags
+	setflag FLAG_SYS_POKEDEX_GET
 # 103 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_12, MSGBOX_AUTOCLOSE
+	special SetUnlockedPokedexFlags
+# 104 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_13, MSGBOX_AUTOCLOSE
 	end
 
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue::
-# 113 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 114 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_JIRACHI_MEDICINE, ProfMyrasLab_EventScript_ProfMyra_Dialogue_1
-# 116 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 117 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_1, type = MSGBOX_NPC
 	return
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue_1:
-# 114 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 115 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_0, type = MSGBOX_NPC
 	return
 
 
 ProfMyrasLab_EventScript_JirachiNPC::
-# 122 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	playmoncry SPECIES_JIRACHI, CRY_MODE_NORMAL
 # 123 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	playmoncry SPECIES_JIRACHI, CRY_MODE_NORMAL
+# 124 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	waitmoncry
 	return
 
@@ -291,9 +293,9 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_1:
 # 41 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	.string "Hmmm... These Pokémon were part of a\n"
 	.string "special research assignment.\l"
-	.string "They weren't meant for trainers... not\l"
+	.string "They weren't meant for trainers - not\l"
 	.string "yet.\l"
-	.string "But I see it in yours eyes - you're\l"
+	.string "But I see it in your eyes... you're\l"
 	.string "serious.\l"
 	.string "This isn't about catching up, is it?\l"
 	.string "It's about proving you're ready.$"
@@ -371,7 +373,11 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_11:
 	.string "data on all Pokémon you encounter.$"
 
 LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_12:
-# 104 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 100 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	.string "{PLAYER} received the Pokédex!$"
+
+LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_13:
+# 105 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	.string "I hope you'll use it to learn more about\n"
 	.string "the world of Pokémon.\l"
 	.string "And of course, if you ever need\l"
@@ -379,13 +385,13 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_12:
 	.string "Good luck on your journey, {PLAYER}!$"
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_0:
-# 114 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 115 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	.string "Thank you for agreeing to get the\n"
 	.string "medicine from Solstice Town for Jirachi.\l"
 	.string "It's imperative we help it recover.$"
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_1:
-# 116 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	.string "Welcome back, {PLAYER}!\l"
+# 117 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	.string "Welcome back, {PLAYER}!\n"
 	.string "Jirachi is doing much better now,\l"
 	.string "thanks to you!$"
