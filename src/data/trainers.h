@@ -33712,7 +33712,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_GRUNT_MAGMA_HIDEOUT_14] =
     {
 #line 13452
-        .trainerName = _("GRUNT"),
+        .trainerName = _("Grunt"),
 #line 13453
         .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
 #line 13454

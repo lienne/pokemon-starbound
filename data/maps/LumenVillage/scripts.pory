@@ -24,7 +24,7 @@ mapscripts LumenVillage_MapScripts {
             applymovement(LumenVillage_Rival_Intro, moves(walk_fast_left *3
                                                         walk_fast_up * 3))
             waitmovement(0)
-            speakername(RivalName)
+            call(RivalName)
             msgbox(format("Hey, {PLAYER}! What are you doing out here?\l"
                 "WHOA - hold up! You've got a Pokémon?!\l"
                 "Wait a second... you SERIOUSLY already got a Pokémon??\l"

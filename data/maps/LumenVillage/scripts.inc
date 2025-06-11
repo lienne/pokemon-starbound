@@ -54,7 +54,7 @@ LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 # 26 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
 # 27 "data/maps/LumenVillage/scripts.pory"
-	speakername RivalName
+	call RivalName
 # 28 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0, MSGBOX_AUTOCLOSE
 # 35 "data/maps/LumenVillage/scripts.pory"

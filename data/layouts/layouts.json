@@ -4425,7 +4425,7 @@
       "id": "LAYOUT_ROUTE1_STARLIT_PATH",
       "name": "Route1_StarlitPath_Layout",
       "width": 26,
-      "height": 36,
+      "height": 34,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route1_StarlitPath/border.bin",
@@ -4547,7 +4547,7 @@
       "width": 50,
       "height": 40,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Fallarbor",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/WhisperingGrove/border.bin",
       "blockdata_filepath": "data/layouts/WhisperingGrove/map.bin"
     },

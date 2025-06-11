@@ -36,7 +36,7 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             delay(50)
             applymovement(LOCALID_PLAYER, moves(walk_up * 6))
             waitmovement(0)
-            speakername(RivalName)
+            call(RivalName)
             msgbox(format("Professor Myra! I want a Pokémon too!\n"
                 "{PLAYER} already got one! It's not fair that only {PLAYER} gets one!\l"
                 "I'll treat it well! We'll get strong together! Please believe me!"))
@@ -46,7 +46,7 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
                 "But I see it in your eyes... you're serious.\l"
                 "This isn't about catching up, is it?\l"
                 "It's about proving you're ready."))
-            speakername(RivalName)
+            call(RivalName)
             msgbox(format("I've ALWAYS been ready!\n"
                 "If {PLAYER} is out there, then I should be too!\l"
                 "Please, Professor! I want to be a Pokémon Trainer!"))
@@ -55,18 +55,18 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
                 "But know this: once you take this step, there's no going back.\l"
                 "This journey will challenge more than just your strength.\l"
                 "Choose carefully."))
-            speakername(RivalName)
+            call(RivalName)
             msgbox(format("Thank you, Professor Myra!!\n"
                 "I promise I won't let you down!"), MSGBOX_AUTOCLOSE)
             playfanfare(MUS_OBTAIN_ITEM)
-            msgbox(format("Rival received a Pokémon!"), MSGBOX_AUTOCLOSE)
+            msgbox(format("{RIVAL} received a Pokémon!"), MSGBOX_AUTOCLOSE)
             waitfanfare()
             applymovement(ProfMyrasLab_Rival_Intro_2, moves(face_down))
             waitmovement(0)
             applymovement(ProfMyrasLab_Rival_Intro_2, moves(emote_exclamation_mark))
             playse(SE_PIN)
             waitmovement()
-            speakername(RivalName)
+            call(RivalName)
             msgbox(format("{PLAYER}!\n"
                 "I told you I'd get a Pokémon too!\l"
                 "Now we're even. Don't think you'll stay one step ahead for long!\l"
@@ -74,12 +74,11 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
                 "Even if I AM gonna beat you!\l"
                 "Catch you later!"), MSGBOX_AUTOCLOSE)
             applymovement(ProfMyrasLab_Rival_Intro_2, moves(walk_fast_right))
-            applymovement(LOCALID_PLAYER, moves(face_right))
-            applymovement(ProfMyrasLab_Rival_Intro_2, moves(walk_fast_down * 2))
+            waitmovement(0)
+            applymovement(ProfMyrasLab_Rival_Intro_2, moves(walk_fast_down * 7))
+            waitmovement(0)
             applymovement(LOCALID_PLAYER, moves(face_down))
-            applymovement(ProfMyrasLab_Rival_Intro_2, moves(walk_fast_down * 5))
-            waitmovement(ProfMyrasLab_Rival_Intro_2)
-            waitmovement(LOCALID_PLAYER)
+            waitmovement(0)
             playse(SE_DOOR)
             waitse()
             removeobject(ProfMyrasLab_Rival_Intro_2)
@@ -94,10 +93,13 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
                 "After all, it looks like you two have already started bonding."))
             playfanfare(MUS_OBTAIN_ITEM)
             speakername(NULL)
-            msgbox(format("You received a Pokémon!"), MSGBOX_AUTOCLOSE)
+            bufferleadmonspeciesname(STR_VAR_1)
+            msgbox(format("{PLAYER} received the {STR_VAR_1}!"), MSGBOX_AUTOCLOSE)
             waitfanfare()
-            msgbox(format("Would you like to give a nickname to the Pokémon?"))
-            // Set up pokemon nickname screen here, MSGBOX_YESNO
+            msgbox(format("Would you like to give a nickname to {STR_VAR_1}?"), MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                call(Common_EventScript_NameReceivedPartyMon)
+            }
             speakername(ProfMyraName)
             msgbox(format("I see you've also retrieved the medicine from Solstice Town.\l"
                 "Thank you for that, {PLAYER}.\l"
@@ -108,10 +110,12 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
                 "It's a Pokédex, a device that records data on all Pokémon you encounter."))
             // Also give player 5 pokeballs along with pokedex here
             playfanfare(MUS_OBTAIN_ITEM)
+            speakername(NULL)
             msgbox(format("{PLAYER} received the Pokédex!"))
             waitfanfare()
     	    setflag(FLAG_SYS_POKEDEX_GET)
 	        special(SetUnlockedPokedexFlags)
+            speakername(ProfMyraName)
             msgbox(format(
                 "I hope you'll use it to learn more about the world of Pokémon.\l"
                 "And of course, if you ever need anything, feel free to come back here.\l"
@@ -121,8 +125,13 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
     ]
 }
 
-text RivalName {
-    "{RIVAL}"
+script RivalName {
+    checkplayergender()
+    if (var(VAR_RESULT) == MALE) {
+        speakername("Selene")
+    } else {
+        speakername("Cassian")
+    }
 }
 
 script ProfMyrasLab_EventScript_ProfMyra_Dialogue {
