@@ -54,192 +54,194 @@ LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 # 26 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
 # 27 "data/maps/LumenVillage/scripts.pory"
+	speakername RivalName
+# 28 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0, MSGBOX_AUTOCLOSE
-# 34 "data/maps/LumenVillage/scripts.pory"
-	applymovement LumenVillage_Rival_Intro, LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_2
 # 35 "data/maps/LumenVillage/scripts.pory"
-	waitmovement 0
+	applymovement LumenVillage_Rival_Intro, LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_2
 # 36 "data/maps/LumenVillage/scripts.pory"
-	removeobject LumenVillage_Rival_Intro
+	waitmovement 0
 # 37 "data/maps/LumenVillage/scripts.pory"
+	removeobject LumenVillage_Rival_Intro
+# 38 "data/maps/LumenVillage/scripts.pory"
 	fadedefaultbgm
 	end
 
 
 LumenVillage_EventScript_GoBack_LeftTrigger::
-# 44 "data/maps/LumenVillage/scripts.pory"
+# 45 "data/maps/LumenVillage/scripts.pory"
 	goto_if_unset FLAG_CAN_LEAVE_BEGINNER_CLEARING, LumenVillage_EventScript_GoBack_LeftTrigger_1
 	return
 
 LumenVillage_EventScript_GoBack_LeftTrigger_1:
-# 45 "data/maps/LumenVillage/scripts.pory"
-	lockall
 # 46 "data/maps/LumenVillage/scripts.pory"
+	lockall
+# 47 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_EventScript_GoBack_LeftTrigger_Text_0
-# 48 "data/maps/LumenVillage/scripts.pory"
-	playse SE_SELECT
 # 49 "data/maps/LumenVillage/scripts.pory"
-	applymovement LOCALID_PLAYER, LumenVillage_EventScript_GoBack_LeftTrigger_Movement_0
+	playse SE_SELECT
 # 50 "data/maps/LumenVillage/scripts.pory"
-	waitmovement 0
+	applymovement LOCALID_PLAYER, LumenVillage_EventScript_GoBack_LeftTrigger_Movement_0
 # 51 "data/maps/LumenVillage/scripts.pory"
+	waitmovement 0
+# 52 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 
 LumenVillage_EventScript_GoBack_UpTrigger::
-# 56 "data/maps/LumenVillage/scripts.pory"
+# 57 "data/maps/LumenVillage/scripts.pory"
 	goto_if_unset FLAG_CAN_LEAVE_BEGINNER_CLEARING, LumenVillage_EventScript_GoBack_UpTrigger_1
 	return
 
 LumenVillage_EventScript_GoBack_UpTrigger_1:
-# 57 "data/maps/LumenVillage/scripts.pory"
-	lockall
 # 58 "data/maps/LumenVillage/scripts.pory"
+	lockall
+# 59 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_EventScript_GoBack_LeftTrigger_Text_0
-# 60 "data/maps/LumenVillage/scripts.pory"
-	playse SE_SELECT
 # 61 "data/maps/LumenVillage/scripts.pory"
-	applymovement LOCALID_PLAYER, LumenVillage_EventScript_GoBack_UpTrigger_Movement_0
+	playse SE_SELECT
 # 62 "data/maps/LumenVillage/scripts.pory"
-	waitmovement 0
+	applymovement LOCALID_PLAYER, LumenVillage_EventScript_GoBack_UpTrigger_Movement_0
 # 63 "data/maps/LumenVillage/scripts.pory"
+	waitmovement 0
+# 64 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 
 LumenVillage_EventScript_SetIntroFlags::
-# 68 "data/maps/LumenVillage/scripts.pory"
-	lockall
 # 69 "data/maps/LumenVillage/scripts.pory"
-	checkplayergender
+	lockall
 # 70 "data/maps/LumenVillage/scripts.pory"
+	checkplayergender
+# 71 "data/maps/LumenVillage/scripts.pory"
 	compare VAR_RESULT, MALE
 	goto_if_eq LumenVillage_EventScript_SetIntroFlags_1
-# 73 "data/maps/LumenVillage/scripts.pory"
+# 74 "data/maps/LumenVillage/scripts.pory"
 	call LumenVillage_EventScript_SetIntroFlags_Female
 	return
 
 LumenVillage_EventScript_SetIntroFlags_1:
-# 71 "data/maps/LumenVillage/scripts.pory"
+# 72 "data/maps/LumenVillage/scripts.pory"
 	call LumenVillage_EventScript_SetIntroFlags_Male
 	return
 
 
 LumenVillage_EventScript_SetIntroFlags_Male::
-# 78 "data/maps/LumenVillage/scripts.pory"
-	setrespawn HEAL_LOCATION_LUMEN_VILLAGE
 # 79 "data/maps/LumenVillage/scripts.pory"
-	clearflag FLAG_HIDE_LUMEN_VILLAGE_CASSIANS_HOUSE_MOM
+	setrespawn HEAL_LOCATION_LUMEN_VILLAGE
 # 80 "data/maps/LumenVillage/scripts.pory"
-	clearflag FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_RIVAL_MOM
+	clearflag FLAG_HIDE_LUMEN_VILLAGE_CASSIANS_HOUSE_MOM
 # 81 "data/maps/LumenVillage/scripts.pory"
-	addobject Cassians_House_Mom
+	clearflag FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_RIVAL_MOM
 # 82 "data/maps/LumenVillage/scripts.pory"
-	addobject Selenes_House_Rival_Mom
+	addobject Cassians_House_Mom
 # 83 "data/maps/LumenVillage/scripts.pory"
+	addobject Selenes_House_Rival_Mom
+# 84 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 
 LumenVillage_EventScript_SetIntroFlags_Female::
-# 87 "data/maps/LumenVillage/scripts.pory"
-	setrespawn HEAL_LOCATION_LUMEN_VILLAGE
 # 88 "data/maps/LumenVillage/scripts.pory"
-	clearflag FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_MOM
+	setrespawn HEAL_LOCATION_LUMEN_VILLAGE
 # 89 "data/maps/LumenVillage/scripts.pory"
-	clearflag FLAG_HIDE_LUMEN_VILLAGE_CASSIANS_HOUSE_RIVAL_MOM
+	clearflag FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_MOM
 # 90 "data/maps/LumenVillage/scripts.pory"
-	addobject Selenes_House_Mom
+	clearflag FLAG_HIDE_LUMEN_VILLAGE_CASSIANS_HOUSE_RIVAL_MOM
 # 91 "data/maps/LumenVillage/scripts.pory"
-	addobject Cassians_House_Rival_Mom
+	addobject Selenes_House_Mom
 # 92 "data/maps/LumenVillage/scripts.pory"
+	addobject Cassians_House_Rival_Mom
+# 93 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 
 LumenVillage_EventScript_ProfLabSign::
-# 96 "data/maps/LumenVillage/scripts.pory"
-	lockall
 # 97 "data/maps/LumenVillage/scripts.pory"
-	msgbox LumenVillage_EventScript_ProfLabSign_Text_0
+	lockall
 # 98 "data/maps/LumenVillage/scripts.pory"
+	msgbox LumenVillage_EventScript_ProfLabSign_Text_0
+# 99 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 
 LumenVillage_EventScript_SelenesHouseSign::
-# 102 "data/maps/LumenVillage/scripts.pory"
-	lockall
 # 103 "data/maps/LumenVillage/scripts.pory"
-	checkplayergender
+	lockall
 # 104 "data/maps/LumenVillage/scripts.pory"
+	checkplayergender
+# 105 "data/maps/LumenVillage/scripts.pory"
 	compare VAR_RESULT, FEMALE
 	goto_if_eq LumenVillage_EventScript_SelenesHouseSign_2
-# 107 "data/maps/LumenVillage/scripts.pory"
+# 108 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_EventScript_SelenesHouseSign_Text_0
 LumenVillage_EventScript_SelenesHouseSign_1:
-# 109 "data/maps/LumenVillage/scripts.pory"
+# 110 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 LumenVillage_EventScript_SelenesHouseSign_2:
-# 105 "data/maps/LumenVillage/scripts.pory"
+# 106 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_Text_PlayersHouse_Sign
 	goto LumenVillage_EventScript_SelenesHouseSign_1
 
 
 LumenVillage_EventScript_CassiansHouseSign::
-# 113 "data/maps/LumenVillage/scripts.pory"
-	lockall
 # 114 "data/maps/LumenVillage/scripts.pory"
-	checkplayergender
+	lockall
 # 115 "data/maps/LumenVillage/scripts.pory"
+	checkplayergender
+# 116 "data/maps/LumenVillage/scripts.pory"
 	compare VAR_RESULT, MALE
 	goto_if_eq LumenVillage_EventScript_CassiansHouseSign_2
-# 118 "data/maps/LumenVillage/scripts.pory"
+# 119 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_EventScript_CassiansHouseSign_Text_0
 LumenVillage_EventScript_CassiansHouseSign_1:
-# 120 "data/maps/LumenVillage/scripts.pory"
+# 121 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 LumenVillage_EventScript_CassiansHouseSign_2:
-# 116 "data/maps/LumenVillage/scripts.pory"
+# 117 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_Text_PlayersHouse_Sign
 	goto LumenVillage_EventScript_CassiansHouseSign_1
 
 
 LumenVillage_EventScript_VillageSign::
-# 124 "data/maps/LumenVillage/scripts.pory"
-	lockall
 # 125 "data/maps/LumenVillage/scripts.pory"
+	lockall
+# 126 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_EventScript_VillageSign_Text_0
-# 127 "data/maps/LumenVillage/scripts.pory"
+# 128 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 
 LumenVillage_FatMan_Dialogue::
-# 131 "data/maps/LumenVillage/scripts.pory"
-	applymovement LumenVillage_FatMan, LumenVillage_FatMan_Dialogue_Movement_0
 # 132 "data/maps/LumenVillage/scripts.pory"
+	applymovement LumenVillage_FatMan, LumenVillage_FatMan_Dialogue_Movement_0
+# 133 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_FatMan_Dialogue_Text_0, type = MSGBOX_NPC
 	return
 
 
 LumenVillage_OldLady_Dialogue::
-# 137 "data/maps/LumenVillage/scripts.pory"
-	applymovement LumenVillage_OldLady, LumenVillage_FatMan_Dialogue_Movement_0
 # 138 "data/maps/LumenVillage/scripts.pory"
+	applymovement LumenVillage_OldLady, LumenVillage_FatMan_Dialogue_Movement_0
+# 139 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_OldLady_Dialogue_Text_0, type = MSGBOX_NPC
 	return
 
 
 LumenVillage_LittleGirl_Dialogue::
-# 142 "data/maps/LumenVillage/scripts.pory"
-	applymovement LumenVillage_LittleGirl, LumenVillage_FatMan_Dialogue_Movement_0
 # 143 "data/maps/LumenVillage/scripts.pory"
+	applymovement LumenVillage_LittleGirl, LumenVillage_FatMan_Dialogue_Movement_0
+# 144 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_LittleGirl_Dialogue_Text_0, type = MSGBOX_NPC
 	return
 
@@ -266,48 +268,48 @@ LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_1:
 	walk_fast_up
 	step_end
 
-# 34 "data/maps/LumenVillage/scripts.pory"
+# 35 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_2:
-# 34 "data/maps/LumenVillage/scripts.pory"
+# 35 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_down
-# 34 "data/maps/LumenVillage/scripts.pory"
+# 35 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_down
-# 34 "data/maps/LumenVillage/scripts.pory"
+# 35 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_down
-# 34 "data/maps/LumenVillage/scripts.pory"
+# 35 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_down
-# 34 "data/maps/LumenVillage/scripts.pory"
+# 35 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_down
-# 34 "data/maps/LumenVillage/scripts.pory"
+# 35 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_down
-# 34 "data/maps/LumenVillage/scripts.pory"
+# 35 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_down
-# 34 "data/maps/LumenVillage/scripts.pory"
+# 35 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_down
 	step_end
 
-# 49 "data/maps/LumenVillage/scripts.pory"
+# 50 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_EventScript_GoBack_LeftTrigger_Movement_0:
-# 49 "data/maps/LumenVillage/scripts.pory"
+# 50 "data/maps/LumenVillage/scripts.pory"
 	walk_right
 	step_end
 
-# 61 "data/maps/LumenVillage/scripts.pory"
+# 62 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_EventScript_GoBack_UpTrigger_Movement_0:
-# 61 "data/maps/LumenVillage/scripts.pory"
+# 62 "data/maps/LumenVillage/scripts.pory"
 	walk_down
 	step_end
 
-# 131 "data/maps/LumenVillage/scripts.pory"
+# 132 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_FatMan_Dialogue_Movement_0:
-# 131 "data/maps/LumenVillage/scripts.pory"
+# 132 "data/maps/LumenVillage/scripts.pory"
 	face_player
 	step_end
 
 LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0:
-# 27 "data/maps/LumenVillage/scripts.pory"
-	.string "Cassian: Hey, {PLAYER}! What are you\n"
-	.string "doing out here?\l"
+# 28 "data/maps/LumenVillage/scripts.pory"
+	.string "Hey, {PLAYER}! What are you doing out\n"
+	.string "here?\l"
 	.string "WHOA - hold up! You've got a Pokémon?!\l"
 	.string "Wait a second... you SERIOUSLY already\l"
 	.string "got a Pokémon??\l"
@@ -321,44 +323,44 @@ LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0:
 	.string "I'll get my own Pokémon too, you'll see!$"
 
 LumenVillage_EventScript_GoBack_LeftTrigger_Text_0:
-# 46 "data/maps/LumenVillage/scripts.pory"
+# 47 "data/maps/LumenVillage/scripts.pory"
 	.string "You can't ignore the cries of\n"
 	.string "a hurt Pokémon!$"
 
 LumenVillage_EventScript_ProfLabSign_Text_0:
-# 97 "data/maps/LumenVillage/scripts.pory"
+# 98 "data/maps/LumenVillage/scripts.pory"
 	.string "Prof. Myra's Lab$"
 
 LumenVillage_EventScript_SelenesHouseSign_Text_0:
-# 107 "data/maps/LumenVillage/scripts.pory"
+# 108 "data/maps/LumenVillage/scripts.pory"
 	.string "Selene's House$"
 
 LumenVillage_EventScript_CassiansHouseSign_Text_0:
-# 118 "data/maps/LumenVillage/scripts.pory"
+# 119 "data/maps/LumenVillage/scripts.pory"
 	.string "Cassian's House$"
 
 LumenVillage_EventScript_VillageSign_Text_0:
-# 125 "data/maps/LumenVillage/scripts.pory"
+# 126 "data/maps/LumenVillage/scripts.pory"
 	.string "Lumen Village\n"
 	.string "“A quiet place beneath the stars”$"
 
 LumenVillage_FatMan_Dialogue_Text_0:
-# 132 "data/maps/LumenVillage/scripts.pory"
+# 133 "data/maps/LumenVillage/scripts.pory"
 	.string "Technology is amazing! You can now use\n"
 	.string "satellites to chart the stars in\l"
 	.string "Astrea!$"
 
 LumenVillage_OldLady_Dialogue_Text_0:
-# 138 "data/maps/LumenVillage/scripts.pory"
+# 139 "data/maps/LumenVillage/scripts.pory"
 	.string "Lumen Village must be the safest place\n"
 	.string "in Astrea, but I swear I hear rustling in\l"
 	.string "the night lately...$"
 
 LumenVillage_LittleGirl_Dialogue_Text_0:
-# 143 "data/maps/LumenVillage/scripts.pory"
+# 144 "data/maps/LumenVillage/scripts.pory"
 	.string "The water looks so nice!\n"
 	.string "But I'm not allowed to swim yet...$"
 
 LumenVillage_Text_PlayersHouse_Sign::
-# 147 "data/maps/LumenVillage/scripts.pory"
+# 148 "data/maps/LumenVillage/scripts.pory"
 	.string "{PLAYER}'s House$"

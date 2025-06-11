@@ -13,6 +13,7 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             setvar(VAR_INTRO_SCENE, 1)
             applymovement(LOCALID_PLAYER, moves(walk_up * 7))
             waitmovement(0)
+            speakername(ProfMyraName)
             msgbox(format("Jirachi seems to be doing a bit better now, thanks to you, {PLAYER}."))
             playmoncry(SPECIES_JIRACHI, CRY_MODE_NORMAL)
             waitmoncry()
@@ -35,21 +36,26 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             delay(50)
             applymovement(LOCALID_PLAYER, moves(walk_up * 6))
             waitmovement(0)
+            speakername(RivalName)
             msgbox(format("Professor Myra! I want a Pokémon too!\n"
                 "{PLAYER} already got one! It's not fair that only {PLAYER} gets one!\l"
                 "I'll treat it well! We'll get strong together! Please believe me!"))
+            speakername(ProfMyraName)
             msgbox(format("Hmmm... These Pokémon were part of a special research assignment.\l"
                 "They weren't meant for trainers - not yet.\l"
                 "But I see it in your eyes... you're serious.\l"
                 "This isn't about catching up, is it?\l"
                 "It's about proving you're ready."))
+            speakername(RivalName)
             msgbox(format("I've ALWAYS been ready!\n"
                 "If {PLAYER} is out there, then I should be too!\l"
                 "Please, Professor! I want to be a Pokémon Trainer!"))
+            speakername(ProfMyraName)
             msgbox(format("...very well.\n"
                 "But know this: once you take this step, there's no going back.\l"
                 "This journey will challenge more than just your strength.\l"
                 "Choose carefully."))
+            speakername(RivalName)
             msgbox(format("Thank you, Professor Myra!!\n"
                 "I promise I won't let you down!"), MSGBOX_AUTOCLOSE)
             playfanfare(MUS_OBTAIN_ITEM)
@@ -60,6 +66,7 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             applymovement(ProfMyrasLab_Rival_Intro_2, moves(emote_exclamation_mark))
             playse(SE_PIN)
             waitmovement()
+            speakername(RivalName)
             msgbox(format("{PLAYER}!\n"
                 "I told you I'd get a Pokémon too!\l"
                 "Now we're even. Don't think you'll stay one step ahead for long!\l"
@@ -79,16 +86,19 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             fadedefaultbgm()
             applymovement(LOCALID_PLAYER, moves(walk_up))
             waitmovement(0)
+            speakername(ProfMyraName)
             msgbox(format("Hi {PLAYER}!\n"
                 "You came at just the right time.\l"
                 "I ended up giving your friend a Pokémon.\l"
                 "For the sake of being fair, I think you should keep the one I lent you earlier.\l"
                 "After all, it looks like you two have already started bonding."))
             playfanfare(MUS_OBTAIN_ITEM)
+            speakername(NULL)
             msgbox(format("You received a Pokémon!"), MSGBOX_AUTOCLOSE)
             waitfanfare()
             msgbox(format("Would you like to give a nickname to the Pokémon?"))
             // Set up pokemon nickname screen here, MSGBOX_YESNO
+            speakername(ProfMyraName)
             msgbox(format("I see you've also retrieved the medicine from Solstice Town.\l"
                 "Thank you for that, {PLAYER}.\l"
                 "I think Jirachi will be able to recover now."))
@@ -96,6 +106,7 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             removeitem(ITEM_PARCEL)
             msgbox(format("Since you're keeping the Pokémon I lent you, I think it's only fair that you take this as well.\l"
                 "It's a Pokédex, a device that records data on all Pokémon you encounter."))
+            // Also give player 5 pokeballs along with pokedex here
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox(format("{PLAYER} received the Pokédex!"))
             waitfanfare()
@@ -110,10 +121,16 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
     ]
 }
 
+text RivalName {
+    "{RIVAL}"
+}
+
 script ProfMyrasLab_EventScript_ProfMyra_Dialogue {
     if (!flag(FLAG_RECEIVED_JIRACHI_MEDICINE)) {
+        speakername(ProfMyraName)
         msgbox(format("Thank you for agreeing to get the medicine from Solstice Town for Jirachi. It's imperative we help it recover."), type=MSGBOX_NPC)
     } else {
+        speakername(ProfMyraName)
         msgbox(format("Welcome back, {PLAYER}!\n"
             "Jirachi is doing much better now, thanks to you!"), type=MSGBOX_NPC)
     }

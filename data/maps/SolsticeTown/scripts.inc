@@ -209,8 +209,7 @@ SolsticeTown_EventScript_Boy2_Dialogue_SpotA_Movement_0:
 SolsticeTown_EventScript_TownSign_Text_0:
 # 7 "data/maps/SolsticeTown/scripts.pory"
 	.string "Solstice Town\n"
-	.string "“The balance point between light and\l"
-	.string "shadow”$"
+	.string "“The balance between light and shadow”$"
 
 SolsticeTown_EventScript_Girl1_Dialogue_Text_0:
 # 14 "data/maps/SolsticeTown/scripts.pory"
