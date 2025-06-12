@@ -55,11 +55,11 @@
 #define FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_MOM           0x29
 #define FLAG_HIDE_LUMEN_VILLAGE_CASSIANS_HOUSE_RIVAL_MOM    0x2A
 #define FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_RIVAL_MOM     0x2B
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
+#define FLAG_HIDE_PROFMYRASLAB_JIRACHI                      0x2C
+#define FLAG_HIDE_CLEARING_JIRACHI2                         0x2D
+#define FLAG_HIDE_LAB_ASSISTANT                             0x2E
+#define FLAG_HIDE_MYRA_IN_LUMEN_VILLAGE                     0x2F
+#define FLAG_HIDE_MYRA_IN_LAB                               0x30
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag

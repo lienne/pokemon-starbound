@@ -82,6 +82,40 @@ movement BeginnerClearing_WalkToGruntA_BottomSideOfBag {
     walk_fast_left * 2
 }
 
+movement BeginnerClearing_PlayerWalksIn_LookForJirachiFromA {
+    delay_16
+    walk_right * 7
+    walk_up
+    delay_16
+    delay_16
+    face_left
+    delay_16
+    delay_16
+    delay_16
+    face_right
+    delay_16
+    delay_16
+    delay_16
+    face_up
+}
+
+movement BeginnerClearing_PlayerWalksIn_LookForJirachiFromB {
+    delay_16
+    walk_right * 7
+    walk_up * 2
+    delay_16
+    delay_16
+    face_left
+    delay_16
+    delay_16
+    delay_16
+    face_right
+    delay_16
+    delay_16
+    delay_16
+    face_up
+}
+
 text ProfMyraName {
     "Prof. Myra"
 }
@@ -304,9 +338,9 @@ script BeginnerClearing_EventScript_AfterBattle {
     applymovement(LOCALID_PLAYER, moves(face_down))
     waitmovement(0)
     speakername(ProfMyraName)
-    msgbox(format("{PLAYER}, you were amazing!\l"
+    msgbox(format("{PLAYER}, you were amazing!\n"
         "I'm so glad you were here.\l"
-        "Now let's take this Jirachi back to my lab so it can rest."))
+        "Now let's take this Jirachi back to my lab so it can rest."), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     setflag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)
     setflag(FLAG_HIDE_CLEARING_NPCS)
@@ -314,4 +348,71 @@ script BeginnerClearing_EventScript_AfterBattle {
     special(HealPlayerParty)
     warpsilent(MAP_LUMEN_VILLAGE_PROFESSOR_MYRAS_LAB, 6, 12)
     releaseall
+}
+
+script BeginnerClearing_EventScript_LookForJirachiFromA {
+    if (var(VAR_INTRO_SCENE) == 4) {
+        lockall
+        setvar(VAR_INTRO_SCENE, 5)
+        applymovement(LOCALID_PLAYER, BeginnerClearing_PlayerWalksIn_LookForJirachiFromA)
+        waitmovement(0)
+        call(BeginnerClearing_EventScript_JirachiPlayerFirstDialogue)
+        releaseall
+    }
+}
+
+script BeginnerClearing_EventScript_LookForJirachiFromB {
+    if (var(VAR_INTRO_SCENE) == 4) {
+        lockall
+        setvar(VAR_INTRO_SCENE, 5)
+        applymovement(LOCALID_PLAYER, BeginnerClearing_PlayerWalksIn_LookForJirachiFromB)
+        waitmovement(0)
+        call(BeginnerClearing_EventScript_JirachiPlayerFirstDialogue)
+        releaseall
+    }
+}
+
+script BeginnerClearing_EventScript_JirachiPlayerFirstDialogue {
+    lockall
+    applymovement(LOCALID_PLAYER, BeginnerClearing_ExclamationMark)
+    playse(SE_PIN)
+    waitmovement(0)
+    clearflag(FLAG_HIDE_CLEARING_JIRACHI2)
+    addobject(jirachi_intro_2)
+    applymovement(jirachi_intro_2, moves(walk_down * 8))
+    waitmovement(0)
+    speakername(JirachiName)
+    msgbox(format("...you came.\p"
+        "I wasn't sure you'd hear me, but... you did.\p"
+        "Those people, they tried to take me. They hurt me.\l"
+        "But I'm not the only one.\l"
+        "There was another. A friend. Like me.\l"
+        "They took him. Locked him away... and twisted his voice.\l"
+        "His wishes... used for control. For silence.\l"
+        "...I'm still too weak. But I can feel it... minds cracking. Dreams bending.\l"
+        "I need help...  I need to save my friend. And I need to stop them.\l"
+        "Will you help me stop them?\l"
+        "Will you help me bring my friend back?\p"
+        "...\p"
+        "Thank you, {PLAYER}.\p"
+        "He's being held in a place far from here.\p"
+        "A place of towers and metal... minds shine brightly there, but not freely.\l"
+        "Zenith City, I believe is the name.\l"
+        "They use him there. To twist thoughts. To turn strong hearts into hollow voices.\l"
+        "One by one, they fall under the silence.\l"
+        "Leaders. Champions. Protectors.\l"
+        "...If we don't act soon, no one will remain untouched.\l"
+        "I can't go with you... not yet.\l"
+        "But I'll guide you when I can.\l"
+        "There are other minds I can still reach. Free them, and we'll be closer to saving him, and closer to the truth.\l"
+        "Closer to stopping the silence.\l"
+        "Thank you for your help.\l"
+        "Go, {PLAYER}.\l"
+        "I'll find you again when I can."))
+        fadescreen(FADE_TO_WHITE)
+        setflag(FLAG_HIDE_CLEARING_JIRACHI2)
+        setflag(FLAG_HIDE_MYRA_IN_LAB)
+        removeobject(jirachi_intro_2)
+        fadescreen(FADE_FROM_WHITE)
+        releaseall
 }

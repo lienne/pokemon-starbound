@@ -3,7 +3,7 @@ mapscripts SolsticeTown_Mart_MapScripts {
 }
 
 script SolsticeTown_Mart_Employee_Dialogue {
-    if (!flag(FLAG_RECEIVED_JIRACHI_MEDICINE) && var(VAR_INTRO_SCENE) == 2) {
+    if (var(VAR_INTRO_SCENE) == 2 && !flag(FLAG_RECEIVED_JIRACHI_MEDICINE)) {
         lock
         applymovement(SolsticeTown_Mart_Employee, moves(face_player))
         msgbox(format("Hi! Are you {PLAYER}?\n"
@@ -11,6 +11,7 @@ script SolsticeTown_Mart_Employee_Dialogue {
             "I have your package here for you."), MSGBOX_AUTOCLOSE)
         giveitem(ITEM_PARCEL)
         setflag(FLAG_RECEIVED_JIRACHI_MEDICINE)
+        setflag(FLAG_HIDE_PROFMYRASLAB_JIRACHI)
         setvar(VAR_INTRO_SCENE, 3)
         releaseall
     } elif (flag(FLAG_RECEIVED_JIRACHI_MEDICINE) && !flag(FLAG_DELIVERED_JIRACHI_MEDICINE)) {

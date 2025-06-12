@@ -15,6 +15,7 @@
   "connections": null,
   "object_events": [
     {
+      "local_id": "ProfMyrasLab_Myra",
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
       "x": 6,
       "y": 4,
@@ -25,7 +26,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ProfMyrasLab_EventScript_ProfMyra_Dialogue",
-      "flag": "0"
+      "flag": "FLAG_HIDE_MYRA_IN_LAB"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_JIRACHI",
@@ -38,7 +39,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ProfMyrasLab_EventScript_JirachiNPC",
-      "flag": "0"
+      "flag": "FLAG_HIDE_PROFMYRASLAB_JIRACHI"
     },
     {
       "local_id": "ProfMyrasLab_Rival_Intro_2",
@@ -53,6 +54,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_HIDE_RIVAL_IN_LAB"
+    },
+    {
+      "local_id": "ProfMyrasLab_Assistant",
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_2",
+      "x": 9,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ProfMyrasLab_EventScript_Assistant_Dialogue",
+      "flag": "FLAG_HIDE_LAB_ASSISTANT"
     }
   ],
   "warp_events": [

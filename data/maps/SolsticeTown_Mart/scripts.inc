@@ -4,20 +4,21 @@ SolsticeTown_Mart_MapScripts::
 
 SolsticeTown_Mart_Employee_Dialogue::
 # 6 "data/maps/SolsticeTown_Mart/scripts.pory"
-	goto_if_unset FLAG_RECEIVED_JIRACHI_MEDICINE, SolsticeTown_Mart_Employee_Dialogue_7
+	compare VAR_INTRO_SCENE, 2
+	goto_if_eq SolsticeTown_Mart_Employee_Dialogue_7
 SolsticeTown_Mart_Employee_Dialogue_5:
-# 16 "data/maps/SolsticeTown_Mart/scripts.pory"
+# 17 "data/maps/SolsticeTown_Mart/scripts.pory"
 	goto_if_set FLAG_RECEIVED_JIRACHI_MEDICINE, SolsticeTown_Mart_Employee_Dialogue_4
 SolsticeTown_Mart_Employee_Dialogue_3:
-# 21 "data/maps/SolsticeTown_Mart/scripts.pory"
-	applymovement SolsticeTown_Mart_Employee, SolsticeTown_Mart_Employee_Dialogue_Movement_0
 # 22 "data/maps/SolsticeTown_Mart/scripts.pory"
-	msgbox SolsticeTown_Mart_Employee_Dialogue_Text_2, type = MSGBOX_NPC
+	applymovement SolsticeTown_Mart_Employee, SolsticeTown_Mart_Employee_Dialogue_Movement_0
 # 23 "data/maps/SolsticeTown_Mart/scripts.pory"
-	waitmessage
+	msgbox SolsticeTown_Mart_Employee_Dialogue_Text_2, type = MSGBOX_NPC
 # 24 "data/maps/SolsticeTown_Mart/scripts.pory"
-	pokemart SolsticeTown_Mart_Items
+	waitmessage
 # 25 "data/maps/SolsticeTown_Mart/scripts.pory"
+	pokemart SolsticeTown_Mart_Items
+# 26 "data/maps/SolsticeTown_Mart/scripts.pory"
 	msgbox SolsticeTown_Mart_Employee_Dialogue_Text_3, type = MSGBOX_NPC
 	return
 
@@ -33,51 +34,52 @@ SolsticeTown_Mart_Employee_Dialogue_1:
 # 13 "data/maps/SolsticeTown_Mart/scripts.pory"
 	setflag FLAG_RECEIVED_JIRACHI_MEDICINE
 # 14 "data/maps/SolsticeTown_Mart/scripts.pory"
-	setvar VAR_INTRO_SCENE, 3
+	setflag FLAG_HIDE_PROFMYRASLAB_JIRACHI
 # 15 "data/maps/SolsticeTown_Mart/scripts.pory"
+	setvar VAR_INTRO_SCENE, 3
+# 16 "data/maps/SolsticeTown_Mart/scripts.pory"
 	releaseall
 	return
 
 SolsticeTown_Mart_Employee_Dialogue_2:
-# 17 "data/maps/SolsticeTown_Mart/scripts.pory"
-	applymovement SolsticeTown_Mart_Employee, SolsticeTown_Mart_Employee_Dialogue_Movement_0
 # 18 "data/maps/SolsticeTown_Mart/scripts.pory"
+	applymovement SolsticeTown_Mart_Employee, SolsticeTown_Mart_Employee_Dialogue_Movement_0
+# 19 "data/maps/SolsticeTown_Mart/scripts.pory"
 	msgbox SolsticeTown_Mart_Employee_Dialogue_Text_1, type = MSGBOX_NPC
 	return
 
 SolsticeTown_Mart_Employee_Dialogue_4:
-# 16 "data/maps/SolsticeTown_Mart/scripts.pory"
+# 17 "data/maps/SolsticeTown_Mart/scripts.pory"
 	goto_if_unset FLAG_DELIVERED_JIRACHI_MEDICINE, SolsticeTown_Mart_Employee_Dialogue_2
 	goto SolsticeTown_Mart_Employee_Dialogue_3
 
 SolsticeTown_Mart_Employee_Dialogue_7:
 # 6 "data/maps/SolsticeTown_Mart/scripts.pory"
-	compare VAR_INTRO_SCENE, 2
-	goto_if_eq SolsticeTown_Mart_Employee_Dialogue_1
+	goto_if_unset FLAG_RECEIVED_JIRACHI_MEDICINE, SolsticeTown_Mart_Employee_Dialogue_1
 	goto SolsticeTown_Mart_Employee_Dialogue_5
 
 
 	.align 2
-# 29 "data/maps/SolsticeTown_Mart/scripts.pory"
-SolsticeTown_Mart_Items:
 # 30 "data/maps/SolsticeTown_Mart/scripts.pory"
-	.2byte ITEM_POKE_BALL
+SolsticeTown_Mart_Items:
 # 31 "data/maps/SolsticeTown_Mart/scripts.pory"
-	.2byte ITEM_POTION
+	.2byte ITEM_POKE_BALL
 # 32 "data/maps/SolsticeTown_Mart/scripts.pory"
-	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_POTION
 # 33 "data/maps/SolsticeTown_Mart/scripts.pory"
-	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_ANTIDOTE
 # 34 "data/maps/SolsticeTown_Mart/scripts.pory"
+	.2byte ITEM_PARALYZE_HEAL
+# 35 "data/maps/SolsticeTown_Mart/scripts.pory"
 	.2byte ITEM_AWAKENING
 	.2byte ITEM_NONE
 
 SolsticeTown_Mart_Boy1_Dialogue::
-# 38 "data/maps/SolsticeTown_Mart/scripts.pory"
-	applymovement SolsticeTown_Mart_Boy1, SolsticeTown_Mart_Employee_Dialogue_Movement_0
 # 39 "data/maps/SolsticeTown_Mart/scripts.pory"
-	msgbox SolsticeTown_Mart_Boy1_Dialogue_Text_0, type = MSGBOX_NPC
+	applymovement SolsticeTown_Mart_Boy1, SolsticeTown_Mart_Employee_Dialogue_Movement_0
 # 40 "data/maps/SolsticeTown_Mart/scripts.pory"
+	msgbox SolsticeTown_Mart_Boy1_Dialogue_Text_0, type = MSGBOX_NPC
+# 41 "data/maps/SolsticeTown_Mart/scripts.pory"
 	applymovement SolsticeTown_Mart_Boy1, SolsticeTown_Mart_Boy1_Dialogue_Movement_0
 	return
 
@@ -88,9 +90,9 @@ SolsticeTown_Mart_Employee_Dialogue_Movement_0:
 	face_player
 	step_end
 
-# 40 "data/maps/SolsticeTown_Mart/scripts.pory"
+# 41 "data/maps/SolsticeTown_Mart/scripts.pory"
 SolsticeTown_Mart_Boy1_Dialogue_Movement_0:
-# 40 "data/maps/SolsticeTown_Mart/scripts.pory"
+# 41 "data/maps/SolsticeTown_Mart/scripts.pory"
 	face_left
 	step_end
 
@@ -102,21 +104,21 @@ SolsticeTown_Mart_Employee_Dialogue_Text_0:
 	.string "I have your package here for you.$"
 
 SolsticeTown_Mart_Employee_Dialogue_Text_1:
-# 18 "data/maps/SolsticeTown_Mart/scripts.pory"
+# 19 "data/maps/SolsticeTown_Mart/scripts.pory"
 	.string "Hi {PLAYER}!\n"
 	.string "Did you deliver the package to Prof.\l"
 	.string "Myra yet?$"
 
 SolsticeTown_Mart_Employee_Dialogue_Text_2:
-# 22 "data/maps/SolsticeTown_Mart/scripts.pory"
+# 23 "data/maps/SolsticeTown_Mart/scripts.pory"
 	.string "Welcome to the Solstice Town Mart!$"
 
 SolsticeTown_Mart_Employee_Dialogue_Text_3:
-# 25 "data/maps/SolsticeTown_Mart/scripts.pory"
+# 26 "data/maps/SolsticeTown_Mart/scripts.pory"
 	.string "Thank you for shopping with us!$"
 
 SolsticeTown_Mart_Boy1_Dialogue_Text_0:
-# 39 "data/maps/SolsticeTown_Mart/scripts.pory"
+# 40 "data/maps/SolsticeTown_Mart/scripts.pory"
 	.string "Don't forget to grab Pokéballs! You\n"
 	.string "never know what you'll run into out\l"
 	.string "there.$"

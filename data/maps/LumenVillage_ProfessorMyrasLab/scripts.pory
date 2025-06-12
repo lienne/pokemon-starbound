@@ -7,6 +7,11 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
     ]
     MAP_SCRIPT_ON_TRANSITION {
         call(Common_EventScript_SetupRivalGfxId)
+        if (var(VAR_INTRO_SCENE) >= 5) {
+            clearflag(FLAG_HIDE_LAB_ASSISTANT)
+            addobject(ProfMyrasLab_Assistant)
+            setobjectxyperm(ProfMyrasLab_Assistant, 9, 8)
+        }
     }
     MAP_SCRIPT_ON_FRAME_TABLE[
         VAR_INTRO_SCENE, 0 {
@@ -73,11 +78,8 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
                 "...but, uh, I'm still glad we're doing this together.\l"
                 "Even if I AM gonna beat you!\l"
                 "Catch you later!"), MSGBOX_AUTOCLOSE)
-            applymovement(ProfMyrasLab_Rival_Intro_2, moves(walk_fast_right))
-            waitmovement(0)
-            applymovement(ProfMyrasLab_Rival_Intro_2, moves(walk_fast_down * 7))
-            waitmovement(0)
-            applymovement(LOCALID_PLAYER, moves(face_down))
+            applymovement(LOCALID_PLAYER, ProfMyrasLab_Movement_PlayerWatchRivalExit)
+            applymovement(ProfMyrasLab_Rival_Intro_2, ProfMyrasLab_Movement_RivalExit)
             waitmovement(0)
             playse(SE_DOOR)
             waitse()
@@ -103,23 +105,14 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             speakername(ProfMyraName)
             msgbox(format("I see you've also retrieved the medicine from Solstice Town.\l"
                 "Thank you for that, {PLAYER}.\l"
-                "I think Jirachi will be able to recover now."))
-            setflag(FLAG_DELIVERED_JIRACHI_MEDICINE)
-            removeitem(ITEM_PARCEL)
-            msgbox(format("Since you're keeping the Pokémon I lent you, I think it's only fair that you take this as well.\l"
-                "It's a Pokédex, a device that records data on all Pokémon you encounter."))
-            // Also give player 5 pokeballs along with pokedex here
-            playfanfare(MUS_OBTAIN_ITEM)
-            speakername(NULL)
-            msgbox(format("{PLAYER} received the Pokédex!"))
-            waitfanfare()
-    	    setflag(FLAG_SYS_POKEDEX_GET)
-	        special(SetUnlockedPokedexFlags)
-            speakername(ProfMyraName)
-            msgbox(format(
-                "I hope you'll use it to learn more about the world of Pokémon.\l"
-                "And of course, if you ever need anything, feel free to come back here.\l"
-                "Good luck on your journey, {PLAYER}!"), MSGBOX_AUTOCLOSE)
+                "However, Jirachi has already left.\l"
+                "I'm worried about it, since it was badly hurt.\l"
+                "You might not know this, but Jirachi is a very special Pokémon.\l"
+                "Whoever those Team Eclipse guys were, I don't think they had good intentions towards Jirachi.\l"
+                "If it went anywhere... it must have returned to the place where you found it.\l"
+                "You should go back to Starfall Clearing to look for it.\l"
+                "If it chose to show itself to you, it might do so again.\l"
+                "Please look for Jirachi, {PLAYER}, and make sure it is safe."), MSGBOX_AUTOCLOSE)
             end
         }
     ]
@@ -135,17 +128,46 @@ script RivalName {
 }
 
 script ProfMyrasLab_EventScript_ProfMyra_Dialogue {
-    if (!flag(FLAG_RECEIVED_JIRACHI_MEDICINE)) {
+    if (var(VAR_INTRO_SCENE) < 4) {
         speakername(ProfMyraName)
         msgbox(format("Thank you for agreeing to get the medicine from Solstice Town for Jirachi. It's imperative we help it recover."), type=MSGBOX_NPC)
+    } elif (var(VAR_INTRO_SCENE) == 4) {
+        speakername(ProfMyraName)
+        msgbox(format("Please look for Jirachi, {PLAYER}, and make sure it is safe."), type=MSGBOX_NPC)
     } else {
         speakername(ProfMyraName)
-        msgbox(format("Welcome back, {PLAYER}!\n"
-            "Jirachi is doing much better now, thanks to you!"), type=MSGBOX_NPC)
+        msgbox(format("I hope your journey's off to a good start, {PLAYER}.\l"
+        "Don't forget - you're not alone out there.\l"
+        "Oh, and remember to register Pokémon in your Pokédex.\l"
+        "The more you learn, the stronger you'll become.\l"
+        "Safe travels, {PLAYER}."), type=MSGBOX_NPC)
     }
 }
 
 script ProfMyrasLab_EventScript_JirachiNPC {
     playmoncry(SPECIES_JIRACHI, CRY_MODE_NORMAL)
     waitmoncry()
+}
+
+script ProfMyrasLab_EventScript_Assistant_Dialogue {
+    if (var(VAR_INTRO_SCENE) == 5) {
+        applymovement(ProfMyrasLab_Assistant, moves(face_player))
+        msgbox(format("Prof. Myra went out. I'm not sure where she went."), type=MSGBOX_NPC)
+    } else {
+        applymovement(ProfMyrasLab_Assistant, moves(face_player))
+        msgbox(format("Prof. Myra is an astrologer. She's very interested in the stars.\l"
+            "That's why she moved to Lumen Village - there's a lot less light pollution around here."), type=MSGBOX_NPC)
+    }
+}
+
+movement ProfMyrasLab_Movement_RivalExit {
+    walk_fast_right
+    walk_fast_down * 7
+}
+
+movement ProfMyrasLab_Movement_PlayerWatchRivalExit {
+    delay_16
+    walk_in_place_faster_right
+    delay_16
+    walk_in_place_faster_down
 }
