@@ -31,9 +31,14 @@ const u32 gObjectEventPic_MayDecorating[] = INCBIN_U32("graphics/object_events/p
 const u32 gObjectEventPic_BrendanUnderwater[] = INCBIN_U32("graphics/object_events/pics/people/brendan/underwater.4bpp");
 const u32 gObjectEventPic_MayUnderwater[] = INCBIN_U32("graphics/object_events/pics/people/may/underwater.4bpp");
 const u16 gObjectEventPal_PlayerUnderwater[] = INCBIN_U16("graphics/object_events/palettes/player_underwater.gbapal");
+
 const u32 gObjectEventPic_MayNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/may/walking.4bpp", "graphics/object_events/pics/people/may/running.4bpp");
 const u16 gObjectEventPal_May[] = INCBIN_U16("graphics/object_events/palettes/may.gbapal");
 const u16 gObjectEventPal_MayReflection[] = INCBIN_U16("graphics/object_events/palettes/may_reflection.gbapal");
+
+const u32 gObjectEventPic_SeleneNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/selene/walking.4bpp", "graphics/object_events/pics/people/selene/running.4bpp");
+const u16 gObjectEventPal_Selene[] = INCBIN_U16("graphics/object_events/palettes/selene.gbapal");
+
 const u32 gObjectEventPic_RubySapphireMayNormal[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_may/walking.4bpp");
 const u32 gObjectEventPic_RubySapphireMayRunning[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_may/running.4bpp");
 const u16 gObjectEventPal_RubySapphireMay[] = INCBIN_U16("graphics/object_events/palettes/ruby_sapphire_may.gbapal");
