@@ -136,9 +136,9 @@ LumenVillage_EventScript_SetIntroFlags_Male::
 # 81 "data/maps/LumenVillage/scripts.pory"
 	clearflag FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_RIVAL_MOM
 # 82 "data/maps/LumenVillage/scripts.pory"
-	addobject Cassians_House_Mom
+	addobject Player_Mom_1F
 # 83 "data/maps/LumenVillage/scripts.pory"
-	addobject Selenes_House_Rival_Mom
+	addobject Rival_Mom_1F
 # 84 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
@@ -152,9 +152,9 @@ LumenVillage_EventScript_SetIntroFlags_Female::
 # 90 "data/maps/LumenVillage/scripts.pory"
 	clearflag FLAG_HIDE_LUMEN_VILLAGE_CASSIANS_HOUSE_RIVAL_MOM
 # 91 "data/maps/LumenVillage/scripts.pory"
-	addobject Selenes_House_Mom
+	addobject Player_Mom_1F
 # 92 "data/maps/LumenVillage/scripts.pory"
-	addobject Cassians_House_Rival_Mom
+	addobject Rival_Mom_1F
 # 93 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return

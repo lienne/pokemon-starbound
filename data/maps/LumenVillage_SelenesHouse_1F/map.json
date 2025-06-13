@@ -15,7 +15,7 @@
   "connections": null,
   "object_events": [
     {
-      "local_id": "Selenes_House_Mom",
+      "local_id": "Player_Mom_1F",
       "graphics_id": "OBJ_EVENT_GFX_MOM",
       "x": 8,
       "y": 6,
@@ -25,11 +25,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "PlayersHouse_EventScript_Mom_Dialogue",
       "flag": "FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_MOM"
     },
     {
-      "local_id": "Selenes_House_Rival_Mom",
+      "local_id": "Rival_Mom_1F",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
       "x": 8,
       "y": 7,
@@ -39,7 +39,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "PlayersHouse_EventScript_RivalMom_Dialogue",
       "flag": "FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_RIVAL_MOM"
     }
   ],

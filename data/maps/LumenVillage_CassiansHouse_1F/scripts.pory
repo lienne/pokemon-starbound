@@ -1,10 +1,19 @@
 mapscripts LumenVillage_CassiansHouse_1F_MapScripts {
-    MAP_SCRIPT_ON_TRANSITION {
-        call(LumenVillage_CassiansHouse_1F_EventScript_SpawnMom)
-    }
+    
 }
 
-script LumenVillage_CassiansHouse_1F_EventScript_SpawnMom {
-    setobjectxyperm(Cassians_House_Mom, 2, 6)
-    // setobjectmovementtype(Cassians_House_Mom, MOVEMENT_TYPE_FACE_RIGHT)
+script PlayersHouse_EventScript_RivalMom_Dialogue {
+    if (var(VAR_INTRO_SCENE) < 6) {
+        applymovement(Rival_Mom_1F, moves(face_player))
+        msgbox(format("Oh hi, {PLAYER}!\p"
+            "{RIVAL} went out to Starlit Path a little while ago.\l"
+            "That child just can't stay quietly at home."), type=MSGBOX_NPC)
+    } else {
+        applymovement(Rival_Mom_1F, moves(face_player))
+        msgbox(format("Hi {PLAYER}!\p"
+            "That {RIVAL}!\l"
+            "I guess our child is too busy with Pokémon to ever visit home.\l"
+            "You should stop home every so often too, to let your mother know you're ok.\l"
+            "She might not say it, but I'm sure she worries about you, {PLAYER}."), type=MSGBOX_NPC)
+    }
 }

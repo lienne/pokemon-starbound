@@ -1,9 +1,5 @@
 mapscripts BeginnerClearing_MapScripts {
-    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE [
-        1, 1 {
-            turnobject(LOCALID_PLAYER, DIR_EAST)
-        }
-    ]
+    
 }
 
 movement BeginnerClearing_ExclamationMark {
@@ -221,8 +217,6 @@ script BeginnerClearing_EventScript_JirachiIntro {
     applymovement(ProfMyra, moves(face_left))
     waitmovement(0)
     msgbox(format("What's your name?"))
-    // special(DoPlayerNamingScreen)
-    // waitstate()
     msgbox(format("..."))
     msgbox(format(
         "{PLAYER}, is it?\l"

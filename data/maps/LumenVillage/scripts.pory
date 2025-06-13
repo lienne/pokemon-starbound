@@ -79,8 +79,8 @@ script LumenVillage_EventScript_SetIntroFlags_Male {
     setrespawn(HEAL_LOCATION_LUMEN_VILLAGE)
     clearflag(FLAG_HIDE_LUMEN_VILLAGE_CASSIANS_HOUSE_MOM)
     clearflag(FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_RIVAL_MOM)
-    addobject(Cassians_House_Mom)
-    addobject(Selenes_House_Rival_Mom)
+    addobject(Player_Mom_1F)
+    addobject(Rival_Mom_1F)
     releaseall
 }
 
@@ -88,8 +88,8 @@ script LumenVillage_EventScript_SetIntroFlags_Female {
     setrespawn(HEAL_LOCATION_LUMEN_VILLAGE)
     clearflag(FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_MOM)
     clearflag(FLAG_HIDE_LUMEN_VILLAGE_CASSIANS_HOUSE_RIVAL_MOM)
-    addobject(Selenes_House_Mom)
-    addobject(Cassians_House_Rival_Mom)
+    addobject(Player_Mom_1F)
+    addobject(Rival_Mom_1F)
     releaseall
 }
 
