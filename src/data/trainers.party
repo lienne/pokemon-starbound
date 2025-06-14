@@ -9505,8 +9505,8 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Psychic
 - Future Sight
 
-=== TRAINER_BRENDAN_ROUTE_103_MUDKIP ===
-Name: BRENDAN
+=== TRAINER_CASSIAN_SOLSTICE_SQUIRTLE ===
+Name: Cassian
 Class: Rival
 Pic: Brendan
 Gender: Male
@@ -9514,7 +9514,7 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Treecko
+Sprigatito
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9560,8 +9560,8 @@ Grovyle
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_BRENDAN_ROUTE_103_TREECKO ===
-Name: BRENDAN
+=== TRAINER_CASSIAN_SOLSTICE_SPRIGATITO ===
+Name: Cassian
 Class: Rival
 Pic: Brendan
 Gender: Male
@@ -9569,7 +9569,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
 
-Torchic
+Fennekin
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9615,8 +9615,8 @@ Combusken
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_BRENDAN_ROUTE_103_TORCHIC ===
-Name: BRENDAN
+=== TRAINER_CASSIAN_SOLSTICE_FENNEKIN ===
+Name: Cassian
 Class: Rival
 Pic: Brendan
 Gender: Male
@@ -9624,7 +9624,7 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Mudkip
+Squirtle
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9670,8 +9670,8 @@ Marshtomp
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_MAY_ROUTE_103_MUDKIP ===
-Name: MAY
+=== TRAINER_SELENE_SOLSTICE_SQUIRTLE ===
+Name: Selene
 Class: Rival
 Pic: May
 Gender: Female
@@ -9679,7 +9679,7 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Treecko
+Sprigatito
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9725,8 +9725,8 @@ Grovyle
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_MAY_ROUTE_103_TREECKO ===
-Name: MAY
+=== TRAINER_SELENE_SOLSTICE_SPRIGATITO ===
+Name: Selene
 Class: Rival
 Pic: May
 Gender: Female
@@ -9734,7 +9734,7 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Torchic
+Fennekin
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9780,8 +9780,8 @@ Combusken
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_MAY_ROUTE_103_TORCHIC ===
-Name: MAY
+=== TRAINER_SELENE_SOLSTICE_FENNEKIN ===
+Name: Selene
 Class: Rival
 Pic: May
 Gender: Female
@@ -9789,7 +9789,7 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Mudkip
+Squirtle
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 

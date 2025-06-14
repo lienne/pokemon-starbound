@@ -60,7 +60,7 @@
 #define FLAG_HIDE_LAB_ASSISTANT                             0x2E
 #define FLAG_HIDE_MYRA_IN_LUMEN_VILLAGE                     0x2F
 #define FLAG_HIDE_MYRA_IN_LAB                               0x30
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
+#define FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN                    0x31
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag
 #define FLAG_UNUSED_0x034    0x34 // Unused Flag

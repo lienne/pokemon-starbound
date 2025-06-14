@@ -28,7 +28,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ZIGZAGOON_2",
       "x": 11,
-      "y": 5,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -42,7 +42,7 @@
       "local_id": "SolsticeTown_Girl1",
       "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
       "x": 8,
-      "y": 10,
+      "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -56,7 +56,7 @@
       "local_id": "SolsticeTown_Boy1",
       "graphics_id": "OBJ_EVENT_GFX_BOY_3",
       "x": 9,
-      "y": 10,
+      "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -70,7 +70,7 @@
       "local_id": "SolsticeTown_Girl2",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
       "x": 14,
-      "y": 21,
+      "y": 23,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 1,
@@ -83,7 +83,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
       "x": 0,
-      "y": 17,
+      "y": 19,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -97,7 +97,7 @@
       "local_id": "SolsticeTown_Boy2",
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
       "x": 23,
-      "y": 4,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -106,40 +106,54 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SolsticeTown_EventScript_Boy2_Dialogue",
       "flag": "0"
+    },
+    {
+      "local_id": "SolsticeTown_Rival",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
+      "x": 21,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN"
     }
   ],
   "warp_events": [
     {
       "x": 5,
-      "y": 20,
+      "y": 22,
       "elevation": 0,
       "dest_map": "MAP_SOLSTICE_TOWN_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 21,
-      "y": 12,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_SOLSTICE_TOWN_MART",
       "dest_warp_id": "0"
     },
     {
       "x": 8,
-      "y": 15,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_SOLSTICE_TOWN_HOUSE1",
       "dest_warp_id": "0"
     },
     {
       "x": 16,
-      "y": 19,
+      "y": 21,
       "elevation": 0,
       "dest_map": "MAP_SOLSTICE_TOWN_HOUSE2",
       "dest_warp_id": "0"
     },
     {
       "x": 15,
-      "y": 7,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_SOLSTICE_TOWN_HOUSE3",
       "dest_warp_id": "0"
@@ -149,7 +163,7 @@
     {
       "type": "trigger",
       "x": 22,
-      "y": 4,
+      "y": 6,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -158,7 +172,7 @@
     {
       "type": "trigger",
       "x": 21,
-      "y": 4,
+      "y": 6,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -167,18 +181,54 @@
     {
       "type": "trigger",
       "x": 20,
-      "y": 4,
+      "y": 6,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "SolsticeTown_EventScript_Boy2_Dialogue_SpotA"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_INTRO_SCENE",
+      "var_value": "6",
+      "script": "SolsticeTown_EventScript_RivalRunsToPlayerAtA"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_INTRO_SCENE",
+      "var_value": "6",
+      "script": "SolsticeTown_EventScript_RivalRunsToPlayerAtB"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_INTRO_SCENE",
+      "var_value": "6",
+      "script": "SolsticeTown_EventScript_RivalRunsToPlayerAtC"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_INTRO_SCENE",
+      "var_value": "6",
+      "script": "SolsticeTown_EventScript_RivalRunsToPlayerAtD"
     }
   ],
   "bg_events": [
     {
       "type": "sign",
       "x": 6,
-      "y": 20,
+      "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
@@ -186,7 +236,7 @@
     {
       "type": "sign",
       "x": 7,
-      "y": 20,
+      "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
@@ -194,7 +244,7 @@
     {
       "type": "sign",
       "x": 22,
-      "y": 12,
+      "y": 14,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
@@ -202,7 +252,7 @@
     {
       "type": "sign",
       "x": 23,
-      "y": 12,
+      "y": 14,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
@@ -210,7 +260,7 @@
     {
       "type": "sign",
       "x": 13,
-      "y": 10,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "SolsticeTown_EventScript_TownSign"

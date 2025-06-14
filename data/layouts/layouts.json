@@ -4485,7 +4485,7 @@
       "id": "LAYOUT_SOLSTICE_TOWN",
       "name": "SolsticeTown_Layout",
       "width": 27,
-      "height": 24,
+      "height": 26,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/SolsticeTown/border.bin",

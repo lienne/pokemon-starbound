@@ -37,8 +37,8 @@ PlayersHouse_EventScript_RivalMom_Dialogue_Text_0:
 PlayersHouse_EventScript_RivalMom_Dialogue_Text_1:
 # 13 "data/maps/LumenVillage_CassiansHouse_1F/scripts.pory"
 	.string "Hi {PLAYER}!\p"
-	.string "That {RIVAL}!\l"
-	.string "I guess our child is too busy with\l"
+	.string "That {RIVAL}!\p"
+	.string "I guess our child is too busy with\n"
 	.string "Pokémon to ever visit home.\l"
 	.string "You should stop home every so often\l"
 	.string "too, to let your mother know you're ok.\l"

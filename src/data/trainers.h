@@ -23732,10 +23732,10 @@ F_TRAINER_FEMALE |
         },
     },
 #line 9508
-    [DIFFICULTY_NORMAL][TRAINER_BRENDAN_ROUTE_103_MUDKIP] =
+    [DIFFICULTY_NORMAL][TRAINER_CASSIAN_SOLSTICE_SQUIRTLE] =
     {
 #line 9509
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Cassian"),
 #line 9510
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9511
@@ -23752,7 +23752,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 9517
-            .species = SPECIES_TREECKO,
+            .species = SPECIES_SPRIGATITO,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9519
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
@@ -23872,10 +23872,10 @@ F_TRAINER_FEMALE |
         },
     },
 #line 9563
-    [DIFFICULTY_NORMAL][TRAINER_BRENDAN_ROUTE_103_TREECKO] =
+    [DIFFICULTY_NORMAL][TRAINER_CASSIAN_SOLSTICE_SPRIGATITO] =
     {
 #line 9564
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Cassian"),
 #line 9565
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9566
@@ -23892,7 +23892,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 9572
-            .species = SPECIES_TORCHIC,
+            .species = SPECIES_FENNEKIN,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9574
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
@@ -24012,10 +24012,10 @@ F_TRAINER_FEMALE |
         },
     },
 #line 9618
-    [DIFFICULTY_NORMAL][TRAINER_BRENDAN_ROUTE_103_TORCHIC] =
+    [DIFFICULTY_NORMAL][TRAINER_CASSIAN_SOLSTICE_FENNEKIN] =
     {
 #line 9619
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Cassian"),
 #line 9620
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9621
@@ -24032,7 +24032,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 9627
-            .species = SPECIES_MUDKIP,
+            .species = SPECIES_SQUIRTLE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9629
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
@@ -24152,10 +24152,10 @@ F_TRAINER_FEMALE |
         },
     },
 #line 9673
-    [DIFFICULTY_NORMAL][TRAINER_MAY_ROUTE_103_MUDKIP] =
+    [DIFFICULTY_NORMAL][TRAINER_SELENE_SOLSTICE_SQUIRTLE] =
     {
 #line 9674
-        .trainerName = _("MAY"),
+        .trainerName = _("Selene"),
 #line 9675
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9676
@@ -24174,7 +24174,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 9682
-            .species = SPECIES_TREECKO,
+            .species = SPECIES_SPRIGATITO,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9684
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
@@ -24298,10 +24298,10 @@ F_TRAINER_FEMALE |
         },
     },
 #line 9728
-    [DIFFICULTY_NORMAL][TRAINER_MAY_ROUTE_103_TREECKO] =
+    [DIFFICULTY_NORMAL][TRAINER_SELENE_SOLSTICE_SPRIGATITO] =
     {
 #line 9729
-        .trainerName = _("MAY"),
+        .trainerName = _("Selene"),
 #line 9730
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9731
@@ -24320,7 +24320,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 9737
-            .species = SPECIES_TORCHIC,
+            .species = SPECIES_FENNEKIN,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9739
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
@@ -24444,10 +24444,10 @@ F_TRAINER_FEMALE |
         },
     },
 #line 9783
-    [DIFFICULTY_NORMAL][TRAINER_MAY_ROUTE_103_TORCHIC] =
+    [DIFFICULTY_NORMAL][TRAINER_SELENE_SOLSTICE_FENNEKIN] =
     {
 #line 9784
-        .trainerName = _("MAY"),
+        .trainerName = _("Selene"),
 #line 9785
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9786
@@ -24466,7 +24466,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 9792
-            .species = SPECIES_MUDKIP,
+            .species = SPECIES_SQUIRTLE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9794
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),

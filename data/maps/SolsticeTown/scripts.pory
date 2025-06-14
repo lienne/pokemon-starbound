@@ -1,5 +1,8 @@
 mapscripts SolsticeTown_MapScripts {
-    
+    MAP_SCRIPT_ON_TRANSITION {
+        setflag(FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN)
+        removeobject(SolsticeTown_Rival)
+    }
 }
 
 script SolsticeTown_EventScript_TownSign {
@@ -81,6 +84,169 @@ script SolsticeTown_EventScript_Boy2_Dialogue {
     }
 }
 
+script SolsticeTown_EventScript_RivalRunsToPlayerAtA {
+    if (var(VAR_INTRO_SCENE) == 6) {
+        lockall
+        clearflag(FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN)
+        addobject(SolsticeTown_Rival)
+        playbgm(MUS_RG_ENCOUNTER_RIVAL, FALSE)
+        applymovement(LOCALID_PLAYER, SolsticeTown_ExclamationMark)
+        playse(SE_PIN)
+        waitmovement(0)
+        delay(20)
+        applymovement(LOCALID_PLAYER, moves(face_down))
+        waitmovement(0)
+        applymovement(SolsticeTown_Rival, SolsticeTown_Movement_RivalRunsToPlayerAtA)
+        waitmovement(0)
+        applymovement(LOCALID_PLAYER, moves(face_right))
+        waitmovement(0)
+        call(SolsticeTown_EventScript_Rival_First_Battle)
+        releaseall
+    }
+}
+
+script SolsticeTown_EventScript_RivalRunsToPlayerAtB {
+    if (var(VAR_INTRO_SCENE) == 6) {
+        lockall
+        clearflag(FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN)
+        addobject(SolsticeTown_Rival)
+        playbgm(MUS_RG_ENCOUNTER_RIVAL, FALSE)
+        applymovement(LOCALID_PLAYER, SolsticeTown_ExclamationMark)
+        playse(SE_PIN)
+        waitmovement(0)
+        delay(20)
+        applymovement(LOCALID_PLAYER, moves(face_down))
+        waitmovement(0)
+        applymovement(SolsticeTown_Rival, SolsticeTown_Movement_RivalRunsToPlayerAtB)
+        waitmovement(0)
+        applymovement(LOCALID_PLAYER, moves(face_down))
+        waitmovement(0)
+        call(SolsticeTown_EventScript_Rival_First_Battle)
+        releaseall
+    }
+}
+
+script SolsticeTown_EventScript_RivalRunsToPlayerAtC {
+    if (var(VAR_INTRO_SCENE) == 6) {
+        lockall
+        clearflag(FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN)
+        addobject(SolsticeTown_Rival)
+        playbgm(MUS_RG_ENCOUNTER_RIVAL, FALSE)
+        applymovement(LOCALID_PLAYER, SolsticeTown_ExclamationMark)
+        playse(SE_PIN)
+        waitmovement(0)
+        delay(20)
+        applymovement(LOCALID_PLAYER, moves(face_down))
+        waitmovement(0)
+        applymovement(SolsticeTown_Rival, SolsticeTown_Movement_RivalRunsToPlayerAtC)
+        waitmovement(0)
+        applymovement(LOCALID_PLAYER, moves(face_left))
+        waitmovement(0)
+        call(SolsticeTown_EventScript_Rival_First_Battle)
+        releaseall
+    }
+}
+
+script SolsticeTown_EventScript_RivalRunsToPlayerAtD {
+    if (var(VAR_INTRO_SCENE) == 6) {
+        lockall
+        clearflag(FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN)
+        addobject(SolsticeTown_Rival)
+        playbgm(MUS_RG_ENCOUNTER_RIVAL, FALSE)
+        applymovement(LOCALID_PLAYER, SolsticeTown_ExclamationMark)
+        playse(SE_PIN)
+        waitmovement(0)
+        delay(20)
+        applymovement(LOCALID_PLAYER, moves(face_down))
+        waitmovement(0)
+        applymovement(SolsticeTown_Rival, SolsticeTown_Movement_RivalRunsToPlayerAtD)
+        waitmovement(0)
+        applymovement(LOCALID_PLAYER, moves(face_left))
+        waitmovement(0)
+        call(SolsticeTown_EventScript_Rival_First_Battle)
+        releaseall
+    }
+}
+
+script SolsticeTown_EventScript_Rival_First_Battle {
+    lockall
+    checkplayergender()
+    if (var(VAR_RESULT) == MALE) {
+        call(SolsticeTown_EventScript_RivalSelene)
+    }
+    else {
+        call (SolsticeTown_EventScript_RivalCassian)
+    }
+    releaseall
+}
+
+script SolsticeTown_EventScript_RivalSelene {
+    call(RivalName)
+    msgbox(SolsticeTown_Rival_Battle_Intro_Dialogue)
+    switch (var(VAR_STARTER_MON)) {
+        case 0:
+            call(SolsticeTown_EventScript_StartSeleneBattleSprigatito)
+        case 1:
+            call(SolsticeTown_EventScript_StartSeleneBattleSquirtle)
+        case 2:
+            call(SolsticeTown_EventScript_StartSeleneBattleFennekin)
+    }
+}
+
+script SolsticeTown_EventScript_RivalCassian {
+    call(RivalName)
+    msgbox(SolsticeTown_Rival_Battle_Intro_Dialogue)
+    switch (var(VAR_STARTER_MON)) {
+        case 0:
+            call(SolsticeTown_EventScript_StartCassianBattleSprigatito)
+        case 1:
+            call(SolsticeTown_EventScript_StartCassianBattleSquirtle)
+        case 2:
+            call(SolsticeTown_EventScript_StartCassianBattleFennekin)
+    }
+}
+
+script SolsticeTown_EventScript_StartSeleneBattleSprigatito {
+    trainerbattle_no_intro(TRAINER_SELENE_SOLSTICE_SPRIGATITO, SolsticeTown_Rival_Battle_Defeat_Dialogue)
+    call(SolsticeTown_EventScript_RivalExit)
+}
+
+script SolsticeTown_EventScript_StartSeleneBattleFennekin {
+    trainerbattle_no_intro(TRAINER_SELENE_SOLSTICE_FENNEKIN, SolsticeTown_Rival_Battle_Defeat_Dialogue)
+    call(SolsticeTown_EventScript_RivalExit)
+}
+
+script SolsticeTown_EventScript_StartSeleneBattleSquirtle {
+    trainerbattle_no_intro(TRAINER_SELENE_SOLSTICE_SQUIRTLE, SolsticeTown_Rival_Battle_Defeat_Dialogue)
+    call(SolsticeTown_EventScript_RivalExit)
+}
+
+script SolsticeTown_EventScript_StartCassianBattleSprigatito {
+    trainerbattle_no_intro(TRAINER_CASSIAN_SOLSTICE_SPRIGATITO, SolsticeTown_Rival_Battle_Defeat_Dialogue)
+    call(SolsticeTown_EventScript_RivalExit)
+}
+
+script SolsticeTown_EventScript_StartCassianBattleFennekin {
+    trainerbattle_no_intro(TRAINER_CASSIAN_SOLSTICE_FENNEKIN, SolsticeTown_Rival_Battle_Defeat_Dialogue)
+    call(SolsticeTown_EventScript_RivalExit)
+}
+
+script SolsticeTown_EventScript_StartCassianBattleSquirtle {
+    trainerbattle_no_intro(TRAINER_CASSIAN_SOLSTICE_SQUIRTLE, SolsticeTown_Rival_Battle_Defeat_Dialogue)
+    call(SolsticeTown_EventScript_RivalExit)
+}
+
+script SolsticeTown_EventScript_RivalExit {
+    setvar(VAR_INTRO_SCENE, 7)
+    msgbox(SolsticeTown_Rival_After_Battle_Dialogue)
+    applymovement(SolsticeTown_Rival, SolsticeTown_Movement_RivalExit)
+    waitmovement(0)
+    fadedefaultbgm()
+    setflag(FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN)
+    removeobject(SolsticeTown_Rival)
+    releaseall
+}
+
 text SolsticeTown_Boy2_Dialogue_PreDelivery {
     format("WHOA there, superstar! The road ahead's closed.\l"
     "Not by law or anything, I'm just standing here real confidently.\l"
@@ -91,6 +257,25 @@ text SolsticeTown_Boy2_Dialogue_PostDelivery {
     format("Ahh, the hero returns!\n"
         "I'd move out of the way dramatically, but my back's acting up.\l"
         "Just pretend I did a cool spin or something.")
+}
+
+text SolsticeTown_Rival_Battle_Intro_Dialogue {
+    format("{PLAYER}, wait!\p"
+        "So you're leaving on an too adventure, huh?\l"
+        "Now that I have a Pokémon, I also want to go out and explore the world!\l"
+        "We'll take the Pokémon League challenge together and see who comes out on top!\l"
+        "Before we leave, how about a battle?\l"
+        "I'll give you a taste of what it means to compete with me!")
+}
+
+text SolsticeTown_Rival_Battle_Defeat_Dialogue {
+    format("What...? Maybe I picked the wrong Pokémon...")
+}
+
+text SolsticeTown_Rival_After_Battle_Dialogue {
+    format("Humpft... You only won because you had a head start.\l"
+        "You won't be so lucky next time, though!\l"
+        "Me and my Pokémon will train and get much stronger, you'll see!")
 }
 
 movement SolsticeTown_ExclamationMark {
@@ -113,4 +298,29 @@ movement SolsticeTown_Boy2_RunsToPlayer_SpotB {
 movement SolsticeTown_Boy2_RunsBack_SpotB {
     walk_right
     face_left
+}
+
+movement SolsticeTown_Movement_RivalRunsToPlayerAtA {
+    walk_fast_up * 9
+    face_left
+}
+
+movement SolsticeTown_Movement_RivalRunsToPlayerAtB {
+    walk_fast_up * 8
+    face_up
+}
+
+movement SolsticeTown_Movement_RivalRunsToPlayerAtC {
+    walk_fast_up * 9
+    face_right
+}
+
+movement SolsticeTown_Movement_RivalRunsToPlayerAtD {
+    walk_fast_up * 9
+    walk_fast_right
+    face_right
+}
+
+movement SolsticeTown_Movement_RivalExit {
+    walk_fast_down * 8
 }
