@@ -238,7 +238,7 @@ script SolsticeTown_EventScript_StartCassianBattleSquirtle {
 
 script SolsticeTown_EventScript_RivalExit {
     setvar(VAR_INTRO_SCENE, 7)
-    msgbox(SolsticeTown_Rival_After_Battle_Dialogue)
+    msgbox(SolsticeTown_Rival_After_Battle_Dialogue, MSGBOX_AUTOCLOSE)
     applymovement(SolsticeTown_Rival, SolsticeTown_Movement_RivalExit)
     waitmovement(0)
     fadedefaultbgm()
@@ -261,7 +261,7 @@ text SolsticeTown_Boy2_Dialogue_PostDelivery {
 
 text SolsticeTown_Rival_Battle_Intro_Dialogue {
     format("{PLAYER}, wait!\p"
-        "So you're leaving on an too adventure, huh?\l"
+        "So you're leaving on an adventure too, huh?\l"
         "Now that I have a Pokémon, I also want to go out and explore the world!\l"
         "We'll take the Pokémon League challenge together and see who comes out on top!\l"
         "Before we leave, how about a battle?\l"

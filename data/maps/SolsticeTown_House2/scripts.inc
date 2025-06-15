@@ -19,7 +19,7 @@ SolsticeTown_House2_EventScript_Man_Dialogue_Movement_0:
 SolsticeTown_House2_EventScript_Man_Dialogue_Text_0:
 # 7 "data/maps/SolsticeTown_House2/scripts.pory"
 	.string "I'm a teacher.\n"
-	.string "We used to have a 'bring your Pokémon\l"
-	.string "to school' day.\l"
+	.string "We used to have a “bring your Pokémon\l"
+	.string "to school” day.\l"
 	.string "Nowadays, kids bring their Pokémon to\l"
 	.string "school every day...$"

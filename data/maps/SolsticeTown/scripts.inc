@@ -456,7 +456,7 @@ SolsticeTown_EventScript_RivalExit::
 # 240 "data/maps/SolsticeTown/scripts.pory"
 	setvar VAR_INTRO_SCENE, 7
 # 241 "data/maps/SolsticeTown/scripts.pory"
-	msgbox SolsticeTown_Rival_After_Battle_Dialogue
+	msgbox SolsticeTown_Rival_After_Battle_Dialogue, MSGBOX_AUTOCLOSE
 # 242 "data/maps/SolsticeTown/scripts.pory"
 	applymovement SolsticeTown_Rival, SolsticeTown_Movement_RivalExit
 # 243 "data/maps/SolsticeTown/scripts.pory"
@@ -696,7 +696,7 @@ SolsticeTown_Boy2_Dialogue_PostDelivery::
 SolsticeTown_Rival_Battle_Intro_Dialogue::
 # 262 "data/maps/SolsticeTown/scripts.pory"
 	.string "{PLAYER}, wait!\p"
-	.string "So you're leaving on an too adventure,\n"
+	.string "So you're leaving on an adventure too,\n"
 	.string "huh?\l"
 	.string "Now that I have a Pokémon, I also want\l"
 	.string "to go out and explore the world!\l"

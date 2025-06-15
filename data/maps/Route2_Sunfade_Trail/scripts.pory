@@ -19,6 +19,15 @@ script SunfadeTrail_EventScript_Boy_Tim {
     msgbox(SunfadeTrail_Boy_Tim_Dialogue, type=MSGBOX_NPC)
 }
 
+script SunfadeTrail_EventScript_Healing_Lady {
+    applymovement(SunfadeTrail_Healing_Lady, moves(face_player))
+    waitmovement(0)
+    msgbox(format("I'm having a picnic by the water.\n"
+        "It's really peaceful here.\l"
+        "Why don't you stay for a minute and take a rest with me?"), type=MSGBOX_NPC)
+    call(Common_EventScript_OutOfCenterPartyHeal)
+}
+
 text SunfadeTrail_BugCatcher_Simeon_Intro_Text {
     format("Passing through?\nNot without meeting my Bug\lPokémon you aren't!")
 }

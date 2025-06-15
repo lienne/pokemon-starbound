@@ -4555,7 +4555,7 @@
       "id": "LAYOUT_ROUTE2_SUNFADE_TRAIL",
       "name": "Route2_Sunfade_Trail_Layout",
       "width": 80,
-      "height": 50,
+      "height": 54,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Route2_Sunfade_Trail/border.bin",
@@ -4580,6 +4580,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/LumenVillage_SelenesHouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/LumenVillage_SelenesHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ASTRIDALE",
+      "name": "Astridale_Layout",
+      "width": 62,
+      "height": 34,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/Astridale/border.bin",
+      "blockdata_filepath": "data/layouts/Astridale/map.bin"
     }
   ]
 }

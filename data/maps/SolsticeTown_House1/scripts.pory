@@ -9,6 +9,8 @@ script SolsticeTown_House1_EventScript_Woman_Dialogue {
 
 script SolsticeTown_House1_EventScript_Pidove {
     applymovement(SolsticeTown_House1_Pidove, moves(face_player))
+    waitmovement(0)
     playmoncry(SPECIES_PIDOVE, CRY_MODE_NORMAL)
     waitmoncry()
+    releaseall
 }

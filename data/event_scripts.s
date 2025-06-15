@@ -883,11 +883,11 @@ Common_EventScript_PlayerHandedOverTheItem::
 @ The below and surf.inc could be split into some text/notices.inc
 gText_PokemartSign::
 	.string "“Selected items for your convenience!”\n"
-	.string "POKéMON MART$"
+	.string "Pokémon Mart$"
 
 gText_PokemonCenterSign::
 	.string "“Rejuvenate your tired partners!”\n"
-	.string "POKéMON CENTER$"
+	.string "Pokémon Center$"
 
 gText_MomOrDadMightLikeThisProgram::
 	.string "{STR_VAR_1} might like this program.\n"
@@ -903,7 +903,7 @@ gText_SandstormIsVicious::
 	.string "It's impossible to keep going.$"
 
 gText_SelectWithoutRegisteredItem::
-	.string "An item in the BAG can be\n"
+	.string "An item in the bag can be\n"
 	.string "registered to SELECT for easy use.$"
 
 gText_PokemonTrainerSchoolEmail::
@@ -927,7 +927,7 @@ gText_UnusedNicknameReceivedPokemon::
 
 gText_PlayerWhitedOut::
 	.string "{PLAYER} is out of usable\n"
-	.string "POKéMON!\p{PLAYER} whited out!$"
+	.string "Pokémon!\p{PLAYER} whited out!$"
 
 gText_FirstShouldRestoreMonsHealth::
 	.string "First, you should restore your\n"
@@ -1191,3 +1191,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/LumenVillage_SelenesHouse_1F/scripts.inc"
 
 	.include "data/maps/LumenVillage_SelenesHouse_2F/scripts.inc"
+
+	.include "data/maps/Astridale/scripts.inc"
