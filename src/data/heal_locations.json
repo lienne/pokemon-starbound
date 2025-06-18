@@ -149,6 +149,12 @@
       "map": "MAP_SOLSTICE_TOWN",
       "x": 5,
       "y": 23
+    },
+    {
+      "id": "HEAL_LOCATION_ASTRIDALE",
+      "map": "MAP_ASTRIDALE",
+      "x": 30,
+      "y": 11
     }
   ]
 }

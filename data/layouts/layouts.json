@@ -4584,12 +4584,72 @@
     {
       "id": "LAYOUT_ASTRIDALE",
       "name": "Astridale_Layout",
-      "width": 62,
+      "width": 80,
       "height": 34,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lilycove",
       "border_filepath": "data/layouts/Astridale/border.bin",
       "blockdata_filepath": "data/layouts/Astridale/map.bin"
+    },
+    {
+      "id": "LAYOUT_ASTRIDALE_CITY_POKEMON_CENTER_1F",
+      "name": "AstridaleCity_PokemonCenter_1F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/AstridaleCity_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/AstridaleCity_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ASTRIDALE_CITY_MART",
+      "name": "AstridaleCity_Mart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/AstridaleCity_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/AstridaleCity_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_ASTRIDALE_CITY_HOUSE1",
+      "name": "AstridaleCity_House1_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/AstridaleCity_House1/border.bin",
+      "blockdata_filepath": "data/layouts/AstridaleCity_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ASTRIDALE_CITY_HOUSE2",
+      "name": "AstridaleCity_House2_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/AstridaleCity_House2/border.bin",
+      "blockdata_filepath": "data/layouts/AstridaleCity_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ASTRIDALE_CITY_HOUSE3",
+      "name": "AstridaleCity_House3_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/AstridaleCity_House3/border.bin",
+      "blockdata_filepath": "data/layouts/AstridaleCity_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_ASTRIDALE_CITY_HOUSE4",
+      "name": "AstridaleCity_House4_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/AstridaleCity_House4/border.bin",
+      "blockdata_filepath": "data/layouts/AstridaleCity_House4/map.bin"
     }
   ]
 }

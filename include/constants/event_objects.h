@@ -255,6 +255,7 @@
 
 #define OBJ_EVENT_GFX_JIRACHI OBJ_EVENT_GFX_SPECIES(JIRACHI)
 #define OBJ_EVENT_GFX_PIDOVE OBJ_EVENT_GFX_SPECIES(PIDOVE)
+#define OBJ_EVENT_GFX_MACHOKE OBJ_EVENT_GFX_SPECIES(MACHOKE)
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.

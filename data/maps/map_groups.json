@@ -37,7 +37,8 @@
     "gMapGroup_AstreaTownsAndRoutes",
     "gMapGroup_IndoorLumenVillage",
     "gMapGroup_IndoorSolstice",
-    "gMapGroup_AstreaDungeons"
+    "gMapGroup_AstreaDungeons",
+    "gMapGroup_IndoorAstridale"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -650,5 +651,13 @@
   ],
   "gMapGroup_AstreaDungeons": [
     "WhisperingGrove"
+  ],
+  "gMapGroup_IndoorAstridale": [
+    "AstridaleCity_PokemonCenter_1F",
+    "AstridaleCity_Mart",
+    "AstridaleCity_House1",
+    "AstridaleCity_House2",
+    "AstridaleCity_House3",
+    "AstridaleCity_House4"
   ]
 }

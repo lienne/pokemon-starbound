@@ -1193,3 +1193,15 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/LumenVillage_SelenesHouse_2F/scripts.inc"
 
 	.include "data/maps/Astridale/scripts.inc"
+
+	.include "data/maps/AstridaleCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/AstridaleCity_Mart/scripts.inc"
+
+	.include "data/maps/AstridaleCity_House1/scripts.inc"
+
+	.include "data/maps/AstridaleCity_House2/scripts.inc"
+
+	.include "data/maps/AstridaleCity_House3/scripts.inc"
+
+	.include "data/maps/AstridaleCity_House4/scripts.inc"
