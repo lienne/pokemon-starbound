@@ -880,7 +880,8 @@ static void CB2_GiveStarter(void)
     // SetMainCallback2(CB2_StartFirstBattle);
     // BattleTransition_Start(B_TRANSITION_BLUR);
 
-    SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+    BeginNormalPaletteFade(PALETTES_ALL, 0, 0x10, 0, 0);
+    SetMainCallback2(CB2_ReturnToFieldContinueScript);
 }
 
 static void CB2_StartFirstBattle(void)

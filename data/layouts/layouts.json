@@ -4650,6 +4650,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/AstridaleCity_House4/border.bin",
       "blockdata_filepath": "data/layouts/AstridaleCity_House4/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUNFADE_TRAIL_HOUSE",
+      "name": "SunfadeTrail_House_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SunfadeTrail_House/border.bin",
+      "blockdata_filepath": "data/layouts/SunfadeTrail_House/map.bin"
     }
   ]
 }

@@ -1205,3 +1205,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/AstridaleCity_House3/scripts.inc"
 
 	.include "data/maps/AstridaleCity_House4/scripts.inc"
+
+	.include "data/maps/SunfadeTrail_House/scripts.inc"

@@ -54,7 +54,6 @@
       "flag": "0"
     },
     {
-      "local_id": "StarlitPath_Item",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 0,
       "y": 16,
@@ -82,7 +81,6 @@
       "flag": "0"
     },
     {
-      "local_id": "StarlitPath_SecondItem",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 25,
       "y": 23,

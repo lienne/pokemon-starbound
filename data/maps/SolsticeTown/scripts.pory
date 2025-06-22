@@ -26,7 +26,8 @@ script SolsticeTown_EventScript_Boy1_Dialogue {
 
 script SolsticeTown_EventScript_Girl2_Dialogue {
     applymovement(SolsticeTown_Girl2, moves(face_player))
-    msgbox(format("I want to take a rest, so I'm saving my progress."), type=MSGBOX_NPC)
+    msgbox(format("Solstice Town doesn't have a gym.\l"
+        "It's a bit too out of the way for us to have one."), type=MSGBOX_NPC)
 }
 
 script SolsticeTown_EventScript_Boy2_Dialogue_SpotA {

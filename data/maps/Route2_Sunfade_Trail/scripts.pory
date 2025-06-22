@@ -19,13 +19,29 @@ script SunfadeTrail_EventScript_Boy_Tim {
     msgbox(SunfadeTrail_Boy_Tim_Dialogue, type=MSGBOX_NPC)
 }
 
+script SunfadeTrail_EventScript_Youngster_Billy {
+    trainerbattle_single(TRAINER_BILLY, SunfadeTrail_Youngster_Billy_Intro_Text, SunfadeTrail_Youngster_Billy_Lose_Text)
+    msgbox(SunfadeTrail_Youngster_Billy_Dialogue, type=MSGBOX_NPC)
+}
+
+script SunfadeTrail_EventScript_Anabel {
+    msgbox(SunfadeTrail_Anabel_Dialogue, type=MSGBOX_NPC)
+}
+
+script SunfadeTrail_EventScript_House_OldMan {
+    msgbox(SunfadeTrail_OldMan_Dialogue, type=MSGBOX_NPC)
+}
+
 script SunfadeTrail_EventScript_Healing_Lady {
     applymovement(SunfadeTrail_Healing_Lady, moves(face_player))
     waitmovement(0)
-    msgbox(format("I'm having a picnic by the water.\n"
-        "It's really peaceful here.\l"
-        "Why don't you stay for a minute and take a rest with me?"), type=MSGBOX_NPC)
+    msgbox(SunfadeTrail_Healing_Lady_Dialogue, type=MSGBOX_NPC)
     call(Common_EventScript_OutOfCenterPartyHeal)
+}
+
+script SunfadeTrail_EventScript_Lass_Haley {
+    trainerbattle_single(TRAINER_HALEY_1, SunfadeTrail_Lass_Haley_Intro_Text, SunfadeTrail_Lass_Haley_Lose_Text)
+    msgbox(SunfadeTrail_Lass_Haley_Dialogue, type=MSGBOX_NPC)
 }
 
 text SunfadeTrail_BugCatcher_Simeon_Intro_Text {
@@ -53,4 +69,45 @@ text SunfadeTrail_Boy_Tim_Dialogue {
     format("Whispering Grove has lots of\n"
         "Poison-type Pokémon... I keep getting\l"
         "overwhelmed!")
+}
+
+text SunfadeTrail_Youngster_Billy_Intro_Text {
+    format("I found a rare Pokémon in Sunfade Trail!\l"
+        "Wanna see?")
+}
+
+text SunfadeTrail_Youngster_Billy_Lose_Text {
+    format("I guess rare Pokémon aren't necessarily stronger...")
+}
+
+text SunfadeTrail_Youngster_Billy_Dialogue {
+    format("Apparently Seedot are more common in Whispering Grove.")
+}
+
+text SunfadeTrail_Anabel_Dialogue {
+    format("Lumen Village is a bit isolated from the rest of Astrea.\l"
+        "You have to get through Whispering Grove and Solstice Town to get there.")
+}
+
+text SunfadeTrail_OldMan_Dialogue {
+    format("I moved here from Myrren Town in my retirement.\l"
+        "My old bones couldn't really take the cold anymore.")
+}
+
+text SunfadeTrail_Healing_Lady_Dialogue {
+    format("I'm having a picnic by the water.\n"
+        "It's really peaceful here.\l"
+        "Why don't you stay for a minute and take a rest with me?")
+}
+
+text SunfadeTrail_Lass_Haley_Intro_Text {
+    format("Did you hear? Astridale's under construction!")
+}
+
+text SunfadeTrail_Lass_Haley_Lose_Text {
+    format("Awee...")
+}
+
+text SunfadeTrail_Lass_Haley_Dialogue {
+    format("I hear that Astridale's gym leader isn't very happy with the expansion.")
 }

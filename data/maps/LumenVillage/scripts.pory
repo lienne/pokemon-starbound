@@ -249,7 +249,9 @@ script LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue {
     special(SetUnlockedPokedexFlags)
     speakername(ProfMyraName)
     msgbox(format("And take these Pokéballs - you'll need them."))
+    speakername(NULL)
     giveitem(ITEM_POKE_BALL, 5)
+    speakername(ProfMyraName)
     msgbox(format("I won't stop you, {PLAYER}... but please be careful.\l"
         "You're walking into something vast and dangerous.\l"
         "Use the items I gave you to get stronger. You'll need all the help you can get to help Jirachi.\l"
