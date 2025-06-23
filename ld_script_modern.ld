@@ -66,6 +66,7 @@ SECTIONS {
         src/main.o(.text);
         src/*.o(.text*);
         asm/*.o(.text*);
+        src/quests.o(.text);
     } > ROM =0
 
     script_data :
@@ -100,6 +101,7 @@ SECTIONS {
     {
         src/*.o(.rodata*);
         data/*.o(.rodata*);
+        src/quests.o(.rodata);
     } > ROM =0
 
     song_data :

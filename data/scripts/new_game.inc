@@ -113,6 +113,7 @@ EventScript_ResetAllBerries::
 	return
 
 EventScript_ResetAllMapFlags::
+	setflag FLAG_SYS_QUEST_MENU_GET
 	setflag FLAG_HIDE_CLEARING_NPCS
 	setflag FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_MOM
     setflag FLAG_HIDE_LUMEN_VILLAGE_CASSIANS_HOUSE_RIVAL_MOM
