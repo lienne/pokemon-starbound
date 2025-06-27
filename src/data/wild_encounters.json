@@ -11506,7 +11506,7 @@
               {
                 "min_level": 2,
                 "max_level": 4,
-                "species": "SPECIES_STARLY"
+                "species": "SPECIES_FLETCHLING"
               },
               {
                 "min_level": 2,
@@ -11526,7 +11526,7 @@
               {
                 "min_level": 2,
                 "max_level": 5,
-                "species": "SPECIES_STARLY"
+                "species": "SPECIES_FLETCHLING"
               },
               {
                 "min_level": 2,
@@ -11580,7 +11580,7 @@
               {
                 "min_level": 3,
                 "max_level": 6,
-                "species": "SPECIES_STARLY"
+                "species": "SPECIES_FLETCHLING"
               },
               {
                 "min_level": 3,
@@ -11605,7 +11605,7 @@
               {
                 "min_level": 3,
                 "max_level": 7,
-                "species": "SPECIES_STARLY"
+                "species": "SPECIES_FLETCHLING"
               },
               {
                 "min_level": 3,
@@ -11739,7 +11739,7 @@
               {
                 "min_level": 3,
                 "max_level": 7,
-                "species": "SPECIES_HOOTHOOT"
+                "species": "SPECIES_SPINARAK"
               },
               {
                 "min_level": 3,
@@ -11749,7 +11749,7 @@
               {
                 "min_level": 3,
                 "max_level": 7,
-                "species": "SPECIES_RATTATA"
+                "species": "SPECIES_BUDEW"
               },
               {
                 "min_level": 3,
@@ -11780,6 +11780,160 @@
                 "min_level": 3,
                 "max_level": 8,
                 "species": "SPECIES_BULBASAUR"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROUTE3_ECHO_RIDGE",
+          "base_label": "gRoute3_EchoRidge",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_BUNNELBY"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_NICKIT"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_NACLI"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_FLETCHLING"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_BUNNELBY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_NICKIT"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_NACLI"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_FLETCHLING"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_ROCKRUFF"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_ROCKRUFF"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
               }
             ]
           }

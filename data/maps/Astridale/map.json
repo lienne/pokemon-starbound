@@ -17,6 +17,11 @@
       "map": "MAP_ROUTE2_SUNFADE_TRAIL",
       "offset": -40,
       "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE3_ECHO_RIDGE",
+      "offset": 18,
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -36,7 +41,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MACHOKE",
       "x": 64,
-      "y": 23,
+      "y": 25,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 0,
@@ -192,6 +197,13 @@
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_ASTRIDALE_CITY_HOUSE4",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 21,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_ASTRIDALE_MINDSCAPE",
       "dest_warp_id": "0"
     }
   ],

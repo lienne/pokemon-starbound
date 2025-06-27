@@ -4660,6 +4660,26 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/SunfadeTrail_House/border.bin",
       "blockdata_filepath": "data/layouts/SunfadeTrail_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE3_ECHO_RIDGE",
+      "name": "Route3_EchoRidge_Layout",
+      "width": 50,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/Route3_EchoRidge/border.bin",
+      "blockdata_filepath": "data/layouts/Route3_EchoRidge/map.bin"
+    },
+    {
+      "id": "LAYOUT_ASTRIDALE_MINDSCAPE",
+      "name": "Astridale_Mindscape_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_AstridaleMindscape",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/Astridale_Mindscape/border.bin",
+      "blockdata_filepath": "data/layouts/Astridale_Mindscape/map.bin"
     }
   ]
 }

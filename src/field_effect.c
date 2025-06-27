@@ -293,6 +293,7 @@ bool8 (*const gFieldEffectScriptFuncs[])(u8 **, u32 *) =
     FieldEffectCmd_loadgfx_callnative,
     FieldEffectCmd_loadtiles_callnative,
     FieldEffectCmd_loadfadedpal_callnative,
+    FieldEffectCmd_loadfadedpal_callnative_TallGrass,
 };
 
 static const struct OamData sOam_64x64 =
@@ -771,6 +772,14 @@ bool8 FieldEffectCmd_loadfadedpal_callnative(u8 **script, u32 *val)
 {
     (*script)++;
     FieldEffectScript_LoadFadedPalette(script);
+    FieldEffectScript_CallNative(script, val);
+    return TRUE;
+}
+
+bool8 FieldEffectCmd_loadfadedpal_callnative_TallGrass(u8 **script, u32 *val)
+{
+    (*script)++;
+    FieldEffectScript_LoadFadedPalette_TallGrass(script);
     FieldEffectScript_CallNative(script, val);
     return TRUE;
 }
@@ -4232,4 +4241,10 @@ static void UseVsSeeker_CleanUpFieldEffect(struct Task *task)
     gPlayerAvatar.preventStep = FALSE;
     FieldEffectActiveListRemove(FLDEFF_USE_VS_SEEKER);
     DestroyTask(FindTaskIdByFunc(Task_FldEffUseVsSeeker));
+}
+
+void FieldEffectScript_LoadFadedPalette_TallGrass(u8 **script)
+{
+    int palId = 0;
+    struct SpritePalette *palettes = (struct SpritePalette *)FieldEffectScript_ReadWord(script);
 }

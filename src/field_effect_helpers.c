@@ -430,8 +430,15 @@ u32 FldEff_TallGrass(void)
     u8 spriteId;
     s16 x = gFieldEffectArguments[0];
     s16 y = gFieldEffectArguments[1];
+    u16 tileBehavior = MapGridGetMetatileBehaviorAt(x, y);
+    u16 fldEffObj = FLDEFFOBJ_TALL_GRASS;
     SetSpritePosToOffsetMapCoords(&x, &y, 8, 8);
-    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_TALL_GRASS], x, y, 0);
+
+    if(MetatileBehavior_IsTallGrassPurple(tileBehavior))
+        fldEffObj = FLDEFFOBJ_TALL_GRASS_PURPLE;
+
+    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[fldEffObj], x, y, 0);
+    
     if (spriteId != MAX_SPRITES)
     {
         struct Sprite *sprite = &gSprites[spriteId];
@@ -473,7 +480,12 @@ void UpdateTallGrassFieldEffect(struct Sprite *sprite)
      || !MetatileBehavior_IsTallGrass(metatileBehavior)
      || (sprite->sObjectMoved && sprite->animEnded))
     {
-        FieldEffectStop(sprite, FLDEFF_TALL_GRASS);
+        u16 fldEff = FLDEFF_TALL_GRASS;
+
+        if(MetatileBehavior_IsTallGrassPurple(metatileBehavior))
+            fldEff = FLDEFF_TALL_GRASS_PURPLE;
+
+        FieldEffectStop(sprite, fldEff);
     }
     else
     {

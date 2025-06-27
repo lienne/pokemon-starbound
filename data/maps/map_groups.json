@@ -633,7 +633,8 @@
     "StarseaPassage",
     "SolsticeTown",
     "Route2_Sunfade_Trail",
-    "Astridale"
+    "Astridale",
+    "Route3_EchoRidge"
   ],
   "gMapGroup_IndoorLumenVillage": [
     "LumenVillage_ProfessorMyrasLab",
@@ -651,7 +652,8 @@
     "SunfadeTrail_House"
   ],
   "gMapGroup_AstreaDungeons": [
-    "WhisperingGrove"
+    "WhisperingGrove",
+    "Astridale_Mindscape"
   ],
   "gMapGroup_IndoorAstridale": [
     "AstridaleCity_PokemonCenter_1F",
