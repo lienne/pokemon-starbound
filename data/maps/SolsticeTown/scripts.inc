@@ -673,7 +673,7 @@ SolsticeTown_EventScript_Boy1_Dialogue_Text_0:
 
 SolsticeTown_EventScript_Girl2_Dialogue_Text_0:
 # 29 "data/maps/SolsticeTown/scripts.pory"
-	.string "Solstice Town doesn't have a gym.\l"
+	.string "Solstice Town doesn't have a gym.\n"
 	.string "It's a bit too out of the way for us to\l"
 	.string "have one.$"
 

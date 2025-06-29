@@ -4596,7 +4596,7 @@
       "name": "AstridaleCity_PokemonCenter_1F_Layout",
       "width": 14,
       "height": 9,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/AstridaleCity_PokemonCenter_1F/border.bin",
       "blockdata_filepath": "data/layouts/AstridaleCity_PokemonCenter_1F/map.bin"
@@ -4674,8 +4674,8 @@
     {
       "id": "LAYOUT_ASTRIDALE_MINDSCAPE",
       "name": "Astridale_Mindscape_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 40,
+      "height": 40,
       "primary_tileset": "gTileset_AstridaleMindscape",
       "secondary_tileset": "gTileset_Lilycove",
       "border_filepath": "data/layouts/Astridale_Mindscape/border.bin",

@@ -5,7 +5,7 @@ Common_EventScript_SetupRivalGfxId::
 	end
 
 EventScript_SetupRivalGfxIdFemale::
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SELENE_NORMAL
 	return
 
 EventScript_SetupRivalGfxIdMale::
