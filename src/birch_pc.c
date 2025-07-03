@@ -8,8 +8,8 @@ bool16 ScriptGetPokedexInfo(void)
 {
     if (gSpecialVar_0x8004 == 0) // is national dex not present?
     {
-        gSpecialVar_0x8005 = GetHoennPokedexCount(FLAG_GET_SEEN);
-        gSpecialVar_0x8006 = GetHoennPokedexCount(FLAG_GET_CAUGHT);
+        gSpecialVar_0x8005 = GetAstreaPokedexCount(FLAG_GET_SEEN);
+        gSpecialVar_0x8006 = GetAstreaPokedexCount(FLAG_GET_CAUGHT);
     }
     else
     {
@@ -55,7 +55,7 @@ const u8 *GetPokedexRatingText(u32 count)
     // doesNotCountForRegionalPokedex
     for(i = 0; i < HOENN_DEX_COUNT; i++)
     {
-        j = NationalPokedexNumToSpecies(HoennToNationalOrder(i + 1));
+        j = NationalPokedexNumToSpecies(AstreaToNationalOrder(i + 1));
         if (gSpeciesInfo[j].isMythical && !gSpeciesInfo[j].dexForceRequired)
         {
             if (GetSetPokedexFlag(j, FLAG_GET_CAUGHT))

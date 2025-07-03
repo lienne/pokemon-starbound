@@ -284,7 +284,7 @@ static const u8 gText_MysteryEventsCantUse[] = _("MYSTERY EVENTS can't be used w
 
 static const u8 gText_ContinueMenuPlayer[] = _("PLAYER");
 static const u8 gText_ContinueMenuTime[] = _("TIME");
-static const u8 gText_ContinueMenuPokedex[] = _("POKéDEX");
+static const u8 gText_ContinueMenuPokedex[] = _("Pokédex");
 static const u8 gText_ContinueMenuBadges[] = _("BADGES");
 
 #define MENU_LEFT 2
@@ -2300,7 +2300,7 @@ static void MainMenu_FormatSavegamePokedex(void)
         if (IsNationalPokedexEnabled())
             dexCount = GetNationalPokedexCount(FLAG_GET_CAUGHT);
         else
-            dexCount = GetHoennPokedexCount(FLAG_GET_CAUGHT);
+            dexCount = GetAstreaPokedexCount(FLAG_GET_CAUGHT);
         StringExpandPlaceholders(gStringVar4, gText_ContinueMenuPokedex);
         AddTextPrinterParameterized3(2, FONT_NORMAL, 0, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
         ConvertIntToDecimalStringN(str, dexCount, STR_CONV_MODE_LEFT_ALIGN, 4);
