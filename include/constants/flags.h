@@ -61,9 +61,9 @@
 #define FLAG_HIDE_MYRA_IN_LUMEN_VILLAGE                     0x2F
 #define FLAG_HIDE_MYRA_IN_LAB                               0x30
 #define FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN                    0x31
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
-#define FLAG_UNUSED_0x034    0x34 // Unused Flag
+#define FLAG_HIDE_VIVIANE_IN_ASTRIDALE_WAREHOUSE            0x32
+#define FLAG_HIDE_JIRACHI_IN_ASTRIDALE_WAREHOUSE            0x33
+#define FLAG_HIDE_VIVIANES_CLEFAIRY_DOLL                    0x34
 #define FLAG_UNUSED_0x035    0x35 // Unused Flag
 #define FLAG_UNUSED_0x036    0x36 // Unused Flag
 #define FLAG_UNUSED_0x037    0x37 // Unused Flag

@@ -10,14 +10,21 @@
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [],
   "warp_events": [
     {
       "x": 19,
-      "y": 37,
+      "y": 77,
+      "elevation": 0,
+      "dest_map": "MAP_ASTRIDALE",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 20,
+      "y": 77,
       "elevation": 0,
       "dest_map": "MAP_ASTRIDALE",
       "dest_warp_id": "6"

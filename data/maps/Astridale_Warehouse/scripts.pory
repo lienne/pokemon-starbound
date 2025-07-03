@@ -1,0 +1,122 @@
+mapscripts Astridale_Warehouse_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if (var(VAR_ASTRIDALE_STATE) < 2) {
+            setflag(FLAG_HIDE_VIVIANE_IN_ASTRIDALE_WAREHOUSE)
+            setflag(FLAG_HIDE_JIRACHI_IN_ASTRIDALE_WAREHOUSE)
+        }
+        playbgm(MUS_NONE, 1)
+    }
+
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_ASTRIDALE_STATE, 2 {
+            setvar(VAR_ASTRIDALE_STATE, 3)
+            clearflag(FLAG_HIDE_VIVIANE_IN_ASTRIDALE_WAREHOUSE)
+            addobject(Astridale_Warehouse_Viviane)
+            applymovement(LOCALID_PLAYER, Player_Enters_Warehouse_Look_For_Viviane)
+            waitmovement(0)
+            applymovement(LOCALID_PLAYER, moves(emote_exclamation_mark))
+            playse(SE_PIN)
+            waitse()
+            waitmovement(0)
+            special(SpawnCameraObject)
+            applymovement(LOCALID_CAMERA, Astridale_Warehouse_Camera_Movement_PanToViviane)
+            waitmovement(0)
+            speakername(VivianeName)
+            msgbox(format("..."), MSGBOX_AUTOCLOSE)
+            applymovement(Astridale_Warehouse_Viviane, moves(walk_fast_down * 3 face_right))
+            waitmovement(0)
+            speakername(VivianeName)
+            msgbox(format("..."), MSGBOX_AUTOCLOSE)
+            applymovement(Astridale_Warehouse_Viviane, moves(walk_fast_left * 5 walk_up face_up))
+            waitmovement(0)
+            applymovement(LOCALID_PLAYER, moves(face_up))
+            waitmovement(0)
+            speakername(VivianeName)
+            msgbox(format("...so these are the plans for the construction...\l"
+                "...let's see...\l"
+                "..."), MSGBOX_AUTOCLOSE)
+            applymovement(Astridale_Warehouse_Viviane, moves(emote_exclamation_mark))
+            playse(SE_PIN)
+            waitse()
+            waitmovement(0)
+            applymovement(Astridale_Warehouse_Viviane, moves(face_down))
+            waitmovement(0)
+            applymovement(LOCALID_PLAYER, moves(walk_up * 4))
+            waitmovement(0)
+            special(RemoveCameraObject)
+            speakername(VivianeName)
+            msgbox(format("...what's this?\n"
+                "...\l"
+                "Yes, I'm the one who's been sabotaging the construction.\l"
+                "...\l"
+                "You don't know what you're talking about.\l"
+                "This construction's bad for Astridale.\l"
+                "It can't be allowed to continue.\l"
+                "You think you can stop me? You're just a kid.\l"
+                "I'll put a stop to this if it's the last thing I do!"), MSGBOX_AUTOCLOSE)
+            applymovement(Astridale_Warehouse_Viviane, moves(walk_fast_down * 7))
+            waitmovement(0)
+            applymovement(LOCALID_PLAYER, moves(delay_16 walk_in_place_faster_down))
+            waitmovement(0)
+            playse(SE_DOOR)
+            waitse()
+            setflag(FLAG_HIDE_VIVIANE_IN_ASTRIDALE_WAREHOUSE)
+            removeobject(Astridale_Warehouse_Viviane)
+            applymovement(LOCALID_PLAYER, moves(emote_exclamation_mark))
+            playse(SE_PIN)
+            waitse()
+            waitmovement(0)
+            fadescreenswapbuffers(FADE_TO_WHITE)
+            clearflag(FLAG_HIDE_JIRACHI_IN_ASTRIDALE_WAREHOUSE)
+            addobject(Astridale_Warehouse_Jirachi)
+            fadescreenswapbuffers(FADE_FROM_WHITE)
+            applymovement(LOCALID_PLAYER, moves(face_up))
+            waitmovement(0)
+            applymovement(Astridale_Warehouse_Jirachi, moves(walk_slow_down * 6))
+            waitmovement(0)
+            speakername(JirachiName)
+            msgbox(format("{PLAYER}.\n"
+                "That person... I can feel something horribly wrong with her.\l"
+                "I think she's not in her right mind...\l"
+                "{PLAYER}, there's something you must know.\l"
+                "There is another dimension... a dimension where each person's dreams and sense of self lives.\l"
+                "Those who captured me, they've been trying to mess with people's dreams, through this other dimension.\l"
+                "I'm afraid the worst has come to pass...\l"
+                "If they somehow succeeded, they could control others through their dreams.\l"
+                "I'm afraid that person has fallen to their mind control.\l"
+                "{PLAYER}, we must find out if this is true.\l"
+                "I can grant you the power to go into her mindscape... the dimension that holds that person's dreams.\l"
+                "You'll need something, an item of great sentimental value to that person.\l"
+                "If you can find such an item, you'll be able to enter her mind and hopefully free her from the control.\l"
+                "Find that item, and show it to her.\l"
+                "That should be all you need to enter her mindscape.\l"
+                "I'm counting on you, {PLAYER}.\l"
+                "I'll find you again soon."), MSGBOX_AUTOCLOSE)
+            fadescreenswapbuffers(FADE_TO_WHITE)
+            setflag(FLAG_HIDE_JIRACHI_IN_ASTRIDALE_WAREHOUSE)
+            removeobject(Astridale_Warehouse_Jirachi)
+            fadescreenswapbuffers(FADE_FROM_WHITE)
+            end
+        }
+    ]
+}
+
+movement Player_Enters_Warehouse_Look_For_Viviane {
+    delay_16
+    walk_up
+    delay_16
+    delay_16
+    face_left
+    delay_16
+    delay_16
+    delay_16
+    face_right
+    delay_16
+    delay_16
+    delay_16
+    face_up
+}
+
+movement Astridale_Warehouse_Camera_Movement_PanToViviane {
+    walk_up * 4
+}

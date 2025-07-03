@@ -78,6 +78,7 @@
       "flag": "0"
     },
     {
+      "local_id": "Astridale_OldMan",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
       "x": 40,
       "y": 17,
@@ -87,7 +88,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Astridale_EventScript_OldMan_Dialogue",
       "flag": "0"
     },
     {
@@ -104,6 +105,7 @@
       "flag": "0"
     },
     {
+      "local_id": "Astridale_OldWoman",
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
       "x": 39,
       "y": 11,
@@ -113,10 +115,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Astridale_EventScript_OldWoman_Dialogue",
       "flag": "0"
     },
     {
+      "local_id": "Astridale_Gameboy_Kid",
       "graphics_id": "OBJ_EVENT_GFX_GAMEBOY_KID",
       "x": 29,
       "y": 16,
@@ -126,10 +129,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Astridale_EventScript_Gameboy_Kid_Dialogue",
       "flag": "0"
     },
     {
+      "local_id": "Astridale_ConstructionMan1",
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
       "x": 54,
       "y": 9,
@@ -139,7 +143,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Astridale_EventScript_ConstructionMan1_Dialogue",
       "flag": "0"
     },
     {
@@ -156,6 +160,7 @@
       "flag": "0"
     },
     {
+      "local_id": "Astridale_Gym_Door_Man",
       "graphics_id": "OBJ_EVENT_GFX_MAN_4",
       "x": 22,
       "y": 17,
@@ -165,7 +170,21 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Astridale_EventScript_Gym_Door_Man_Dialogue",
+      "flag": "0"
+    },
+    {
+      "local_id": "Astridale_Lady",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
+      "x": 44,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Astridale_EventScript_Lady_Dialogue",
       "flag": "0"
     }
   ],
@@ -218,6 +237,13 @@
       "elevation": 0,
       "dest_map": "MAP_ASTRIDALE_MINDSCAPE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 68,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ASTRIDALE_WAREHOUSE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
@@ -260,7 +286,7 @@
       "y": 24,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "NULL"
+      "script": "Astridale_EventScript_CitySign"
     },
     {
       "type": "sign",
@@ -268,7 +294,7 @@
       "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "NULL"
+      "script": "Astridale_EventScript_ConstructionSign"
     },
     {
       "type": "sign",
@@ -276,7 +302,15 @@
       "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "NULL"
+      "script": "Astridale_EventScript_DeptStoreSign"
+    },
+    {
+      "type": "sign",
+      "x": 24,
+      "y": 16,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Astridale_EventScript_GymSign"
     }
   ]
 }

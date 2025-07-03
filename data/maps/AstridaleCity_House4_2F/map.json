@@ -1,0 +1,43 @@
+{
+  "id": "MAP_ASTRIDALE_CITY_HOUSE4_2F",
+  "name": "AstridaleCity_House4_2F",
+  "layout": "LAYOUT_ASTRIDALE_CITY_HOUSE4_2F",
+  "music": "MUS_LILYCOVE",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "Astridale_House4_2F_ClefairyDoll",
+      "graphics_id": "OBJ_EVENT_GFX_CLEFAIRY_DOLL",
+      "x": 6,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Astridale_House4_2F_EventScript_Clefairy_Doll",
+      "flag": "FLAG_HIDE_VIVIANES_CLEFAIRY_DOLL"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 1,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_ASTRIDALE_CITY_HOUSE4",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

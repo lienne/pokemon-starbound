@@ -11937,6 +11937,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ASTRIDALE_MINDSCAPE",
+          "base_label": "gAstridale_Mindscape",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_RALTS"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_FLABEBE"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_CUTIEFLY"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_TINKATINK"
+              },
+              {
+                "min_level": 10,
+                "max_level": 14,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 14,
+                "species": "SPECIES_RALTS"
+              },
+              {
+                "min_level": 10,
+                "max_level": 14,
+                "species": "SPECIES_FLABEBE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 14,
+                "species": "SPECIES_CUTIEFLY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 14,
+                "species": "SPECIES_TINKATINK"
+              },
+              {
+                "min_level": 8,
+                "max_level": 14,
+                "species": "SPECIES_DROWZEE"
+              },
+              {
+                "min_level": 8,
+                "max_level": 14,
+                "species": "SPECIES_MUNNA"
+              }
+            ]
+          }
         }
       ]
     },

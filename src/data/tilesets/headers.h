@@ -841,3 +841,14 @@ const struct Tileset gTileset_AstridaleMindscape =
     .metatileAttributes = gMetatileAttributes_AstridaleMindscape,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Astridale_Mindscape_Secondary =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Astridale_Mindscape_Secondary,
+    .palettes = gTilesetPalettes_Astridale_Mindscape_Secondary,
+    .metatiles = gMetatiles_Astridale_Mindscape_Secondary,
+    .metatileAttributes = gMetatileAttributes_Astridale_Mindscape_Secondary,
+    .callback = NULL,
+};

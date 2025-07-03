@@ -1212,3 +1212,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route3_EchoRidge/scripts.inc"
 
 	.include "data/maps/Astridale_Mindscape/scripts.inc"
+
+	.include "data/maps/Astridale_Warehouse/scripts.inc"
+
+	.include "data/maps/AstridaleCity_House4_2F/scripts.inc"
+
+	.include "data/maps/Astridale_Gym/scripts.inc"

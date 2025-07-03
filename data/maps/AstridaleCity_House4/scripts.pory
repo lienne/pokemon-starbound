@@ -1,0 +1,44 @@
+mapscripts AstridaleCity_House4_MapScripts {
+
+}
+
+script Astridale_House4_EventScript_OldMan_Dialogue {
+    if (var(VAR_ASTRIDALE_STATE) < 3) {
+        applymovement(Astridale_House4_OldMan, moves(face_player))
+        msgbox(format("Our daughter Viviane has not been herself lately.\l"
+            "She hardly ever comes home anymore..."), MSGBOX_AUTOCLOSE)
+    }
+
+    elif (var(VAR_ASTRIDALE_STATE) == 3) {
+        applymovement(Astridale_House4_OldMan, moves(face_player))
+        msgbox(format("Viviane hasn't been home in a while.\n"
+            "It's not like her. She usually can't sleep without her Clefairy doll."), MSGBOX_AUTOCLOSE)
+    }
+    else {
+        applymovement(Astridale_House4_OldMan, moves(face_player))
+        msgbox(format("I used to be a sailor, you know.\n"
+            "But I got tired of the sea and settled down here in Astridale with my family.\l"
+            "It's a peaceful life, and I like it that way."), MSGBOX_AUTOCLOSE)
+    }
+}
+
+script Astridale_House4_EventScript_OldWoman_Dialogue {
+    if (var(VAR_ASTRIDALE_STATE) < 3) {
+        applymovement(Astridale_House4_OldWoman, moves(face_player))
+        msgbox(format("I'm worried about our daughter.\n"
+            "She was excited about the construction before, but now she seems to hate the very idea.\l"
+            "Something must have happened for her to change her mind so suddenly."), MSGBOX_AUTOCLOSE)
+    }
+
+    elif (var(VAR_ASTRIDALE_STATE) == 3) {
+        applymovement(Astridale_House4_OldWoman, moves(face_player))
+        msgbox(format("Viviane keeps her beloved Clefairy doll in her room.\l"
+            "She used to take it everywhere with her, but now..."), MSGBOX_AUTOCLOSE)
+    }
+    else {
+        applymovement(Astridale_House4_OldWoman, moves(face_player))
+        msgbox(format("I used to be a sailor's wife.\n"
+            "Now I just enjoy the peace and quiet of Astridale.\l"
+            "Our daughter, Viviane, became the gym leader after we moved here."), MSGBOX_AUTOCLOSE)
+    }
+}

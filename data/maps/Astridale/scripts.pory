@@ -1,0 +1,104 @@
+mapscripts Astridale_MapScripts {
+
+}
+
+text VivianeName {
+    "Viviane"
+}
+
+script Astridale_EventScript_CitySign {
+    lockall
+    msgbox("Astridale\n"
+        "“Growing towards tomorrow without forgetting yesterday”")
+    releaseall
+}
+
+script Astridale_EventScript_ConstructionSign {
+    lockall
+    msgbox("Construction Site\n"
+        "Mind the dust!")
+    releaseall
+}
+
+script Astridale_EventScript_DeptStoreSign {
+    lockall
+    msgbox("Astridale Department Store\n"
+        "Coming soon!")
+    releaseall
+}
+
+script Astridale_EventScript_GymSign {
+    lockall
+    msgbox("Astridale Gym\n"
+        "Leader: Viviane\n"
+        "The soft-spoken fairy beauty")
+    releaseall
+}
+
+script Astridale_EventScript_Gym_Door_Man_Dialogue {
+    if (var(VAR_ASTRIDALE_STATE) == 0) {
+        setvar(VAR_ASTRIDALE_STATE, 1)
+        applymovement(Astridale_Gym_Door_Man, moves(face_player))
+        msgbox(format("The gym leader, Viviane, is not in today.\n"
+            "Sigh... she's been acting strange lately.\l"
+            "Ever since the construction on the other side of the city began, she hasn't been herself.\l"
+            "She's not taking any challengers at the moment. You'll have to come back later."), MSGBOX_AUTOCLOSE)
+    }
+    else {
+        applymovement(Astridale_Gym_Door_Man, moves(face_player))
+        msgbox(format("The gym leader, Viviane, is not in today.\n"
+            "Sigh... she's been acting strange lately.\l"
+            "Ever since the construction on the other side of the city began, she hasn't been herself.\l"
+            "She's not taking any challengers at the moment. You'll have to come back later."), MSGBOX_AUTOCLOSE)
+    }
+}
+
+script Astridale_EventScript_ConstructionMan1_Dialogue {
+    if (var(VAR_ASTRIDALE_STATE) == 0 || var(VAR_ASTRIDALE_STATE) == 1) {
+        setvar(VAR_ASTRIDALE_STATE, 2)
+        applymovement(Astridale_ConstructionMan1, moves(face_player))
+        msgbox(format("Hey ho! The construction's halted for the time being.\l"
+            "There have been strange happenings lately.\l"
+            "Our equipment keeps mysteriously breaking, materials have gone missing...\l"
+            "We don't know what to make of it.\l"
+            "It would be crazy if someone were sabotaging us, wouldn't it?\l"
+            "Hahahaha!"), MSGBOX_AUTOCLOSE)
+    }
+    else {
+        applymovement(Astridale_ConstructionMan1, moves(face_player))
+        msgbox(format("Hey ho! The construction's halted for the time being.\l"
+            "There have been strange happenings lately.\l"
+            "Our equipment keeps mysteriously breaking, materials have gone missing...\l"
+            "We don't know what to make of it.\l"
+            "It would be crazy if someone were sabotaging us, wouldn't it?\l"
+            "Hahahaha!"), MSGBOX_AUTOCLOSE)
+    }
+}
+
+script Astridale_EventScript_Gameboy_Kid_Dialogue {
+    applymovement(Astridale_Gameboy_Kid, moves(face_player))
+    msgbox(format("I'm excited about the construction!\n"
+        "I hear they're building a biiiig department store!\l"
+        "I bet they'll have lots of games to sell!"), MSGBOX_AUTOCLOSE)
+}
+
+script Astridale_EventScript_OldMan_Dialogue {
+    applymovement(Astridale_OldMan, moves(face_player))
+    msgbox(format("The citizens of Astridale are divided about the construction.\l"
+        "The younger crowd seems excited about it, while us old folk ...\l"
+        "Well, we worry."), MSGBOX_AUTOCLOSE)
+}
+
+script Astridale_EventScript_OldWoman_Dialogue {
+    applymovement(Astridale_OldWoman, moves(face_player))
+    msgbox(format("The construction on the other side of the city is a bad idea.\l"
+            "It's going to ruin the peaceful atmosphere of Astridale.\l"
+            "I don't like it one bit."), MSGBOX_AUTOCLOSE)
+}
+
+script Astridale_EventScript_Lady_Dialogue {
+    applymovement(Astridale_Lady, moves(face_player))
+    msgbox(format("The gym leader, Viviane, lives in that old house on the hill, with her family.\l"
+        "They're sweet people, usually, but Viviane's been so mean lately...\l"
+        "I wonder what's going on..."), MSGBOX_AUTOCLOSE)
+}

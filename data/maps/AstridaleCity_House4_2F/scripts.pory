@@ -1,0 +1,23 @@
+mapscripts AstridaleCity_House4_2F_MapScripts {
+
+}
+
+script Astridale_House4_2F_EventScript_Clefairy_Doll {
+    if (var(VAR_ASTRIDALE_STATE) < 3) {
+        applymovement(Astridale_House4_2F_ClefairyDoll, moves(face_player))
+        msgbox(format("It's Viviane's Clefairy doll."), MSGBOX_AUTOCLOSE)
+    }
+    elif (var(VAR_ASTRIDALE_STATE) == 3) {
+        applymovement(Astridale_House4_2F_ClefairyDoll, moves(face_player))
+        msgbox(format("It's Viviane's Clefairy doll.\l"
+            "Would you like to take it?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            setvar(VAR_ASTRIDALE_STATE, 4)
+            setflag(FLAG_HIDE_VIVIANES_CLEFAIRY_DOLL)
+            removeobject(Astridale_House4_2F_ClefairyDoll)
+            msgbox(format("You took the Clefairy doll."), MSGBOX_AUTOCLOSE)
+        } else {
+            msgbox(format("You decided not to take it."), MSGBOX_AUTOCLOSE)
+        }
+    }
+}
