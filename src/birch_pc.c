@@ -48,12 +48,13 @@ static const u8 *const sBirchDexRatingTexts[BIRCH_DEX_STRINGS] =
 };
 
 // This shows your Hoenn Pokédex rating and not your National Dex.
+// Modified for Astrea region.
 const u8 *GetPokedexRatingText(u32 count)
 {
     u32 i, j;
-    u16 maxDex = HOENN_DEX_COUNT - 1;
+    u16 maxDex = ASTREA_DEX_COUNT - 1;
     // doesNotCountForRegionalPokedex
-    for(i = 0; i < HOENN_DEX_COUNT; i++)
+    for(i = 0; i < ASTREA_DEX_COUNT; i++)
     {
         j = NationalPokedexNumToSpecies(AstreaToNationalOrder(i + 1));
         if (gSpeciesInfo[j].isMythical && !gSpeciesInfo[j].dexForceRequired)

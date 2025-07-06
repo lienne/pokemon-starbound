@@ -1,0 +1,35 @@
+mapscripts Astridale_Gym_MapScripts {
+    
+}
+
+script Astridale_Gym_EventScript_Viviane {
+    if (var(VAR_ASTRIDALE_STATE) >= 4) {
+        applymovement(Astridale_Gym_Viviane, moves(face_player))
+        speakername(VivianeName)
+        msgbox(format("So you're back.\p"
+            "I suggest you forget what you saw at the warehouse.\l"
+            "It's really none of your business, you know.\l"
+            "You shouldn't go meddling in other people's affairs.\l"
+            "The construction is bad for Astridale, and I need to do everything I can to stop it!\l"
+            "You won't be able to stop me, even if you try!\p"
+            "I'm a gym leader, you know.\l"
+            "You think a kid like you can beat me?\p"
+            "...\p"
+            "What's that? You've got something for me?"), MSGBOX_NPC)
+        msgbox(format("Give Viviane her Clefairy doll?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            speakername(VivianeName)
+            msgbox(format("That's right, scram!"), MSGBOX_NPC)
+        }
+        else {
+            msgbox(format("You gave Viviane her Clefairy doll."), MSGBOX_AUTOCLOSE)
+            speakername(VivianeName)
+            msgbox(format("...\p"
+                "...oh...\p"
+                "...my beloved Clefairy doll...\p"
+                "...\p"
+                "...ugh, what's happening? I don't feel well..."), MSGBOX_NPC)
+            warpwhitefade(MAP_ASTRIDALE_MINDSCAPE, 19, 75)
+        }
+    }
+}

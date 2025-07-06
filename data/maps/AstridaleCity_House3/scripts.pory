@@ -1,0 +1,17 @@
+mapscripts AstridaleCity_House3_MapScripts {
+
+}
+
+script Astridale_House3_EventScript_Man_Dialogue {
+    applymovement(Astridale_House3_Man, moves(face_player))
+    msgbox(format("My girlfriend and I have been bickering a lot lately.\l"
+        "I'm against the new construction, while she's for it.\l"
+        "We moved here to have a more peaceful life, and now all this noise and mess is gonna mess everything up."), MSGBOX_NPC)
+}
+
+script Astridale_House3_EventScript_Woman_Dialogue {
+    applymovement(Astridale_House3_Woman, moves(face_player))
+    msgbox(format("I can't wait for the construction to finish.\l"
+        "I hear they're building a new shopping mall.\l"
+        "I hope it has a lot of new stores!"), MSGBOX_NPC)
+}

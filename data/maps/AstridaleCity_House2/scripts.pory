@@ -1,0 +1,16 @@
+mapscripts AstridaleCity_House2_MapScripts {
+
+}
+
+script Astridale_House2_EventScript_Girl_Dialogue {
+    applymovement(Astridale_House2_Girl, moves(face_player))
+    msgbox(format("I like to watch my favorite show during the day, but the construction is so loud that I sometimes can't hear it.\l"
+        "I'm excited for all the new things, but I hope they stop soon!"), MSGBOX_NPC)
+}
+
+script Astridale_House2_EventScript_Man_Dialogue {
+    applymovement(Astridale_House2_Man, moves(face_player))
+    msgbox(format("The power of technology nowadays is amazing.\l"
+        "I'm sure the construction will bring even more of it to Astridale.\l"
+        "I just hope it doesn't change things too much."), MSGBOX_NPC)
+}

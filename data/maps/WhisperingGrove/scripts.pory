@@ -9,6 +9,15 @@ script WhisperingGrove_EventScript_RouteSign {
     releaseall
 }
 
+script WhisperingGrove_EventScript_TrainerTipsSigns {
+    lockall
+    msgbox(format("Trainer Tips!\n"
+        "People often drop items in the forest.\l"
+        "It's dark so they're difficult to see.\l"
+        "Check every corner and you might find something useful!"))
+    releaseall
+}
+
 script WhisperingGrove_EventScript_BugCatcher_Lyle {
     trainerbattle_single(TRAINER_LYLE, WhisperingGrove_BugCatcher_Lyle_Intro_Text, WhisperingGrove_BugCatcher_Lyle_Lose_Text)
     msgbox(WhisperingGrove_BugCatcher_Lyle_Dialogue, type=MSGBOX_NPC)

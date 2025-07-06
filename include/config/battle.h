@@ -204,7 +204,7 @@
 #define B_FLAG_FORCE_DOUBLE_WILD    0     // If this flag is set, all land and surfing wild battles will be double battles.
 #define B_SMART_WILD_AI_FLAG        0     // If this flag is set, wild Pokémon will become smart, with all AI flags enabled.
 #define B_FLAG_NO_BAG_USE           0     // If this flag is set, the ability to use the bag in battle is disabled.
-#define B_FLAG_NO_CATCHING          0     // If this flag is set, the ability to catch wild Pokémon is disabled.
+#define B_FLAG_NO_CATCHING          FLAG_NO_CATCHING     // If this flag is set, the ability to catch wild Pokémon is disabled.
 #define B_FLAG_NO_RUNNING           0     // If this flag is set, the ability to escape from wild battles is disabled. Also makes Roar/Whirlwind and Teleport (under Gen8) fail.
 #define B_FLAG_AI_VS_AI_BATTLE      0     // If this flag is set, the player's mons will be controlled by the ai next battles.
 #define B_FLAG_DYNAMAX_BATTLE       0     // If this flag is set, the ability to Dynamax in battle is enabled for all trainers.
@@ -338,7 +338,7 @@
 #define SHOW_TYPES_ALWAYS   1                    // Always show types in battle
 #define SHOW_TYPES_CAUGHT   2                    // Only show types if you've caught a species of the mon.
 #define SHOW_TYPES_SEEN     3                    // Only show types if you've seen a species of the mon.
-#define B_SHOW_TYPES        SHOW_TYPES_NEVER     // When to show type indicators next to Pokémon health bars in battle, while choosing a move after selecting a target Pokémon.
+#define B_SHOW_TYPES        SHOW_TYPES_SEEN      // When to show type indicators next to Pokémon health bars in battle, while choosing a move after selecting a target Pokémon.
 
 #define SHOW_EFFECTIVENESS_NEVER    0           // Never show effectiveness when selecting moves.
 #define SHOW_EFFECTIVENESS_ALWAYS   1           // Always show effectiveness when selecting moves.

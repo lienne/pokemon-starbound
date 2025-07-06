@@ -1,5 +1,9 @@
 mapscripts Astridale_MapScripts {
-
+    MAP_SCRIPT_ON_TRANSITION {
+        if (var(VAR_ASTRIDALE_STATE) >= 4) {
+            setobjectxyperm(Astridale_Gym_Door_Man, 22, 17)
+        }
+    }
 }
 
 text VivianeName {
@@ -8,30 +12,30 @@ text VivianeName {
 
 script Astridale_EventScript_CitySign {
     lockall
-    msgbox("Astridale\n"
-        "“Growing towards tomorrow without forgetting yesterday”")
+    msgbox(format("Astridale\n"
+        "“Growing towards tomorrow without forgetting yesterday”"))
     releaseall
 }
 
 script Astridale_EventScript_ConstructionSign {
     lockall
-    msgbox("Construction Site\n"
-        "Mind the dust!")
+    msgbox(format("Construction Site\n"
+        "Mind the dust!"))
     releaseall
 }
 
 script Astridale_EventScript_DeptStoreSign {
     lockall
-    msgbox("Astridale Department Store\n"
-        "Coming soon!")
+    msgbox(format("Astridale Department Store\n"
+        "Coming soon!"))
     releaseall
 }
 
 script Astridale_EventScript_GymSign {
     lockall
-    msgbox("Astridale Gym\n"
+    msgbox(format("Astridale Gym\n"
         "Leader: Viviane\n"
-        "The soft-spoken fairy beauty")
+        "The soft-spoken fairy beauty"))
     releaseall
 }
 
@@ -42,14 +46,20 @@ script Astridale_EventScript_Gym_Door_Man_Dialogue {
         msgbox(format("The gym leader, Viviane, is not in today.\n"
             "Sigh... she's been acting strange lately.\l"
             "Ever since the construction on the other side of the city began, she hasn't been herself.\l"
-            "She's not taking any challengers at the moment. You'll have to come back later."), MSGBOX_AUTOCLOSE)
+            "She's not taking any challengers at the moment. You'll have to come back later."), MSGBOX_NPC)
+    }
+    elif (var(VAR_ASTRIDALE_STATE) == 4) {
+        applymovement(Astridale_Gym_Door_Man, moves(face_player))
+        msgbox(format("The gym leader, Viviane, just came back to the gym.\l"
+            "She seems to be in a bad mood, though...\l"
+            "I'd proceed with caution if I were you."), MSGBOX_NPC)
     }
     else {
         applymovement(Astridale_Gym_Door_Man, moves(face_player))
         msgbox(format("The gym leader, Viviane, is not in today.\n"
             "Sigh... she's been acting strange lately.\l"
             "Ever since the construction on the other side of the city began, she hasn't been herself.\l"
-            "She's not taking any challengers at the moment. You'll have to come back later."), MSGBOX_AUTOCLOSE)
+            "She's not taking any challengers at the moment. You'll have to come back later."), MSGBOX_NPC)
     }
 }
 
@@ -62,7 +72,7 @@ script Astridale_EventScript_ConstructionMan1_Dialogue {
             "Our equipment keeps mysteriously breaking, materials have gone missing...\l"
             "We don't know what to make of it.\l"
             "It would be crazy if someone were sabotaging us, wouldn't it?\l"
-            "Hahahaha!"), MSGBOX_AUTOCLOSE)
+            "Hahahaha!"), MSGBOX_NPC)
     }
     else {
         applymovement(Astridale_ConstructionMan1, moves(face_player))
@@ -71,34 +81,68 @@ script Astridale_EventScript_ConstructionMan1_Dialogue {
             "Our equipment keeps mysteriously breaking, materials have gone missing...\l"
             "We don't know what to make of it.\l"
             "It would be crazy if someone were sabotaging us, wouldn't it?\l"
-            "Hahahaha!"), MSGBOX_AUTOCLOSE)
+            "Hahahaha!"), MSGBOX_NPC)
     }
+}
+
+script Astridale_EventScript_ConstructionMan2_Dialogue {
+    applymovement(Astridale_ConstructionMan2, moves(face_player))
+    msgbox(format("...zzz...\n"
+        "...zzz...\l"
+        "Huh? Oh, sorry, I must've dozed off.\l"
+        "This is the warehouse where we keep all our construction equipment and materials.\l"
+        "I'm supposed to be keeping watch, but I'm just so tired...\l"
+        "...zzz..."), MSGBOX_NPC)
+}
+
+script Astridale_EventScript_Machoke1_Dialogue {
+    applymovement(Astridale_Machoke1, moves(face_player))
+    msgbox(format("Machoke is stomping down some soil."
+        "It looks like it's working hard."), MSGBOX_NPC)
+}
+
+script Astridale_EventScript_Machoke2_Dialogue {
+    applymovement(Astridale_Machoke2, moves(face_player))
+    msgbox(format("Machoke is stomping down some soil."
+        "It looks like it's working hard."), MSGBOX_NPC)
+}
+
+script Astridale_EventScript_Vigorith1_Dialogue {
+    applymovement(Astridale_Vigoroth1, moves(face_player))
+    msgbox(format("Vigoroth is carrying a heavy load of construction materials.\l"
+        "It looks like it's working hard."), MSGBOX_NPC)
+}
+
+script Astridale_EventScript_Vigorith2_Dialogue {
+    applymovement(Astridale_Vigoroth2, moves(face_player))
+    msgbox(format("Vigoroth is carrying a heavy load of construction materials.\l"
+        "It looks like it's working hard."), MSGBOX_NPC)
 }
 
 script Astridale_EventScript_Gameboy_Kid_Dialogue {
     applymovement(Astridale_Gameboy_Kid, moves(face_player))
     msgbox(format("I'm excited about the construction!\n"
         "I hear they're building a biiiig department store!\l"
-        "I bet they'll have lots of games to sell!"), MSGBOX_AUTOCLOSE)
+        "I bet they'll have lots of games to sell!"), MSGBOX_NPC)
 }
 
 script Astridale_EventScript_OldMan_Dialogue {
     applymovement(Astridale_OldMan, moves(face_player))
     msgbox(format("The citizens of Astridale are divided about the construction.\l"
         "The younger crowd seems excited about it, while us old folk ...\l"
-        "Well, we worry."), MSGBOX_AUTOCLOSE)
+        "Well, we worry."), MSGBOX_NPC)
 }
 
 script Astridale_EventScript_OldWoman_Dialogue {
     applymovement(Astridale_OldWoman, moves(face_player))
     msgbox(format("The construction on the other side of the city is a bad idea.\l"
             "It's going to ruin the peaceful atmosphere of Astridale.\l"
-            "I don't like it one bit."), MSGBOX_AUTOCLOSE)
+            "I don't like it one bit."), MSGBOX_NPC)
 }
 
 script Astridale_EventScript_Lady_Dialogue {
     applymovement(Astridale_Lady, moves(face_player))
     msgbox(format("The gym leader, Viviane, lives in that old house on the hill, with her family.\l"
         "They're sweet people, usually, but Viviane's been so mean lately...\l"
-        "I wonder what's going on..."), MSGBOX_AUTOCLOSE)
+        "I wonder what's going on..."), MSGBOX_NPC)
 }

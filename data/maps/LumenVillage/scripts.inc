@@ -1,5 +1,5 @@
 LumenVillage_MapScripts::
-# 11 "data/maps/LumenVillage/scripts.pory"
+# 8 "data/maps/LumenVillage/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, LumenVillage_MapScripts_MAP_SCRIPT_ON_TRANSITION
 # 2 "data/maps/LumenVillage/scripts.pory"
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LumenVillage_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE
@@ -8,8 +8,16 @@ LumenVillage_MapScripts::
 	.byte 0
 
 LumenVillage_MapScripts_MAP_SCRIPT_ON_TRANSITION:
-# 12 "data/maps/LumenVillage/scripts.pory"
+# 9 "data/maps/LumenVillage/scripts.pory"
 	call Common_EventScript_SetupRivalGfxId
+# 10 "data/maps/LumenVillage/scripts.pory"
+	compare VAR_INTRO_SCENE, 1
+	goto_if_lt LumenVillage_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
+	return
+
+LumenVillage_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
+# 11 "data/maps/LumenVillage/scripts.pory"
+	playbgm MUS_NONE, 1
 	return
 
 LumenVillage_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
@@ -20,13 +28,6 @@ LumenVillage_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
 LumenVillage_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0:
 # 4 "data/maps/LumenVillage/scripts.pory"
 	turnobject LOCALID_PLAYER, DIR_EAST
-# 5 "data/maps/LumenVillage/scripts.pory"
-	goto_if_unset FLAG_HIDE_CLEARING_JIRACHI, LumenVillage_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0_1
-	return
-
-LumenVillage_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0_1:
-# 6 "data/maps/LumenVillage/scripts.pory"
-	playbgm MUS_NONE, 1
 	return
 
 LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:

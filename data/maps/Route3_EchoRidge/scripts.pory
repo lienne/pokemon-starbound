@@ -1,0 +1,10 @@
+mapscripts Route3_EchoRidge_MapScripts {
+
+}
+
+script Route3_EchoRidge_EventScript_RouteSign {
+    lockall
+    msgbox(format("Echo Ridge\n"
+        "“Where the echoes of the past linger”"))
+    releaseall
+}

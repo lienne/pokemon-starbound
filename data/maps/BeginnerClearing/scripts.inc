@@ -846,11 +846,11 @@ BeginnerClearing_EventScript_GruntB_Text_0:
 
 BeginnerClearing_EventScript_JirachiIntro_Text_0:
 # 188 "data/maps/BeginnerClearing/scripts.pory"
-	.string "Help... they're coming after me...$"
+	.string "{COLOR RED}Help... they're coming after me...$"
 
 BeginnerClearing_EventScript_JirachiIntro_Text_1:
 # 195 "data/maps/BeginnerClearing/scripts.pory"
-	.string "They took my friend... Help...$"
+	.string "{COLOR RED}They took my friend... Help...$"
 
 BeginnerClearing_EventScript_JirachiIntro_Text_2:
 # 208 "data/maps/BeginnerClearing/scripts.pory"
@@ -953,7 +953,7 @@ BeginnerClearing_EventScript_AfterBattle_Text_2:
 
 BeginnerClearing_EventScript_JirachiPlayerFirstDialogue_Text_0:
 # 380 "data/maps/BeginnerClearing/scripts.pory"
-	.string "...you came.\p"
+	.string "{COLOR RED}...you came.\p"
 	.string "I wasn't sure you'd hear me, but... you\n"
 	.string "did.\p"
 	.string "Those people, they tried to take me.\n"
@@ -1003,8 +1003,8 @@ JirachiName::
 
 GruntAName::
 # 123 "data/maps/BeginnerClearing/scripts.pory"
-	.string "Grunt 1$"
+	.string "Stranger 1$"
 
 GruntBName::
 # 127 "data/maps/BeginnerClearing/scripts.pory"
-	.string "Grunt 2$"
+	.string "Stranger 2$"

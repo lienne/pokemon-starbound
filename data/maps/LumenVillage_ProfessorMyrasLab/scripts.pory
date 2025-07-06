@@ -49,8 +49,7 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             msgbox(format("Hmmm... These Pokémon were part of a special research assignment.\l"
                 "They weren't meant for trainers - not yet.\l"
                 "But I see it in your eyes... you're serious.\l"
-                "This isn't about catching up, is it?\l"
-                "It's about proving you're ready."))
+                "You really want to prove you're ready, don't you?"))
             call(RivalName)
             msgbox(format("I've ALWAYS been ready!\n"
                 "If {PLAYER} is out there, then I should be too!\l"
@@ -106,7 +105,7 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             msgbox(format("I see you've also retrieved the medicine from Solstice Town.\l"
                 "Thank you for that, {PLAYER}.\l"
                 "However, Jirachi has already left.\l"
-                "I'm worried about it, since it was badly hurt.\l"
+                "I'm worried about it, since it was badly injured.\l"
                 "You might not know this, but Jirachi is a very special Pokémon.\l"
                 "Whoever those Team Eclipse guys were, I don't think they had good intentions towards Jirachi.\l"
                 "If it went anywhere... it must have returned to the place where you found it.\l"

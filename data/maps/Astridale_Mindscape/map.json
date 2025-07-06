@@ -5,7 +5,7 @@
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_FOG_DIAGONAL",
   "map_type": "MAP_TYPE_NONE",
   "allow_cycling": false,
   "allow_escaping": false,
@@ -26,24 +26,65 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "0"
-    }
-  ],
-  "warp_events": [
-    {
-      "x": 19,
-      "y": 77,
-      "elevation": 0,
-      "dest_map": "MAP_ASTRIDALE",
-      "dest_warp_id": "6"
     },
     {
+      "local_id": "Astridale_Mindscape_Jirachi",
+      "graphics_id": "OBJ_EVENT_GFX_JIRACHI",
       "x": 20,
-      "y": 77,
+      "y": 69,
       "elevation": 0,
-      "dest_map": "MAP_ASTRIDALE",
-      "dest_warp_id": "6"
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Astridale_Mindscape_EventScript_Jirachi_Dialogue",
+      "flag": "0"
+    },
+    {
+      "local_id": "Astridale_Mindscape_Munna",
+      "graphics_id": "OBJ_EVENT_GFX_MUNNA",
+      "x": 15,
+      "y": 55,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Astridale_Mindscape_EventScript_Munna_PC",
+      "flag": "0"
     }
   ],
-  "coord_events": [],
+  "warp_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 61,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 63,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 64,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    }
+  ],
   "bg_events": []
 }

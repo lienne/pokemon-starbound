@@ -15,6 +15,7 @@
   "connections": null,
   "object_events": [
     {
+      "local_id": "Astridale_House2_Man",
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
       "x": 8,
       "y": 5,
@@ -24,10 +25,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Astridale_House2_EventScript_Man_Dialogue",
       "flag": "0"
     },
     {
+      "local_id": "Astridale_House2_Girl",
       "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
       "x": 2,
       "y": 3,
@@ -37,7 +39,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Astridale_House2_EventScript_Girl_Dialogue",
       "flag": "0"
     }
   ],

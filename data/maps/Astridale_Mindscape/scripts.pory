@@ -1,0 +1,64 @@
+mapscripts Astridale_Mindscape_MapScripts {
+    MAP_SCRIPT_ON_RESUME {
+        setflag(FLAG_NO_CATCHING)
+        setflag(FLAG_FORCE_NO_SHINY)
+    }
+
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_ASTRIDALE_STATE, 4 {
+            setvar(VAR_ASTRIDALE_STATE, 5)
+            call(Astridale_Mindscape_EventScript_Intro_Dialogue)
+            setobjectxyperm(Astridale_Mindscape_Jirachi, 20, 75)
+            end
+        }
+    ]
+}
+
+script Astridale_Mindscape_EventScript_Intro_Dialogue {
+    lockall
+    applymovement(LOCALID_PLAYER, moves(emote_exclamation_mark))
+    playse(SE_PIN)
+    waitse()
+    waitmovement(LOCALID_PLAYER)
+    applymovement(LOCALID_PLAYER, moves(face_up))
+    waitmovement(LOCALID_PLAYER)
+    applymovement(Astridale_Mindscape_Jirachi, moves(walk_slow_down * 6))
+    waitmovement(Astridale_Mindscape_Jirachi)
+    applymovement(Astridale_Mindscape_Jirachi, moves(face_left))
+    waitmovement(Astridale_Mindscape_Jirachi)
+    applymovement(LOCALID_PLAYER, moves(face_right))
+    waitmovement(LOCALID_PLAYER)
+    speakername(JirachiName)
+    msgbox(format("{COLOR RED}{PLAYER}.\p"
+        "This is the realm of dreams.\n"
+        "You are in Viviane's mindscape now.\l"
+        "I was able to pull you in once you showed her the Clefairy doll.\l"
+        "You did well, {PLAYER}.\l"
+        "Now we should be able to look for her here and see if she's under mind control.\l"
+        "I should warn you, mindscapes can be very unpredictable.\l"
+        "They reflect a person's innermost self, and there might be challenges you face before you can find Viviane.\l"
+        "Every person's mindscape is different, so I can't tell you what you'll find here.\l"
+        "But just keep in mind that nothing you encounter here is real - people, pokémon, items.\l"
+        "Whatever pokémon you find here, you won't be able to catch, since they don't exist in the real world - only in Viviane's consciousness.\l"
+        "Likewise, anyone you encounter, besides Viviane herself, is only a figment of her mind.\l"
+        "I'll stay here to support you, so please go and find Viviane."), MSGBOX_NPC)
+    releaseall
+}
+
+script Astridale_Mindscape_EventScript_Jirachi_Dialogue {
+    applymovement(Astridale_Mindscape_Jirachi, moves(face_player))
+    speakername(JirachiName)
+    msgbox(format("{COLOR RED}{PLAYER}, you should rest while you can."), MSGBOX_NPC)
+    call(Common_EventScript_OutOfCenterPartyHeal)
+    speakername(JirachiName)
+    msgbox(format("{COLOR RED}Your party has been healed.\n"
+        "I'm counting on you, {PLAYER}."), MSGBOX_AUTOCLOSE)
+}
+
+script Astridale_Mindscape_EventScript_Munna_PC {
+    applymovement(Astridale_Mindscape_Munna, moves(face_player))
+    msgbox(format("Muuuunn..."), MSGBOX_NPC)
+    special(ShowPokemonStorageSystemPC)
+    waitstate()
+    closemessage()
+}

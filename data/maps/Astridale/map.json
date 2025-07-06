@@ -26,6 +26,7 @@
   ],
   "object_events": [
     {
+      "local_id": "Astridale_Vigoroth2",
       "graphics_id": "OBJ_EVENT_GFX_VIGOROTH_CARRYING_BOX",
       "x": 53,
       "y": 26,
@@ -35,7 +36,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Astridale_EventScript_Vigorith2_Dialogue",
       "flag": "0"
     },
     {
@@ -52,6 +53,7 @@
       "flag": "0"
     },
     {
+      "local_id": "Astridale_Machoke2",
       "graphics_id": "OBJ_EVENT_GFX_MACHOKE",
       "x": 58,
       "y": 18,
@@ -61,20 +63,21 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Astridale_EventScript_Machoke2_Dialogue",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_VIGOROTH_FACING_AWAY",
+      "local_id": "Astridale_Vigoroth1",
+      "graphics_id": "OBJ_EVENT_GFX_VIGOROTH_CARRYING_BOX",
       "x": 68,
       "y": 13,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Astridale_EventScript_Vigorith1_Dialogue",
       "flag": "0"
     },
     {
@@ -92,6 +95,7 @@
       "flag": "0"
     },
     {
+      "local_id": "Astridale_Machoke1",
       "graphics_id": "OBJ_EVENT_GFX_MACHOKE",
       "x": 52,
       "y": 4,
@@ -101,7 +105,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Astridale_EventScript_Machoke1_Dialogue",
       "flag": "0"
     },
     {
@@ -147,6 +151,7 @@
       "flag": "0"
     },
     {
+      "local_id": "Astridale_ConstructionMan2",
       "graphics_id": "OBJ_EVENT_GFX_MYSTERY_GIFT_MAN",
       "x": 64,
       "y": 20,
@@ -156,13 +161,13 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Astridale_EventScript_ConstructionMan2_Dialogue",
       "flag": "0"
     },
     {
       "local_id": "Astridale_Gym_Door_Man",
       "graphics_id": "OBJ_EVENT_GFX_MAN_4",
-      "x": 22,
+      "x": 21,
       "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -185,6 +190,20 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Astridale_EventScript_Lady_Dialogue",
+      "flag": "0"
+    },
+    {
+      "local_id": "Astridale_ConstructionMan3",
+      "graphics_id": "OBJ_EVENT_GFX_MYSTERY_GIFT_MAN",
+      "x": 39,
+      "y": 1,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
       "flag": "0"
     }
   ],
@@ -235,7 +254,7 @@
       "x": 21,
       "y": 16,
       "elevation": 0,
-      "dest_map": "MAP_ASTRIDALE_MINDSCAPE",
+      "dest_map": "MAP_ASTRIDALE_GYM",
       "dest_warp_id": "0"
     },
     {
@@ -246,7 +265,53 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 38,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 37,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

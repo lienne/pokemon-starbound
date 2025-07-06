@@ -3,7 +3,7 @@ mapscripts LumenVillage_CassiansHouse_1F_MapScripts {
 }
 
 script PlayersHouse_EventScript_RivalMom_Dialogue {
-    if (var(VAR_INTRO_SCENE) < 6) {
+    if (var(VAR_INTRO_SCENE) < 7) {
         applymovement(Rival_Mom_1F, moves(face_player))
         msgbox(format("Oh hi, {PLAYER}!\p"
             "{RIVAL} went out to Starlit Path a little while ago.\l"

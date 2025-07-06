@@ -9,24 +9,27 @@ Astridale_House4_EventScript_OldMan_Dialogue::
 # 12 "data/maps/AstridaleCity_House4/scripts.pory"
 	compare VAR_ASTRIDALE_STATE, 3
 	goto_if_eq Astridale_House4_EventScript_OldMan_Dialogue_2
+# 12 "data/maps/AstridaleCity_House4/scripts.pory"
+	compare VAR_ASTRIDALE_STATE, 4
+	goto_if_eq Astridale_House4_EventScript_OldMan_Dialogue_2
 # 18 "data/maps/AstridaleCity_House4/scripts.pory"
 	applymovement Astridale_House4_OldMan, Astridale_House4_EventScript_OldMan_Dialogue_Movement_0
 # 19 "data/maps/AstridaleCity_House4/scripts.pory"
-	msgbox Astridale_House4_EventScript_OldMan_Dialogue_Text_2, MSGBOX_AUTOCLOSE
+	msgbox Astridale_House4_EventScript_OldMan_Dialogue_Text_2, MSGBOX_NPC
 	return
 
 Astridale_House4_EventScript_OldMan_Dialogue_1:
 # 7 "data/maps/AstridaleCity_House4/scripts.pory"
 	applymovement Astridale_House4_OldMan, Astridale_House4_EventScript_OldMan_Dialogue_Movement_0
 # 8 "data/maps/AstridaleCity_House4/scripts.pory"
-	msgbox Astridale_House4_EventScript_OldMan_Dialogue_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Astridale_House4_EventScript_OldMan_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 Astridale_House4_EventScript_OldMan_Dialogue_2:
 # 13 "data/maps/AstridaleCity_House4/scripts.pory"
 	applymovement Astridale_House4_OldMan, Astridale_House4_EventScript_OldMan_Dialogue_Movement_0
 # 14 "data/maps/AstridaleCity_House4/scripts.pory"
-	msgbox Astridale_House4_EventScript_OldMan_Dialogue_Text_1, MSGBOX_AUTOCLOSE
+	msgbox Astridale_House4_EventScript_OldMan_Dialogue_Text_1, MSGBOX_NPC
 	return
 
 
@@ -37,24 +40,27 @@ Astridale_House4_EventScript_OldWoman_Dialogue::
 # 33 "data/maps/AstridaleCity_House4/scripts.pory"
 	compare VAR_ASTRIDALE_STATE, 3
 	goto_if_eq Astridale_House4_EventScript_OldWoman_Dialogue_2
+# 33 "data/maps/AstridaleCity_House4/scripts.pory"
+	compare VAR_ASTRIDALE_STATE, 4
+	goto_if_eq Astridale_House4_EventScript_OldWoman_Dialogue_2
 # 39 "data/maps/AstridaleCity_House4/scripts.pory"
 	applymovement Astridale_House4_OldWoman, Astridale_House4_EventScript_OldMan_Dialogue_Movement_0
 # 40 "data/maps/AstridaleCity_House4/scripts.pory"
-	msgbox Astridale_House4_EventScript_OldWoman_Dialogue_Text_2, MSGBOX_AUTOCLOSE
+	msgbox Astridale_House4_EventScript_OldWoman_Dialogue_Text_2, MSGBOX_NPC
 	return
 
 Astridale_House4_EventScript_OldWoman_Dialogue_1:
 # 27 "data/maps/AstridaleCity_House4/scripts.pory"
 	applymovement Astridale_House4_OldWoman, Astridale_House4_EventScript_OldMan_Dialogue_Movement_0
 # 28 "data/maps/AstridaleCity_House4/scripts.pory"
-	msgbox Astridale_House4_EventScript_OldWoman_Dialogue_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Astridale_House4_EventScript_OldWoman_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 Astridale_House4_EventScript_OldWoman_Dialogue_2:
 # 34 "data/maps/AstridaleCity_House4/scripts.pory"
 	applymovement Astridale_House4_OldWoman, Astridale_House4_EventScript_OldMan_Dialogue_Movement_0
 # 35 "data/maps/AstridaleCity_House4/scripts.pory"
-	msgbox Astridale_House4_EventScript_OldWoman_Dialogue_Text_1, MSGBOX_AUTOCLOSE
+	msgbox Astridale_House4_EventScript_OldWoman_Dialogue_Text_1, MSGBOX_NPC
 	return
 
 

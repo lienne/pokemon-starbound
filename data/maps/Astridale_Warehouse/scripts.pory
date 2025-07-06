@@ -33,7 +33,7 @@ mapscripts Astridale_Warehouse_MapScripts {
             waitmovement(0)
             speakername(VivianeName)
             msgbox(format("...so these are the plans for the construction...\l"
-                "...let's see...\l"
+                "...let's see...\p"
                 "..."), MSGBOX_AUTOCLOSE)
             applymovement(Astridale_Warehouse_Viviane, moves(emote_exclamation_mark))
             playse(SE_PIN)
@@ -45,17 +45,16 @@ mapscripts Astridale_Warehouse_MapScripts {
             waitmovement(0)
             special(RemoveCameraObject)
             speakername(VivianeName)
-            msgbox(format("...what's this?\n"
-                "...\l"
-                "Yes, I'm the one who's been sabotaging the construction.\l"
-                "...\l"
+            msgbox(format("...what's this?\p"
+                "...\p"
+                "Yes, I'm the one who's been sabotaging the construction.\p"
+                "...\p"
                 "You don't know what you're talking about.\l"
                 "This construction's bad for Astridale.\l"
                 "It can't be allowed to continue.\l"
                 "You think you can stop me? You're just a kid.\l"
                 "I'll put a stop to this if it's the last thing I do!"), MSGBOX_AUTOCLOSE)
             applymovement(Astridale_Warehouse_Viviane, moves(walk_fast_down * 7))
-            waitmovement(0)
             applymovement(LOCALID_PLAYER, moves(delay_16 walk_in_place_faster_down))
             waitmovement(0)
             playse(SE_DOOR)
@@ -75,7 +74,7 @@ mapscripts Astridale_Warehouse_MapScripts {
             applymovement(Astridale_Warehouse_Jirachi, moves(walk_slow_down * 6))
             waitmovement(0)
             speakername(JirachiName)
-            msgbox(format("{PLAYER}.\n"
+            msgbox(format("{COLOR RED}{PLAYER}.\n"
                 "That person... I can feel something horribly wrong with her.\l"
                 "I think she's not in her right mind...\l"
                 "{PLAYER}, there's something you must know.\l"
@@ -86,11 +85,14 @@ mapscripts Astridale_Warehouse_MapScripts {
                 "I'm afraid that person has fallen to their mind control.\l"
                 "{PLAYER}, we must find out if this is true.\l"
                 "I can grant you the power to go into her mindscape... the dimension that holds that person's dreams.\l"
-                "You'll need something, an item of great sentimental value to that person.\l"
+                "You'll need something, an item of great sentimental value to her.\l"
                 "If you can find such an item, you'll be able to enter her mind and hopefully free her from the control.\l"
                 "Find that item, and show it to her.\l"
                 "That should be all you need to enter her mindscape.\l"
-                "I'm counting on you, {PLAYER}.\l"
+                "But be warned that once you enter, you won't be able to leave until you find her.\l"
+                "But I will be there to support you, so don't worry.\l"
+                "I will be able to help you if you need it.\l"
+                "I know you can do this, {PLAYER}.\l"
                 "I'll find you again soon."), MSGBOX_AUTOCLOSE)
             fadescreenswapbuffers(FADE_TO_WHITE)
             setflag(FLAG_HIDE_JIRACHI_IN_ASTRIDALE_WAREHOUSE)

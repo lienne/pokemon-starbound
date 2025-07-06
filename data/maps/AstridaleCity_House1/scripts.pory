@@ -1,0 +1,11 @@
+mapscripts AstridaleCity_House1_MapScripts {
+
+}
+
+script Astridale_House1_EventScript_Woman_Dialogue {
+    applymovement(Astridale_House1_Woman, moves(face_player))
+    msgbox(format("It's horrible living right next to the construction.\l"
+        "It's so loud during the day, and they keep the lights on at night...\l"
+        "I can hardly hear myself think!\l"
+        "I hope they finish up soon..."), MSGBOX_NPC)
+}

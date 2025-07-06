@@ -100,97 +100,95 @@ Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 # 57 "data/maps/Astridale_Warehouse/scripts.pory"
 	applymovement Astridale_Warehouse_Viviane, Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_6
 # 58 "data/maps/Astridale_Warehouse/scripts.pory"
-	waitmovement 0
-# 59 "data/maps/Astridale_Warehouse/scripts.pory"
 	applymovement LOCALID_PLAYER, Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_7
+# 59 "data/maps/Astridale_Warehouse/scripts.pory"
+	waitmovement 0
 # 60 "data/maps/Astridale_Warehouse/scripts.pory"
-	waitmovement 0
-# 61 "data/maps/Astridale_Warehouse/scripts.pory"
 	playse SE_DOOR
+# 61 "data/maps/Astridale_Warehouse/scripts.pory"
+	waitse
 # 62 "data/maps/Astridale_Warehouse/scripts.pory"
-	waitse
-# 63 "data/maps/Astridale_Warehouse/scripts.pory"
 	setflag FLAG_HIDE_VIVIANE_IN_ASTRIDALE_WAREHOUSE
-# 64 "data/maps/Astridale_Warehouse/scripts.pory"
+# 63 "data/maps/Astridale_Warehouse/scripts.pory"
 	removeobject Astridale_Warehouse_Viviane
-# 65 "data/maps/Astridale_Warehouse/scripts.pory"
+# 64 "data/maps/Astridale_Warehouse/scripts.pory"
 	applymovement LOCALID_PLAYER, Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_0
-# 66 "data/maps/Astridale_Warehouse/scripts.pory"
+# 65 "data/maps/Astridale_Warehouse/scripts.pory"
 	playse SE_PIN
-# 67 "data/maps/Astridale_Warehouse/scripts.pory"
+# 66 "data/maps/Astridale_Warehouse/scripts.pory"
 	waitse
+# 67 "data/maps/Astridale_Warehouse/scripts.pory"
+	waitmovement 0
 # 68 "data/maps/Astridale_Warehouse/scripts.pory"
-	waitmovement 0
+	fadescreenswapbuffers FADE_TO_WHITE
 # 69 "data/maps/Astridale_Warehouse/scripts.pory"
-	fadescreenswapbuffers FADE_TO_WHITE
-# 70 "data/maps/Astridale_Warehouse/scripts.pory"
 	clearflag FLAG_HIDE_JIRACHI_IN_ASTRIDALE_WAREHOUSE
-# 71 "data/maps/Astridale_Warehouse/scripts.pory"
+# 70 "data/maps/Astridale_Warehouse/scripts.pory"
 	addobject Astridale_Warehouse_Jirachi
-# 72 "data/maps/Astridale_Warehouse/scripts.pory"
+# 71 "data/maps/Astridale_Warehouse/scripts.pory"
 	fadescreenswapbuffers FADE_FROM_WHITE
-# 73 "data/maps/Astridale_Warehouse/scripts.pory"
+# 72 "data/maps/Astridale_Warehouse/scripts.pory"
 	applymovement LOCALID_PLAYER, Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_3
+# 73 "data/maps/Astridale_Warehouse/scripts.pory"
+	waitmovement 0
 # 74 "data/maps/Astridale_Warehouse/scripts.pory"
-	waitmovement 0
-# 75 "data/maps/Astridale_Warehouse/scripts.pory"
 	applymovement Astridale_Warehouse_Jirachi, Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_8
-# 76 "data/maps/Astridale_Warehouse/scripts.pory"
+# 75 "data/maps/Astridale_Warehouse/scripts.pory"
 	waitmovement 0
-# 77 "data/maps/Astridale_Warehouse/scripts.pory"
+# 76 "data/maps/Astridale_Warehouse/scripts.pory"
 	speakername JirachiName
-# 78 "data/maps/Astridale_Warehouse/scripts.pory"
+# 77 "data/maps/Astridale_Warehouse/scripts.pory"
 	msgbox Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_3, MSGBOX_AUTOCLOSE
-# 95 "data/maps/Astridale_Warehouse/scripts.pory"
-	fadescreenswapbuffers FADE_TO_WHITE
-# 96 "data/maps/Astridale_Warehouse/scripts.pory"
-	setflag FLAG_HIDE_JIRACHI_IN_ASTRIDALE_WAREHOUSE
 # 97 "data/maps/Astridale_Warehouse/scripts.pory"
-	removeobject Astridale_Warehouse_Jirachi
+	fadescreenswapbuffers FADE_TO_WHITE
 # 98 "data/maps/Astridale_Warehouse/scripts.pory"
+	setflag FLAG_HIDE_JIRACHI_IN_ASTRIDALE_WAREHOUSE
+# 99 "data/maps/Astridale_Warehouse/scripts.pory"
+	removeobject Astridale_Warehouse_Jirachi
+# 100 "data/maps/Astridale_Warehouse/scripts.pory"
 	fadescreenswapbuffers FADE_FROM_WHITE
 	end
 
 
-# 104 "data/maps/Astridale_Warehouse/scripts.pory"
-Player_Enters_Warehouse_Look_For_Viviane:
-# 105 "data/maps/Astridale_Warehouse/scripts.pory"
-	delay_16
 # 106 "data/maps/Astridale_Warehouse/scripts.pory"
-	walk_up
+Player_Enters_Warehouse_Look_For_Viviane:
 # 107 "data/maps/Astridale_Warehouse/scripts.pory"
 	delay_16
 # 108 "data/maps/Astridale_Warehouse/scripts.pory"
-	delay_16
+	walk_up
 # 109 "data/maps/Astridale_Warehouse/scripts.pory"
-	face_left
+	delay_16
 # 110 "data/maps/Astridale_Warehouse/scripts.pory"
 	delay_16
 # 111 "data/maps/Astridale_Warehouse/scripts.pory"
-	delay_16
+	face_left
 # 112 "data/maps/Astridale_Warehouse/scripts.pory"
 	delay_16
 # 113 "data/maps/Astridale_Warehouse/scripts.pory"
-	face_right
+	delay_16
 # 114 "data/maps/Astridale_Warehouse/scripts.pory"
 	delay_16
 # 115 "data/maps/Astridale_Warehouse/scripts.pory"
-	delay_16
+	face_right
 # 116 "data/maps/Astridale_Warehouse/scripts.pory"
 	delay_16
 # 117 "data/maps/Astridale_Warehouse/scripts.pory"
+	delay_16
+# 118 "data/maps/Astridale_Warehouse/scripts.pory"
+	delay_16
+# 119 "data/maps/Astridale_Warehouse/scripts.pory"
 	face_up
 	step_end
 
-# 120 "data/maps/Astridale_Warehouse/scripts.pory"
+# 122 "data/maps/Astridale_Warehouse/scripts.pory"
 Astridale_Warehouse_Camera_Movement_PanToViviane:
-# 121 "data/maps/Astridale_Warehouse/scripts.pory"
+# 123 "data/maps/Astridale_Warehouse/scripts.pory"
 	walk_up
-# 121 "data/maps/Astridale_Warehouse/scripts.pory"
+# 123 "data/maps/Astridale_Warehouse/scripts.pory"
 	walk_up
-# 121 "data/maps/Astridale_Warehouse/scripts.pory"
+# 123 "data/maps/Astridale_Warehouse/scripts.pory"
 	walk_up
-# 121 "data/maps/Astridale_Warehouse/scripts.pory"
+# 123 "data/maps/Astridale_Warehouse/scripts.pory"
 	walk_up
 	step_end
 
@@ -272,27 +270,27 @@ Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_6:
 	walk_fast_down
 	step_end
 
-# 59 "data/maps/Astridale_Warehouse/scripts.pory"
+# 58 "data/maps/Astridale_Warehouse/scripts.pory"
 Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_7:
-# 59 "data/maps/Astridale_Warehouse/scripts.pory"
+# 58 "data/maps/Astridale_Warehouse/scripts.pory"
 	delay_16
-# 59 "data/maps/Astridale_Warehouse/scripts.pory"
+# 58 "data/maps/Astridale_Warehouse/scripts.pory"
 	walk_in_place_faster_down
 	step_end
 
-# 75 "data/maps/Astridale_Warehouse/scripts.pory"
+# 74 "data/maps/Astridale_Warehouse/scripts.pory"
 Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_8:
-# 75 "data/maps/Astridale_Warehouse/scripts.pory"
+# 74 "data/maps/Astridale_Warehouse/scripts.pory"
 	walk_slow_down
-# 75 "data/maps/Astridale_Warehouse/scripts.pory"
+# 74 "data/maps/Astridale_Warehouse/scripts.pory"
 	walk_slow_down
-# 75 "data/maps/Astridale_Warehouse/scripts.pory"
+# 74 "data/maps/Astridale_Warehouse/scripts.pory"
 	walk_slow_down
-# 75 "data/maps/Astridale_Warehouse/scripts.pory"
+# 74 "data/maps/Astridale_Warehouse/scripts.pory"
 	walk_slow_down
-# 75 "data/maps/Astridale_Warehouse/scripts.pory"
+# 74 "data/maps/Astridale_Warehouse/scripts.pory"
 	walk_slow_down
-# 75 "data/maps/Astridale_Warehouse/scripts.pory"
+# 74 "data/maps/Astridale_Warehouse/scripts.pory"
 	walk_slow_down
 	step_end
 
@@ -304,17 +302,17 @@ Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_1:
 # 35 "data/maps/Astridale_Warehouse/scripts.pory"
 	.string "...so these are the plans for the\n"
 	.string "construction...\l"
-	.string "...let's see...\l"
+	.string "...let's see...\p"
 	.string "...$"
 
 Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_2:
 # 48 "data/maps/Astridale_Warehouse/scripts.pory"
-	.string "...what's this?\n"
-	.string "...\l"
-	.string "Yes, I'm the one who's been sabotaging\l"
-	.string "the construction.\l"
-	.string "...\l"
-	.string "You don't know what you're talking\l"
+	.string "...what's this?\p"
+	.string "...\p"
+	.string "Yes, I'm the one who's been sabotaging\n"
+	.string "the construction.\p"
+	.string "...\p"
+	.string "You don't know what you're talking\n"
 	.string "about.\l"
 	.string "This construction's bad for Astridale.\l"
 	.string "It can't be allowed to continue.\l"
@@ -324,8 +322,8 @@ Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_2:
 	.string "thing I do!$"
 
 Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_3:
-# 78 "data/maps/Astridale_Warehouse/scripts.pory"
-	.string "{PLAYER}.\n"
+# 77 "data/maps/Astridale_Warehouse/scripts.pory"
+	.string "{COLOR RED}{PLAYER}.\n"
 	.string "That person... I can feel something\l"
 	.string "horribly wrong with her.\l"
 	.string "I think she's not in her right mind...\l"
@@ -348,12 +346,18 @@ Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_3:
 	.string "mindscape... the dimension that holds\l"
 	.string "that person's dreams.\l"
 	.string "You'll need something, an item of great\l"
-	.string "sentimental value to that person.\l"
+	.string "sentimental value to her.\l"
 	.string "If you can find such an item, you'll be\l"
 	.string "able to enter her mind and hopefully\l"
 	.string "free her from the control.\l"
 	.string "Find that item, and show it to her.\l"
 	.string "That should be all you need to enter her\l"
 	.string "mindscape.\l"
-	.string "I'm counting on you, {PLAYER}.\l"
+	.string "But be warned that once you enter, you\l"
+	.string "won't be able to leave until you find\l"
+	.string "her.\l"
+	.string "But I will be there to support you, so\l"
+	.string "don't worry.\l"
+	.string "I will be able to help you if you need it.\l"
+	.string "I know you can do this, {PLAYER}.\l"
 	.string "I'll find you again soon.$"

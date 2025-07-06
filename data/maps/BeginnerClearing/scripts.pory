@@ -121,11 +121,11 @@ text JirachiName {
 }
 
 text GruntAName {
-    "Grunt 1"
+    "Stranger 1"
 }
 
 text GruntBName {
-    "Grunt 2"
+    "Stranger 2"
 }
 
 script BeginnerClearing_EventScript_WalkFromA {
@@ -185,14 +185,14 @@ script BeginnerClearing_EventScript_JirachiIntro {
     lockall
     clearflag(FLAG_HIDE_CLEARING_NPCS)
     speakername(JirachiName)
-    msgbox(format("Help... they're coming after me..."))
+    msgbox(format("{COLOR RED}Help... they're coming after me..."))
     playse(SE_SELECT)
     delay(10)
     applymovement(LOCALID_PLAYER, BeginnerClearing_QuestionMark)
     playse(SE_PIN)
     waitmovement(0)
     delay(50)
-    msgbox(format("They took my friend... Help..."), MSGBOX_AUTOCLOSE)
+    msgbox(format("{COLOR RED}They took my friend... Help..."), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     addobject(ProfMyra)
     applymovement(ProfMyra, BeginnerClearing_MyraRunsInA)
@@ -377,7 +377,7 @@ script BeginnerClearing_EventScript_JirachiPlayerFirstDialogue {
     applymovement(jirachi_intro_2, moves(walk_down * 8))
     waitmovement(0)
     speakername(JirachiName)
-    msgbox(format("...you came.\p"
+    msgbox(format("{COLOR RED}...you came.\p"
         "I wasn't sure you'd hear me, but... you did.\p"
         "Those people, they tried to take me. They hurt me.\l"
         "But I'm not the only one.\l"
