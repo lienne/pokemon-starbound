@@ -25,12 +25,12 @@ mapscripts LumenVillage_MapScripts {
                                                         walk_fast_up * 3))
             waitmovement(0)
             call(RivalName)
-            msgbox(format("Hey, {PLAYER}! What are you doing out here?\l"
-                "WHOA - hold up! You've got a Pokémon?!\l"
-                "Wait a second... you SERIOUSLY already got a Pokémon??\l"
-                "I can't believe this! After all these years training together, and you didn't even tell me??\l"
-                "Tch... classic {PLAYER}. Always one step ahead, huh?\l"
-                "Well, guess what - I'm not letting you leave me in the dust!\l"
+            msgbox(format("Hey, {PLAYER}! What are you doing out here?\p"
+                "WHOA - hold up! You've got a Pokémon?!\p"
+                "Wait a second… you SERIOUSLY already got a Pokémon??\p"
+                "I can't believe this! After all these years training together, and you didn't even tell me??\p"
+                "Tch… classic {PLAYER}. Always one step ahead, huh?\p"
+                "Well, guess what - I'm not letting you leave me in the dust!\p"
                 "I'll get my own Pokémon too, you'll see!"), MSGBOX_AUTOCLOSE)
             applymovement(LumenVillage_Rival_Intro, moves(walk_fast_down * 8))
             waitmovement(0)
@@ -44,8 +44,7 @@ mapscripts LumenVillage_MapScripts {
 script LumenVillage_EventScript_GoBack_LeftTrigger {
 	if (!flag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)) {
 		lockall
-		msgbox("You can't ignore the cries of\n"
-				"a hurt Pokémon!")
+		msgbox(format("You can't ignore the cries of a hurt Pokémon!"))
         playse(SE_SELECT)
 		applymovement(LOCALID_PLAYER, moves(walk_right))
 		waitmovement(0)
@@ -56,8 +55,7 @@ script LumenVillage_EventScript_GoBack_LeftTrigger {
 script LumenVillage_EventScript_GoBack_UpTrigger {
 	if (!flag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)) {
 		lockall
-		msgbox("You can't ignore the cries of\n"
-				"a hurt Pokémon!")
+		msgbox(format("You can't ignore the cries of a hurt Pokémon!"))
         playse(SE_SELECT)
 		applymovement(LOCALID_PLAYER, moves(walk_down))
 		waitmovement(0)
@@ -94,7 +92,7 @@ script LumenVillage_EventScript_SetIntroFlags_Female {
 
 script LumenVillage_EventScript_ProfLabSign {
     lockall
-    msgbox("Prof. Myra's Lab")
+    msgbox(format("Prof. Myra's Lab"))
     releaseall
 }
 
@@ -129,19 +127,19 @@ script LumenVillage_EventScript_VillageSign {
 
 script LumenVillage_FatMan_Dialogue {
     applymovement(LumenVillage_FatMan, moves(face_player))
-    msgbox(format("Technology is amazing!"
+    msgbox(format("Technology is amazing!\p"
         "You can now use satellites to chart the stars in Astrea!"), type=MSGBOX_NPC)
 }
 
 script LumenVillage_OldLady_Dialogue {
     applymovement(LumenVillage_OldLady, moves(face_player))
-    msgbox(format("Lumen Village must be the safest place in Astrea, but I swear I hear rustling in the night lately..."), type=MSGBOX_NPC)
+    msgbox(format("Lumen Village must be the safest place in Astrea, but I swear I hear rustling in the night lately…"), type=MSGBOX_NPC)
 }
 
 script LumenVillage_LittleGirl_Dialogue {
     applymovement(LumenVillage_LittleGirl, moves(face_player))
     msgbox(format("The water looks so nice!\n"
-                    "But I'm not allowed to swim yet..."), type=MSGBOX_NPC)
+                    "But I'm not allowed to swim yet…"), type=MSGBOX_NPC)
 }
 
 text LumenVillage_Text_PlayersHouse_Sign {
@@ -228,18 +226,19 @@ script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotD {
 
 script LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue {
     lockall
+    hidefollower()
     speakername(ProfMyraName)
     msgbox(format("{PLAYER}! Wait!\p"
         "Did you find Jirachi? Is it safe?\p"
-        "...\p"
-        "You... you spoke to it...? And it... it told you all of that??\p"
-        "...\p"
-        "...I see. This is incredible, {PLAYER}.\p"
-        "You must be truly special to be able to speak to Jirachi directly.\l"
-        "It sounds as if this situation is bigger than all of us.\l"
-        "Jirachi needs your help, and you're the only one it trusts right now.\l"
-        "If you're really going to do this - travel the region, help it find its friend...\l"
-        "then you'll need this.\l"
+        "…\p"
+        "You… you spoke to it…? And it… it told you all of that??\p"
+        "…\p"
+        "…I see. This is incredible, {PLAYER}.\p"
+        "You must be truly special to be able to speak to Jirachi directly.\p"
+        "It sounds as if this situation is bigger than all of us.\p"
+        "Jirachi needs your help, and you're the only one it trusts right now.\p"
+        "If you're really going to do this - travel the region, help it find its friend…\l"
+        "then you'll need this.\p"
         "This is a Pokédex, a device that records data on all Pokémon you encounter."))
     playfanfare(MUS_OBTAIN_ITEM)
     speakername(NULL)
@@ -252,12 +251,12 @@ script LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue {
     speakername(NULL)
     giveitem(ITEM_POKE_BALL, 5)
     speakername(ProfMyraName)
-    msgbox(format("I won't stop you, {PLAYER}... but please be careful.\l"
-        "You're walking into something vast and dangerous.\l"
-        "Use the items I gave you to get stronger. You'll need all the help you can get to help Jirachi.\l"
-        "...Before you go, why don't you stop home and say goodbye to your mother?\l"
-        "I know she'll want to see you off.\l"
-        "And of course, if you ever need anything, feel free to come back here.\l"
+    msgbox(format("I won't stop you, {PLAYER}… but please be careful.\p"
+        "You're walking into something vast and dangerous.\p"
+        "Use the items I gave you to get stronger. You'll need all the help you can get to help Jirachi.\p"
+        "…Before you go, why don't you stop home and say goodbye to your mother?\p"
+        "I know she'll want to see you off.\p"
+        "And of course, if you ever need anything, feel free to come back here.\p"
         "I wish you all the luck on your journey, {PLAYER}!"), MSGBOX_AUTOCLOSE)
     applymovement(LOCALID_PLAYER, moves(delay_16 face_down))
     applymovement(LumenVillage_ProfMyra, moves(walk_down * 7))

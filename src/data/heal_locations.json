@@ -155,6 +155,18 @@
       "map": "MAP_ASTRIDALE",
       "x": 30,
       "y": 11
+    },
+    {
+      "id": "HEAL_LOCATION_ASTRIDALE_MINDSCAPE",
+      "map": "MAP_ASTRIDALE_MINDSCAPE",
+      "x": 19,
+      "y": 75
+    },
+    {
+      "id": "HEAL_LOCATION_ASTRIDALE_2",
+      "map": "MAP_ASTRIDALE",
+      "x": 23,
+      "y": 16
     }
   ]
 }

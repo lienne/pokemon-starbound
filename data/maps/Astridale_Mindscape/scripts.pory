@@ -2,6 +2,16 @@ mapscripts Astridale_Mindscape_MapScripts {
     MAP_SCRIPT_ON_RESUME {
         setflag(FLAG_NO_CATCHING)
         setflag(FLAG_FORCE_NO_SHINY)
+        setrespawn(HEAL_LOCATION_ASTRIDALE_MINDSCAPE)
+        if (var(VAR_ASTRIDALE_STATE) == 6) {
+            call(Astridale_Mindscape_Set_Key_Metatiles)
+            setobjectxyperm(Astridale_Mindscape_Jirachi, 20, 75)
+        }
+        elif (var(VAR_ASTRIDALE_STATE) == 7) {
+            call(Astridale_Mindscape_Set_Key_Metatiles)
+            call(Astridale_Mindscape_Set_LockBox_Metatiles)
+            setobjectxyperm(Astridale_Mindscape_Jirachi, 20, 75)
+        }
     }
 
     MAP_SCRIPT_ON_FRAME_TABLE [
@@ -30,18 +40,18 @@ script Astridale_Mindscape_EventScript_Intro_Dialogue {
     waitmovement(LOCALID_PLAYER)
     speakername(JirachiName)
     msgbox(format("{COLOR RED}{PLAYER}.\p"
-        "This is the realm of dreams.\n"
-        "You are in Viviane's mindscape now.\l"
-        "I was able to pull you in once you showed her the Clefairy doll.\l"
-        "You did well, {PLAYER}.\l"
-        "Now we should be able to look for her here and see if she's under mind control.\l"
-        "I should warn you, mindscapes can be very unpredictable.\l"
-        "They reflect a person's innermost self, and there might be challenges you face before you can find Viviane.\l"
-        "Every person's mindscape is different, so I can't tell you what you'll find here.\l"
-        "But just keep in mind that nothing you encounter here is real - people, pokémon, items.\l"
-        "Whatever pokémon you find here, you won't be able to catch, since they don't exist in the real world - only in Viviane's consciousness.\l"
-        "Likewise, anyone you encounter, besides Viviane herself, is only a figment of her mind.\l"
-        "I'll stay here to support you, so please go and find Viviane."), MSGBOX_NPC)
+        "This is the realm of dreams.\p"
+        "You are in Viviane's mindscape now.\p"
+        "I was able to pull you in once you showed her the Clefairy doll.\p"
+        "You did well, {PLAYER}.\p"
+        "Now we should be able to look for her here and see if she's under mind control.\p"
+        "I should warn you, mindscapes can be very unpredictable.\p"
+        "They reflect a person's innermost self, and there might be challenges you face before you can find Viviane.\p"
+        "Every person's mindscape is different, so I can't tell you what you'll find here.\p"
+        "But just keep in mind that nothing you encounter here is real - people, Pokémon, items.\p"
+        "Whatever Pokémon you find here, you won't be able to catch, since they don't exist in the real world - only in Viviane's consciousness.\p"
+        "Likewise, anyone you encounter, besides Viviane herself, is only a figment of her mind.\p"
+        "I'll stay here to support you, so please go and find Viviane."), MSGBOX_AUTOCLOSE)
     releaseall
 }
 
@@ -51,14 +61,111 @@ script Astridale_Mindscape_EventScript_Jirachi_Dialogue {
     msgbox(format("{COLOR RED}{PLAYER}, you should rest while you can."), MSGBOX_NPC)
     call(Common_EventScript_OutOfCenterPartyHeal)
     speakername(JirachiName)
-    msgbox(format("{COLOR RED}Your party has been healed.\n"
-        "I'm counting on you, {PLAYER}."), MSGBOX_AUTOCLOSE)
+    msgbox(format("{COLOR RED}I'm counting on you, {PLAYER}."), MSGBOX_AUTOCLOSE)
 }
 
 script Astridale_Mindscape_EventScript_Munna_PC {
     applymovement(Astridale_Mindscape_Munna, moves(face_player))
-    msgbox(format("Muuuunn..."), MSGBOX_NPC)
+    msgbox(format("Muuuunn…"), MSGBOX_NPC)
     special(ShowPokemonStorageSystemPC)
     waitstate()
     closemessage()
+}
+
+script Astridale_Mindscape_EventScript_LockBox_Trigger {
+	if (var(VAR_ASTRIDALE_STATE) < 7) {
+		lockall
+		msgbox(format("A strange force doesn't allow you through…"), MSGBOX_AUTOCLOSE)
+        playse(SE_SELECT)
+		applymovement(LOCALID_PLAYER, moves(walk_left))
+		waitmovement(0)
+		releaseall
+	}
+}
+
+script Astridale_Mindscape_EventScript_Key {
+    lockall
+    msgbox(format("You found a key!\p"
+    "It looks like it might open a lock box.\p"
+    "Would you like to pick it up?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == NO) {
+        msgbox(format("You decided not to pick up the key."), MSGBOX_AUTOCLOSE)
+    }
+    else {
+        setvar(VAR_ASTRIDALE_STATE, 6)
+        setflag(FLAG_HIDE_ASTRIDALE_MINDSCAPE_INV_BRENDAN_KEY)
+        removeobject(Astridale_Mindscape_Invisible_Brendan_Key)
+        playse(SE_ITEMFINDER)
+        waitse()
+        msgbox(format("You picked up the key."), MSGBOX_AUTOCLOSE)
+        call(Astridale_Mindscape_Set_Key_Metatiles)
+    }
+    releaseall
+}
+
+script Astridale_Mindscape_Set_Key_Metatiles {
+    setmetatile(53, 18, METATILE_AstridaleMindscape_astridale_mindscape_ground, FALSE)
+    setmetatile(51, 19, METATILE_AstridaleMindscape_astridale_mindscape_maze_middle_edge, TRUE)
+    setmetatile(51, 20, METATILE_AstridaleMindscape_astridale_mindscape_maze_bottom_edge, TRUE)
+    setmetatile(52, 19, METATILE_AstridaleMindscape_astridale_mindscape_ground, FALSE)
+    setmetatile(52, 20, METATILE_AstridaleMindscape_astridale_mindscape_ground, FALSE)
+    setmetatile(53, 19, METATILE_AstridaleMindscape_astridale_mindscape_ground, FALSE)
+    setmetatile(53, 20, METATILE_AstridaleMindscape_astridale_mindscape_ground, FALSE)
+    setmetatile(54, 19, METATILE_AstridaleMindscape_astridale_mindscape_maze_middle_edge, TRUE)
+    setmetatile(54, 20, METATILE_AstridaleMindscape_astridale_mindscape_maze_bottom_edge, TRUE)
+    special(DrawWholeMapView)
+}
+
+script Astridale_Mindscape_EventScript_LockBox {
+    if (var(VAR_ASTRIDALE_STATE) < 6) {
+        lockall
+        msgbox(format("The lock box is locked.\p"
+            "It looks like it might be opened with a key."), MSGBOX_AUTOCLOSE)
+        releaseall
+    }
+    else {
+        lockall
+        setvar(VAR_ASTRIDALE_STATE, 7)
+        msgbox(format("You opened the lock box with the key you found."), MSGBOX_AUTOCLOSE)
+        setflag(FLAG_HIDE_ASTRIDALE_MINDSCAPE_INV_BRENDAN_LOCKBOX)
+        removeobject(Astridale_Mindscape_Invisible_Brendan_LockBox)
+        call(Astridale_Mindscape_Set_LockBox_Metatiles)
+        releaseall
+    }
+}
+
+script Astridale_Mindscape_Set_LockBox_Metatiles {
+    setmetatile(39, 61, METATILE_AstridaleMindscape_astridale_mindscape_ground, FALSE)
+    setmetatile(39, 62, METATILE_AstridaleMindscape_astridale_mindscape_ground, FALSE)
+    special(DrawWholeMapView)
+}
+
+script Astridale_Mindscape_EventScript_Viviane {
+    lockall
+    speakername(VivianeName)
+    trainerbattle_single(TRAINER_VIVIANE_1, Astridale_Mindscape_Text_VivianeIntro, Astridale_Mindscape_Text_VivianeDefeat, Astridale_Mindscape_EventScript_VivianeDefeated, NO_MUSIC)
+    releaseall
+}
+
+text Astridale_Mindscape_Text_VivianeIntro {
+    format("…\p"
+        "I must destroy the construction in Astridale…\p"
+        "You wouldn't understand…\p"
+        "I must… I must…\p"
+        "I…")
+}
+
+text Astridale_Mindscape_Text_VivianeDefeat {
+    format("No… I can't lose…")
+}
+
+script Astridale_Mindscape_EventScript_VivianeDefeated {
+    setvar(VAR_ASTRIDALE_STATE, 8)
+    applymovement(Astridale_Mindscape_Viviane, moves(face_player))
+    speakername(VivianeName)
+    msgbox(format("…I… I can't remember…\p"
+        "What was I doing?\p"
+        "I feel so tired…\p"
+        "I think I need to rest for a while…"), MSGBOX_AUTOCLOSE)
+    warpwhitefade(MAP_ASTRIDALE_GYM, 7, 3)
 }

@@ -30,8 +30,8 @@ PlayersHouse_EventScript_RivalMom_Dialogue_Text_0:
 # 8 "data/maps/LumenVillage_CassiansHouse_1F/scripts.pory"
 	.string "Oh hi, {PLAYER}!\p"
 	.string "{RIVAL} went out to Starlit Path a\n"
-	.string "little while ago.\l"
-	.string "That child just can't stay quietly at\l"
+	.string "little while ago.\p"
+	.string "That child just can't stay quietly at\n"
 	.string "home.$"
 
 PlayersHouse_EventScript_RivalMom_Dialogue_Text_1:
@@ -39,8 +39,8 @@ PlayersHouse_EventScript_RivalMom_Dialogue_Text_1:
 	.string "Hi {PLAYER}!\p"
 	.string "That {RIVAL}!\p"
 	.string "I guess our child is too busy with\n"
-	.string "Pokémon to ever visit home.\l"
-	.string "You should stop home every so often\l"
-	.string "too, to let your mother know you're ok.\l"
-	.string "She might not say it, but I'm sure she\l"
+	.string "Pokémon to ever visit home.\p"
+	.string "You should stop home every so often\n"
+	.string "too, to let your mother know you're ok.\p"
+	.string "She might not say it, but I'm sure she\n"
 	.string "worries about you, {PLAYER}.$"

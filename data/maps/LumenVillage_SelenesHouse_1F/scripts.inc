@@ -61,9 +61,9 @@ PlayersHouse_EventScript_Mom_Dialogue_Text_0:
 # 13 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
 	.string "Welcome home, sweetie.\p"
 	.string "Oh, that's a cute Pokémon you've got\n"
-	.string "there.\l"
-	.string "Did you get it from Professor Myra?\l"
-	.string "You should take good care of it.\l"
+	.string "there.\p"
+	.string "Did you get it from Professor Myra?\p"
+	.string "You should take good care of it.\p"
 	.string "Why don't you take a quick rest?$"
 
 PlayersHouse_EventScript_Mom_Dialogue_Text_1:
@@ -73,18 +73,18 @@ PlayersHouse_EventScript_Mom_Dialogue_Text_1:
 PlayersHouse_EventScript_Mom_Dialogue_Text_2:
 # 23 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
 	.string "Hi, honey!\p"
-	.string "...\p"
-	.string "So, you're finally leaving home.\l"
-	.string "It's really happening, isn't it?\l"
-	.string "You've always had a gentle heart.\l"
-	.string "But now, I see something else too.\l"
-	.string "Courage.\l"
+	.string "…\p"
+	.string "So, you're finally leaving home.\p"
+	.string "It's really happening, isn't it?\p"
+	.string "You've always had a gentle heart.\p"
+	.string "But now, I see something else too.\p"
+	.string "Courage.\p"
 	.string "I won't try to stop you.\p"
-	.string "Just... promise me you'll be careful out\n"
-	.string "there.\l"
-	.string "And remember, you'll always have a home\l"
-	.string "to come back to.\l"
-	.string "Why don't you take a quick rest before\l"
+	.string "Just… promise me you'll be careful out\n"
+	.string "there.\p"
+	.string "And remember, you'll always have a home\n"
+	.string "to come back to.\p"
+	.string "Why don't you take a quick rest before\n"
 	.string "leaving?$"
 
 PlayersHouse_EventScript_Mom_Dialogue_Text_3:
@@ -94,9 +94,9 @@ PlayersHouse_EventScript_Mom_Dialogue_Text_3:
 PlayersHouse_EventScript_Mom_Dialogue_Text_4:
 # 39 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
 	.string "Oh, {PLAYER}! You're back!\p"
-	.string "Just for a visit, I hope - not trouble?\l"
-	.string "You look different already.\l"
-	.string "I've kept your bed made.\l"
+	.string "Just for a visit, I hope - not trouble?\p"
+	.string "You look different already.\p"
+	.string "I've kept your bed made.\p"
 	.string "Why don't you take a quick rest?$"
 
 MomName::

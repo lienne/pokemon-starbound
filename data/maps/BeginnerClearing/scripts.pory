@@ -185,14 +185,14 @@ script BeginnerClearing_EventScript_JirachiIntro {
     lockall
     clearflag(FLAG_HIDE_CLEARING_NPCS)
     speakername(JirachiName)
-    msgbox(format("{COLOR RED}Help... they're coming after me..."))
+    msgbox(format("{COLOR RED}Help… they're coming after me…"))
     playse(SE_SELECT)
     delay(10)
     applymovement(LOCALID_PLAYER, BeginnerClearing_QuestionMark)
     playse(SE_PIN)
     waitmovement(0)
     delay(50)
-    msgbox(format("{COLOR RED}They took my friend... Help..."), MSGBOX_AUTOCLOSE)
+    msgbox(format("{COLOR RED}They took my friend… Help…"), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     addobject(ProfMyra)
     applymovement(ProfMyra, BeginnerClearing_MyraRunsInA)
@@ -210,20 +210,20 @@ script BeginnerClearing_EventScript_JirachiIntro {
     msgbox(format("Quick, I have a Potion!"))
     playse(SE_USE_ITEM)
     waitse()
-    msgbox(format("It should be okay for now, but it needs rest.\l"
-        "The poor thing's definitely in bad shape.\l"
-        "I wonder what happened..."))
+    msgbox(format("It should be okay for now, but it needs rest.\p"
+        "The poor thing's definitely in bad shape.\p"
+        "I wonder what happened…"))
     playse(SE_SELECT)
     applymovement(ProfMyra, moves(face_left))
     waitmovement(0)
     msgbox(format("What's your name?"))
-    msgbox(format("..."))
+    msgbox(format("…"))
     msgbox(format(
-        "{PLAYER}, is it?\l"
-        "We are lucky you found it so quickly.\l"
-        "We should take it somewhere to recover.\l"
-        "...\l"
-        "You said Jirachi spoke to you? And\nthat it said it's being chased?"), MSGBOX_AUTOCLOSE)
+        "{PLAYER}, is it?\p"
+        "We are lucky you found it so quickly.\p"
+        "We should take it somewhere to recover.\p"
+        "…\p"
+        "You said Jirachi spoke to you? And that it said it's being chased?"), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     addobject(GruntA)
     addobject(GruntB)
@@ -239,6 +239,9 @@ script BeginnerClearing_EventScript_JirachiIntro {
     delay(50)
     applymovement(LOCALID_PLAYER, moves(face_left))
     applymovement(ProfMyra, moves(face_left))
+    special(SpawnCameraObject)
+    applymovement(LOCALID_CAMERA, moves(walk_diag_southwest*2))
+    waitmovement(0)
     speakername(GruntAName)
     msgbox(format("Here it is! Grab it!"))
     playse(SE_SELECT)
@@ -252,8 +255,10 @@ script BeginnerClearing_EventScript_JirachiIntro {
     waitmovement(0)
     delay(50)
     applymovement(LOCALID_PLAYER, BeginnerClearing_PlayerRunsInFrontOfGrunts)
+    applymovement(LOCALID_CAMERA, moves(walk_right))
     waitmovement(0)
     delay(30)
+    special(RemoveCameraObject)
     speakername(GruntAName)
     msgbox(format("Huh? Who are you?"))
     playse(SE_SELECT)
@@ -273,9 +278,9 @@ script BeginnerClearing_EventScript_JirachiIntro {
     waitmovement(0)
     speakername(ProfMyraName)
     msgbox(format("{PLAYER}, do you have any Pokémon?\p"
-        "...\p"
-        "Hmmm, I see. I think this situation calls for special circumstances.\l"
-        "I will lend you one of my Pokémon so we can defend this Jirachi together.\l"
+        "…\p"
+        "Hmmm, I see. I think this situation calls for special circumstances.\p"
+        "I will lend you one of my Pokémon so we can defend this Jirachi together.\p"
         "Please grab a Pokéball from my bag."))
     setobjectxyperm(GruntA, 7, 14)
     setobjectxyperm(GruntB, 7, 15)
@@ -310,15 +315,15 @@ script BeginnerClearing_EventScript_GruntABattle {
     }
     waitmovement(LOCALID_PLAYER)
     applymovement(ProfMyra, moves(face_left))
-    trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_14, "You're going down, kid!", "Impossible...", BeginnerClearing_EventScript_AfterBattle)
+    trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_14, "You're going down, kid!", "Impossible…", BeginnerClearing_EventScript_AfterBattle)
     releaseall
 }
 
 script BeginnerClearing_EventScript_AfterBattle {
     lockall
     speakername(GruntAName)
-    msgbox(format("How is this possible!?\l"
-        "You little brat... You'll regret this!"), MSGBOX_AUTOCLOSE)
+    msgbox(format("How is this possible!?\p"
+        "You little brat… You'll regret this!"), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     applymovement(GruntA, moves(walk_fast_left * 10))
     waitmovement(0)
@@ -333,8 +338,8 @@ script BeginnerClearing_EventScript_AfterBattle {
     applymovement(LOCALID_PLAYER, moves(face_down))
     waitmovement(0)
     speakername(ProfMyraName)
-    msgbox(format("{PLAYER}, you were amazing!\n"
-        "I'm so glad you were here.\l"
+    msgbox(format("{PLAYER}, you were amazing!\p"
+        "I'm so glad you were here.\p"
         "Now let's take this Jirachi back to my lab so it can rest."), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     setflag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)
@@ -349,6 +354,7 @@ script BeginnerClearing_EventScript_LookForJirachiFromA {
     if (var(VAR_INTRO_SCENE) == 4) {
         lockall
         setvar(VAR_INTRO_SCENE, 5)
+        hidefollower()
         applymovement(LOCALID_PLAYER, BeginnerClearing_PlayerWalksIn_LookForJirachiFromA)
         waitmovement(0)
         call(BeginnerClearing_EventScript_JirachiPlayerFirstDialogue)
@@ -360,6 +366,7 @@ script BeginnerClearing_EventScript_LookForJirachiFromB {
     if (var(VAR_INTRO_SCENE) == 4) {
         lockall
         setvar(VAR_INTRO_SCENE, 5)
+        hidefollower()
         applymovement(LOCALID_PLAYER, BeginnerClearing_PlayerWalksIn_LookForJirachiFromB)
         waitmovement(0)
         call(BeginnerClearing_EventScript_JirachiPlayerFirstDialogue)
@@ -374,40 +381,42 @@ script BeginnerClearing_EventScript_JirachiPlayerFirstDialogue {
     waitmovement(0)
     clearflag(FLAG_HIDE_CLEARING_JIRACHI2)
     addobject(jirachi_intro_2)
-    applymovement(jirachi_intro_2, moves(walk_down * 8))
+    applymovement(jirachi_intro_2, moves(walk_slow_down * 8))
     waitmovement(0)
     speakername(JirachiName)
-    msgbox(format("{COLOR RED}...you came.\p"
-        "I wasn't sure you'd hear me, but... you did.\p"
-        "Those people, they tried to take me. They hurt me.\l"
-        "But I'm not the only one.\l"
-        "There was another. A friend. Like me.\l"
-        "They took him. Locked him away... and twisted his voice.\l"
-        "His wishes... used for control. For silence.\l"
-        "...I'm still too weak. But I can feel it... minds cracking. Dreams bending.\l"
-        "I need help...  I need to save my friend. And I need to stop them.\l"
-        "Will you help me stop them?\l"
+    msgbox(format("{COLOR RED}…you came.\p"
+        "I wasn't sure you'd hear me, but… you did.\p"
+        "Those people, they tried to take me. They hurt me.\p"
+        "But I'm not the only one.\p"
+        "There was another. A friend. Like me.\p"
+        "They took him. Locked him away… and twisted his voice.\p"
+        "His wishes… used for control. For silence.\p"
+        "…I'm still too weak. But I can feel it… minds cracking. Dreams bending.\p"
+        "I need help…  I need to save my friend. And I need to stop them.\p"
+        "Will you help me stop them?\p"
         "Will you help me bring my friend back?\p"
-        "...\p"
+        "…\p"
         "Thank you, {PLAYER}.\p"
         "He's being held in a place far from here.\p"
-        "A place of towers and metal... minds shine brightly there, but not freely.\l"
-        "Zenith City, I believe is the name.\l"
-        "They use him there. To twist thoughts. To turn strong hearts into hollow voices.\l"
-        "One by one, they fall under the silence.\l"
-        "Leaders. Champions. Protectors.\l"
-        "...If we don't act soon, no one will remain untouched.\l"
-        "I can't go with you... not yet.\l"
-        "But I'll guide you when I can.\l"
-        "There are other minds I can still reach. Free them, and we'll be closer to saving him, and closer to the truth.\l"
-        "Closer to stopping the silence.\l"
-        "Thank you for your help.\l"
-        "Go, {PLAYER}.\l"
+        "A place of towers and metal… minds shine brightly there, but not freely.\p"
+        "Zenith City, I believe is the name.\p"
+        "They use him there. To twist thoughts. To turn strong hearts into hollow voices.\p"
+        "One by one, they fall under the silence.\p"
+        "Leaders. Champions. Protectors.\p"
+        "…If we don't act soon, no one will remain untouched.\p"
+        "I can't go with you… not yet.\p"
+        "But I'll guide you when I can.\p"
+        "There are other minds I can still reach. Free them, and we'll be closer to saving him, and closer to the truth.\p"
+        "Closer to stopping the silence.\p"
+        "Thank you for your help, {PLAYER}.\p"
         "I'll find you again when I can."))
         fadescreenswapbuffers(FADE_TO_WHITE)
         setflag(FLAG_HIDE_CLEARING_JIRACHI2)
         setflag(FLAG_HIDE_MYRA_IN_LAB)
         removeobject(jirachi_intro_2)
         fadescreenswapbuffers(FADE_FROM_WHITE)
+        completequest(QUEST_1_MEDS_FOR_JIRACHI)
+        startquest(QUEST_2_STARBOUND_OATH)
+        openquestmenu()
         releaseall
 }

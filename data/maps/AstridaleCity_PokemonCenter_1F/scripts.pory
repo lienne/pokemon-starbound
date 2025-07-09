@@ -1,0 +1,29 @@
+mapscripts AstridaleCity_PokemonCenter_1F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setrespawn(HEAL_LOCATION_ASTRIDALE)
+    }
+}
+
+script AstridaleCity_PokemonCenter_1F_EventScript_Nurse {
+    setvar(VAR_0x800B, Astridale_Nurse)
+    call(Common_EventScript_PkmnCenterNurse)
+    waitmessage()
+    waitbuttonpress()
+    release
+}
+
+script Astridale_PokemonCenter_Construction_Supervisor_Dialogue {
+    msgbox(format("I'm taking a break from working at the construction site.\p"
+        "I'm the supervisor, but I still need to stand around in the sun all day.\p"
+        "It's exhausting."), MSGBOX_NPC)
+}
+
+script Astridale_PokemonCenter_Youngster_Dialogue {
+    msgbox(format("I hope they build a place where I can ride my skateboard.\p"
+        "I keep being told I can't ride it around the towncenter…"), MSGBOX_NPC)
+}
+
+script Astridale_PokemonCenter_Woman_Dialogue {
+    msgbox(format("I'm honestly on the fence about the construction.\p"
+        "I know progress is inevitable, but I also worry about our traditions."), MSGBOX_NPC)
+}

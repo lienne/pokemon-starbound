@@ -34,32 +34,30 @@ script Astridale_EventScript_DeptStoreSign {
 script Astridale_EventScript_GymSign {
     lockall
     msgbox(format("Astridale Gym\n"
-        "Leader: Viviane\n"
+        "Leader: Viviane\l"
         "The soft-spoken fairy beauty"))
     releaseall
 }
 
 script Astridale_EventScript_Gym_Door_Man_Dialogue {
-    if (var(VAR_ASTRIDALE_STATE) == 0) {
-        setvar(VAR_ASTRIDALE_STATE, 1)
+    if (var(VAR_ASTRIDALE_STATE) < 4) {
         applymovement(Astridale_Gym_Door_Man, moves(face_player))
-        msgbox(format("The gym leader, Viviane, is not in today.\n"
-            "Sigh... she's been acting strange lately.\l"
-            "Ever since the construction on the other side of the city began, she hasn't been herself.\l"
+        msgbox(format("The Gym Leader, Viviane, is not in today.\p"
+            "Sigh… she's been acting strange lately.\p"
+            "Ever since the construction on the other side of the city began, she hasn't been herself.\p"
             "She's not taking any challengers at the moment. You'll have to come back later."), MSGBOX_NPC)
     }
     elif (var(VAR_ASTRIDALE_STATE) == 4) {
         applymovement(Astridale_Gym_Door_Man, moves(face_player))
-        msgbox(format("The gym leader, Viviane, just came back to the gym.\l"
-            "She seems to be in a bad mood, though...\l"
+        msgbox(format("The Gym Leader, Viviane, just came back to the gym.\p"
+            "She seems to be in a bad mood, though…\p"
             "I'd proceed with caution if I were you."), MSGBOX_NPC)
     }
     else {
         applymovement(Astridale_Gym_Door_Man, moves(face_player))
-        msgbox(format("The gym leader, Viviane, is not in today.\n"
-            "Sigh... she's been acting strange lately.\l"
-            "Ever since the construction on the other side of the city began, she hasn't been herself.\l"
-            "She's not taking any challengers at the moment. You'll have to come back later."), MSGBOX_NPC)
+        msgbox(format("Viviane seems to be a in a better mood lately.\p"
+            "She really went a bit crazy about the construction for a while.\p"
+            "I wonder what was going on?"), MSGBOX_NPC)
     }
 }
 
@@ -67,43 +65,43 @@ script Astridale_EventScript_ConstructionMan1_Dialogue {
     if (var(VAR_ASTRIDALE_STATE) == 0 || var(VAR_ASTRIDALE_STATE) == 1) {
         setvar(VAR_ASTRIDALE_STATE, 2)
         applymovement(Astridale_ConstructionMan1, moves(face_player))
-        msgbox(format("Hey ho! The construction's halted for the time being.\l"
-            "There have been strange happenings lately.\l"
-            "Our equipment keeps mysteriously breaking, materials have gone missing...\l"
-            "We don't know what to make of it.\l"
-            "It would be crazy if someone were sabotaging us, wouldn't it?\l"
+        msgbox(format("Hey ho! The construction's halted for the time being.\p"
+            "There have been strange happenings lately.\p"
+            "Our equipment keeps mysteriously breaking, materials have gone missing…\p"
+            "We don't know what to make of it.\p"
+            "It would be crazy if someone were sabotaging us, wouldn't it?\p"
             "Hahahaha!"), MSGBOX_NPC)
     }
     else {
         applymovement(Astridale_ConstructionMan1, moves(face_player))
-        msgbox(format("Hey ho! The construction's halted for the time being.\l"
-            "There have been strange happenings lately.\l"
-            "Our equipment keeps mysteriously breaking, materials have gone missing...\l"
-            "We don't know what to make of it.\l"
-            "It would be crazy if someone were sabotaging us, wouldn't it?\l"
+        msgbox(format("Hey ho! The construction's halted for the time being.\p"
+            "There have been strange happenings lately.\p"
+            "Our equipment keeps mysteriously breaking, materials have gone missing…\p"
+            "We don't know what to make of it.\p"
+            "It would be crazy if someone were sabotaging us, wouldn't it?\p"
             "Hahahaha!"), MSGBOX_NPC)
     }
 }
 
 script Astridale_EventScript_ConstructionMan2_Dialogue {
     applymovement(Astridale_ConstructionMan2, moves(face_player))
-    msgbox(format("...zzz...\n"
-        "...zzz...\l"
-        "Huh? Oh, sorry, I must've dozed off.\l"
-        "This is the warehouse where we keep all our construction equipment and materials.\l"
-        "I'm supposed to be keeping watch, but I'm just so tired...\l"
-        "...zzz..."), MSGBOX_NPC)
+    msgbox(format("…zzz…\p"
+        "…zzz…\p"
+        "Huh? Oh, sorry, I must've dozed off.\p"
+        "This is the warehouse where we keep all our construction equipment and materials.\p"
+        "I'm supposed to be keeping watch, but I'm just so tired…\p"
+        "…zzz…"), MSGBOX_NPC)
 }
 
 script Astridale_EventScript_Machoke1_Dialogue {
     applymovement(Astridale_Machoke1, moves(face_player))
-    msgbox(format("Machoke is stomping down some soil."
+    msgbox(format("Machoke is stomping down some soil.\l"
         "It looks like it's working hard."), MSGBOX_NPC)
 }
 
 script Astridale_EventScript_Machoke2_Dialogue {
     applymovement(Astridale_Machoke2, moves(face_player))
-    msgbox(format("Machoke is stomping down some soil."
+    msgbox(format("Machoke is stomping down some soil.\l"
         "It looks like it's working hard."), MSGBOX_NPC)
 }
 
@@ -121,28 +119,97 @@ script Astridale_EventScript_Vigorith2_Dialogue {
 
 script Astridale_EventScript_Gameboy_Kid_Dialogue {
     applymovement(Astridale_Gameboy_Kid, moves(face_player))
-    msgbox(format("I'm excited about the construction!\n"
-        "I hear they're building a biiiig department store!\l"
+    msgbox(format("I'm excited about the construction!\p"
+        "I hear they're building a biiiig department store!\p"
         "I bet they'll have lots of games to sell!"), MSGBOX_NPC)
 }
 
 script Astridale_EventScript_OldMan_Dialogue {
     applymovement(Astridale_OldMan, moves(face_player))
-    msgbox(format("The citizens of Astridale are divided about the construction.\l"
-        "The younger crowd seems excited about it, while us old folk ...\l"
+    msgbox(format("The citizens of Astridale are divided about the construction.\p"
+        "The younger crowd seems excited about it, while us old folk…\p"
         "Well, we worry."), MSGBOX_NPC)
 }
 
 script Astridale_EventScript_OldWoman_Dialogue {
     applymovement(Astridale_OldWoman, moves(face_player))
-    msgbox(format("The construction on the other side of the city is a bad idea.\l"
-            "It's going to ruin the peaceful atmosphere of Astridale.\l"
+    msgbox(format("The construction on the other side of the city is a bad idea.\p"
+            "It's going to ruin the peaceful atmosphere of Astridale.\p"
             "I don't like it one bit."), MSGBOX_NPC)
 }
 
 script Astridale_EventScript_Lady_Dialogue {
     applymovement(Astridale_Lady, moves(face_player))
-    msgbox(format("The gym leader, Viviane, lives in that old house on the hill, with her family.\l"
-        "They're sweet people, usually, but Viviane's been so mean lately...\l"
-        "I wonder what's going on..."), MSGBOX_NPC)
+    msgbox(format("The Gym Leader, Viviane, lives in that old house on the hill, with her family.\p"
+        "They're sweet people, usually, but Viviane's been so mean lately…\p"
+        "I wonder what's going on…"), MSGBOX_NPC)
+}
+
+script Astridale_EventScript_ConstructionMan3_Dialogue {
+    if (var(VAR_ASTRIDALE_STATE) < 9) {
+        msgbox(Astridale_ConstructionMan3_Dialogue_Pre_Gym, MSGBOX_NPC)
+    }
+    else {
+        msgbox(Astridale_ConstructionMan3_Dialogue_Post_Gym, MSGBOX_NPC)
+    }
+}
+
+script Astridale_EventScript_ConstructionMan3_Trigger {
+    if (var(VAR_ASTRIDALE_STATE) < 9) {
+        applymovement(Astridale_ConstructionMan3, moves(emote_exclamation_mark))
+        playse(SE_PIN)
+        waitse()
+        waitmovement(0)
+        applymovement(Astridale_ConstructionMan3, moves(face_player))
+        waitmovement(0)
+        msgbox(Astridale_ConstructionMan3_Dialogue_Pre_Gym, MSGBOX_AUTOCLOSE)
+        applymovement(LOCALID_PLAYER, moves(walk_down))
+        waitmovement(0)
+        applymovement(Astridale_ConstructionMan3, moves(face_down))
+        waitmovement(0)
+    }
+}
+
+script Astridale_EventScript_ConstructionMan_Cutter_Dialogue {
+    lockall
+    applymovement(Astridale_ConstructionMan_Cutter, moves(face_player))
+    waitmovement(0)
+    if (flag(FLAG_RECEIVED_HM_CUT)) {
+        msgbox(format("That Hidden Machine, or HM for short, is Cut.\p"
+            "An HM move can be used by Pokémon outside of battle.\p"
+            "Any Pokémon that's learned Cut can chop down thin trees if the trainer has earned the Charm Badge.\p"
+            "And, unlike a TM, an HM can be used more than once.\p"
+            "Isn't that nifty?"), MSGBOX_AUTOCLOSE)
+    }
+    else {
+        msgbox(format("I'm having my Pokémon use Cut on the trees here to make way for the construction.\p"
+            "You look like a promising young trainer.\p"
+            "I have an extra, so why don't you take it?\p"
+            "It's mighty useful."), MSGBOX_AUTOCLOSE)
+        giveitem(ITEM_HM_CUT)
+        setflag(FLAG_RECEIVED_HM_CUT)
+        msgbox(format("That Hidden Machine, or HM for short, is Cut.\p"
+            "An HM move can be used by Pokémon outside of battle.\p"
+            "Any Pokémon that's learned Cut can chop down thin trees if the trainer has earned the Charm Badge.\p"
+            "And, unlike a TM, an HM can be used more than once.\p"
+            "Isn't that nifty?"), MSGBOX_AUTOCLOSE)
+    }
+    releaseall
+}
+
+script Astridale_EventScript_Scyther_Dialogue {
+    applymovement(Astridale_Scyther, moves(face_player))
+    msgbox(format("Scyther is using Cut to cut down some trees.\l"
+        "It looks like it's working hard."), MSGBOX_NPC)
+    applymovement(Astridale_Scyther, moves(face_right))
+}
+
+text Astridale_ConstructionMan3_Dialogue_Pre_Gym {
+    format("Hey kid!\p"
+        "Sorry, but I can't let you through here.\p"
+        "We have some heavy construction equipment coming through soon, and the way is blocked.")
+}
+
+text Astridale_ConstructionMan3_Dialogue_Post_Gym {
+    format("The construction was halted for a while, but now it's back on track.")
 }

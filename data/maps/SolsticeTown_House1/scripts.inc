@@ -11,15 +11,15 @@ SolsticeTown_House1_EventScript_Woman_Dialogue::
 
 
 SolsticeTown_House1_EventScript_Pidove::
-# 11 "data/maps/SolsticeTown_House1/scripts.pory"
-	applymovement SolsticeTown_House1_Pidove, SolsticeTown_House1_EventScript_Woman_Dialogue_Movement_0
 # 12 "data/maps/SolsticeTown_House1/scripts.pory"
-	waitmovement 0
+	applymovement SolsticeTown_House1_Pidove, SolsticeTown_House1_EventScript_Woman_Dialogue_Movement_0
 # 13 "data/maps/SolsticeTown_House1/scripts.pory"
-	playmoncry SPECIES_PIDOVE, CRY_MODE_NORMAL
+	waitmovement 0
 # 14 "data/maps/SolsticeTown_House1/scripts.pory"
-	waitmoncry
+	playmoncry SPECIES_PIDOVE, CRY_MODE_NORMAL
 # 15 "data/maps/SolsticeTown_House1/scripts.pory"
+	waitmoncry
+# 16 "data/maps/SolsticeTown_House1/scripts.pory"
 	releaseall
 	return
 
@@ -33,7 +33,7 @@ SolsticeTown_House1_EventScript_Woman_Dialogue_Movement_0:
 SolsticeTown_House1_EventScript_Woman_Dialogue_Text_0:
 # 7 "data/maps/SolsticeTown_House1/scripts.pory"
 	.string "I used to send Mail on my Pidove to a\n"
-	.string "friend in Astridale... but lately, they\l"
-	.string "haven't sent anything back!\l"
-	.string "Do you think they don't like me\l"
+	.string "friend in Astridale… but lately, they\l"
+	.string "haven't sent anything back!\p"
+	.string "Do you think they don't like me\n"
 	.string "anymore!?$"

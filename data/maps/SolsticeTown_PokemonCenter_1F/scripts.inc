@@ -12,7 +12,7 @@ SolsticeTown_PokemonCenter_1F_OnTransition::
 
 SolsticeTown_PokemonCenter_1F_EventScript_Nurse::
 # 10 "data/maps/SolsticeTown_PokemonCenter_1F/scripts.pory"
-	setvar VAR_0x800B, SOLSTICE_TOWN_NURSE
+	setvar VAR_0x800B, Solstice_Town_Nurse
 # 11 "data/maps/SolsticeTown_PokemonCenter_1F/scripts.pory"
 	call Common_EventScript_PkmnCenterNurse
 # 12 "data/maps/SolsticeTown_PokemonCenter_1F/scripts.pory"
@@ -49,11 +49,11 @@ SolsticeTown_PokemonCenter_Gentleman_Dialogue_Movement_0:
 SolsticeTown_PokemonCenter_Gentleman_Dialogue_Text_0:
 # 19 "data/maps/SolsticeTown_PokemonCenter_1F/scripts.pory"
 	.string "That PC in the corner there is for any\n"
-	.string "Pokémon trainer to use.\l"
-	.string "Naturally, that means you're welcome to\l"
+	.string "Pokémon trainer to use.\p"
+	.string "Naturally, that means you're welcome to\n"
 	.string "use it, too.$"
 
 SolsticeTown_PokemonCenter_LittleGirl_Dialogue_Text_0:
 # 25 "data/maps/SolsticeTown_PokemonCenter_1F/scripts.pory"
-	.string "I love the Pokémon Center!\l"
+	.string "I love the Pokémon Center!\p"
 	.string "It's so cozy and warm in here!$"

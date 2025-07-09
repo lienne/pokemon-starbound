@@ -1218,3 +1218,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/AstridaleCity_House4_2F/scripts.inc"
 
 	.include "data/maps/Astridale_Gym/scripts.inc"
+
+	.include "data/maps/Caelestic/scripts.inc"

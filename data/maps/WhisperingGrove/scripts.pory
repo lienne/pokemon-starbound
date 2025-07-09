@@ -12,8 +12,8 @@ script WhisperingGrove_EventScript_RouteSign {
 script WhisperingGrove_EventScript_TrainerTipsSigns {
     lockall
     msgbox(format("Trainer Tips!\n"
-        "People often drop items in the forest.\l"
-        "It's dark so they're difficult to see.\l"
+        "People often drop items in the forest.\p"
+        "It's dark so they're difficult to see.\p"
         "Check every corner and you might find something useful!"))
     releaseall
 }
@@ -43,25 +43,25 @@ script WhisperingGrove_EventScript_BugCatcher_Rick {
 }
 
 text WhisperingGrove_BugCatcher_Lyle_Intro_Text {
-    format("Shhh! I've been trying to catch this Metapod all morning!")
+    format("Shhh! I've been trying to catch this Metapod all day!")
 }
 
 text WhisperingGrove_BugCatcher_Lyle_Lose_Text {
-    format("Aw man... maybe I need quieter shoes.")
+    format("Aw man… maybe I need quieter shoes.")
 }
 
 text WhisperingGrove_BugCatcher_Lyle_Dialogue {
-    format("I hear there are some rare Pokémon in this forest.\l"
-        "I've been looking for hours...")
+    format("I hear there are some rare Pokémon in this forest.\p"
+        "I've been looking for hours…")
 }
 
 text WhisperingGrove_AromaLady_Jaclyn_Intro_Text {
-    format("I like to match my Pokémon with the colors of the flowers!\l"
+    format("I like to match my Pokémon with the colors of the flowers!\p"
     "It's just more fun that way!")
 }
 
 text WhisperingGrove_AromaLady_Jaclyn_Lose_Text {
-    format("Looks like I need a new strategy... and maybe a new outfit!")
+    format("Looks like I need a new strategy… and maybe a new outfit!")
 }
 
 text WhisperingGrove_AromaLady_Jaclyn_Dialogue {

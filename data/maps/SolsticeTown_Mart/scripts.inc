@@ -98,15 +98,15 @@ SolsticeTown_Mart_Boy1_Dialogue_Movement_0:
 
 SolsticeTown_Mart_Employee_Dialogue_Text_0:
 # 9 "data/maps/SolsticeTown_Mart/scripts.pory"
-	.string "Hi! Are you {PLAYER}?\n"
-	.string "Prof. Myra called ahead of time to say\l"
-	.string "you'd come by.\l"
+	.string "Hi! Are you {PLAYER}?\p"
+	.string "Prof. Myra called ahead of time to say\n"
+	.string "you'd come by.\p"
 	.string "I have your package here for you.$"
 
 SolsticeTown_Mart_Employee_Dialogue_Text_1:
 # 19 "data/maps/SolsticeTown_Mart/scripts.pory"
-	.string "Hi {PLAYER}!\n"
-	.string "Did you deliver the package to Prof.\l"
+	.string "Hi {PLAYER}!\p"
+	.string "Did you deliver the package to Prof.\n"
 	.string "Myra yet?$"
 
 SolsticeTown_Mart_Employee_Dialogue_Text_2:

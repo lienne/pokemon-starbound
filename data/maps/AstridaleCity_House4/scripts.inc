@@ -73,43 +73,43 @@ Astridale_House4_EventScript_OldMan_Dialogue_Movement_0:
 Astridale_House4_EventScript_OldMan_Dialogue_Text_0:
 # 8 "data/maps/AstridaleCity_House4/scripts.pory"
 	.string "Our daughter Viviane has not been\n"
-	.string "herself lately.\l"
-	.string "She hardly ever comes home anymore...$"
+	.string "herself lately.\p"
+	.string "She hardly ever comes home anymore…$"
 
 Astridale_House4_EventScript_OldMan_Dialogue_Text_1:
 # 14 "data/maps/AstridaleCity_House4/scripts.pory"
-	.string "Viviane hasn't been home in a while.\n"
-	.string "It's not like her. She usually can't\l"
+	.string "Viviane hasn't been home in a while.\p"
+	.string "It's not like her. She usually can't\n"
 	.string "sleep without her Clefairy doll.$"
 
 Astridale_House4_EventScript_OldMan_Dialogue_Text_2:
 # 19 "data/maps/AstridaleCity_House4/scripts.pory"
-	.string "I used to be a sailor, you know.\n"
-	.string "But I got tired of the sea and settled\l"
-	.string "down here in Astridale with my family.\l"
-	.string "It's a peaceful life, and I like it that\l"
+	.string "I used to be a sailor, you know.\p"
+	.string "But I got tired of the sea and settled\n"
+	.string "down here in Astridale with my family.\p"
+	.string "It's a peaceful life, and I like it that\n"
 	.string "way.$"
 
 Astridale_House4_EventScript_OldWoman_Dialogue_Text_0:
 # 28 "data/maps/AstridaleCity_House4/scripts.pory"
-	.string "I'm worried about our daughter.\n"
-	.string "She was excited about the construction\l"
+	.string "I'm worried about our daughter.\p"
+	.string "She was excited about the construction\n"
 	.string "before, but now she seems to hate the\l"
-	.string "very idea.\l"
-	.string "Something must have happened for her\l"
+	.string "very idea.\p"
+	.string "Something must have happened for her\n"
 	.string "to change her mind so suddenly.$"
 
 Astridale_House4_EventScript_OldWoman_Dialogue_Text_1:
 # 35 "data/maps/AstridaleCity_House4/scripts.pory"
 	.string "Viviane keeps her beloved Clefairy doll\n"
-	.string "in her room.\l"
-	.string "She used to take it everywhere with\l"
+	.string "in her room.\p"
+	.string "She used to take it everywhere with\n"
 	.string "her, but now...$"
 
 Astridale_House4_EventScript_OldWoman_Dialogue_Text_2:
 # 40 "data/maps/AstridaleCity_House4/scripts.pory"
-	.string "I used to be a sailor's wife.\n"
-	.string "Now I just enjoy the peace and quiet of\l"
-	.string "Astridale.\l"
-	.string "Our daughter, Viviane, became the gym\l"
+	.string "I used to be a sailor's wife.\p"
+	.string "Now I just enjoy the peace and quiet of\n"
+	.string "Astridale.\p"
+	.string "Our daughter, Viviane, became the gym\n"
 	.string "leader after we moved here.$"

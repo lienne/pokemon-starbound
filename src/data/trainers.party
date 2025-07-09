@@ -4795,8 +4795,8 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Rock Slide
 - Crunch
 
-=== TRAINER_ROXANNE_1 ===
-Name: ROXANNE
+=== TRAINER_VIVIANE_1 ===
+Name: Viviane
 Class: Leader
 Pic: Leader Roxanne
 Gender: Female
@@ -4805,29 +4805,29 @@ Items: Potion / Potion
 Double Battle: No
 AI: Basic Trainer
 
-Geodude
+Flabebe
 Level: 12
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
+- Vine Whip
+- Fairy Wind
+- Lucky Chant
 
-Geodude
-Level: 12
+Tinkatink
+Level: 14
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
+- Astonish
+- Fairy Wind
+- Baby Doll Eyes
+- Metal Claw
 
-Nosepass @ Oran Berry
-Level: 15
+Clefairy @ Oran Berry
+Level: 16
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Block
-- Harden
-- Tackle
-- Rock Tomb
+- Sing
+- Sweet Kiss
+- Pound
+- Life Dew
 
 === TRAINER_BRAWLY_1 ===
 Name: BRAWLY
@@ -13452,7 +13452,7 @@ Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_14 ===
-Name: Grunt
+Name: Stranger
 Class: Team Magma
 Pic: Magma Grunt F
 Gender: Female

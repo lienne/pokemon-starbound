@@ -1,35 +1,83 @@
 mapscripts Astridale_Gym_MapScripts {
-    
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_ASTRIDALE_STATE, 8 {
+            setvar(VAR_ASTRIDALE_STATE, 9)
+            clearflag(FLAG_NO_CATCHING)
+            clearflag(FLAG_FORCE_NO_SHINY)
+            setrespawn(HEAL_LOCATION_ASTRIDALE)
+            applymovement(LOCALID_PLAYER, moves(emote_exclamation_mark))
+            playse(SE_PIN)
+            waitse()
+            waitmovement(0)
+            applymovement(LOCALID_PLAYER, moves(face_up))
+            waitmovement(0)
+            speakername(VivianeName)
+            msgbox(format("…uughh…\p"
+                "What… what happened?\p"
+                "I… I don't remember anything…\p"
+                "I feel so weak…\p"
+                "…\p"
+                "I… I was sabotaging the construction?\p"
+                "Oh no… that's not like me at all…\p"
+                "I don't really remember what happened…\p"
+                "A stranger talked to me a few days ago, and since then everything's kind of a blur…\p"
+                "It looks like you were able to snap me out of it, somehow.\p"
+                "What's your name?\p"
+                "…\p"
+                "{PLAYER}. Got it.\p"
+                "Thank you so much for snapping me out of it.\p"
+                "I really don't know what came over me…\p"
+                "In any case, I should thank you properly for helping me.\p"
+                "Why don't you take this Gym badge?\p"
+                "I'm in no condition to battle you at the moment, but I am sure this will be useful for you."))
+            speakername(NULL)
+            msgbox(format("{PLAYER} received the Charm Badge from Viviane!"))
+            call(Common_EventScript_PlayGymBadgeFanfare)
+            speakername(VivianeName)
+            msgbox(format("The Charm Badge allows you to use the HM Cut outside of battle.\p"
+                "It also heightens the attack power of your Pokémon.\p"
+                "I'm sure you will find it very useful."), MSGBOX_AUTOCLOSE)
+            end
+        }
+    ]
 }
 
 script Astridale_Gym_EventScript_Viviane {
-    if (var(VAR_ASTRIDALE_STATE) >= 4) {
+    if (var(VAR_ASTRIDALE_STATE) >= 4 && var(VAR_ASTRIDALE_STATE) < 9) {
         applymovement(Astridale_Gym_Viviane, moves(face_player))
         speakername(VivianeName)
         msgbox(format("So you're back.\p"
-            "I suggest you forget what you saw at the warehouse.\l"
-            "It's really none of your business, you know.\l"
-            "You shouldn't go meddling in other people's affairs.\l"
-            "The construction is bad for Astridale, and I need to do everything I can to stop it!\l"
+            "I suggest you forget what you saw at the warehouse.\p"
+            "It's really none of your business, you know.\p"
+            "You shouldn't go meddling in other people's affairs.\p"
+            "The construction is bad for Astridale, and I need to do everything I can to stop it!\p"
             "You won't be able to stop me, even if you try!\p"
-            "I'm a gym leader, you know.\l"
+            "I'm a gym leader, you know.\p"
             "You think a kid like you can beat me?\p"
-            "...\p"
-            "What's that? You've got something for me?"), MSGBOX_NPC)
+            "…\p"
+            "What's that? You've got something for me?"))
+        speakername(NULL)
         msgbox(format("Give Viviane her Clefairy doll?"), MSGBOX_YESNO)
         if (var(VAR_RESULT) == NO) {
             speakername(VivianeName)
             msgbox(format("That's right, scram!"), MSGBOX_NPC)
         }
         else {
-            msgbox(format("You gave Viviane her Clefairy doll."), MSGBOX_AUTOCLOSE)
+            msgbox(format("You gave Viviane her Clefairy doll."))
             speakername(VivianeName)
-            msgbox(format("...\p"
-                "...oh...\p"
-                "...my beloved Clefairy doll...\p"
-                "...\p"
-                "...ugh, what's happening? I don't feel well..."), MSGBOX_NPC)
+            msgbox(format("…\p"
+                "…oh…\p"
+                "…my beloved Clefairy doll…\p"
+                "…\p"
+                "…ugh, what's happening? I don't feel well…"), MSGBOX_NPC)
             warpwhitefade(MAP_ASTRIDALE_MINDSCAPE, 19, 75)
         }
+    }
+    else {
+        applymovement(Astridale_Gym_Viviane, moves(face_player))
+        speakername(VivianeName)
+        msgbox(format("Hi, {PLAYER}!\p"
+            "Thank you again for helping me snap out of my mind fog.\p"
+            "I hope your journey's going well."), MSGBOX_AUTOCLOSE)
     }
 }

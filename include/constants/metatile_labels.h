@@ -1,6 +1,13 @@
 #ifndef GUARD_METATILE_LABELS_H
 #define GUARD_METATILE_LABELS_H
 
+// gTileset_AstridaleMindscape
+#define METATILE_AstridaleMindscape_astridale_mindscape_ground            0x000
+#define METATILE_AstridaleMindscape_astridale_mindscape_key               0x045
+#define METATILE_AstridaleMindscape_astridale_mindscape_lockbox           0x013
+#define METATILE_AstridaleMindscape_astridale_mindscape_maze_bottom_edge  0x01C
+#define METATILE_AstridaleMindscape_astridale_mindscape_maze_middle_edge  0x014
+
 // gTileset_BattleArena
 #define METATILE_BattleArena_Door  0x21B
 

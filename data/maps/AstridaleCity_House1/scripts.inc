@@ -19,8 +19,8 @@ Astridale_House1_EventScript_Woman_Dialogue_Movement_0:
 Astridale_House1_EventScript_Woman_Dialogue_Text_0:
 # 7 "data/maps/AstridaleCity_House1/scripts.pory"
 	.string "It's horrible living right next to the\n"
-	.string "construction.\l"
-	.string "It's so loud during the day, and they\l"
-	.string "keep the lights on at night...\l"
-	.string "I can hardly hear myself think!\l"
-	.string "I hope they finish up soon...$"
+	.string "construction.\p"
+	.string "It's so loud during the day, and they\n"
+	.string "keep the lights on at night…\p"
+	.string "I can hardly hear myself think!\p"
+	.string "I hope they finish up soon…$"

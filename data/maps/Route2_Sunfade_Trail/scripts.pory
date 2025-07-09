@@ -45,20 +45,21 @@ script SunfadeTrail_EventScript_Lass_Haley {
 }
 
 text SunfadeTrail_BugCatcher_Simeon_Intro_Text {
-    format("Passing through?\nNot without meeting my Bug\lPokémon you aren't!")
+    format("Passing through?\n"
+        "Not without meeting my Bug Pokémon you aren't!")
 }
 
 text SunfadeTrail_BugCatcher_Simeon_Lose_Text {
-    format("You were supposed to meet them,\nnot beat them...")
+    format("You were supposed to meet them, not beat them…")
 }
 
 text SunfadeTrail_BugCatcher_Simeon_Dialogue {
-    format("Bug Pokémon are my favorite... when\n"
-        "they're not nibbling on me!")
+    format("Bug Pokémon are my favorite… when they're not nibbling on me!")
 }
 
 text SunfadeTrail_Boy_Tim_Intro_Text {
-    format("I'm training to get through\nWhispering Grove.\lWant to train with me?")
+    format("I'm training to get through Whispering Grove.\p"
+        "Want to train with me?")
 }
 
 text SunfadeTrail_Boy_Tim_Lose_Text {
@@ -66,18 +67,16 @@ text SunfadeTrail_Boy_Tim_Lose_Text {
 }
 
 text SunfadeTrail_Boy_Tim_Dialogue {
-    format("Whispering Grove has lots of\n"
-        "Poison-type Pokémon... I keep getting\l"
-        "overwhelmed!")
+    format("Whispering Grove has lots of Poison-type Pokémon… I keep getting overwhelmed!")
 }
 
 text SunfadeTrail_Youngster_Billy_Intro_Text {
-    format("I found a rare Pokémon in Sunfade Trail!\l"
+    format("I found a rare Pokémon in Sunfade Trail!\p"
         "Wanna see?")
 }
 
 text SunfadeTrail_Youngster_Billy_Lose_Text {
-    format("I guess rare Pokémon aren't necessarily stronger...")
+    format("I guess rare Pokémon aren't necessarily stronger…")
 }
 
 text SunfadeTrail_Youngster_Billy_Dialogue {
@@ -85,18 +84,18 @@ text SunfadeTrail_Youngster_Billy_Dialogue {
 }
 
 text SunfadeTrail_Anabel_Dialogue {
-    format("Lumen Village is a bit isolated from the rest of Astrea.\l"
+    format("Lumen Village is a bit isolated from the rest of Astrea.\p"
         "You have to get through Whispering Grove and Solstice Town to get there.")
 }
 
 text SunfadeTrail_OldMan_Dialogue {
-    format("I moved here from Myrren Town in my retirement.\l"
+    format("I moved here from Myrren Town in my retirement.\p"
         "My old bones couldn't really take the cold anymore.")
 }
 
 text SunfadeTrail_Healing_Lady_Dialogue {
-    format("I'm having a picnic by the water.\n"
-        "It's really peaceful here.\l"
+    format("I'm having a picnic by the water.\p"
+        "It's really peaceful here.\p"
         "Why don't you stay for a minute and take a rest with me?")
 }
 
@@ -105,9 +104,9 @@ text SunfadeTrail_Lass_Haley_Intro_Text {
 }
 
 text SunfadeTrail_Lass_Haley_Lose_Text {
-    format("Awee...")
+    format("Awee…")
 }
 
 text SunfadeTrail_Lass_Haley_Dialogue {
-    format("I hear that Astridale's gym leader isn't very happy with the expansion.")
+    format("I hear that Astridale's Gym Leader isn't very happy with the expansion.")
 }

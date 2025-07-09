@@ -175,454 +175,462 @@ SolsticeTown_EventScript_RivalRunsToPlayerAtA_1:
 # 96 "data/maps/SolsticeTown/scripts.pory"
 	waitmovement 0
 # 97 "data/maps/SolsticeTown/scripts.pory"
-	delay 20
+	hidefollower
 # 98 "data/maps/SolsticeTown/scripts.pory"
-	applymovement LOCALID_PLAYER, SolsticeTown_EventScript_RivalRunsToPlayerAtA_Movement_0
+	delay 20
 # 99 "data/maps/SolsticeTown/scripts.pory"
-	waitmovement 0
+	applymovement LOCALID_PLAYER, SolsticeTown_EventScript_RivalRunsToPlayerAtA_Movement_0
 # 100 "data/maps/SolsticeTown/scripts.pory"
-	applymovement SolsticeTown_Rival, SolsticeTown_Movement_RivalRunsToPlayerAtA
+	waitmovement 0
 # 101 "data/maps/SolsticeTown/scripts.pory"
-	waitmovement 0
+	applymovement SolsticeTown_Rival, SolsticeTown_Movement_RivalRunsToPlayerAtA
 # 102 "data/maps/SolsticeTown/scripts.pory"
-	applymovement LOCALID_PLAYER, SolsticeTown_EventScript_Girl1_Dialogue_Movement_1
-# 103 "data/maps/SolsticeTown/scripts.pory"
 	waitmovement 0
+# 103 "data/maps/SolsticeTown/scripts.pory"
+	applymovement LOCALID_PLAYER, SolsticeTown_EventScript_Girl1_Dialogue_Movement_1
 # 104 "data/maps/SolsticeTown/scripts.pory"
-	call SolsticeTown_EventScript_Rival_First_Battle
+	waitmovement 0
 # 105 "data/maps/SolsticeTown/scripts.pory"
+	call SolsticeTown_EventScript_Rival_First_Battle
+# 106 "data/maps/SolsticeTown/scripts.pory"
 	releaseall
 	return
 
 
 SolsticeTown_EventScript_RivalRunsToPlayerAtB::
-# 110 "data/maps/SolsticeTown/scripts.pory"
+# 111 "data/maps/SolsticeTown/scripts.pory"
 	compare VAR_INTRO_SCENE, 6
 	goto_if_eq SolsticeTown_EventScript_RivalRunsToPlayerAtB_1
 	return
 
 SolsticeTown_EventScript_RivalRunsToPlayerAtB_1:
-# 111 "data/maps/SolsticeTown/scripts.pory"
-	lockall
 # 112 "data/maps/SolsticeTown/scripts.pory"
-	clearflag FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN
+	lockall
 # 113 "data/maps/SolsticeTown/scripts.pory"
-	addobject SolsticeTown_Rival
+	clearflag FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN
 # 114 "data/maps/SolsticeTown/scripts.pory"
-	playbgm MUS_RG_ENCOUNTER_RIVAL, FALSE
+	addobject SolsticeTown_Rival
 # 115 "data/maps/SolsticeTown/scripts.pory"
-	applymovement LOCALID_PLAYER, SolsticeTown_ExclamationMark
+	playbgm MUS_RG_ENCOUNTER_RIVAL, FALSE
 # 116 "data/maps/SolsticeTown/scripts.pory"
-	playse SE_PIN
+	applymovement LOCALID_PLAYER, SolsticeTown_ExclamationMark
 # 117 "data/maps/SolsticeTown/scripts.pory"
-	waitmovement 0
+	playse SE_PIN
 # 118 "data/maps/SolsticeTown/scripts.pory"
-	delay 20
-# 119 "data/maps/SolsticeTown/scripts.pory"
-	applymovement LOCALID_PLAYER, SolsticeTown_EventScript_RivalRunsToPlayerAtA_Movement_0
-# 120 "data/maps/SolsticeTown/scripts.pory"
 	waitmovement 0
+# 119 "data/maps/SolsticeTown/scripts.pory"
+	hidefollower
+# 120 "data/maps/SolsticeTown/scripts.pory"
+	delay 20
 # 121 "data/maps/SolsticeTown/scripts.pory"
-	applymovement SolsticeTown_Rival, SolsticeTown_Movement_RivalRunsToPlayerAtB
+	applymovement LOCALID_PLAYER, SolsticeTown_EventScript_RivalRunsToPlayerAtA_Movement_0
 # 122 "data/maps/SolsticeTown/scripts.pory"
 	waitmovement 0
 # 123 "data/maps/SolsticeTown/scripts.pory"
-	applymovement LOCALID_PLAYER, SolsticeTown_EventScript_RivalRunsToPlayerAtA_Movement_0
+	applymovement SolsticeTown_Rival, SolsticeTown_Movement_RivalRunsToPlayerAtB
 # 124 "data/maps/SolsticeTown/scripts.pory"
 	waitmovement 0
 # 125 "data/maps/SolsticeTown/scripts.pory"
-	call SolsticeTown_EventScript_Rival_First_Battle
+	applymovement LOCALID_PLAYER, SolsticeTown_EventScript_RivalRunsToPlayerAtA_Movement_0
 # 126 "data/maps/SolsticeTown/scripts.pory"
+	waitmovement 0
+# 127 "data/maps/SolsticeTown/scripts.pory"
+	call SolsticeTown_EventScript_Rival_First_Battle
+# 128 "data/maps/SolsticeTown/scripts.pory"
 	releaseall
 	return
 
 
 SolsticeTown_EventScript_RivalRunsToPlayerAtC::
-# 131 "data/maps/SolsticeTown/scripts.pory"
+# 133 "data/maps/SolsticeTown/scripts.pory"
 	compare VAR_INTRO_SCENE, 6
 	goto_if_eq SolsticeTown_EventScript_RivalRunsToPlayerAtC_1
 	return
 
 SolsticeTown_EventScript_RivalRunsToPlayerAtC_1:
-# 132 "data/maps/SolsticeTown/scripts.pory"
-	lockall
-# 133 "data/maps/SolsticeTown/scripts.pory"
-	clearflag FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN
 # 134 "data/maps/SolsticeTown/scripts.pory"
-	addobject SolsticeTown_Rival
+	lockall
 # 135 "data/maps/SolsticeTown/scripts.pory"
-	playbgm MUS_RG_ENCOUNTER_RIVAL, FALSE
+	clearflag FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN
 # 136 "data/maps/SolsticeTown/scripts.pory"
-	applymovement LOCALID_PLAYER, SolsticeTown_ExclamationMark
+	addobject SolsticeTown_Rival
 # 137 "data/maps/SolsticeTown/scripts.pory"
-	playse SE_PIN
+	playbgm MUS_RG_ENCOUNTER_RIVAL, FALSE
 # 138 "data/maps/SolsticeTown/scripts.pory"
-	waitmovement 0
+	applymovement LOCALID_PLAYER, SolsticeTown_ExclamationMark
 # 139 "data/maps/SolsticeTown/scripts.pory"
-	delay 20
+	playse SE_PIN
 # 140 "data/maps/SolsticeTown/scripts.pory"
-	applymovement LOCALID_PLAYER, SolsticeTown_EventScript_RivalRunsToPlayerAtA_Movement_0
+	waitmovement 0
 # 141 "data/maps/SolsticeTown/scripts.pory"
-	waitmovement 0
+	hidefollower
 # 142 "data/maps/SolsticeTown/scripts.pory"
-	applymovement SolsticeTown_Rival, SolsticeTown_Movement_RivalRunsToPlayerAtC
+	delay 20
 # 143 "data/maps/SolsticeTown/scripts.pory"
-	waitmovement 0
+	applymovement LOCALID_PLAYER, SolsticeTown_EventScript_RivalRunsToPlayerAtA_Movement_0
 # 144 "data/maps/SolsticeTown/scripts.pory"
-	applymovement LOCALID_PLAYER, SolsticeTown_EventScript_Boy1_Dialogue_Movement_0
-# 145 "data/maps/SolsticeTown/scripts.pory"
 	waitmovement 0
+# 145 "data/maps/SolsticeTown/scripts.pory"
+	applymovement SolsticeTown_Rival, SolsticeTown_Movement_RivalRunsToPlayerAtC
 # 146 "data/maps/SolsticeTown/scripts.pory"
-	call SolsticeTown_EventScript_Rival_First_Battle
+	waitmovement 0
 # 147 "data/maps/SolsticeTown/scripts.pory"
+	applymovement LOCALID_PLAYER, SolsticeTown_EventScript_Boy1_Dialogue_Movement_0
+# 148 "data/maps/SolsticeTown/scripts.pory"
+	waitmovement 0
+# 149 "data/maps/SolsticeTown/scripts.pory"
+	call SolsticeTown_EventScript_Rival_First_Battle
+# 150 "data/maps/SolsticeTown/scripts.pory"
 	releaseall
 	return
 
 
 SolsticeTown_EventScript_RivalRunsToPlayerAtD::
-# 152 "data/maps/SolsticeTown/scripts.pory"
+# 155 "data/maps/SolsticeTown/scripts.pory"
 	compare VAR_INTRO_SCENE, 6
 	goto_if_eq SolsticeTown_EventScript_RivalRunsToPlayerAtD_1
 	return
 
 SolsticeTown_EventScript_RivalRunsToPlayerAtD_1:
-# 153 "data/maps/SolsticeTown/scripts.pory"
-	lockall
-# 154 "data/maps/SolsticeTown/scripts.pory"
-	clearflag FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN
-# 155 "data/maps/SolsticeTown/scripts.pory"
-	addobject SolsticeTown_Rival
 # 156 "data/maps/SolsticeTown/scripts.pory"
-	playbgm MUS_RG_ENCOUNTER_RIVAL, FALSE
+	lockall
 # 157 "data/maps/SolsticeTown/scripts.pory"
-	applymovement LOCALID_PLAYER, SolsticeTown_ExclamationMark
+	clearflag FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN
 # 158 "data/maps/SolsticeTown/scripts.pory"
-	playse SE_PIN
+	addobject SolsticeTown_Rival
 # 159 "data/maps/SolsticeTown/scripts.pory"
-	waitmovement 0
+	playbgm MUS_RG_ENCOUNTER_RIVAL, FALSE
 # 160 "data/maps/SolsticeTown/scripts.pory"
-	delay 20
+	applymovement LOCALID_PLAYER, SolsticeTown_ExclamationMark
 # 161 "data/maps/SolsticeTown/scripts.pory"
-	applymovement LOCALID_PLAYER, SolsticeTown_EventScript_RivalRunsToPlayerAtA_Movement_0
+	playse SE_PIN
 # 162 "data/maps/SolsticeTown/scripts.pory"
 	waitmovement 0
 # 163 "data/maps/SolsticeTown/scripts.pory"
-	applymovement SolsticeTown_Rival, SolsticeTown_Movement_RivalRunsToPlayerAtD
+	hidefollower
 # 164 "data/maps/SolsticeTown/scripts.pory"
-	waitmovement 0
+	delay 20
 # 165 "data/maps/SolsticeTown/scripts.pory"
-	applymovement LOCALID_PLAYER, SolsticeTown_EventScript_Boy1_Dialogue_Movement_0
+	applymovement LOCALID_PLAYER, SolsticeTown_EventScript_RivalRunsToPlayerAtA_Movement_0
 # 166 "data/maps/SolsticeTown/scripts.pory"
 	waitmovement 0
 # 167 "data/maps/SolsticeTown/scripts.pory"
-	call SolsticeTown_EventScript_Rival_First_Battle
+	applymovement SolsticeTown_Rival, SolsticeTown_Movement_RivalRunsToPlayerAtD
 # 168 "data/maps/SolsticeTown/scripts.pory"
+	waitmovement 0
+# 169 "data/maps/SolsticeTown/scripts.pory"
+	applymovement LOCALID_PLAYER, SolsticeTown_EventScript_Boy1_Dialogue_Movement_0
+# 170 "data/maps/SolsticeTown/scripts.pory"
+	waitmovement 0
+# 171 "data/maps/SolsticeTown/scripts.pory"
+	call SolsticeTown_EventScript_Rival_First_Battle
+# 172 "data/maps/SolsticeTown/scripts.pory"
 	releaseall
 	return
 
 
 SolsticeTown_EventScript_Rival_First_Battle::
-# 173 "data/maps/SolsticeTown/scripts.pory"
+# 177 "data/maps/SolsticeTown/scripts.pory"
 	lockall
-# 174 "data/maps/SolsticeTown/scripts.pory"
+# 178 "data/maps/SolsticeTown/scripts.pory"
 	checkplayergender
-# 175 "data/maps/SolsticeTown/scripts.pory"
+# 179 "data/maps/SolsticeTown/scripts.pory"
 	compare VAR_RESULT, MALE
 	goto_if_eq SolsticeTown_EventScript_Rival_First_Battle_2
-# 179 "data/maps/SolsticeTown/scripts.pory"
+# 183 "data/maps/SolsticeTown/scripts.pory"
 	call SolsticeTown_EventScript_RivalCassian
 SolsticeTown_EventScript_Rival_First_Battle_1:
-# 181 "data/maps/SolsticeTown/scripts.pory"
+# 185 "data/maps/SolsticeTown/scripts.pory"
 	releaseall
 	return
 
 SolsticeTown_EventScript_Rival_First_Battle_2:
-# 176 "data/maps/SolsticeTown/scripts.pory"
+# 180 "data/maps/SolsticeTown/scripts.pory"
 	call SolsticeTown_EventScript_RivalSelene
 	goto SolsticeTown_EventScript_Rival_First_Battle_1
 
 
 SolsticeTown_EventScript_RivalSelene::
-# 185 "data/maps/SolsticeTown/scripts.pory"
+# 189 "data/maps/SolsticeTown/scripts.pory"
 	call RivalName
-# 186 "data/maps/SolsticeTown/scripts.pory"
-	msgbox SolsticeTown_Rival_Battle_Intro_Dialogue
-# 187 "data/maps/SolsticeTown/scripts.pory"
-	switch VAR_STARTER_MON
-# 188 "data/maps/SolsticeTown/scripts.pory"
-	case 0, SolsticeTown_EventScript_RivalSelene_2
 # 190 "data/maps/SolsticeTown/scripts.pory"
-	case 1, SolsticeTown_EventScript_RivalSelene_3
+	msgbox SolsticeTown_Rival_Battle_Intro_Dialogue
+# 191 "data/maps/SolsticeTown/scripts.pory"
+	switch VAR_STARTER_MON
 # 192 "data/maps/SolsticeTown/scripts.pory"
+	case 0, SolsticeTown_EventScript_RivalSelene_2
+# 194 "data/maps/SolsticeTown/scripts.pory"
+	case 1, SolsticeTown_EventScript_RivalSelene_3
+# 196 "data/maps/SolsticeTown/scripts.pory"
 	case 2, SolsticeTown_EventScript_RivalSelene_4
 	return
 
 SolsticeTown_EventScript_RivalSelene_2:
-# 189 "data/maps/SolsticeTown/scripts.pory"
+# 193 "data/maps/SolsticeTown/scripts.pory"
 	call SolsticeTown_EventScript_StartSeleneBattleSprigatito
 	return
 
 SolsticeTown_EventScript_RivalSelene_3:
-# 191 "data/maps/SolsticeTown/scripts.pory"
+# 195 "data/maps/SolsticeTown/scripts.pory"
 	call SolsticeTown_EventScript_StartSeleneBattleSquirtle
 	return
 
 SolsticeTown_EventScript_RivalSelene_4:
-# 193 "data/maps/SolsticeTown/scripts.pory"
+# 197 "data/maps/SolsticeTown/scripts.pory"
 	call SolsticeTown_EventScript_StartSeleneBattleFennekin
 	return
 
 
 SolsticeTown_EventScript_RivalCassian::
-# 198 "data/maps/SolsticeTown/scripts.pory"
+# 202 "data/maps/SolsticeTown/scripts.pory"
 	call RivalName
-# 199 "data/maps/SolsticeTown/scripts.pory"
-	msgbox SolsticeTown_Rival_Battle_Intro_Dialogue
-# 200 "data/maps/SolsticeTown/scripts.pory"
-	switch VAR_STARTER_MON
-# 201 "data/maps/SolsticeTown/scripts.pory"
-	case 0, SolsticeTown_EventScript_RivalCassian_2
 # 203 "data/maps/SolsticeTown/scripts.pory"
-	case 1, SolsticeTown_EventScript_RivalCassian_3
+	msgbox SolsticeTown_Rival_Battle_Intro_Dialogue
+# 204 "data/maps/SolsticeTown/scripts.pory"
+	switch VAR_STARTER_MON
 # 205 "data/maps/SolsticeTown/scripts.pory"
+	case 0, SolsticeTown_EventScript_RivalCassian_2
+# 207 "data/maps/SolsticeTown/scripts.pory"
+	case 1, SolsticeTown_EventScript_RivalCassian_3
+# 209 "data/maps/SolsticeTown/scripts.pory"
 	case 2, SolsticeTown_EventScript_RivalCassian_4
 	return
 
 SolsticeTown_EventScript_RivalCassian_2:
-# 202 "data/maps/SolsticeTown/scripts.pory"
+# 206 "data/maps/SolsticeTown/scripts.pory"
 	call SolsticeTown_EventScript_StartCassianBattleSprigatito
 	return
 
 SolsticeTown_EventScript_RivalCassian_3:
-# 204 "data/maps/SolsticeTown/scripts.pory"
+# 208 "data/maps/SolsticeTown/scripts.pory"
 	call SolsticeTown_EventScript_StartCassianBattleSquirtle
 	return
 
 SolsticeTown_EventScript_RivalCassian_4:
-# 206 "data/maps/SolsticeTown/scripts.pory"
+# 210 "data/maps/SolsticeTown/scripts.pory"
 	call SolsticeTown_EventScript_StartCassianBattleFennekin
 	return
 
 
 SolsticeTown_EventScript_StartSeleneBattleSprigatito::
-# 211 "data/maps/SolsticeTown/scripts.pory"
+# 215 "data/maps/SolsticeTown/scripts.pory"
 	trainerbattle_no_intro TRAINER_SELENE_SOLSTICE_SPRIGATITO, SolsticeTown_Rival_Battle_Defeat_Dialogue
-# 212 "data/maps/SolsticeTown/scripts.pory"
+# 216 "data/maps/SolsticeTown/scripts.pory"
 	call SolsticeTown_EventScript_RivalExit
 	return
 
 
 SolsticeTown_EventScript_StartSeleneBattleFennekin::
-# 216 "data/maps/SolsticeTown/scripts.pory"
+# 220 "data/maps/SolsticeTown/scripts.pory"
 	trainerbattle_no_intro TRAINER_SELENE_SOLSTICE_FENNEKIN, SolsticeTown_Rival_Battle_Defeat_Dialogue
-# 217 "data/maps/SolsticeTown/scripts.pory"
+# 221 "data/maps/SolsticeTown/scripts.pory"
 	call SolsticeTown_EventScript_RivalExit
 	return
 
 
 SolsticeTown_EventScript_StartSeleneBattleSquirtle::
-# 221 "data/maps/SolsticeTown/scripts.pory"
+# 225 "data/maps/SolsticeTown/scripts.pory"
 	trainerbattle_no_intro TRAINER_SELENE_SOLSTICE_SQUIRTLE, SolsticeTown_Rival_Battle_Defeat_Dialogue
-# 222 "data/maps/SolsticeTown/scripts.pory"
+# 226 "data/maps/SolsticeTown/scripts.pory"
 	call SolsticeTown_EventScript_RivalExit
 	return
 
 
 SolsticeTown_EventScript_StartCassianBattleSprigatito::
-# 226 "data/maps/SolsticeTown/scripts.pory"
+# 230 "data/maps/SolsticeTown/scripts.pory"
 	trainerbattle_no_intro TRAINER_CASSIAN_SOLSTICE_SPRIGATITO, SolsticeTown_Rival_Battle_Defeat_Dialogue
-# 227 "data/maps/SolsticeTown/scripts.pory"
+# 231 "data/maps/SolsticeTown/scripts.pory"
 	call SolsticeTown_EventScript_RivalExit
 	return
 
 
 SolsticeTown_EventScript_StartCassianBattleFennekin::
-# 231 "data/maps/SolsticeTown/scripts.pory"
+# 235 "data/maps/SolsticeTown/scripts.pory"
 	trainerbattle_no_intro TRAINER_CASSIAN_SOLSTICE_FENNEKIN, SolsticeTown_Rival_Battle_Defeat_Dialogue
-# 232 "data/maps/SolsticeTown/scripts.pory"
+# 236 "data/maps/SolsticeTown/scripts.pory"
 	call SolsticeTown_EventScript_RivalExit
 	return
 
 
 SolsticeTown_EventScript_StartCassianBattleSquirtle::
-# 236 "data/maps/SolsticeTown/scripts.pory"
+# 240 "data/maps/SolsticeTown/scripts.pory"
 	trainerbattle_no_intro TRAINER_CASSIAN_SOLSTICE_SQUIRTLE, SolsticeTown_Rival_Battle_Defeat_Dialogue
-# 237 "data/maps/SolsticeTown/scripts.pory"
+# 241 "data/maps/SolsticeTown/scripts.pory"
 	call SolsticeTown_EventScript_RivalExit
 	return
 
 
 SolsticeTown_EventScript_RivalExit::
-# 241 "data/maps/SolsticeTown/scripts.pory"
-	setvar VAR_INTRO_SCENE, 7
-# 242 "data/maps/SolsticeTown/scripts.pory"
-	msgbox SolsticeTown_Rival_After_Battle_Dialogue, MSGBOX_AUTOCLOSE
-# 243 "data/maps/SolsticeTown/scripts.pory"
-	applymovement SolsticeTown_Rival, SolsticeTown_Movement_RivalExit
-# 244 "data/maps/SolsticeTown/scripts.pory"
-	waitmovement 0
 # 245 "data/maps/SolsticeTown/scripts.pory"
-	fadedefaultbgm
+	setvar VAR_INTRO_SCENE, 7
 # 246 "data/maps/SolsticeTown/scripts.pory"
-	setflag FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN
+	msgbox SolsticeTown_Rival_After_Battle_Dialogue, MSGBOX_AUTOCLOSE
 # 247 "data/maps/SolsticeTown/scripts.pory"
-	removeobject SolsticeTown_Rival
+	applymovement SolsticeTown_Rival, SolsticeTown_Movement_RivalExit
 # 248 "data/maps/SolsticeTown/scripts.pory"
+	waitmovement 0
+# 249 "data/maps/SolsticeTown/scripts.pory"
+	fadedefaultbgm
+# 250 "data/maps/SolsticeTown/scripts.pory"
+	setflag FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN
+# 251 "data/maps/SolsticeTown/scripts.pory"
+	removeobject SolsticeTown_Rival
+# 252 "data/maps/SolsticeTown/scripts.pory"
 	releaseall
 	return
 
 
-# 282 "data/maps/SolsticeTown/scripts.pory"
+# 286 "data/maps/SolsticeTown/scripts.pory"
 SolsticeTown_ExclamationMark:
-# 283 "data/maps/SolsticeTown/scripts.pory"
+# 287 "data/maps/SolsticeTown/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
-# 286 "data/maps/SolsticeTown/scripts.pory"
-SolsticeTown_Boy2_RunsToPlayer_SpotA:
-# 287 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_left
-# 287 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_left
-	step_end
-
 # 290 "data/maps/SolsticeTown/scripts.pory"
-SolsticeTown_Boy2_RunsBack_SpotA:
+SolsticeTown_Boy2_RunsToPlayer_SpotA:
 # 291 "data/maps/SolsticeTown/scripts.pory"
-	walk_right
+	walk_fast_left
 # 291 "data/maps/SolsticeTown/scripts.pory"
-	walk_right
-# 292 "data/maps/SolsticeTown/scripts.pory"
-	face_left
+	walk_fast_left
 	step_end
 
+# 294 "data/maps/SolsticeTown/scripts.pory"
+SolsticeTown_Boy2_RunsBack_SpotA:
 # 295 "data/maps/SolsticeTown/scripts.pory"
-SolsticeTown_Boy2_RunsToPlayer_SpotB:
+	walk_right
+# 295 "data/maps/SolsticeTown/scripts.pory"
+	walk_right
 # 296 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_left
+	face_left
 	step_end
 
 # 299 "data/maps/SolsticeTown/scripts.pory"
-SolsticeTown_Boy2_RunsBack_SpotB:
+SolsticeTown_Boy2_RunsToPlayer_SpotB:
 # 300 "data/maps/SolsticeTown/scripts.pory"
-	walk_right
-# 301 "data/maps/SolsticeTown/scripts.pory"
-	face_left
+	walk_fast_left
 	step_end
 
+# 303 "data/maps/SolsticeTown/scripts.pory"
+SolsticeTown_Boy2_RunsBack_SpotB:
 # 304 "data/maps/SolsticeTown/scripts.pory"
-SolsticeTown_Movement_RivalRunsToPlayerAtA:
+	walk_right
 # 305 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 305 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 305 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 305 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 305 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 305 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 305 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 305 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 305 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 306 "data/maps/SolsticeTown/scripts.pory"
 	face_left
 	step_end
 
+# 308 "data/maps/SolsticeTown/scripts.pory"
+SolsticeTown_Movement_RivalRunsToPlayerAtA:
 # 309 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 309 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 309 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 309 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 309 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 309 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 309 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 309 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 309 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 310 "data/maps/SolsticeTown/scripts.pory"
+	face_left
+	step_end
+
+# 313 "data/maps/SolsticeTown/scripts.pory"
 SolsticeTown_Movement_RivalRunsToPlayerAtB:
-# 310 "data/maps/SolsticeTown/scripts.pory"
+# 314 "data/maps/SolsticeTown/scripts.pory"
 	walk_fast_up
-# 310 "data/maps/SolsticeTown/scripts.pory"
+# 314 "data/maps/SolsticeTown/scripts.pory"
 	walk_fast_up
-# 310 "data/maps/SolsticeTown/scripts.pory"
+# 314 "data/maps/SolsticeTown/scripts.pory"
 	walk_fast_up
-# 310 "data/maps/SolsticeTown/scripts.pory"
+# 314 "data/maps/SolsticeTown/scripts.pory"
 	walk_fast_up
-# 310 "data/maps/SolsticeTown/scripts.pory"
+# 314 "data/maps/SolsticeTown/scripts.pory"
 	walk_fast_up
-# 310 "data/maps/SolsticeTown/scripts.pory"
+# 314 "data/maps/SolsticeTown/scripts.pory"
 	walk_fast_up
-# 310 "data/maps/SolsticeTown/scripts.pory"
+# 314 "data/maps/SolsticeTown/scripts.pory"
 	walk_fast_up
-# 310 "data/maps/SolsticeTown/scripts.pory"
+# 314 "data/maps/SolsticeTown/scripts.pory"
 	walk_fast_up
-# 311 "data/maps/SolsticeTown/scripts.pory"
+# 315 "data/maps/SolsticeTown/scripts.pory"
 	face_up
 	step_end
 
-# 314 "data/maps/SolsticeTown/scripts.pory"
+# 318 "data/maps/SolsticeTown/scripts.pory"
 SolsticeTown_Movement_RivalRunsToPlayerAtC:
-# 315 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 315 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 315 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 315 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 315 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 315 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 315 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 315 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 315 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 316 "data/maps/SolsticeTown/scripts.pory"
-	face_right
-	step_end
-
 # 319 "data/maps/SolsticeTown/scripts.pory"
-SolsticeTown_Movement_RivalRunsToPlayerAtD:
-# 320 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 319 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 319 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 319 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 319 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 319 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 319 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 319 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 319 "data/maps/SolsticeTown/scripts.pory"
 	walk_fast_up
 # 320 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 320 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 320 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 320 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 320 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 320 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 320 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 320 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_up
-# 321 "data/maps/SolsticeTown/scripts.pory"
-	walk_fast_right
-# 322 "data/maps/SolsticeTown/scripts.pory"
 	face_right
 	step_end
 
+# 323 "data/maps/SolsticeTown/scripts.pory"
+SolsticeTown_Movement_RivalRunsToPlayerAtD:
+# 324 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 324 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 324 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 324 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 324 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 324 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 324 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 324 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
+# 324 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_up
 # 325 "data/maps/SolsticeTown/scripts.pory"
+	walk_fast_right
+# 326 "data/maps/SolsticeTown/scripts.pory"
+	face_right
+	step_end
+
+# 329 "data/maps/SolsticeTown/scripts.pory"
 SolsticeTown_Movement_RivalExit:
-# 326 "data/maps/SolsticeTown/scripts.pory"
+# 330 "data/maps/SolsticeTown/scripts.pory"
 	walk_fast_down
-# 326 "data/maps/SolsticeTown/scripts.pory"
+# 330 "data/maps/SolsticeTown/scripts.pory"
 	walk_fast_down
-# 326 "data/maps/SolsticeTown/scripts.pory"
+# 330 "data/maps/SolsticeTown/scripts.pory"
 	walk_fast_down
-# 326 "data/maps/SolsticeTown/scripts.pory"
+# 330 "data/maps/SolsticeTown/scripts.pory"
 	walk_fast_down
-# 326 "data/maps/SolsticeTown/scripts.pory"
+# 330 "data/maps/SolsticeTown/scripts.pory"
 	walk_fast_down
-# 326 "data/maps/SolsticeTown/scripts.pory"
+# 330 "data/maps/SolsticeTown/scripts.pory"
 	walk_fast_down
-# 326 "data/maps/SolsticeTown/scripts.pory"
+# 330 "data/maps/SolsticeTown/scripts.pory"
 	walk_fast_down
-# 326 "data/maps/SolsticeTown/scripts.pory"
+# 330 "data/maps/SolsticeTown/scripts.pory"
 	walk_fast_down
 	step_end
 
@@ -650,9 +658,9 @@ SolsticeTown_EventScript_Boy2_Dialogue_SpotA_Movement_0:
 	walk_down
 	step_end
 
-# 98 "data/maps/SolsticeTown/scripts.pory"
+# 99 "data/maps/SolsticeTown/scripts.pory"
 SolsticeTown_EventScript_RivalRunsToPlayerAtA_Movement_0:
-# 98 "data/maps/SolsticeTown/scripts.pory"
+# 99 "data/maps/SolsticeTown/scripts.pory"
 	face_down
 	step_end
 
@@ -664,7 +672,7 @@ SolsticeTown_EventScript_TownSign_Text_0:
 SolsticeTown_EventScript_Girl1_Dialogue_Text_0:
 # 17 "data/maps/SolsticeTown/scripts.pory"
 	.string "Did you know you can press Start to\n"
-	.string "check your Pokémon summary?$"
+	.string "check your Pokémon Summary?$"
 
 SolsticeTown_EventScript_Boy1_Dialogue_Text_0:
 # 23 "data/maps/SolsticeTown/scripts.pory"
@@ -673,49 +681,49 @@ SolsticeTown_EventScript_Boy1_Dialogue_Text_0:
 
 SolsticeTown_EventScript_Girl2_Dialogue_Text_0:
 # 29 "data/maps/SolsticeTown/scripts.pory"
-	.string "Solstice Town doesn't have a gym.\n"
-	.string "It's a bit too out of the way for us to\l"
+	.string "Solstice Town doesn't have a Gym.\p"
+	.string "It's a bit too out of the way for us to\n"
 	.string "have one.$"
 
 SolsticeTown_Boy2_Dialogue_PreDelivery::
-# 251 "data/maps/SolsticeTown/scripts.pory"
+# 255 "data/maps/SolsticeTown/scripts.pory"
 	.string "WHOA there, superstar! The road ahead's\n"
-	.string "closed.\l"
-	.string "Not by law or anything, I'm just\l"
-	.string "standing here real confidently.\l"
-	.string "You look like you've got something\l"
+	.string "closed.\p"
+	.string "Not by law or anything, I'm just\n"
+	.string "standing here real confidently.\p"
+	.string "You look like you've got something\n"
 	.string "important to do back home anyway.$"
 
 SolsticeTown_Boy2_Dialogue_PostDelivery::
-# 257 "data/maps/SolsticeTown/scripts.pory"
-	.string "Ahh, the hero returns!\n"
-	.string "I'd move out of the way dramatically,\l"
-	.string "but my back's acting up.\l"
-	.string "Just pretend I did a cool spin or\l"
+# 261 "data/maps/SolsticeTown/scripts.pory"
+	.string "Ahh, the hero returns!\p"
+	.string "I'd move out of the way dramatically,\n"
+	.string "but my back's acting up.\p"
+	.string "Just pretend I did a cool spin or\n"
 	.string "something.$"
 
 SolsticeTown_Rival_Battle_Intro_Dialogue::
-# 263 "data/maps/SolsticeTown/scripts.pory"
+# 267 "data/maps/SolsticeTown/scripts.pory"
 	.string "{PLAYER}, wait!\p"
 	.string "So you're leaving on an adventure too,\n"
-	.string "huh?\l"
-	.string "Now that I have a Pokémon, I also want\l"
-	.string "to go out and explore the world!\l"
-	.string "We'll take the Pokémon League challenge\l"
-	.string "together and see who comes out on top!\l"
-	.string "Before we leave, how about a battle?\l"
-	.string "I'll give you a taste of what it means to\l"
+	.string "huh?\p"
+	.string "Now that I have a Pokémon, I also want\n"
+	.string "to go out and explore the world!\p"
+	.string "We'll take the Pokémon League challenge\n"
+	.string "together and see who comes out on top!\p"
+	.string "Before we leave, how about a battle?\p"
+	.string "I'll give you a taste of what it means to\n"
 	.string "compete with me!$"
 
 SolsticeTown_Rival_Battle_Defeat_Dialogue::
-# 272 "data/maps/SolsticeTown/scripts.pory"
-	.string "What...? Maybe I picked the wrong\n"
-	.string "Pokémon...$"
+# 276 "data/maps/SolsticeTown/scripts.pory"
+	.string "What…? Maybe I picked the wrong\n"
+	.string "Pokémon…$"
 
 SolsticeTown_Rival_After_Battle_Dialogue::
-# 276 "data/maps/SolsticeTown/scripts.pory"
-	.string "Humpft... You only won because you had a\n"
-	.string "head start.\l"
-	.string "You won't be so lucky next time, though!\l"
-	.string "Me and my Pokémon will train and get\l"
+# 280 "data/maps/SolsticeTown/scripts.pory"
+	.string "Humpft… You only won because you had a\n"
+	.string "head start.\p"
+	.string "You won't be so lucky next time, though!\p"
+	.string "Me and my Pokémon will train and get\n"
 	.string "much stronger, you'll see!$"

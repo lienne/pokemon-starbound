@@ -27,4 +27,6 @@ Info taken from https://bulbapedia.bulbagarden.net/wiki/Stats_judge.
 // Flags
 #define P_FLAG_SUMMARY_SCREEN_IV_EV_INFO 0      // If this flag is set, will allow player to cycle through the Stats, IVs, and EVs in the summary screen skills page. Note: if P_SUMMARY_SCREEN_IV_EV_INFO is TRUE, this flag does nothing.
 
+#define P_SUMMARY_SCREEN_SHOW_CONTEST_MOVES FALSE // If FALSE, the contest moves page will be hidden in the summary screen.
+
 #endif // GUARD_CONFIG_SUMMARY_SCREEN_H

@@ -6,8 +6,8 @@ script SolsticeTown_Mart_Employee_Dialogue {
     if (var(VAR_INTRO_SCENE) == 2 && !flag(FLAG_RECEIVED_JIRACHI_MEDICINE)) {
         lock
         applymovement(SolsticeTown_Mart_Employee, moves(face_player))
-        msgbox(format("Hi! Are you {PLAYER}?\n"
-            "Prof. Myra called ahead of time to say you'd come by.\l"
+        msgbox(format("Hi! Are you {PLAYER}?\p"
+            "Prof. Myra called ahead of time to say you'd come by.\p"
             "I have your package here for you."), MSGBOX_AUTOCLOSE)
         giveitem(ITEM_PARCEL)
         setflag(FLAG_RECEIVED_JIRACHI_MEDICINE)
@@ -16,7 +16,7 @@ script SolsticeTown_Mart_Employee_Dialogue {
         releaseall
     } elif (flag(FLAG_RECEIVED_JIRACHI_MEDICINE) && !flag(FLAG_DELIVERED_JIRACHI_MEDICINE)) {
         applymovement(SolsticeTown_Mart_Employee, moves(face_player))
-        msgbox(format("Hi {PLAYER}!\n"
+        msgbox(format("Hi {PLAYER}!\p"
             "Did you deliver the package to Prof. Myra yet?"), type=MSGBOX_NPC)
     } else {
         applymovement(SolsticeTown_Mart_Employee, moves(face_player))

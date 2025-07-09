@@ -11,9 +11,9 @@ script PlayersHouse_EventScript_Mom_Dialogue {
         speakername(MomName)
         applymovement(Player_Mom_1F, moves(face_player))
         msgbox(format("Welcome home, sweetie.\p"
-            "Oh, that's a cute Pokémon you've got there.\l"
-            "Did you get it from Professor Myra?\l"
-            "You should take good care of it.\l"
+            "Oh, that's a cute Pokémon you've got there.\p"
+            "Did you get it from Professor Myra?\p"
+            "You should take good care of it.\p"
             "Why don't you take a quick rest?"), type=MSGBOX_NPC)
         call(Common_EventScript_OutOfCenterPartyHeal)
         msgbox(format("Take care, honey!"), type=MSGBOX_NPC)
@@ -21,15 +21,15 @@ script PlayersHouse_EventScript_Mom_Dialogue {
         speakername(MomName)
         applymovement(Player_Mom_1F, moves(face_player))
         msgbox(format("Hi, honey!\p"
-            "...\p"
-            "So, you're finally leaving home.\l"
-            "It's really happening, isn't it?\l"
-            "You've always had a gentle heart.\l"
-            "But now, I see something else too.\l"
-            "Courage.\l"
+            "…\p"
+            "So, you're finally leaving home.\p"
+            "It's really happening, isn't it?\p"
+            "You've always had a gentle heart.\p"
+            "But now, I see something else too.\p"
+            "Courage.\p"
             "I won't try to stop you.\p"
-            "Just... promise me you'll be careful out there.\l"
-            "And remember, you'll always have a home to come back to.\l"
+            "Just… promise me you'll be careful out there.\p"
+            "And remember, you'll always have a home to come back to.\p"
             "Why don't you take a quick rest before leaving?"), type=MSGBOX_NPC)
         call(Common_EventScript_OutOfCenterPartyHeal)
         msgbox(format("Bye sweetie, I love you!"), type=MSGBOX_NPC)
@@ -37,9 +37,9 @@ script PlayersHouse_EventScript_Mom_Dialogue {
         speakername(MomName)
         applymovement(Player_Mom_1F, moves(face_player))
         msgbox(format("Oh, {PLAYER}! You're back!\p"
-            "Just for a visit, I hope - not trouble?\l"
-            "You look different already.\l"
-            "I've kept your bed made.\l"
+            "Just for a visit, I hope - not trouble?\p"
+            "You look different already.\p"
+            "I've kept your bed made.\p"
             "Why don't you take a quick rest?"), type=MSGBOX_NPC)
         call(Common_EventScript_OutOfCenterPartyHeal)
         msgbox(format("Take care, honey!"), type=MSGBOX_NPC)

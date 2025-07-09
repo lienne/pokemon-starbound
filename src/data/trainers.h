@@ -11868,10 +11868,10 @@ F_TRAINER_FEMALE |
         },
     },
 #line 4798
-    [DIFFICULTY_NORMAL][TRAINER_ROXANNE_1] =
+    [DIFFICULTY_NORMAL][TRAINER_VIVIANE_1] =
     {
 #line 4799
-        .trainerName = _("ROXANNE"),
+        .trainerName = _("Viviane"),
 #line 4800
         .trainerClass = TRAINER_CLASS_LEADER,
 #line 4801
@@ -11892,7 +11892,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 4808
-            .species = SPECIES_GEODUDE,
+            .species = SPECIES_FLABEBE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 4810
             .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
@@ -11903,47 +11903,47 @@ F_TRAINER_FEMALE |
             .moves = {
 #line 4811
                 MOVE_TACKLE,
-                MOVE_DEFENSE_CURL,
-                MOVE_ROCK_THROW,
-                MOVE_ROCK_TOMB,
+                MOVE_VINE_WHIP,
+                MOVE_FAIRY_WIND,
+                MOVE_LUCKY_CHANT,
             },
             },
             {
 #line 4816
-            .species = SPECIES_GEODUDE,
+            .species = SPECIES_TINKATINK,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 4818
             .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
 #line 4817
-            .lvl = 12,
+            .lvl = 14,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 4819
-                MOVE_TACKLE,
-                MOVE_DEFENSE_CURL,
-                MOVE_ROCK_THROW,
-                MOVE_ROCK_TOMB,
+                MOVE_ASTONISH,
+                MOVE_FAIRY_WIND,
+                MOVE_BABY_DOLL_EYES,
+                MOVE_METAL_CLAW,
             },
             },
             {
 #line 4824
-            .species = SPECIES_NOSEPASS,
+            .species = SPECIES_CLEFAIRY,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 4824
             .heldItem = ITEM_ORAN_BERRY,
 #line 4826
             .iv = TRAINER_PARTY_IVS(24, 24, 24, 24, 24, 24),
 #line 4825
-            .lvl = 15,
+            .lvl = 16,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 4827
-                MOVE_BLOCK,
-                MOVE_HARDEN,
-                MOVE_TACKLE,
-                MOVE_ROCK_TOMB,
+                MOVE_SING,
+                MOVE_SWEET_KISS,
+                MOVE_POUND,
+                MOVE_LIFE_DEW,
             },
             },
         },
@@ -33719,7 +33719,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_GRUNT_MAGMA_HIDEOUT_14] =
     {
 #line 13455
-        .trainerName = _("Grunt"),
+        .trainerName = _("Stranger"),
 #line 13456
         .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
 #line 13457

@@ -3,7 +3,7 @@
   "name": "Astridale_Gym",
   "layout": "LAYOUT_ASTRIDALE_GYM",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_LILYCOVE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -16,7 +16,7 @@
   "object_events": [
     {
       "local_id": "Astridale_Gym_Viviane",
-      "graphics_id": "OBJ_EVENT_GFX_ROXANNE",
+      "graphics_id": "OBJ_EVENT_GFX_VIVIANE",
       "x": 7,
       "y": 2,
       "elevation": 0,

@@ -49,18 +49,18 @@ StarlitPath_EventScript_RouteSign_Text_0:
 
 StarlitPath_LittleGirl_Dialogue_Text_0:
 # 14 "data/maps/Route1_StarlitPath/scripts.pory"
-	.string "The flowers here glow at night...\l"
-	.string "Grandma says it's because\n"
-	.string "the stars shine on them!$"
+	.string "The flowers here glow at night…\p"
+	.string "Grandma says it's because the stars\n"
+	.string "shine on them!$"
 
 StarlitPath_Youngster_Dialogue_Text_0:
 # 20 "data/maps/Route1_StarlitPath/scripts.pory"
 	.string "If your Pokémon get tired, take them to\n"
-	.string "a Pokémon Center.\l"
-	.string "There's a Pokémon Center in Solstice\l"
+	.string "a Pokémon Center.\p"
+	.string "There's a Pokémon Center in Solstice\n"
 	.string "Town nearby.$"
 
 StarlitPath_OldWoman_Dialogue_Text_0:
 # 26 "data/maps/Route1_StarlitPath/scripts.pory"
-	.string "I love looking at the stars!\l"
-	.string "They make me feel so small...$"
+	.string "I love looking at the stars!\p"
+	.string "They make me feel so small…$"

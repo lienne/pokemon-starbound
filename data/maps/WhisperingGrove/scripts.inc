@@ -68,35 +68,35 @@ WhisperingGrove_EventScript_RouteSign_Text_0:
 WhisperingGrove_EventScript_TrainerTipsSigns_Text_0:
 # 14 "data/maps/WhisperingGrove/scripts.pory"
 	.string "Trainer Tips!\n"
-	.string "People often drop items in the forest.\l"
-	.string "It's dark so they're difficult to see.\l"
-	.string "Check every corner and you might find\l"
+	.string "People often drop items in the forest.\p"
+	.string "It's dark so they're difficult to see.\p"
+	.string "Check every corner and you might find\n"
 	.string "something useful!$"
 
 WhisperingGrove_BugCatcher_Lyle_Intro_Text::
 # 45 "data/maps/WhisperingGrove/scripts.pory"
 	.string "Shhh! I've been trying to catch this\n"
-	.string "Metapod all morning!$"
+	.string "Metapod all day!$"
 
 WhisperingGrove_BugCatcher_Lyle_Lose_Text::
 # 49 "data/maps/WhisperingGrove/scripts.pory"
-	.string "Aw man... maybe I need quieter shoes.$"
+	.string "Aw man… maybe I need quieter shoes.$"
 
 WhisperingGrove_BugCatcher_Lyle_Dialogue::
 # 53 "data/maps/WhisperingGrove/scripts.pory"
 	.string "I hear there are some rare Pokémon in\n"
-	.string "this forest.\l"
-	.string "I've been looking for hours...$"
+	.string "this forest.\p"
+	.string "I've been looking for hours…$"
 
 WhisperingGrove_AromaLady_Jaclyn_Intro_Text::
 # 58 "data/maps/WhisperingGrove/scripts.pory"
 	.string "I like to match my Pokémon with the\n"
-	.string "colors of the flowers!\l"
+	.string "colors of the flowers!\p"
 	.string "It's just more fun that way!$"
 
 WhisperingGrove_AromaLady_Jaclyn_Lose_Text::
 # 63 "data/maps/WhisperingGrove/scripts.pory"
-	.string "Looks like I need a new strategy... and\n"
+	.string "Looks like I need a new strategy… and\n"
 	.string "maybe a new outfit!$"
 
 WhisperingGrove_AromaLady_Jaclyn_Dialogue::

@@ -22,19 +22,19 @@ mapscripts Astridale_Warehouse_MapScripts {
             applymovement(LOCALID_CAMERA, Astridale_Warehouse_Camera_Movement_PanToViviane)
             waitmovement(0)
             speakername(VivianeName)
-            msgbox(format("..."), MSGBOX_AUTOCLOSE)
+            msgbox(format("…"), MSGBOX_AUTOCLOSE)
             applymovement(Astridale_Warehouse_Viviane, moves(walk_fast_down * 3 face_right))
             waitmovement(0)
             speakername(VivianeName)
-            msgbox(format("..."), MSGBOX_AUTOCLOSE)
+            msgbox(format("…"), MSGBOX_AUTOCLOSE)
             applymovement(Astridale_Warehouse_Viviane, moves(walk_fast_left * 5 walk_up face_up))
             waitmovement(0)
             applymovement(LOCALID_PLAYER, moves(face_up))
             waitmovement(0)
             speakername(VivianeName)
-            msgbox(format("...so these are the plans for the construction...\l"
-                "...let's see...\p"
-                "..."), MSGBOX_AUTOCLOSE)
+            msgbox(format("…so these are the plans for the construction…\p"
+                "…let's see…\p"
+                "…"), MSGBOX_AUTOCLOSE)
             applymovement(Astridale_Warehouse_Viviane, moves(emote_exclamation_mark))
             playse(SE_PIN)
             waitse()
@@ -45,17 +45,17 @@ mapscripts Astridale_Warehouse_MapScripts {
             waitmovement(0)
             special(RemoveCameraObject)
             speakername(VivianeName)
-            msgbox(format("...what's this?\p"
-                "...\p"
+            msgbox(format("…what's this?\p"
+                "…\p"
                 "Yes, I'm the one who's been sabotaging the construction.\p"
-                "...\p"
-                "You don't know what you're talking about.\l"
-                "This construction's bad for Astridale.\l"
-                "It can't be allowed to continue.\l"
-                "You think you can stop me? You're just a kid.\l"
+                "…\p"
+                "You don't know what you're talking about.\p"
+                "This construction's bad for Astridale.\p"
+                "It can't be allowed to continue.\p"
+                "You think you can stop me? You're just a kid.\p"
                 "I'll put a stop to this if it's the last thing I do!"), MSGBOX_AUTOCLOSE)
-            applymovement(Astridale_Warehouse_Viviane, moves(walk_fast_down * 7))
             applymovement(LOCALID_PLAYER, moves(delay_16 walk_in_place_faster_down))
+            applymovement(Astridale_Warehouse_Viviane, moves(walk_fast_down * 7))
             waitmovement(0)
             playse(SE_DOOR)
             waitse()
@@ -74,25 +74,25 @@ mapscripts Astridale_Warehouse_MapScripts {
             applymovement(Astridale_Warehouse_Jirachi, moves(walk_slow_down * 6))
             waitmovement(0)
             speakername(JirachiName)
-            msgbox(format("{COLOR RED}{PLAYER}.\n"
-                "That person... I can feel something horribly wrong with her.\l"
-                "I think she's not in her right mind...\l"
-                "{PLAYER}, there's something you must know.\l"
-                "There is another dimension... a dimension where each person's dreams and sense of self lives.\l"
-                "Those who captured me, they've been trying to mess with people's dreams, through this other dimension.\l"
-                "I'm afraid the worst has come to pass...\l"
-                "If they somehow succeeded, they could control others through their dreams.\l"
-                "I'm afraid that person has fallen to their mind control.\l"
-                "{PLAYER}, we must find out if this is true.\l"
-                "I can grant you the power to go into her mindscape... the dimension that holds that person's dreams.\l"
-                "You'll need something, an item of great sentimental value to her.\l"
-                "If you can find such an item, you'll be able to enter her mind and hopefully free her from the control.\l"
-                "Find that item, and show it to her.\l"
-                "That should be all you need to enter her mindscape.\l"
-                "But be warned that once you enter, you won't be able to leave until you find her.\l"
-                "But I will be there to support you, so don't worry.\l"
-                "I will be able to help you if you need it.\l"
-                "I know you can do this, {PLAYER}.\l"
+            msgbox(format("{COLOR RED}{PLAYER}.\p"
+                "That person… I can feel something horribly wrong with her.\p"
+                "I think she's not in her right mind…\p"
+                "{PLAYER}, there's something you must know.\p"
+                "There is another dimension… a dimension where each person's dreams and sense of self lives.\p"
+                "Those who captured me, they've been trying to mess with people's dreams, through this other dimension.\p"
+                "I'm afraid the worst has come to pass…\p"
+                "If they somehow succeeded, they could control others through their dreams.\p"
+                "I'm afraid that person has fallen to their mind control.\p"
+                "{PLAYER}, we must find out if this is true.\p"
+                "I can grant you the power to go into her mindscape… the dimension that holds that person's dreams.\p"
+                "You'll need something, an item of great sentimental value to her.\p"
+                "If you can find such an item, you'll be able to enter her mind and hopefully free her from the control.\p"
+                "Find that item, and show it to her.\p"
+                "That should be all you need to enter her mindscape.\p"
+                "But be warned that once you enter, you won't be able to leave until you find her.\p"
+                "But I will be there to support you, so don't worry.\p"
+                "I will be able to help you if you need it.\p"
+                "I know you can do this, {PLAYER}.\p"
                 "I'll find you again soon."), MSGBOX_AUTOCLOSE)
             fadescreenswapbuffers(FADE_TO_WHITE)
             setflag(FLAG_HIDE_JIRACHI_IN_ASTRIDALE_WAREHOUSE)

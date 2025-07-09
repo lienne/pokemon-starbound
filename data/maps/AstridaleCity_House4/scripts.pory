@@ -5,19 +5,19 @@ mapscripts AstridaleCity_House4_MapScripts {
 script Astridale_House4_EventScript_OldMan_Dialogue {
     if (var(VAR_ASTRIDALE_STATE) < 3) {
         applymovement(Astridale_House4_OldMan, moves(face_player))
-        msgbox(format("Our daughter Viviane has not been herself lately.\l"
-            "She hardly ever comes home anymore..."), MSGBOX_NPC)
+        msgbox(format("Our daughter Viviane has not been herself lately.\p"
+            "She hardly ever comes home anymore…"), MSGBOX_NPC)
     }
 
     elif (var(VAR_ASTRIDALE_STATE) == 3 || var(VAR_ASTRIDALE_STATE) == 4) {
         applymovement(Astridale_House4_OldMan, moves(face_player))
-        msgbox(format("Viviane hasn't been home in a while.\n"
+        msgbox(format("Viviane hasn't been home in a while.\p"
             "It's not like her. She usually can't sleep without her Clefairy doll."), MSGBOX_NPC)
     }
     else {
         applymovement(Astridale_House4_OldMan, moves(face_player))
-        msgbox(format("I used to be a sailor, you know.\n"
-            "But I got tired of the sea and settled down here in Astridale with my family.\l"
+        msgbox(format("I used to be a sailor, you know.\p"
+            "But I got tired of the sea and settled down here in Astridale with my family.\p"
             "It's a peaceful life, and I like it that way."), MSGBOX_NPC)
     }
 }
@@ -25,20 +25,20 @@ script Astridale_House4_EventScript_OldMan_Dialogue {
 script Astridale_House4_EventScript_OldWoman_Dialogue {
     if (var(VAR_ASTRIDALE_STATE) < 3) {
         applymovement(Astridale_House4_OldWoman, moves(face_player))
-        msgbox(format("I'm worried about our daughter.\n"
-            "She was excited about the construction before, but now she seems to hate the very idea.\l"
+        msgbox(format("I'm worried about our daughter.\p"
+            "She was excited about the construction before, but now she seems to hate the very idea.\p"
             "Something must have happened for her to change her mind so suddenly."), MSGBOX_NPC)
     }
 
     elif (var(VAR_ASTRIDALE_STATE) == 3 || var(VAR_ASTRIDALE_STATE) == 4) {
         applymovement(Astridale_House4_OldWoman, moves(face_player))
-        msgbox(format("Viviane keeps her beloved Clefairy doll in her room.\l"
+        msgbox(format("Viviane keeps her beloved Clefairy doll in her room.\p"
             "She used to take it everywhere with her, but now..."), MSGBOX_NPC)
     }
     else {
         applymovement(Astridale_House4_OldWoman, moves(face_player))
-        msgbox(format("I used to be a sailor's wife.\n"
-            "Now I just enjoy the peace and quiet of Astridale.\l"
+        msgbox(format("I used to be a sailor's wife.\p"
+            "Now I just enjoy the peace and quiet of Astridale.\p"
             "Our daughter, Viviane, became the gym leader after we moved here."), MSGBOX_NPC)
     }
 }

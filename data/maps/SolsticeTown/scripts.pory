@@ -14,7 +14,7 @@ script SolsticeTown_EventScript_TownSign {
 
 script SolsticeTown_EventScript_Girl1_Dialogue {
     applymovement(SolsticeTown_Girl1, moves(face_player))
-    msgbox(format("Did you know you can press Start to check your Pokémon summary?"), type=MSGBOX_NPC)
+    msgbox(format("Did you know you can press Start to check your Pokémon Summary?"), type=MSGBOX_NPC)
     applymovement(SolsticeTown_Girl1, moves(face_right))
 }
 
@@ -26,7 +26,7 @@ script SolsticeTown_EventScript_Boy1_Dialogue {
 
 script SolsticeTown_EventScript_Girl2_Dialogue {
     applymovement(SolsticeTown_Girl2, moves(face_player))
-    msgbox(format("Solstice Town doesn't have a gym.\n"
+    msgbox(format("Solstice Town doesn't have a Gym.\p"
         "It's a bit too out of the way for us to have one."), type=MSGBOX_NPC)
 }
 
@@ -94,6 +94,7 @@ script SolsticeTown_EventScript_RivalRunsToPlayerAtA {
         applymovement(LOCALID_PLAYER, SolsticeTown_ExclamationMark)
         playse(SE_PIN)
         waitmovement(0)
+        hidefollower()
         delay(20)
         applymovement(LOCALID_PLAYER, moves(face_down))
         waitmovement(0)
@@ -115,6 +116,7 @@ script SolsticeTown_EventScript_RivalRunsToPlayerAtB {
         applymovement(LOCALID_PLAYER, SolsticeTown_ExclamationMark)
         playse(SE_PIN)
         waitmovement(0)
+        hidefollower()
         delay(20)
         applymovement(LOCALID_PLAYER, moves(face_down))
         waitmovement(0)
@@ -136,6 +138,7 @@ script SolsticeTown_EventScript_RivalRunsToPlayerAtC {
         applymovement(LOCALID_PLAYER, SolsticeTown_ExclamationMark)
         playse(SE_PIN)
         waitmovement(0)
+        hidefollower()
         delay(20)
         applymovement(LOCALID_PLAYER, moves(face_down))
         waitmovement(0)
@@ -157,6 +160,7 @@ script SolsticeTown_EventScript_RivalRunsToPlayerAtD {
         applymovement(LOCALID_PLAYER, SolsticeTown_ExclamationMark)
         playse(SE_PIN)
         waitmovement(0)
+        hidefollower()
         delay(20)
         applymovement(LOCALID_PLAYER, moves(face_down))
         waitmovement(0)
@@ -249,33 +253,33 @@ script SolsticeTown_EventScript_RivalExit {
 }
 
 text SolsticeTown_Boy2_Dialogue_PreDelivery {
-    format("WHOA there, superstar! The road ahead's closed.\l"
-    "Not by law or anything, I'm just standing here real confidently.\l"
+    format("WHOA there, superstar! The road ahead's closed.\p"
+    "Not by law or anything, I'm just standing here real confidently.\p"
     "You look like you've got something important to do back home anyway.")
 }
 
 text SolsticeTown_Boy2_Dialogue_PostDelivery {
-    format("Ahh, the hero returns!\n"
-        "I'd move out of the way dramatically, but my back's acting up.\l"
+    format("Ahh, the hero returns!\p"
+        "I'd move out of the way dramatically, but my back's acting up.\p"
         "Just pretend I did a cool spin or something.")
 }
 
 text SolsticeTown_Rival_Battle_Intro_Dialogue {
     format("{PLAYER}, wait!\p"
-        "So you're leaving on an adventure too, huh?\l"
-        "Now that I have a Pokémon, I also want to go out and explore the world!\l"
-        "We'll take the Pokémon League challenge together and see who comes out on top!\l"
-        "Before we leave, how about a battle?\l"
+        "So you're leaving on an adventure too, huh?\p"
+        "Now that I have a Pokémon, I also want to go out and explore the world!\p"
+        "We'll take the Pokémon League challenge together and see who comes out on top!\p"
+        "Before we leave, how about a battle?\p"
         "I'll give you a taste of what it means to compete with me!")
 }
 
 text SolsticeTown_Rival_Battle_Defeat_Dialogue {
-    format("What...? Maybe I picked the wrong Pokémon...")
+    format("What…? Maybe I picked the wrong Pokémon…")
 }
 
 text SolsticeTown_Rival_After_Battle_Dialogue {
-    format("Humpft... You only won because you had a head start.\l"
-        "You won't be so lucky next time, though!\l"
+    format("Humpft… You only won because you had a head start.\p"
+        "You won't be so lucky next time, though!\p"
         "Me and my Pokémon will train and get much stronger, you'll see!")
 }
 

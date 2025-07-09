@@ -83,81 +83,81 @@ SunfadeTrail_EventScript_RouteSign_Text_0:
 SunfadeTrail_BugCatcher_Simeon_Intro_Text::
 # 47 "data/maps/Route2_Sunfade_Trail/scripts.pory"
 	.string "Passing through?\n"
-	.string "Not without meeting my Bug\l"
-	.string "Pokémon you aren't!$"
+	.string "Not without meeting my Bug Pokémon you\l"
+	.string "aren't!$"
 
 SunfadeTrail_BugCatcher_Simeon_Lose_Text::
-# 51 "data/maps/Route2_Sunfade_Trail/scripts.pory"
-	.string "You were supposed to meet them,\n"
-	.string "not beat them...$"
+# 52 "data/maps/Route2_Sunfade_Trail/scripts.pory"
+	.string "You were supposed to meet them, not\n"
+	.string "beat them…$"
 
 SunfadeTrail_BugCatcher_Simeon_Dialogue::
-# 55 "data/maps/Route2_Sunfade_Trail/scripts.pory"
-	.string "Bug Pokémon are my favorite... when\n"
+# 56 "data/maps/Route2_Sunfade_Trail/scripts.pory"
+	.string "Bug Pokémon are my favorite… when\n"
 	.string "they're not nibbling on me!$"
 
 SunfadeTrail_Boy_Tim_Intro_Text::
 # 60 "data/maps/Route2_Sunfade_Trail/scripts.pory"
-	.string "I'm training to get through\n"
-	.string "Whispering Grove.\l"
+	.string "I'm training to get through Whispering\n"
+	.string "Grove.\p"
 	.string "Want to train with me?$"
 
 SunfadeTrail_Boy_Tim_Lose_Text::
-# 64 "data/maps/Route2_Sunfade_Trail/scripts.pory"
+# 65 "data/maps/Route2_Sunfade_Trail/scripts.pory"
 	.string "Wow! Amazing Pokémon!$"
 
 SunfadeTrail_Boy_Tim_Dialogue::
-# 68 "data/maps/Route2_Sunfade_Trail/scripts.pory"
+# 69 "data/maps/Route2_Sunfade_Trail/scripts.pory"
 	.string "Whispering Grove has lots of\n"
-	.string "Poison-type Pokémon... I keep getting\l"
+	.string "Poison-type Pokémon… I keep getting\l"
 	.string "overwhelmed!$"
 
 SunfadeTrail_Youngster_Billy_Intro_Text::
-# 74 "data/maps/Route2_Sunfade_Trail/scripts.pory"
-	.string "I found a rare Pokémon in Sunfade Trail!\l"
+# 73 "data/maps/Route2_Sunfade_Trail/scripts.pory"
+	.string "I found a rare Pokémon in Sunfade Trail!\p"
 	.string "Wanna see?$"
 
 SunfadeTrail_Youngster_Billy_Lose_Text::
-# 79 "data/maps/Route2_Sunfade_Trail/scripts.pory"
+# 78 "data/maps/Route2_Sunfade_Trail/scripts.pory"
 	.string "I guess rare Pokémon aren't necessarily\n"
-	.string "stronger...$"
+	.string "stronger…$"
 
 SunfadeTrail_Youngster_Billy_Dialogue::
-# 83 "data/maps/Route2_Sunfade_Trail/scripts.pory"
+# 82 "data/maps/Route2_Sunfade_Trail/scripts.pory"
 	.string "Apparently Seedot are more common in\n"
 	.string "Whispering Grove.$"
 
 SunfadeTrail_Anabel_Dialogue::
-# 87 "data/maps/Route2_Sunfade_Trail/scripts.pory"
+# 86 "data/maps/Route2_Sunfade_Trail/scripts.pory"
 	.string "Lumen Village is a bit isolated from the\n"
-	.string "rest of Astrea.\l"
-	.string "You have to get through Whispering\l"
+	.string "rest of Astrea.\p"
+	.string "You have to get through Whispering\n"
 	.string "Grove and Solstice Town to get there.$"
 
 SunfadeTrail_OldMan_Dialogue::
-# 92 "data/maps/Route2_Sunfade_Trail/scripts.pory"
+# 91 "data/maps/Route2_Sunfade_Trail/scripts.pory"
 	.string "I moved here from Myrren Town in my\n"
-	.string "retirement.\l"
-	.string "My old bones couldn't really take the\l"
+	.string "retirement.\p"
+	.string "My old bones couldn't really take the\n"
 	.string "cold anymore.$"
 
 SunfadeTrail_Healing_Lady_Dialogue::
-# 97 "data/maps/Route2_Sunfade_Trail/scripts.pory"
-	.string "I'm having a picnic by the water.\n"
-	.string "It's really peaceful here.\l"
-	.string "Why don't you stay for a minute and\l"
+# 96 "data/maps/Route2_Sunfade_Trail/scripts.pory"
+	.string "I'm having a picnic by the water.\p"
+	.string "It's really peaceful here.\p"
+	.string "Why don't you stay for a minute and\n"
 	.string "take a rest with me?$"
 
 SunfadeTrail_Lass_Haley_Intro_Text::
-# 103 "data/maps/Route2_Sunfade_Trail/scripts.pory"
+# 102 "data/maps/Route2_Sunfade_Trail/scripts.pory"
 	.string "Did you hear? Astridale's under\n"
 	.string "construction!$"
 
 SunfadeTrail_Lass_Haley_Lose_Text::
-# 107 "data/maps/Route2_Sunfade_Trail/scripts.pory"
-	.string "Awee...$"
+# 106 "data/maps/Route2_Sunfade_Trail/scripts.pory"
+	.string "Awee…$"
 
 SunfadeTrail_Lass_Haley_Dialogue::
-# 111 "data/maps/Route2_Sunfade_Trail/scripts.pory"
-	.string "I hear that Astridale's gym leader isn't\n"
+# 110 "data/maps/Route2_Sunfade_Trail/scripts.pory"
+	.string "I hear that Astridale's Gym Leader isn't\n"
 	.string "very happy with the expansion.$"

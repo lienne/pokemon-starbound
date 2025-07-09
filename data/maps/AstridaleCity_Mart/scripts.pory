@@ -1,0 +1,32 @@
+mapscripts AstridaleCity_Mart_MapScripts {
+    
+}
+
+script Astridale_Mart_Employee_Dialogue {
+    applymovement(Astridale_Mart_Employee, moves(face_player))
+    msgbox(format("Welcome to the Solstice Town Mart!"), MSGBOX_NPC)
+    waitmessage()
+    pokemart(Astridale_Mart_Items)
+    msgbox(format("Thank you for shopping with us!"), MSGBOX_NPC)
+}
+
+mart Astridale_Mart_Items {
+    ITEM_POKE_BALL
+    ITEM_POTION
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+}
+
+script Astridale_Mart_Beauty_Dialogue {
+    applymovement(Astridale_Mart_Beauty, moves(face_player))
+    msgbox(format("I'm buying beauty products for me and my Pokémon.\p"
+        "What? I can't be the only one looking beautiful."), MSGBOX_NPC)
+    applymovement(Astridale_Mart_Beauty, moves(face_up))
+}
+
+script Astridale_Mart_BlackBelt_Dialogue {
+    applymovement(Astridale_Mart_BlackBelt, moves(face_player))
+    msgbox(format("It's incredible how many different products you can find at PokéMarts."), MSGBOX_NPC)
+    applymovement(Astridale_Mart_BlackBelt, moves(face_right))
+}

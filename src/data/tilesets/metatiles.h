@@ -213,3 +213,6 @@ const u16 gMetatileAttributes_AstridaleMindscape[] = INCBIN_U16("data/tilesets/p
 
 const u16 gMetatiles_Astridale_Mindscape_Secondary[] = INCBIN_U16("data/tilesets/secondary/astridale_mindscape_secondary/metatiles.bin");
 const u16 gMetatileAttributes_Astridale_Mindscape_Secondary[] = INCBIN_U16("data/tilesets/secondary/astridale_mindscape_secondary/metatile_attributes.bin");
+
+const u16 gMetatiles_New_General[] = INCBIN_U16("data/tilesets/primary/new_general/metatiles.bin");
+const u16 gMetatileAttributes_New_General[] = INCBIN_U16("data/tilesets/primary/new_general/metatile_attributes.bin");

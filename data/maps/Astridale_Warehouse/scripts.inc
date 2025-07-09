@@ -98,9 +98,9 @@ Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 # 48 "data/maps/Astridale_Warehouse/scripts.pory"
 	msgbox Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_2, MSGBOX_AUTOCLOSE
 # 57 "data/maps/Astridale_Warehouse/scripts.pory"
-	applymovement Astridale_Warehouse_Viviane, Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_6
+	applymovement LOCALID_PLAYER, Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_6
 # 58 "data/maps/Astridale_Warehouse/scripts.pory"
-	applymovement LOCALID_PLAYER, Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_7
+	applymovement Astridale_Warehouse_Viviane, Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_7
 # 59 "data/maps/Astridale_Warehouse/scripts.pory"
 	waitmovement 0
 # 60 "data/maps/Astridale_Warehouse/scripts.pory"
@@ -255,27 +255,27 @@ Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_5:
 # 57 "data/maps/Astridale_Warehouse/scripts.pory"
 Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_6:
 # 57 "data/maps/Astridale_Warehouse/scripts.pory"
-	walk_fast_down
+	delay_16
 # 57 "data/maps/Astridale_Warehouse/scripts.pory"
-	walk_fast_down
-# 57 "data/maps/Astridale_Warehouse/scripts.pory"
-	walk_fast_down
-# 57 "data/maps/Astridale_Warehouse/scripts.pory"
-	walk_fast_down
-# 57 "data/maps/Astridale_Warehouse/scripts.pory"
-	walk_fast_down
-# 57 "data/maps/Astridale_Warehouse/scripts.pory"
-	walk_fast_down
-# 57 "data/maps/Astridale_Warehouse/scripts.pory"
-	walk_fast_down
+	walk_in_place_faster_down
 	step_end
 
 # 58 "data/maps/Astridale_Warehouse/scripts.pory"
 Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_7:
 # 58 "data/maps/Astridale_Warehouse/scripts.pory"
-	delay_16
+	walk_fast_down
 # 58 "data/maps/Astridale_Warehouse/scripts.pory"
-	walk_in_place_faster_down
+	walk_fast_down
+# 58 "data/maps/Astridale_Warehouse/scripts.pory"
+	walk_fast_down
+# 58 "data/maps/Astridale_Warehouse/scripts.pory"
+	walk_fast_down
+# 58 "data/maps/Astridale_Warehouse/scripts.pory"
+	walk_fast_down
+# 58 "data/maps/Astridale_Warehouse/scripts.pory"
+	walk_fast_down
+# 58 "data/maps/Astridale_Warehouse/scripts.pory"
+	walk_fast_down
 	step_end
 
 # 74 "data/maps/Astridale_Warehouse/scripts.pory"
@@ -296,68 +296,68 @@ Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_8:
 
 Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0:
 # 25 "data/maps/Astridale_Warehouse/scripts.pory"
-	.string "...$"
+	.string "…$"
 
 Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_1:
 # 35 "data/maps/Astridale_Warehouse/scripts.pory"
-	.string "...so these are the plans for the\n"
-	.string "construction...\l"
-	.string "...let's see...\p"
-	.string "...$"
+	.string "…so these are the plans for the\n"
+	.string "construction…\p"
+	.string "…let's see…\p"
+	.string "…$"
 
 Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_2:
 # 48 "data/maps/Astridale_Warehouse/scripts.pory"
-	.string "...what's this?\p"
-	.string "...\p"
+	.string "…what's this?\p"
+	.string "…\p"
 	.string "Yes, I'm the one who's been sabotaging\n"
 	.string "the construction.\p"
-	.string "...\p"
+	.string "…\p"
 	.string "You don't know what you're talking\n"
-	.string "about.\l"
-	.string "This construction's bad for Astridale.\l"
-	.string "It can't be allowed to continue.\l"
-	.string "You think you can stop me? You're just\l"
-	.string "a kid.\l"
-	.string "I'll put a stop to this if it's the last\l"
+	.string "about.\p"
+	.string "This construction's bad for Astridale.\p"
+	.string "It can't be allowed to continue.\p"
+	.string "You think you can stop me? You're just\n"
+	.string "a kid.\p"
+	.string "I'll put a stop to this if it's the last\n"
 	.string "thing I do!$"
 
 Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_3:
 # 77 "data/maps/Astridale_Warehouse/scripts.pory"
-	.string "{COLOR RED}{PLAYER}.\n"
-	.string "That person... I can feel something\l"
-	.string "horribly wrong with her.\l"
-	.string "I think she's not in her right mind...\l"
-	.string "{PLAYER}, there's something you must\l"
-	.string "know.\l"
-	.string "There is another dimension... a\l"
-	.string "dimension where each person's dreams\l"
-	.string "and sense of self lives.\l"
-	.string "Those who captured me, they've been\l"
+	.string "{COLOR RED}{PLAYER}.\p"
+	.string "That person… I can feel something\n"
+	.string "horribly wrong with her.\p"
+	.string "I think she's not in her right mind…\p"
+	.string "{PLAYER}, there's something you must\n"
+	.string "know.\p"
+	.string "There is another dimension… a dimension\n"
+	.string "where each person's dreams and sense\l"
+	.string "of self lives.\p"
+	.string "Those who captured me, they've been\n"
 	.string "trying to mess with people's dreams,\l"
-	.string "through this other dimension.\l"
-	.string "I'm afraid the worst has come to pass...\l"
-	.string "If they somehow succeeded, they could\l"
-	.string "control others through their dreams.\l"
-	.string "I'm afraid that person has fallen to\l"
-	.string "their mind control.\l"
-	.string "{PLAYER}, we must find out if this is\l"
-	.string "true.\l"
-	.string "I can grant you the power to go into her\l"
-	.string "mindscape... the dimension that holds\l"
-	.string "that person's dreams.\l"
-	.string "You'll need something, an item of great\l"
-	.string "sentimental value to her.\l"
-	.string "If you can find such an item, you'll be\l"
+	.string "through this other dimension.\p"
+	.string "I'm afraid the worst has come to pass…\p"
+	.string "If they somehow succeeded, they could\n"
+	.string "control others through their dreams.\p"
+	.string "I'm afraid that person has fallen to\n"
+	.string "their mind control.\p"
+	.string "{PLAYER}, we must find out if this is\n"
+	.string "true.\p"
+	.string "I can grant you the power to go into her\n"
+	.string "mindscape… the dimension that holds\l"
+	.string "that person's dreams.\p"
+	.string "You'll need something, an item of great\n"
+	.string "sentimental value to her.\p"
+	.string "If you can find such an item, you'll be\n"
 	.string "able to enter her mind and hopefully\l"
-	.string "free her from the control.\l"
-	.string "Find that item, and show it to her.\l"
-	.string "That should be all you need to enter her\l"
-	.string "mindscape.\l"
-	.string "But be warned that once you enter, you\l"
+	.string "free her from the control.\p"
+	.string "Find that item, and show it to her.\p"
+	.string "That should be all you need to enter her\n"
+	.string "mindscape.\p"
+	.string "But be warned that once you enter, you\n"
 	.string "won't be able to leave until you find\l"
-	.string "her.\l"
-	.string "But I will be there to support you, so\l"
-	.string "don't worry.\l"
-	.string "I will be able to help you if you need it.\l"
-	.string "I know you can do this, {PLAYER}.\l"
+	.string "her.\p"
+	.string "But I will be there to support you, so\n"
+	.string "don't worry.\p"
+	.string "I will be able to help you if you need it.\p"
+	.string "I know you can do this, {PLAYER}.\p"
 	.string "I'll find you again soon.$"
