@@ -50,6 +50,7 @@
 #include "constants/battle_frontier.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "heat_start_menu.h"
 
 // Menu actions
 enum
@@ -580,10 +581,12 @@ static void CreateStartMenuTask(TaskFunc followupFunc)
 
 static bool8 FieldCB_ReturnToFieldStartMenu(void)
 {
-    if (InitStartMenuStep() == FALSE)
-    {
-        return FALSE;
-    }
+    // if (InitStartMenuStep() == FALSE)
+    // {
+    //     return FALSE;
+    // }
+
+    HeatStartMenu_Init();
 
     ReturnToFieldOpenStartMenu();
     return TRUE;

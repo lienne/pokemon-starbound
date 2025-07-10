@@ -2790,6 +2790,11 @@ void Task_QuestMenu_OpenFromStartMenu(u8 taskId)
 	}
 }
 
+void CB2_OpenQuestMenu(void)
+{
+    QuestMenu_Init(0, CB2_ReturnToFieldWithOpenMenu);
+}
+
 void QuestMenu_CopyQuestName(u8 *dst, u8 questId)
 {
 	StringCopy(dst, sSideQuests[questId].name);
