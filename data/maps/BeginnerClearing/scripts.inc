@@ -779,8 +779,10 @@ BeginnerClearing_EventScript_JirachiPlayerFirstDialogue::
 # 419 "data/maps/BeginnerClearing/scripts.pory"
 	startquest QUEST_2_STARBOUND_OATH
 # 420 "data/maps/BeginnerClearing/scripts.pory"
-	openquestmenu
+	subquestmenu QUEST_MENU_SET_ACTIVE, QUEST_2_STARBOUND_OATH, SUB_QUEST_GO_TO_ZENITH_CITY
 # 421 "data/maps/BeginnerClearing/scripts.pory"
+	openquestmenu
+# 422 "data/maps/BeginnerClearing/scripts.pory"
 	releaseall
 	return
 

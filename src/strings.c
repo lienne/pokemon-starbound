@@ -1451,7 +1451,7 @@ const u8 gText_SideQuestMap29[] = _("Map 29");
 const u8 gText_SideQuestMap30[] = _("Map 30");
 
 // subquests
-const u8 gText_SubQuest1_Name1[] = _("Part 1");
+const u8 gText_SubQuest1_Name1[] = _("Go to Zenith!");
 const u8 gText_SubQuest1_Name2[] = _("Part 2");
 const u8 gText_SubQuest1_Name3[] = _("Part 3");
 const u8 gText_SubQuest1_Name4[] = _("Part 4");
@@ -1483,7 +1483,7 @@ const u8 gText_SubQuest2_Name18[] = _("Part 18");
 const u8 gText_SubQuest2_Name19[] = _("Part 19");
 const u8 gText_SubQuest2_Name20[] = _("Part 20");
 
-const u8 gText_SubQuest1_Desc1[] = _("Description Sub 1");
+const u8 gText_SubQuest1_Desc1[] = _("Go to Zenith City to look for Jirachi's\nfriend!");
 const u8 gText_SubQuest1_Desc2[] = _("Description Sub 2");
 const u8 gText_SubQuest1_Desc3[] = _("Description Sub 3");
 const u8 gText_SubQuest1_Desc4[] = _("Description Sub 4");

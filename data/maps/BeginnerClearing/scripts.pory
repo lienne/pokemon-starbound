@@ -417,6 +417,7 @@ script BeginnerClearing_EventScript_JirachiPlayerFirstDialogue {
         fadescreenswapbuffers(FADE_FROM_WHITE)
         completequest(QUEST_1_MEDS_FOR_JIRACHI)
         startquest(QUEST_2_STARBOUND_OATH)
+        subquestmenu(QUEST_MENU_SET_ACTIVE, QUEST_2_STARBOUND_OATH, SUB_QUEST_GO_TO_ZENITH_CITY)
         openquestmenu()
         releaseall
 }
