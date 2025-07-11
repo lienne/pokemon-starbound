@@ -152,6 +152,7 @@ script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA {
         setvar(VAR_INTRO_SCENE, 6)
         setflag(FLAG_DELIVERED_JIRACHI_MEDICINE)
         removeitem(ITEM_PARCEL)
+        hidefollower()
         applymovement(LOCALID_PLAYER, moves(emote_exclamation_mark delay_16 face_down))
         playse(SE_PIN)
         waitmovement(0)
@@ -172,6 +173,7 @@ script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotB {
         setvar(VAR_INTRO_SCENE, 6)
         setflag(FLAG_DELIVERED_JIRACHI_MEDICINE)
         removeitem(ITEM_PARCEL)
+        hidefollower()
         applymovement(LOCALID_PLAYER, moves(emote_exclamation_mark delay_16 face_down))
         playse(SE_PIN)
         waitmovement(0)
@@ -190,6 +192,7 @@ script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotC {
         setvar(VAR_INTRO_SCENE, 6)
         setflag(FLAG_DELIVERED_JIRACHI_MEDICINE)
         removeitem(ITEM_PARCEL)
+        hidefollower()
         applymovement(LOCALID_PLAYER, moves(emote_exclamation_mark delay_16 face_down))
         playse(SE_PIN)
         waitmovement(0)
@@ -210,6 +213,7 @@ script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotD {
         setvar(VAR_INTRO_SCENE, 6)
         setflag(FLAG_DELIVERED_JIRACHI_MEDICINE)
         removeitem(ITEM_PARCEL)
+        hidefollower()
         applymovement(LOCALID_PLAYER, moves(emote_exclamation_mark delay_16 face_down))
         playse(SE_PIN)
         waitmovement(0)
@@ -226,7 +230,6 @@ script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotD {
 
 script LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue {
     lockall
-    hidefollower()
     speakername(ProfMyraName)
     msgbox(format("{PLAYER}! Wait!\p"
         "Did you find Jirachi? Is it safe?\p"

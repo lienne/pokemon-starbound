@@ -71,6 +71,8 @@ script Astridale_EventScript_ConstructionMan1_Dialogue {
             "We don't know what to make of it.\p"
             "It would be crazy if someone were sabotaging us, wouldn't it?\p"
             "Hahahaha!"), MSGBOX_NPC)
+        startquest(QUEST_3_ASTRIDALE_SABOTEUR)
+        openquestmenu()
     }
     else {
         applymovement(Astridale_ConstructionMan1, moves(face_player))

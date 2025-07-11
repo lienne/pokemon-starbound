@@ -674,7 +674,7 @@ static void HeatStartMenu_CreateSprites(void) {
   u32 y6 = 130;
   u32 y7 = 150;
 
-  if (FlagGet(FLAG_SYS_QUEST_MENU_GET) == TRUE) {
+  if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE) {
     sHeatStartMenu->spriteIdPokedex = CreateSprite(&gSpriteIconPokedex, x-1, y1-2, 0);
     sHeatStartMenu->spriteIdParty   = CreateSprite(&gSpriteIconParty, x, y2-3, 0);
     sHeatStartMenu->spriteIdBag     = CreateSprite(&gSpriteIconBag, x, y3-2, 0);
@@ -683,12 +683,12 @@ static void HeatStartMenu_CreateSprites(void) {
     sHeatStartMenu->spriteIdSave    = CreateSprite(&gSpriteIconSave, x, y6, 0);
     sHeatStartMenu->spriteIdOptions = CreateSprite(&gSpriteIconOptions, x, y7, 0);
     return;
-  } else if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE) {
-    sHeatStartMenu->spriteIdPokedex = CreateSprite(&gSpriteIconPokedex, x-1, y1, 0);
-    sHeatStartMenu->spriteIdParty = CreateSprite(&gSpriteIconParty, x, y2-1, 0);
-    sHeatStartMenu->spriteIdBag     = CreateSprite(&gSpriteIconBag, x, y3+1, 0);
-    sHeatStartMenu->spriteIdTrainerCard = CreateSprite(&gSpriteIconTrainerCard, x, y4 + 2, 0);
-    sHeatStartMenu->spriteIdSave    = CreateSprite(&gSpriteIconSave, x, y5 - 1, 0);
+  } else if (FlagGet(FLAG_SYS_QUEST_MENU_GET) == TRUE) {
+    sHeatStartMenu->spriteIdParty   = CreateSprite(&gSpriteIconParty, x, y1, 0);
+    sHeatStartMenu->spriteIdBag     = CreateSprite(&gSpriteIconBag, x, y2-2, 0);
+    sHeatStartMenu->spriteIdPoketch = CreateSprite(&gSpriteIconPoketch, x, y3+3, 0);
+    sHeatStartMenu->spriteIdTrainerCard = CreateSprite(&gSpriteIconTrainerCard, x, y4+2, 0);
+    sHeatStartMenu->spriteIdSave    = CreateSprite(&gSpriteIconSave, x, y5-1, 0);
     sHeatStartMenu->spriteIdOptions = CreateSprite(&gSpriteIconOptions, x, y6-2, 0);
     return;
   } else if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE) {

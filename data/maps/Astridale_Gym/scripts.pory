@@ -37,6 +37,8 @@ mapscripts Astridale_Gym_MapScripts {
             msgbox(format("The Charm Badge allows you to use the HM Cut outside of battle.\p"
                 "It also heightens the attack power of your Pokémon.\p"
                 "I'm sure you will find it very useful."), MSGBOX_AUTOCLOSE)
+            completequest(QUEST_3_ASTRIDALE_SABOTEUR)
+            openquestmenu()
             end
         }
     ]

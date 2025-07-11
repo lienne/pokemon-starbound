@@ -60,5 +60,14 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 15,
+      "y": 11,
+      "elevation": 0,
+      "item": "ITEM_AWAKENING",
+      "flag": "FLAG_HIDDEN_ITEM_ASTRIDALE_WAREHOUSE_AWAKENING"
+    }
+  ]
 }

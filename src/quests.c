@@ -201,7 +201,7 @@ static void Task_QuestMenuTurnOff2(u8 taskId);
 
 // Tiles, palettes and tilemaps for the Quest Menu
 static const u32 sQuestMenuTiles[] = INCBIN_U32("graphics/quest_menu/menu.4bpp.lz");
-static const u32 sQuestMenuBgPals[] = INCBIN_U32("graphics/quest_menu/menu.gbapal.lz");
+static const u32 sQuestMenuBgPals[] = INCBIN_U32("graphics/quest_menu/menu.gbapal");
 static const u32 sQuestMenuTilemap[] = INCBIN_U32("graphics/quest_menu/menu.bin.lz");
 
 //Strings used for the Quest Menu
@@ -583,10 +583,10 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_3,
 	      gText_SideQuestDoneDesc_3,
 	      gText_SideQuestMap3,
-	      OBJ_EVENT_GFX_WALLY,
+	      OBJ_EVENT_GFX_HIKER,
 	      OBJECT,
-	      sSubQuests2,
-	      QUEST_2_SUB_COUNT
+	      NULL,
+	      0
 	),
 	side_quest(
 	      gText_SideQuestName_4,
@@ -1117,23 +1117,15 @@ static bool8 SetupGraphics(void)
 			gMain.state++;
 			break;
 		case 18:
-			if (sListMenuState.initialized == 1)
-			{
-				BlendPalettes(0xFFFFFFFF, 16, RGB_BLACK);
-			}
+            BlendPalettes(PALETTES_ALL, 16, 0);
 			gMain.state++;
 			break;
 		case 19:
-			if (sListMenuState.initialized == 1)
-			{
-				BeginNormalPaletteFade(0xFFFFFFFF, 0, 16, 0, RGB_BLACK);
-			}
-			else
-			{
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
+            gPaletteFade.bufferTransferDisabled = FALSE;
 
-				BeginNormalPaletteFade(0xFFFFFFFF, 0, 16, 0, RGB_BLACK);
-				SetInitializedFlag(1);
-			}
+            if (sListMenuState.initialized != 1)
+                SetInitializedFlag(1);
 			gMain.state++;
 			break;
 		default:
@@ -1520,7 +1512,7 @@ static u8 CountNumberListRows()
 		case SORT_DONE:
 			return CountCompletedQuests() + 1;
 	}
-	
+
 	return 1;
 }
 
