@@ -115,6 +115,7 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
                 "You should go back to {COLOR RED}Starfall Clearing {COLOR DARK_GRAY}to look for it.\p"
                 "If it chose to show itself to you, it might do so again.\p"
                 "Please look for Jirachi, {PLAYER}, and make sure it is safe."), MSGBOX_AUTOCLOSE)
+            updatequest(QUEST_1_MEDS_FOR_JIRACHI, VAR_MEDICINE_FOR_JIRACHI_STATE)
             end
         }
     ]

@@ -1321,6 +1321,7 @@ const u8 gText_CannotSendMonToBoxHM[] = _("Cannot send that mon to the box,\nbec
 const u8 gText_QuestAnnounce[] = _("The quest “{STR_VAR_1}”\nis now {STR_VAR_2}.");
 const u8 gText_QuestComplete[] =_("complete");
 const u8 gText_QuestActive[] =_("active");
+const u8 gText_QuestUpdate[] = _("The quest “{STR_VAR_1}”\nhas been updated!");
 
 // names
 const u8 gText_SideQuestName_1[] = _("Medicine for Jirachi");
@@ -1355,7 +1356,7 @@ const u8 gText_SideQuestName_29[] = _("Side Quest 29");
 const u8 gText_SideQuestName_30[] = _("Side Quest 30");
 
 // descriptions
-const u8 gText_SideQuestDesc_1[] = _("Go to Solstice Town PokéMart and get a\nspecial medicine for Jirachi.");
+// const u8 gText_SideQuestDesc_1[] = _("Go to Solstice Town PokéMart and get a\nspecial medicine for Jirachi.");
 const u8 gText_SideQuestDesc_2[] = _("After witnessing a fallen star, you've\nsworn to help a weakened Jirachi\nrestore balance to the region.");
 const u8 gText_SideQuestDesc_3[] = _("Find whoever is sabotaging the\nAstridale construction!");
 const u8 gText_SideQuestDesc_4[] = _("Description 4");
@@ -1385,6 +1386,10 @@ const u8 gText_SideQuestDesc_27[] = _("Description 27");
 const u8 gText_SideQuestDesc_28[] = _("Description 28");
 const u8 gText_SideQuestDesc_29[] = _("Description 29");
 const u8 gText_SideQuestDesc_30[] = _("Description 30");
+
+// Complex descriptions
+const u8 gComplexQuest_Quest1Desc_1[] = _("Go to Solstice Town PokéMart and get a\nspecial medicine for Jirachi.");
+const u8 gComplexQuest_Quest1Desc_2[] = _("Find Jirachi in Starfall Clearing.");
 
 // completed quest description
 const u8 gText_SideQuestDoneDesc_1[] = _("Medicine delivered!");
@@ -1449,6 +1454,10 @@ const u8 gText_SideQuestMap27[] = _("Map 27");
 const u8 gText_SideQuestMap28[] = _("Map 28");
 const u8 gText_SideQuestMap29[] = _("Map 29");
 const u8 gText_SideQuestMap30[] = _("Map 30");
+
+// Complex quest maps
+const u8 gComplexQuest_Quest1Map_1[] = _("Solstice Town");
+const u8 gComplexQuest_Quest1Map_2[] = _("Starfall Clearing");
 
 // subquests
 const u8 gText_SubQuest1_Name1[] = _("Go to Zenith!");
