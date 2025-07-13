@@ -6,7 +6,7 @@ SolsticeTown_House2_EventScript_Man_Dialogue::
 # 6 "data/maps/SolsticeTown_House2/scripts.pory"
 	applymovement SolsticeTown_House2_Man, SolsticeTown_House2_EventScript_Man_Dialogue_Movement_0
 # 7 "data/maps/SolsticeTown_House2/scripts.pory"
-	msgbox SolsticeTown_House2_EventScript_Man_Dialogue_Text_0, type = MSGBOX_NPC
+	msgbox SolsticeTown_House2_EventScript_Man_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 

@@ -7,41 +7,56 @@ text MomName {
 }
 
 script PlayersHouse_EventScript_Mom_Dialogue {
-    if (var(VAR_INTRO_SCENE) < 5) {
+    if (var(VAR_INTRO_SCENE) <= 5) {
         speakername(MomName)
         applymovement(Player_Mom_1F, moves(face_player))
         msgbox(format("Welcome home, sweetie.\p"
             "Oh, that's a cute Pokémon you've got there.\p"
             "Did you get it from Professor Myra?\p"
             "You should take good care of it.\p"
-            "Why don't you take a quick rest?"), type=MSGBOX_NPC)
+            "Why don't you take a quick rest?"), MSGBOX_NPC)
         call(Common_EventScript_OutOfCenterPartyHeal)
-        msgbox(format("Take care, honey!"), type=MSGBOX_NPC)
-    } elif (var(VAR_INTRO_SCENE) == 5 || var(VAR_INTRO_SCENE) == 6) {
-        speakername(MomName)
-        applymovement(Player_Mom_1F, moves(face_player))
-        msgbox(format("Hi, honey!\p"
-            "…\p"
-            "So, you're finally leaving home.\p"
-            "It's really happening, isn't it?\p"
-            "You've always had a gentle heart.\p"
-            "But now, I see something else too.\p"
-            "Courage.\p"
-            "I won't try to stop you.\p"
-            "Just… promise me you'll be careful out there.\p"
-            "And remember, you'll always have a home to come back to.\p"
-            "Why don't you take a quick rest before leaving?"), type=MSGBOX_NPC)
-        call(Common_EventScript_OutOfCenterPartyHeal)
-        msgbox(format("Bye sweetie, I love you!"), type=MSGBOX_NPC)
-    } else {
+        msgbox(format("Take care, honey!"), MSGBOX_NPC)
+    } elif (var(VAR_INTRO_SCENE) >= 8 && flag(FLAG_RECEIVED_GEN6_EXP_SHARE)) {
         speakername(MomName)
         applymovement(Player_Mom_1F, moves(face_player))
         msgbox(format("Oh, {PLAYER}! You're back!\p"
             "Just for a visit, I hope - not trouble?\p"
             "You look different already.\p"
             "I've kept your bed made.\p"
-            "Why don't you take a quick rest?"), type=MSGBOX_NPC)
+            "Why don't you take a quick rest?"), MSGBOX_NPC)
         call(Common_EventScript_OutOfCenterPartyHeal)
-        msgbox(format("Take care, honey!"), type=MSGBOX_NPC)
+        msgbox(format("Take care, honey!"), MSGBOX_NPC)
+    } elif (var(VAR_INTRO_SCENE) >= 6) {
+        if (!flag(FLAG_RECEIVED_GEN6_EXP_SHARE))
+        {
+            setvar(VAR_INTRO_SCENE, 7)
+            speakername(MomName)
+            applymovement(Player_Mom_1F, moves(face_player))
+            msgbox(format("Hi, honey!\p"
+                "…\p"
+                "So, you're finally leaving home.\p"
+                "It's really happening, isn't it?\p"
+                "You've always had a gentle heart.\p"
+                "But now, I see something else too.\p"
+                "Courage.\p"
+                "I won't try to stop you.\p"
+                "Just… promise me you'll be careful out there.\p"
+                "And remember, you'll always have a home to come back to.\p"
+                "Here, I kept this for you."), MSGBOX_NPC)
+            giveitem(ITEM_EXP_SHARE)
+            goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+            setflag(FLAG_RECEIVED_GEN6_EXP_SHARE)
+            msgbox(format("This should help you on your journey.\p"
+                "Bye sweetie, I love you!"), MSGBOX_NPC)
+        }
+        else {
+            speakername(MomName)
+            msgbox(format("Take care on your journey, sweetie.\p"
+                "Don't forget to come home sometimes.\p"
+                "Why don't you take a quick rest before leaving?"), MSGBOX_NPC)
+            call(Common_EventScript_OutOfCenterPartyHeal)
+            msgbox(format("Bye sweetie, I love you!"), MSGBOX_NPC)
+        }
     }
 }

@@ -17,13 +17,13 @@ script SolsticeTown_Mart_Employee_Dialogue {
     } elif (flag(FLAG_RECEIVED_JIRACHI_MEDICINE) && !flag(FLAG_DELIVERED_JIRACHI_MEDICINE)) {
         applymovement(SolsticeTown_Mart_Employee, moves(face_player))
         msgbox(format("Hi {PLAYER}!\p"
-            "Did you deliver the package to Prof. Myra yet?"), type=MSGBOX_NPC)
+            "Did you deliver the package to Prof. Myra yet?"), MSGBOX_NPC)
     } else {
         applymovement(SolsticeTown_Mart_Employee, moves(face_player))
-        msgbox(format("Welcome to the Solstice Town Mart!"), type=MSGBOX_NPC)
+        msgbox(format("Welcome to the Solstice Town Mart!"), MSGBOX_NPC)
         waitmessage()
         pokemart(SolsticeTown_Mart_Items)
-        msgbox(format("Thank you for shopping with us!"), type=MSGBOX_NPC)
+        msgbox(format("Thank you for shopping with us!"), MSGBOX_NPC)
     }
 }
 
@@ -37,6 +37,6 @@ mart SolsticeTown_Mart_Items {
 
 script SolsticeTown_Mart_Boy1_Dialogue {
     applymovement(SolsticeTown_Mart_Boy1, moves(face_player))
-    msgbox(format("Don't forget to grab Pokéballs! You never know what you'll run into out there."), type=MSGBOX_NPC)
+    msgbox(format("Don't forget to grab Pokéballs! You never know what you'll run into out there."), MSGBOX_NPC)
     applymovement(SolsticeTown_Mart_Boy1, moves(face_left))
 }

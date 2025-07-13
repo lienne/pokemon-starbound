@@ -202,82 +202,91 @@ ProfMyrasLab_EventScript_ProfMyra_Dialogue::
 # 138 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	compare VAR_INTRO_SCENE, 4
 	goto_if_eq ProfMyrasLab_EventScript_ProfMyra_Dialogue_2
-# 142 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 141 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	goto_if_unset FLAG_RECEIVED_GEN6_EXP_SHARE, ProfMyrasLab_EventScript_ProfMyra_Dialogue_3
+# 146 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	speakername ProfMyraName
-# 143 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_2, type = MSGBOX_NPC
+# 147 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_3, MSGBOX_NPC
 	return
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue_1:
 # 135 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	speakername ProfMyraName
 # 136 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_0, type = MSGBOX_NPC
+	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue_2:
 # 139 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	speakername ProfMyraName
 # 140 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_1, type = MSGBOX_NPC
+	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_1, MSGBOX_NPC
+	return
+
+ProfMyrasLab_EventScript_ProfMyra_Dialogue_3:
+# 142 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	speakername ProfMyraName
+# 143 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_2, MSGBOX_NPC
 	return
 
 
 ProfMyrasLab_EventScript_JirachiNPC::
-# 152 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 156 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	playmoncry SPECIES_JIRACHI, CRY_MODE_NORMAL
-# 153 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 157 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	waitmoncry
 	return
 
 
 ProfMyrasLab_EventScript_Assistant_Dialogue::
-# 157 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 161 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	compare VAR_INTRO_SCENE, 5
 	goto_if_eq ProfMyrasLab_EventScript_Assistant_Dialogue_1
-# 161 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 165 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	applymovement ProfMyrasLab_Assistant, ProfMyrasLab_EventScript_Assistant_Dialogue_Movement_0
-# 162 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	msgbox ProfMyrasLab_EventScript_Assistant_Dialogue_Text_1, type = MSGBOX_NPC
+# 166 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	msgbox ProfMyrasLab_EventScript_Assistant_Dialogue_Text_1, MSGBOX_NPC
 	return
 
 ProfMyrasLab_EventScript_Assistant_Dialogue_1:
-# 158 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 162 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	applymovement ProfMyrasLab_Assistant, ProfMyrasLab_EventScript_Assistant_Dialogue_Movement_0
-# 159 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	msgbox ProfMyrasLab_EventScript_Assistant_Dialogue_Text_0, type = MSGBOX_NPC
+# 163 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	msgbox ProfMyrasLab_EventScript_Assistant_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
-# 167 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 171 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 ProfMyrasLab_Movement_RivalExit:
-# 168 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 172 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	walk_fast_right
-# 169 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 173 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	walk_fast_down
-# 169 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 173 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	walk_fast_down
-# 169 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 173 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	walk_fast_down
-# 169 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 173 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	walk_fast_down
-# 169 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 173 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	walk_fast_down
-# 169 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 173 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	walk_fast_down
-# 169 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 173 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	walk_fast_down
 	step_end
 
-# 172 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-ProfMyrasLab_Movement_PlayerWatchRivalExit:
-# 173 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	delay_16
-# 174 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	walk_in_place_faster_right
-# 175 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	delay_16
 # 176 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+ProfMyrasLab_Movement_PlayerWatchRivalExit:
+# 177 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	delay_16
+# 178 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	walk_in_place_faster_right
+# 179 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	delay_16
+# 180 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	walk_in_place_faster_down
 	step_end
 
@@ -333,9 +342,9 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Movement_3
 	walk_up
 	step_end
 
-# 158 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 162 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 ProfMyrasLab_EventScript_Assistant_Dialogue_Movement_0:
-# 158 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 162 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	face_player
 	step_end
 
@@ -479,6 +488,12 @@ ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_1:
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_2:
 # 143 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+	.string "Hello, {PLAYER}.\p"
+	.string "{COLOR RED}Have you stopped home to say goodbye\n"
+	.string "to your mother yet?$"
+
+ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_3:
+# 147 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	.string "I hope your journey's off to a good\n"
 	.string "start, {PLAYER}.\p"
 	.string "Don't forget - you're not alone out\n"
@@ -490,12 +505,12 @@ ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_2:
 	.string "Safe travels, {PLAYER}.$"
 
 ProfMyrasLab_EventScript_Assistant_Dialogue_Text_0:
-# 159 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 163 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	.string "Prof. Myra went out. I'm not sure where\n"
 	.string "she went.$"
 
 ProfMyrasLab_EventScript_Assistant_Dialogue_Text_1:
-# 162 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
+# 166 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	.string "Prof. Myra is an astrologer. She's very\n"
 	.string "interested in the stars.\p"
 	.string "That's why she moved to Lumen Village -\n"

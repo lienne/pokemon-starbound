@@ -16,7 +16,7 @@ SunfadeTrail_EventScript_BugCatcher_Simeon::
 # 13 "data/maps/Route2_Sunfade_Trail/scripts.pory"
 	trainerbattle_single TRAINER_SIMEON, SunfadeTrail_BugCatcher_Simeon_Intro_Text, SunfadeTrail_BugCatcher_Simeon_Lose_Text
 # 14 "data/maps/Route2_Sunfade_Trail/scripts.pory"
-	msgbox SunfadeTrail_BugCatcher_Simeon_Dialogue, type = MSGBOX_NPC
+	msgbox SunfadeTrail_BugCatcher_Simeon_Dialogue, MSGBOX_NPC
 	return
 
 
@@ -24,7 +24,7 @@ SunfadeTrail_EventScript_Boy_Tim::
 # 18 "data/maps/Route2_Sunfade_Trail/scripts.pory"
 	trainerbattle_single TRAINER_TIM, SunfadeTrail_Boy_Tim_Intro_Text, SunfadeTrail_Boy_Tim_Lose_Text
 # 19 "data/maps/Route2_Sunfade_Trail/scripts.pory"
-	msgbox SunfadeTrail_Boy_Tim_Dialogue, type = MSGBOX_NPC
+	msgbox SunfadeTrail_Boy_Tim_Dialogue, MSGBOX_NPC
 	return
 
 
@@ -32,19 +32,19 @@ SunfadeTrail_EventScript_Youngster_Billy::
 # 23 "data/maps/Route2_Sunfade_Trail/scripts.pory"
 	trainerbattle_single TRAINER_BILLY, SunfadeTrail_Youngster_Billy_Intro_Text, SunfadeTrail_Youngster_Billy_Lose_Text
 # 24 "data/maps/Route2_Sunfade_Trail/scripts.pory"
-	msgbox SunfadeTrail_Youngster_Billy_Dialogue, type = MSGBOX_NPC
+	msgbox SunfadeTrail_Youngster_Billy_Dialogue, MSGBOX_NPC
 	return
 
 
 SunfadeTrail_EventScript_Anabel::
 # 28 "data/maps/Route2_Sunfade_Trail/scripts.pory"
-	msgbox SunfadeTrail_Anabel_Dialogue, type = MSGBOX_NPC
+	msgbox SunfadeTrail_Anabel_Dialogue, MSGBOX_NPC
 	return
 
 
 SunfadeTrail_EventScript_House_OldMan::
 # 32 "data/maps/Route2_Sunfade_Trail/scripts.pory"
-	msgbox SunfadeTrail_OldMan_Dialogue, type = MSGBOX_NPC
+	msgbox SunfadeTrail_OldMan_Dialogue, MSGBOX_NPC
 	return
 
 
@@ -54,7 +54,7 @@ SunfadeTrail_EventScript_Healing_Lady::
 # 37 "data/maps/Route2_Sunfade_Trail/scripts.pory"
 	waitmovement 0
 # 38 "data/maps/Route2_Sunfade_Trail/scripts.pory"
-	msgbox SunfadeTrail_Healing_Lady_Dialogue, type = MSGBOX_NPC
+	msgbox SunfadeTrail_Healing_Lady_Dialogue, MSGBOX_NPC
 # 39 "data/maps/Route2_Sunfade_Trail/scripts.pory"
 	call Common_EventScript_OutOfCenterPartyHeal
 	return
@@ -64,7 +64,7 @@ SunfadeTrail_EventScript_Lass_Haley::
 # 43 "data/maps/Route2_Sunfade_Trail/scripts.pory"
 	trainerbattle_single TRAINER_HALEY_1, SunfadeTrail_Lass_Haley_Intro_Text, SunfadeTrail_Lass_Haley_Lose_Text
 # 44 "data/maps/Route2_Sunfade_Trail/scripts.pory"
-	msgbox SunfadeTrail_Lass_Haley_Dialogue, type = MSGBOX_NPC
+	msgbox SunfadeTrail_Lass_Haley_Dialogue, MSGBOX_NPC
 	return
 
 

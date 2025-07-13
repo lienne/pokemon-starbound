@@ -26,7 +26,7 @@ WhisperingGrove_EventScript_BugCatcher_Lyle::
 # 22 "data/maps/WhisperingGrove/scripts.pory"
 	trainerbattle_single TRAINER_LYLE, WhisperingGrove_BugCatcher_Lyle_Intro_Text, WhisperingGrove_BugCatcher_Lyle_Lose_Text
 # 23 "data/maps/WhisperingGrove/scripts.pory"
-	msgbox WhisperingGrove_BugCatcher_Lyle_Dialogue, type = MSGBOX_NPC
+	msgbox WhisperingGrove_BugCatcher_Lyle_Dialogue, MSGBOX_NPC
 	return
 
 
@@ -34,13 +34,13 @@ WhisperingGrove_EventScript_AromaLady_Jaclyn::
 # 27 "data/maps/WhisperingGrove/scripts.pory"
 	trainerbattle_single TRAINER_JACLYN, WhisperingGrove_AromaLady_Jaclyn_Intro_Text, WhisperingGrove_AromaLady_Jaclyn_Lose_Text
 # 28 "data/maps/WhisperingGrove/scripts.pory"
-	msgbox WhisperingGrove_AromaLady_Jaclyn_Dialogue, type = MSGBOX_NPC
+	msgbox WhisperingGrove_AromaLady_Jaclyn_Dialogue, MSGBOX_NPC
 	return
 
 
 WhisperingGrove_EventScript_Boy1::
 # 32 "data/maps/WhisperingGrove/scripts.pory"
-	msgbox WhisperingGrove_Boy1_Dialogue, type = MSGBOX_NPC
+	msgbox WhisperingGrove_Boy1_Dialogue, MSGBOX_NPC
 	return
 
 
@@ -48,7 +48,7 @@ WhisperingGrove_EventScript_BugCatcher_James::
 # 36 "data/maps/WhisperingGrove/scripts.pory"
 	trainerbattle_single TRAINER_JAMES_1, WhisperingGrove_BugCatcher_James_Intro_Text, WhisperingGrove_BugCatcher_James_Lose_Text
 # 37 "data/maps/WhisperingGrove/scripts.pory"
-	msgbox WhisperingGrove_BugCatcher_James_Dialogue, type = MSGBOX_NPC
+	msgbox WhisperingGrove_BugCatcher_James_Dialogue, MSGBOX_NPC
 	return
 
 
@@ -56,7 +56,7 @@ WhisperingGrove_EventScript_BugCatcher_Rick::
 # 41 "data/maps/WhisperingGrove/scripts.pory"
 	trainerbattle_single TRAINER_RICK, WhisperingGrove_BugCatcher_Rick_Intro_Text, WhisperingGrove_BugCatcher_Rick_Lose_Text
 # 42 "data/maps/WhisperingGrove/scripts.pory"
-	msgbox WhisperingGrove_BugCatcher_Rick_Dialogue, type = MSGBOX_NPC
+	msgbox WhisperingGrove_BugCatcher_Rick_Dialogue, MSGBOX_NPC
 	return
 
 

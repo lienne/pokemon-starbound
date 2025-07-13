@@ -8,7 +8,7 @@ SolsticeTown_House3_EventScript_Man_Dialogue::
 # 18 "data/maps/SolsticeTown_House3/scripts.pory"
 	applymovement SolsticeTown_House3_Man, SolsticeTown_House3_EventScript_Man_Dialogue_Movement_0
 # 19 "data/maps/SolsticeTown_House3/scripts.pory"
-	msgbox SolsticeTown_House3_EventScript_Man_Dialogue_Text_2, type = MSGBOX_NPC
+	msgbox SolsticeTown_House3_EventScript_Man_Dialogue_Text_2, MSGBOX_NPC
 	return
 
 SolsticeTown_House3_EventScript_Man_Dialogue_1:
@@ -35,7 +35,7 @@ SolsticeTown_House3_EventScript_Woman_Dialogue::
 # 24 "data/maps/SolsticeTown_House3/scripts.pory"
 	applymovement SolsticeTown_House3_Girl, SolsticeTown_House3_EventScript_Man_Dialogue_Movement_0
 # 25 "data/maps/SolsticeTown_House3/scripts.pory"
-	msgbox SolsticeTown_House3_EventScript_Woman_Dialogue_Text_0, type = MSGBOX_NPC
+	msgbox SolsticeTown_House3_EventScript_Woman_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 

@@ -9,14 +9,14 @@ PlayersHouse_EventScript_RivalMom_Dialogue::
 # 12 "data/maps/LumenVillage_CassiansHouse_1F/scripts.pory"
 	applymovement Rival_Mom_1F, PlayersHouse_EventScript_RivalMom_Dialogue_Movement_0
 # 13 "data/maps/LumenVillage_CassiansHouse_1F/scripts.pory"
-	msgbox PlayersHouse_EventScript_RivalMom_Dialogue_Text_1, type = MSGBOX_NPC
+	msgbox PlayersHouse_EventScript_RivalMom_Dialogue_Text_1, MSGBOX_NPC
 	return
 
 PlayersHouse_EventScript_RivalMom_Dialogue_1:
 # 7 "data/maps/LumenVillage_CassiansHouse_1F/scripts.pory"
 	applymovement Rival_Mom_1F, PlayersHouse_EventScript_RivalMom_Dialogue_Movement_0
 # 8 "data/maps/LumenVillage_CassiansHouse_1F/scripts.pory"
-	msgbox PlayersHouse_EventScript_RivalMom_Dialogue_Text_0, type = MSGBOX_NPC
+	msgbox PlayersHouse_EventScript_RivalMom_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 

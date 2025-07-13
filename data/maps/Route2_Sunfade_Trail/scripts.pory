@@ -11,37 +11,37 @@ script SunfadeTrail_EventScript_RouteSign {
 
 script SunfadeTrail_EventScript_BugCatcher_Simeon {
     trainerbattle_single(TRAINER_SIMEON, SunfadeTrail_BugCatcher_Simeon_Intro_Text, SunfadeTrail_BugCatcher_Simeon_Lose_Text)
-    msgbox(SunfadeTrail_BugCatcher_Simeon_Dialogue, type=MSGBOX_NPC)
+    msgbox(SunfadeTrail_BugCatcher_Simeon_Dialogue, MSGBOX_NPC)
 }
 
 script SunfadeTrail_EventScript_Boy_Tim {
     trainerbattle_single(TRAINER_TIM, SunfadeTrail_Boy_Tim_Intro_Text, SunfadeTrail_Boy_Tim_Lose_Text)
-    msgbox(SunfadeTrail_Boy_Tim_Dialogue, type=MSGBOX_NPC)
+    msgbox(SunfadeTrail_Boy_Tim_Dialogue, MSGBOX_NPC)
 }
 
 script SunfadeTrail_EventScript_Youngster_Billy {
     trainerbattle_single(TRAINER_BILLY, SunfadeTrail_Youngster_Billy_Intro_Text, SunfadeTrail_Youngster_Billy_Lose_Text)
-    msgbox(SunfadeTrail_Youngster_Billy_Dialogue, type=MSGBOX_NPC)
+    msgbox(SunfadeTrail_Youngster_Billy_Dialogue, MSGBOX_NPC)
 }
 
 script SunfadeTrail_EventScript_Anabel {
-    msgbox(SunfadeTrail_Anabel_Dialogue, type=MSGBOX_NPC)
+    msgbox(SunfadeTrail_Anabel_Dialogue, MSGBOX_NPC)
 }
 
 script SunfadeTrail_EventScript_House_OldMan {
-    msgbox(SunfadeTrail_OldMan_Dialogue, type=MSGBOX_NPC)
+    msgbox(SunfadeTrail_OldMan_Dialogue, MSGBOX_NPC)
 }
 
 script SunfadeTrail_EventScript_Healing_Lady {
     applymovement(SunfadeTrail_Healing_Lady, moves(face_player))
     waitmovement(0)
-    msgbox(SunfadeTrail_Healing_Lady_Dialogue, type=MSGBOX_NPC)
+    msgbox(SunfadeTrail_Healing_Lady_Dialogue, MSGBOX_NPC)
     call(Common_EventScript_OutOfCenterPartyHeal)
 }
 
 script SunfadeTrail_EventScript_Lass_Haley {
     trainerbattle_single(TRAINER_HALEY_1, SunfadeTrail_Lass_Haley_Intro_Text, SunfadeTrail_Lass_Haley_Lose_Text)
-    msgbox(SunfadeTrail_Lass_Haley_Dialogue, type=MSGBOX_NPC)
+    msgbox(SunfadeTrail_Lass_Haley_Dialogue, MSGBOX_NPC)
 }
 
 text SunfadeTrail_BugCatcher_Simeon_Intro_Text {

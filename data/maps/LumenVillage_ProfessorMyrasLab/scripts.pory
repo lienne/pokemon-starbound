@@ -134,17 +134,21 @@ script ProfMyrasLab_EventScript_ProfMyra_Dialogue {
     if (var(VAR_INTRO_SCENE) < 4) {
         speakername(ProfMyraName)
         msgbox(format("Thank you for agreeing to get the medicine from Solstice Town for Jirachi.\p"
-            "It's imperative we help it recover."), type=MSGBOX_NPC)
+            "It's imperative we help it recover."), MSGBOX_NPC)
     } elif (var(VAR_INTRO_SCENE) == 4) {
         speakername(ProfMyraName)
-        msgbox(format("Please look for Jirachi, {PLAYER}, and make sure it is safe."), type=MSGBOX_NPC)
+        msgbox(format("Please look for Jirachi, {PLAYER}, and make sure it is safe."), MSGBOX_NPC)
+    } elif (!flag(FLAG_RECEIVED_GEN6_EXP_SHARE)) {
+        speakername(ProfMyraName)
+        msgbox(format("Hello, {PLAYER}.\p"
+            "{COLOR RED}Have you stopped home to say goodbye to your mother yet?"), MSGBOX_NPC)
     } else {
         speakername(ProfMyraName)
         msgbox(format("I hope your journey's off to a good start, {PLAYER}.\p"
         "Don't forget - you're not alone out there.\p"
         "Oh, and remember to register Pokémon in your Pokédex.\p"
         "The more you learn, the stronger you'll become.\p"
-        "Safe travels, {PLAYER}."), type=MSGBOX_NPC)
+        "Safe travels, {PLAYER}."), MSGBOX_NPC)
     }
 }
 
@@ -156,11 +160,11 @@ script ProfMyrasLab_EventScript_JirachiNPC {
 script ProfMyrasLab_EventScript_Assistant_Dialogue {
     if (var(VAR_INTRO_SCENE) == 5) {
         applymovement(ProfMyrasLab_Assistant, moves(face_player))
-        msgbox(format("Prof. Myra went out. I'm not sure where she went."), type=MSGBOX_NPC)
+        msgbox(format("Prof. Myra went out. I'm not sure where she went."), MSGBOX_NPC)
     } else {
         applymovement(ProfMyrasLab_Assistant, moves(face_player))
         msgbox(format("Prof. Myra is an astrologer. She's very interested in the stars.\p"
-            "That's why she moved to Lumen Village - there's a lot less light pollution around here."), type=MSGBOX_NPC)
+            "That's why she moved to Lumen Village - there's a lot less light pollution around here."), MSGBOX_NPC)
     }
 }
 

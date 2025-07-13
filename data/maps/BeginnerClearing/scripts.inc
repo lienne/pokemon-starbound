@@ -358,7 +358,7 @@ BeginnerClearing_EventScript_ProfMyra::
 # 164 "data/maps/BeginnerClearing/scripts.pory"
 	speakername ProfMyraName
 # 165 "data/maps/BeginnerClearing/scripts.pory"
-	msgbox BeginnerClearing_EventScript_ProfMyra_Text_0, type = MSGBOX_NPC
+	msgbox BeginnerClearing_EventScript_ProfMyra_Text_0, MSGBOX_NPC
 	return
 
 
@@ -366,7 +366,7 @@ BeginnerClearing_EventScript_GruntA::
 # 170 "data/maps/BeginnerClearing/scripts.pory"
 	speakername GruntAName
 # 171 "data/maps/BeginnerClearing/scripts.pory"
-	msgbox BeginnerClearing_EventScript_GruntA_Text_0, type = MSGBOX_NPC
+	msgbox BeginnerClearing_EventScript_GruntA_Text_0, MSGBOX_NPC
 	return
 
 
@@ -374,7 +374,7 @@ BeginnerClearing_EventScript_GruntB::
 # 175 "data/maps/BeginnerClearing/scripts.pory"
 	speakername GruntBName
 # 176 "data/maps/BeginnerClearing/scripts.pory"
-	msgbox BeginnerClearing_EventScript_GruntB_Text_0, type = MSGBOX_NPC
+	msgbox BeginnerClearing_EventScript_GruntB_Text_0, MSGBOX_NPC
 	return
 
 

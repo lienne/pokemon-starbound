@@ -163,17 +163,17 @@ script BeginnerClearing_EventScript_WalkFromB {
 script BeginnerClearing_EventScript_ProfMyra {
     speakername(ProfMyraName)
     msgbox("I will lend you one of my Pokémon so\nwe can defend this Jirachi together.\l"
-        "Please grab a Pokéball from my bag.", type=MSGBOX_NPC)
+        "Please grab a Pokéball from my bag.", MSGBOX_NPC)
 }
 
 script BeginnerClearing_EventScript_GruntA {
     speakername(GruntAName)
-    msgbox(format("Fool! Hand Jirachi over and don't interfere!"), type=MSGBOX_NPC)
+    msgbox(format("Fool! Hand Jirachi over and don't interfere!"), MSGBOX_NPC)
 }
 
 script BeginnerClearing_EventScript_GruntB {
     speakername(GruntBName)
-    msgbox(format("Don't meddle where you aren't supposed to!"), type=MSGBOX_NPC)
+    msgbox(format("Don't meddle where you aren't supposed to!"), MSGBOX_NPC)
 }
 
 script BeginnerClearing_EventScript_JirachiNPC {

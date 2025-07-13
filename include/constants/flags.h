@@ -66,7 +66,7 @@
 #define FLAG_HIDE_VIVIANES_CLEFAIRY_DOLL                    0x34
 #define FLAG_HIDE_ASTRIDALE_MINDSCAPE_INV_BRENDAN_KEY       0x35
 #define FLAG_HIDE_ASTRIDALE_MINDSCAPE_INV_BRENDAN_LOCKBOX   0x36
-#define FLAG_UNUSED_0x037    0x37 // Unused Flag
+#define FLAG_RECEIVED_GEN6_EXP_SHARE                        0x37
 #define FLAG_UNUSED_0x038    0x38 // Unused Flag
 #define FLAG_UNUSED_0x039    0x39 // Unused Flag
 #define FLAG_UNUSED_0x03A    0x3A // Unused Flag

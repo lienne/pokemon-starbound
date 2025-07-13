@@ -6,7 +6,7 @@ SolsticeTown_House1_EventScript_Woman_Dialogue::
 # 6 "data/maps/SolsticeTown_House1/scripts.pory"
 	applymovement SolsticeTown_House1_Woman, SolsticeTown_House1_EventScript_Woman_Dialogue_Movement_0
 # 7 "data/maps/SolsticeTown_House1/scripts.pory"
-	msgbox SolsticeTown_House1_EventScript_Woman_Dialogue_Text_0, type = MSGBOX_NPC
+	msgbox SolsticeTown_House1_EventScript_Woman_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 

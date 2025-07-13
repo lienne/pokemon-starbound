@@ -13,13 +13,13 @@ SolsticeTown_Mart_Employee_Dialogue_3:
 # 22 "data/maps/SolsticeTown_Mart/scripts.pory"
 	applymovement SolsticeTown_Mart_Employee, SolsticeTown_Mart_Employee_Dialogue_Movement_0
 # 23 "data/maps/SolsticeTown_Mart/scripts.pory"
-	msgbox SolsticeTown_Mart_Employee_Dialogue_Text_2, type = MSGBOX_NPC
+	msgbox SolsticeTown_Mart_Employee_Dialogue_Text_2, MSGBOX_NPC
 # 24 "data/maps/SolsticeTown_Mart/scripts.pory"
 	waitmessage
 # 25 "data/maps/SolsticeTown_Mart/scripts.pory"
 	pokemart SolsticeTown_Mart_Items
 # 26 "data/maps/SolsticeTown_Mart/scripts.pory"
-	msgbox SolsticeTown_Mart_Employee_Dialogue_Text_3, type = MSGBOX_NPC
+	msgbox SolsticeTown_Mart_Employee_Dialogue_Text_3, MSGBOX_NPC
 	return
 
 SolsticeTown_Mart_Employee_Dialogue_1:
@@ -45,7 +45,7 @@ SolsticeTown_Mart_Employee_Dialogue_2:
 # 18 "data/maps/SolsticeTown_Mart/scripts.pory"
 	applymovement SolsticeTown_Mart_Employee, SolsticeTown_Mart_Employee_Dialogue_Movement_0
 # 19 "data/maps/SolsticeTown_Mart/scripts.pory"
-	msgbox SolsticeTown_Mart_Employee_Dialogue_Text_1, type = MSGBOX_NPC
+	msgbox SolsticeTown_Mart_Employee_Dialogue_Text_1, MSGBOX_NPC
 	return
 
 SolsticeTown_Mart_Employee_Dialogue_4:
@@ -78,7 +78,7 @@ SolsticeTown_Mart_Boy1_Dialogue::
 # 39 "data/maps/SolsticeTown_Mart/scripts.pory"
 	applymovement SolsticeTown_Mart_Boy1, SolsticeTown_Mart_Employee_Dialogue_Movement_0
 # 40 "data/maps/SolsticeTown_Mart/scripts.pory"
-	msgbox SolsticeTown_Mart_Boy1_Dialogue_Text_0, type = MSGBOX_NPC
+	msgbox SolsticeTown_Mart_Boy1_Dialogue_Text_0, MSGBOX_NPC
 # 41 "data/maps/SolsticeTown_Mart/scripts.pory"
 	applymovement SolsticeTown_Mart_Boy1, SolsticeTown_Mart_Boy1_Dialogue_Movement_0
 	return

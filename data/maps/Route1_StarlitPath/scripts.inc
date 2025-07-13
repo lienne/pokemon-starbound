@@ -16,7 +16,7 @@ StarlitPath_LittleGirl_Dialogue::
 # 13 "data/maps/Route1_StarlitPath/scripts.pory"
 	applymovement StarlitPath_LittleGirl, StarlitPath_LittleGirl_Dialogue_Movement_0
 # 14 "data/maps/Route1_StarlitPath/scripts.pory"
-	msgbox StarlitPath_LittleGirl_Dialogue_Text_0, type = MSGBOX_NPC
+	msgbox StarlitPath_LittleGirl_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
@@ -24,7 +24,7 @@ StarlitPath_Youngster_Dialogue::
 # 19 "data/maps/Route1_StarlitPath/scripts.pory"
 	applymovement StarlitPath_Youngster, StarlitPath_LittleGirl_Dialogue_Movement_0
 # 20 "data/maps/Route1_StarlitPath/scripts.pory"
-	msgbox StarlitPath_Youngster_Dialogue_Text_0, type = MSGBOX_NPC
+	msgbox StarlitPath_Youngster_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
@@ -32,7 +32,7 @@ StarlitPath_OldWoman_Dialogue::
 # 25 "data/maps/Route1_StarlitPath/scripts.pory"
 	applymovement StarlitPath_OldWoman, StarlitPath_LittleGirl_Dialogue_Movement_0
 # 26 "data/maps/Route1_StarlitPath/scripts.pory"
-	msgbox StarlitPath_OldWoman_Dialogue_Text_0, type = MSGBOX_NPC
+	msgbox StarlitPath_OldWoman_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 

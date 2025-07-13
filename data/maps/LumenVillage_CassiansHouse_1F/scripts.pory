@@ -7,13 +7,13 @@ script PlayersHouse_EventScript_RivalMom_Dialogue {
         applymovement(Rival_Mom_1F, moves(face_player))
         msgbox(format("Oh hi, {PLAYER}!\p"
             "{RIVAL} went out to Starlit Path a little while ago.\p"
-            "That child just can't stay quietly at home."), type=MSGBOX_NPC)
+            "That child just can't stay quietly at home."), MSGBOX_NPC)
     } else {
         applymovement(Rival_Mom_1F, moves(face_player))
         msgbox(format("Hi {PLAYER}!\p"
             "That {RIVAL}!\p"
             "I guess our child is too busy with Pokémon to ever visit home.\p"
             "You should stop home every so often too, to let your mother know you're ok.\p"
-            "She might not say it, but I'm sure she worries about you, {PLAYER}."), type=MSGBOX_NPC)
+            "She might not say it, but I'm sure she worries about you, {PLAYER}."), MSGBOX_NPC)
     }
 }

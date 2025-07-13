@@ -17,11 +17,11 @@ script SolsticeTown_PokemonCenter_1F_EventScript_Nurse {
 script SolsticeTown_PokemonCenter_Gentleman_Dialogue {
     applymovement(SolsticeTown_PokemonCenter_Gentleman, moves(face_player))
     msgbox(format("That PC in the corner there is for any Pokémon trainer to use.\p"
-        "Naturally, that means you're welcome to use it, too."), type=MSGBOX_NPC)
+        "Naturally, that means you're welcome to use it, too."), MSGBOX_NPC)
 }
 
 script SolsticeTown_PokemonCenter_LittleGirl_Dialogue {
     applymovement(SolsticeTown_PokemonCenter_LittleGirl, moves(face_player))
     msgbox(format("I love the Pokémon Center!\p"
-        "It's so cozy and warm in here!"), type=MSGBOX_NPC)
+        "It's so cozy and warm in here!"), MSGBOX_NPC)
 }

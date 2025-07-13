@@ -14,24 +14,24 @@ script SolsticeTown_EventScript_TownSign {
 
 script SolsticeTown_EventScript_Girl1_Dialogue {
     applymovement(SolsticeTown_Girl1, moves(face_player))
-    msgbox(format("Did you know you can press Start to check your Pokémon Summary?"), type=MSGBOX_NPC)
+    msgbox(format("Did you know you can press Start to check your Pokémon Summary?"), MSGBOX_NPC)
     applymovement(SolsticeTown_Girl1, moves(face_right))
 }
 
 script SolsticeTown_EventScript_Boy1_Dialogue {
     applymovement(SolsticeTown_Boy1, moves(face_player))
-    msgbox(format("I use the Pokémon Summary screen to check my Pokémon's nature."), type=MSGBOX_NPC)
+    msgbox(format("I use the Pokémon Summary screen to check my Pokémon's nature."), MSGBOX_NPC)
     applymovement(SolsticeTown_Boy1, moves(face_left))
 }
 
 script SolsticeTown_EventScript_Girl2_Dialogue {
     applymovement(SolsticeTown_Girl2, moves(face_player))
     msgbox(format("Solstice Town doesn't have a Gym.\p"
-        "It's a bit too out of the way for us to have one."), type=MSGBOX_NPC)
+        "It's a bit too out of the way for us to have one."), MSGBOX_NPC)
 }
 
 script SolsticeTown_EventScript_Boy2_Dialogue_SpotA {
-    if (!flag(FLAG_DELIVERED_JIRACHI_MEDICINE)) {
+    if (var(VAR_INTRO_SCENE) < 7) {
         applymovement(SolsticeTown_Boy2, SolsticeTown_ExclamationMark)
         playse(SE_PIN)
         waitse()
@@ -47,7 +47,7 @@ script SolsticeTown_EventScript_Boy2_Dialogue_SpotA {
 }
 
 script SolsticeTown_EventScript_Boy2_Dialogue_SpotB {
-    if (!flag(FLAG_DELIVERED_JIRACHI_MEDICINE)) {
+    if (var(VAR_INTRO_SCENE) < 7) {
         applymovement(SolsticeTown_Boy2, SolsticeTown_ExclamationMark)
         playse(SE_PIN)
         waitse()
@@ -63,7 +63,7 @@ script SolsticeTown_EventScript_Boy2_Dialogue_SpotB {
 }
 
 script SolsticeTown_EventScript_Boy2_Dialogue_SpotC {
-    if (!flag(FLAG_DELIVERED_JIRACHI_MEDICINE)) {
+    if (var(VAR_INTRO_SCENE) < 7) {
         applymovement(SolsticeTown_Boy2, SolsticeTown_ExclamationMark)
         playse(SE_PIN)
         waitse()
@@ -76,17 +76,17 @@ script SolsticeTown_EventScript_Boy2_Dialogue_SpotC {
 }
 
 script SolsticeTown_EventScript_Boy2_Dialogue {
-    if (!flag(FLAG_DELIVERED_JIRACHI_MEDICINE)) {
+    if (var(VAR_INTRO_SCENE) < 7) {
         applymovement(SolsticeTown_Boy2, moves(face_player))
-        msgbox(SolsticeTown_Boy2_Dialogue_PreDelivery, type=MSGBOX_NPC)
+        msgbox(SolsticeTown_Boy2_Dialogue_PreDelivery, MSGBOX_NPC)
     } else {
         applymovement(SolsticeTown_Boy2, moves(face_player))
-        msgbox(SolsticeTown_Boy2_Dialogue_PostDelivery, type=MSGBOX_NPC)
+        msgbox(SolsticeTown_Boy2_Dialogue_PostDelivery, MSGBOX_NPC)
     }
 }
 
 script SolsticeTown_EventScript_RivalRunsToPlayerAtA {
-    if (var(VAR_INTRO_SCENE) == 6) {
+    if (var(VAR_INTRO_SCENE) == 7) {
         lockall
         clearflag(FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN)
         addobject(SolsticeTown_Rival)
@@ -108,7 +108,7 @@ script SolsticeTown_EventScript_RivalRunsToPlayerAtA {
 }
 
 script SolsticeTown_EventScript_RivalRunsToPlayerAtB {
-    if (var(VAR_INTRO_SCENE) == 6) {
+    if (var(VAR_INTRO_SCENE) == 7) {
         lockall
         clearflag(FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN)
         addobject(SolsticeTown_Rival)
@@ -130,7 +130,7 @@ script SolsticeTown_EventScript_RivalRunsToPlayerAtB {
 }
 
 script SolsticeTown_EventScript_RivalRunsToPlayerAtC {
-    if (var(VAR_INTRO_SCENE) == 6) {
+    if (var(VAR_INTRO_SCENE) == 7) {
         lockall
         clearflag(FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN)
         addobject(SolsticeTown_Rival)
@@ -152,7 +152,7 @@ script SolsticeTown_EventScript_RivalRunsToPlayerAtC {
 }
 
 script SolsticeTown_EventScript_RivalRunsToPlayerAtD {
-    if (var(VAR_INTRO_SCENE) == 6) {
+    if (var(VAR_INTRO_SCENE) == 7) {
         lockall
         clearflag(FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN)
         addobject(SolsticeTown_Rival)
@@ -242,7 +242,7 @@ script SolsticeTown_EventScript_StartCassianBattleSquirtle {
 }
 
 script SolsticeTown_EventScript_RivalExit {
-    setvar(VAR_INTRO_SCENE, 7)
+    setvar(VAR_INTRO_SCENE, 8)
     msgbox(SolsticeTown_Rival_After_Battle_Dialogue, MSGBOX_AUTOCLOSE)
     applymovement(SolsticeTown_Rival, SolsticeTown_Movement_RivalExit)
     waitmovement(0)

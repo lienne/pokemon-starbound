@@ -28,7 +28,7 @@ SolsticeTown_PokemonCenter_Gentleman_Dialogue::
 # 18 "data/maps/SolsticeTown_PokemonCenter_1F/scripts.pory"
 	applymovement SolsticeTown_PokemonCenter_Gentleman, SolsticeTown_PokemonCenter_Gentleman_Dialogue_Movement_0
 # 19 "data/maps/SolsticeTown_PokemonCenter_1F/scripts.pory"
-	msgbox SolsticeTown_PokemonCenter_Gentleman_Dialogue_Text_0, type = MSGBOX_NPC
+	msgbox SolsticeTown_PokemonCenter_Gentleman_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
@@ -36,7 +36,7 @@ SolsticeTown_PokemonCenter_LittleGirl_Dialogue::
 # 24 "data/maps/SolsticeTown_PokemonCenter_1F/scripts.pory"
 	applymovement SolsticeTown_PokemonCenter_LittleGirl, SolsticeTown_PokemonCenter_Gentleman_Dialogue_Movement_0
 # 25 "data/maps/SolsticeTown_PokemonCenter_1F/scripts.pory"
-	msgbox SolsticeTown_PokemonCenter_LittleGirl_Dialogue_Text_0, type = MSGBOX_NPC
+	msgbox SolsticeTown_PokemonCenter_LittleGirl_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 

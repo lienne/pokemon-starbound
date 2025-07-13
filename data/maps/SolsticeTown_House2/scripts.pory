@@ -6,5 +6,5 @@ script SolsticeTown_House2_EventScript_Man_Dialogue {
     applymovement(SolsticeTown_House2_Man, moves(face_player))
     msgbox(format("I'm a teacher.\p"
         "We used to have a “bring your Pokémon to school” day.\p"
-        "Nowadays, kids bring their Pokémon to school every day…"), type=MSGBOX_NPC)
+        "Nowadays, kids bring their Pokémon to school every day…"), MSGBOX_NPC)
 }

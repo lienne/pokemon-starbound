@@ -225,7 +225,7 @@ LumenVillage_FatMan_Dialogue::
 # 129 "data/maps/LumenVillage/scripts.pory"
 	applymovement LumenVillage_FatMan, LumenVillage_FatMan_Dialogue_Movement_0
 # 130 "data/maps/LumenVillage/scripts.pory"
-	msgbox LumenVillage_FatMan_Dialogue_Text_0, type = MSGBOX_NPC
+	msgbox LumenVillage_FatMan_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
@@ -233,7 +233,7 @@ LumenVillage_OldLady_Dialogue::
 # 135 "data/maps/LumenVillage/scripts.pory"
 	applymovement LumenVillage_OldLady, LumenVillage_FatMan_Dialogue_Movement_0
 # 136 "data/maps/LumenVillage/scripts.pory"
-	msgbox LumenVillage_OldLady_Dialogue_Text_0, type = MSGBOX_NPC
+	msgbox LumenVillage_OldLady_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
@@ -241,7 +241,7 @@ LumenVillage_LittleGirl_Dialogue::
 # 140 "data/maps/LumenVillage/scripts.pory"
 	applymovement LumenVillage_LittleGirl, LumenVillage_FatMan_Dialogue_Movement_0
 # 141 "data/maps/LumenVillage/scripts.pory"
-	msgbox LumenVillage_LittleGirl_Dialogue_Text_0, type = MSGBOX_NPC
+	msgbox LumenVillage_LittleGirl_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
@@ -738,9 +738,9 @@ LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_3:
 	.string "Use the items I gave you to get\n"
 	.string "stronger. You'll need all the help you\l"
 	.string "can get to help Jirachi.\p"
-	.string "…Before you go, why don't you stop home\n"
+	.string "…Before you go, {COLOR RED}why don't you stop home\n"
 	.string "and say goodbye to your mother?\p"
-	.string "I know she'll want to see you off.\p"
+	.string "{COLOR DARK_GRAY}I know she'll want to see you off.\p"
 	.string "And of course, if you ever need\n"
 	.string "anything, feel free to come back here.\p"
 	.string "I wish you all the luck on your journey,\n"

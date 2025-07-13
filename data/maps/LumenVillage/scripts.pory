@@ -128,18 +128,18 @@ script LumenVillage_EventScript_VillageSign {
 script LumenVillage_FatMan_Dialogue {
     applymovement(LumenVillage_FatMan, moves(face_player))
     msgbox(format("Technology is amazing!\p"
-        "You can now use satellites to chart the stars in Astrea!"), type=MSGBOX_NPC)
+        "You can now use satellites to chart the stars in Astrea!"), MSGBOX_NPC)
 }
 
 script LumenVillage_OldLady_Dialogue {
     applymovement(LumenVillage_OldLady, moves(face_player))
-    msgbox(format("Lumen Village must be the safest place in Astrea, but I swear I hear rustling in the night lately…"), type=MSGBOX_NPC)
+    msgbox(format("Lumen Village must be the safest place in Astrea, but I swear I hear rustling in the night lately…"), MSGBOX_NPC)
 }
 
 script LumenVillage_LittleGirl_Dialogue {
     applymovement(LumenVillage_LittleGirl, moves(face_player))
     msgbox(format("The water looks so nice!\n"
-                    "But I'm not allowed to swim yet…"), type=MSGBOX_NPC)
+                    "But I'm not allowed to swim yet…"), MSGBOX_NPC)
 }
 
 text LumenVillage_Text_PlayersHouse_Sign {
@@ -257,8 +257,8 @@ script LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue {
     msgbox(format("I won't stop you, {PLAYER}… but please be careful.\p"
         "You're walking into something vast and dangerous.\p"
         "Use the items I gave you to get stronger. You'll need all the help you can get to help Jirachi.\p"
-        "…Before you go, why don't you stop home and say goodbye to your mother?\p"
-        "I know she'll want to see you off.\p"
+        "…Before you go, {COLOR RED}why don't you stop home and say goodbye to your mother?\p"
+        "{COLOR DARK_GRAY}I know she'll want to see you off.\p"
         "And of course, if you ever need anything, feel free to come back here.\p"
         "I wish you all the luck on your journey, {PLAYER}!"), MSGBOX_AUTOCLOSE)
     applymovement(LOCALID_PLAYER, moves(delay_16 face_down))

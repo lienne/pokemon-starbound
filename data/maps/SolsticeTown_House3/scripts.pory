@@ -16,12 +16,12 @@ script SolsticeTown_House3_EventScript_Man_Dialogue {
         releaseall
     } else {
         applymovement(SolsticeTown_House3_Man, moves(face_player))
-        msgbox(format("I hope your Pokémon adventure is going well!"), type=MSGBOX_NPC)
+        msgbox(format("I hope your Pokémon adventure is going well!"), MSGBOX_NPC)
     }
 }
 
 script SolsticeTown_House3_EventScript_Woman_Dialogue {
     applymovement(SolsticeTown_House3_Girl, moves(face_player))
     msgbox(format("Sigh…\n"
-        "I always thought he wanted to stay in Solstice Town, but maybe it's too small for us…"), type=MSGBOX_NPC)
+        "I always thought he wanted to stay in Solstice Town, but maybe it's too small for us…"), MSGBOX_NPC)
 }
