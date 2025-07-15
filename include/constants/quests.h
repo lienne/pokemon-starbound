@@ -15,6 +15,7 @@
 #define QUEST_MENU_BUFFER_QUEST_NAME 10 // buffers a quest name to gStringVar1
 
 // quest number defines
+#define QUEST_NONE                      0xFFFF
 #define QUEST_1_MEDS_FOR_JIRACHI        0
 #define QUEST_2_STARBOUND_OATH          1
 #define QUEST_3_ASTRIDALE_SABOTEUR      2

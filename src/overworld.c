@@ -68,6 +68,7 @@
 #include "wild_encounter.h"
 #include "vs_seeker.h"
 #include "frontier_util.h"
+#include "quests.h"
 #include "constants/abilities.h"
 #include "constants/event_object_movement.h"
 #include "constants/event_objects.h"
@@ -1884,6 +1885,7 @@ void CB2_ReturnToField(void)
     }
     else
     {
+        RefreshQuestIcons();
         FieldClearVBlankHBlankCallbacks();
         SetMainCallback2(CB2_ReturnToFieldLocal);
     }
@@ -1925,6 +1927,7 @@ void CB2_ReturnToFieldWithOpenMenu(void)
 {
     FieldClearVBlankHBlankCallbacks();
     gFieldCallback2 = FieldCB_ReturnToFieldOpenStartMenu;
+    RefreshQuestIcons();
     CB2_ReturnToField();
 }
 
@@ -2435,6 +2438,7 @@ static void InitObjectEventsLocal(void)
     FollowerNPC_HandleSprite();
     UpdateFollowingPokemon();
     TryRunOnWarpIntoMapScript();
+    RefreshQuestIcons();
 }
 
 static void InitObjectEventsReturnToField(void)
@@ -2442,6 +2446,7 @@ static void InitObjectEventsReturnToField(void)
     SpawnObjectEventsOnReturnToField(0, 0);
     RotatingGate_InitPuzzleAndGraphics();
     RunOnReturnToFieldMapScript();
+    RefreshQuestIcons();
 }
 
 static void SetCameraToTrackPlayer(void)
