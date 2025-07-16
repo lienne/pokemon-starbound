@@ -58,7 +58,7 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
                 "If {PLAYER} is out there, then I should be too!\p"
                 "Please, Professor! I want to be a Pokémon Trainer!"))
             speakername(ProfMyraName)
-            msgbox(format("…very well.\p"
+            msgbox(format("… Very well.\p"
                 "But know this: once you take this step, there's no going back.\p"
                 "This journey will challenge more than just your strength.\p"
                 "Choose carefully."))

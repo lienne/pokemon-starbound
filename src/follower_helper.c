@@ -71,8 +71,8 @@ static const u8 sCondMsg42[] = _("{STR_VAR_1}'s burn looks painful!");
 static const u8 sCondMsg43[] = _("{STR_VAR_1} is happy to see what's\noutdoors!");
 static const u8 sCondMsg44[] = _("{STR_VAR_1} is looking up at the\nsky.");
 static const u8* const sDayTexts[] = {sCondMsg43, sCondMsg44, NULL};
-static const u8 sCondMsg45[] = _("Your POKéMON is staring spellbound\nat the night sky!");
-static const u8 sCondMsg46[] = _("Your POKéMON is happily gazing at\nthe beautiful, starry sky!");
+static const u8 sCondMsg45[] = _("Your Pokémon is staring spellbound\nat the night sky!");
+static const u8 sCondMsg46[] = _("Your Pokémon is happily gazing at\nthe beautiful, starry sky!");
 static const u8* const sNightTexts[] = {sCondMsg45, sCondMsg46, NULL};
 
 // See the struct definition in follower_helper.h for more info

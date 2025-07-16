@@ -148,7 +148,8 @@
       "trainer_type": "TRAINER_TYPE_QUEST_GIVER",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Astridale_EventScript_ConstructionMan1_Dialogue",
-      "flag": "0"
+      "flag": "0",
+      "quest_id": 2
     },
     {
       "local_id": "Astridale_ConstructionMan2",

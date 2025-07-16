@@ -40,63 +40,65 @@ Astridale_Gym_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 # 35 "data/maps/Astridale_Gym/scripts.pory"
 	call Common_EventScript_PlayGymBadgeFanfare
 # 36 "data/maps/Astridale_Gym/scripts.pory"
-	speakername VivianeName
+	setflag FLAG_BADGE01_GET
 # 37 "data/maps/Astridale_Gym/scripts.pory"
+	speakername VivianeName
+# 38 "data/maps/Astridale_Gym/scripts.pory"
 	msgbox Astridale_Gym_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_2, MSGBOX_AUTOCLOSE
-# 40 "data/maps/Astridale_Gym/scripts.pory"
-	completequest QUEST_3_ASTRIDALE_SABOTEUR
 # 41 "data/maps/Astridale_Gym/scripts.pory"
+	completequest QUEST_3_ASTRIDALE_SABOTEUR
+# 42 "data/maps/Astridale_Gym/scripts.pory"
 	openquestmenu
 	end
 
 
 Astridale_Gym_EventScript_Viviane::
-# 48 "data/maps/Astridale_Gym/scripts.pory"
+# 49 "data/maps/Astridale_Gym/scripts.pory"
 	compare VAR_ASTRIDALE_STATE, 4
 	goto_if_ge Astridale_Gym_EventScript_Viviane_3
 Astridale_Gym_EventScript_Viviane_2:
-# 79 "data/maps/Astridale_Gym/scripts.pory"
-	applymovement Astridale_Gym_Viviane, Astridale_Gym_EventScript_Viviane_Movement_0
 # 80 "data/maps/Astridale_Gym/scripts.pory"
-	speakername VivianeName
+	applymovement Astridale_Gym_Viviane, Astridale_Gym_EventScript_Viviane_Movement_0
 # 81 "data/maps/Astridale_Gym/scripts.pory"
+	speakername VivianeName
+# 82 "data/maps/Astridale_Gym/scripts.pory"
 	msgbox Astridale_Gym_EventScript_Viviane_Text_5, MSGBOX_AUTOCLOSE
 	return
 
 Astridale_Gym_EventScript_Viviane_1:
-# 49 "data/maps/Astridale_Gym/scripts.pory"
-	applymovement Astridale_Gym_Viviane, Astridale_Gym_EventScript_Viviane_Movement_0
 # 50 "data/maps/Astridale_Gym/scripts.pory"
-	speakername VivianeName
+	applymovement Astridale_Gym_Viviane, Astridale_Gym_EventScript_Viviane_Movement_0
 # 51 "data/maps/Astridale_Gym/scripts.pory"
+	speakername VivianeName
+# 52 "data/maps/Astridale_Gym/scripts.pory"
 	msgbox Astridale_Gym_EventScript_Viviane_Text_0
-# 61 "data/maps/Astridale_Gym/scripts.pory"
-	speakername NULL
 # 62 "data/maps/Astridale_Gym/scripts.pory"
-	msgbox Astridale_Gym_EventScript_Viviane_Text_1, MSGBOX_YESNO
+	speakername NULL
 # 63 "data/maps/Astridale_Gym/scripts.pory"
+	msgbox Astridale_Gym_EventScript_Viviane_Text_1, MSGBOX_YESNO
+# 64 "data/maps/Astridale_Gym/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq Astridale_Gym_EventScript_Viviane_6
-# 68 "data/maps/Astridale_Gym/scripts.pory"
-	msgbox Astridale_Gym_EventScript_Viviane_Text_3
 # 69 "data/maps/Astridale_Gym/scripts.pory"
-	speakername VivianeName
+	msgbox Astridale_Gym_EventScript_Viviane_Text_3
 # 70 "data/maps/Astridale_Gym/scripts.pory"
+	speakername VivianeName
+# 71 "data/maps/Astridale_Gym/scripts.pory"
 	msgbox Astridale_Gym_EventScript_Viviane_Text_4, MSGBOX_NPC
-# 75 "data/maps/Astridale_Gym/scripts.pory"
+# 76 "data/maps/Astridale_Gym/scripts.pory"
 	warpwhitefade MAP_ASTRIDALE_MINDSCAPE, 19, 75
 	return
 
 Astridale_Gym_EventScript_Viviane_3:
-# 48 "data/maps/Astridale_Gym/scripts.pory"
+# 49 "data/maps/Astridale_Gym/scripts.pory"
 	compare VAR_ASTRIDALE_STATE, 9
 	goto_if_lt Astridale_Gym_EventScript_Viviane_1
 	goto Astridale_Gym_EventScript_Viviane_2
 
 Astridale_Gym_EventScript_Viviane_6:
-# 64 "data/maps/Astridale_Gym/scripts.pory"
-	speakername VivianeName
 # 65 "data/maps/Astridale_Gym/scripts.pory"
+	speakername VivianeName
+# 66 "data/maps/Astridale_Gym/scripts.pory"
 	msgbox Astridale_Gym_EventScript_Viviane_Text_2, MSGBOX_NPC
 	return
 
@@ -113,9 +115,9 @@ Astridale_Gym_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_1:
 	face_up
 	step_end
 
-# 49 "data/maps/Astridale_Gym/scripts.pory"
+# 50 "data/maps/Astridale_Gym/scripts.pory"
 Astridale_Gym_EventScript_Viviane_Movement_0:
-# 49 "data/maps/Astridale_Gym/scripts.pory"
+# 50 "data/maps/Astridale_Gym/scripts.pory"
 	face_player
 	step_end
 
@@ -153,7 +155,7 @@ Astridale_Gym_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_1:
 	.string "from Viviane!$"
 
 Astridale_Gym_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_2:
-# 37 "data/maps/Astridale_Gym/scripts.pory"
+# 38 "data/maps/Astridale_Gym/scripts.pory"
 	.string "The Charm Badge allows you to use the\n"
 	.string "HM Cut outside of battle.\p"
 	.string "It also heightens the attack power of\n"
@@ -161,7 +163,7 @@ Astridale_Gym_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_2:
 	.string "I'm sure you will find it very useful.$"
 
 Astridale_Gym_EventScript_Viviane_Text_0:
-# 51 "data/maps/Astridale_Gym/scripts.pory"
+# 52 "data/maps/Astridale_Gym/scripts.pory"
 	.string "So you're back.\p"
 	.string "I suggest you forget what you saw at\n"
 	.string "the warehouse.\p"
@@ -181,19 +183,19 @@ Astridale_Gym_EventScript_Viviane_Text_0:
 	.string "me?$"
 
 Astridale_Gym_EventScript_Viviane_Text_1:
-# 62 "data/maps/Astridale_Gym/scripts.pory"
+# 63 "data/maps/Astridale_Gym/scripts.pory"
 	.string "Give Viviane her Clefairy doll?$"
 
 Astridale_Gym_EventScript_Viviane_Text_2:
-# 65 "data/maps/Astridale_Gym/scripts.pory"
+# 66 "data/maps/Astridale_Gym/scripts.pory"
 	.string "That's right, scram!$"
 
 Astridale_Gym_EventScript_Viviane_Text_3:
-# 68 "data/maps/Astridale_Gym/scripts.pory"
+# 69 "data/maps/Astridale_Gym/scripts.pory"
 	.string "You gave Viviane her Clefairy doll.$"
 
 Astridale_Gym_EventScript_Viviane_Text_4:
-# 70 "data/maps/Astridale_Gym/scripts.pory"
+# 71 "data/maps/Astridale_Gym/scripts.pory"
 	.string "…\p"
 	.string "…oh…\p"
 	.string "…my beloved Clefairy doll…\p"
@@ -202,7 +204,7 @@ Astridale_Gym_EventScript_Viviane_Text_4:
 	.string "well…$"
 
 Astridale_Gym_EventScript_Viviane_Text_5:
-# 81 "data/maps/Astridale_Gym/scripts.pory"
+# 82 "data/maps/Astridale_Gym/scripts.pory"
 	.string "Hi, {PLAYER}!\p"
 	.string "Thank you again for helping me snap out\n"
 	.string "of my mind fog.\p"

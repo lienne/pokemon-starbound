@@ -33,6 +33,7 @@ mapscripts Astridale_Gym_MapScripts {
             speakername(NULL)
             msgbox(format("{PLAYER} received the Charm Badge from Viviane!"))
             call(Common_EventScript_PlayGymBadgeFanfare)
+            setflag(FLAG_BADGE01_GET)
             speakername(VivianeName)
             msgbox(format("The Charm Badge allows you to use the HM Cut outside of battle.\p"
                 "It also heightens the attack power of your Pokémon.\p"

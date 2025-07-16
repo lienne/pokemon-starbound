@@ -726,7 +726,7 @@ SolsticeTown_Rival_Battle_Defeat_Dialogue::
 
 SolsticeTown_Rival_After_Battle_Dialogue::
 # 280 "data/maps/SolsticeTown/scripts.pory"
-	.string "Humpft… You only won because you had a\n"
+	.string "Humph… You only won because you had a\n"
 	.string "head start.\p"
 	.string "You won't be so lucky next time, though!\p"
 	.string "Me and my Pokémon will train and get\n"

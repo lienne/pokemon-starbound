@@ -397,7 +397,7 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_2:
 
 LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_3:
 # 61 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	.string "…very well.\p"
+	.string "… Very well.\p"
 	.string "But know this: once you take this step,\n"
 	.string "there's no going back.\p"
 	.string "This journey will challenge more than\n"

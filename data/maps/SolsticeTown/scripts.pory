@@ -278,7 +278,7 @@ text SolsticeTown_Rival_Battle_Defeat_Dialogue {
 }
 
 text SolsticeTown_Rival_After_Battle_Dialogue {
-    format("Humpft… You only won because you had a head start.\p"
+    format("Humph… You only won because you had a head start.\p"
         "You won't be so lucky next time, though!\p"
         "Me and my Pokémon will train and get much stronger, you'll see!")
 }
