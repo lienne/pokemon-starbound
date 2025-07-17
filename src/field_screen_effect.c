@@ -33,6 +33,7 @@
 #include "string_util.h"
 #include "task.h"
 #include "text.h"
+#include "map_preview_screen.h"
 #include "constants/event_object_movement.h"
 #include "constants/event_objects.h"
 #include "constants/heal_locations.h"
@@ -120,7 +121,10 @@ void WarpFadeOutScreen(void)
         FadeScreen(FADE_TO_BLACK, 0);
         break;
     case 1:
-        FadeScreen(FADE_TO_WHITE, 0);
+        if (MapHasPreviewScreen_HandleQLState2(GetDestinationWarpMapSectionId(), MPS_TYPE_CAVE))
+            FadeScreen(FADE_TO_BLACK, 0);
+        else
+            FadeScreen(FADE_TO_WHITE, 0);
     }
 }
 

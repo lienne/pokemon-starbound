@@ -2,6 +2,7 @@
 #include "constants/songs.h"
 #include "constants/weather.h"
 #include "constants/rgb.h"
+#include "constants/expansion.h"
 #include "util.h"
 #include "decompress.h"
 #include "event_object_movement.h"
@@ -20,6 +21,7 @@
 #include "gpu_regs.h"
 #include "field_camera.h"
 #include "overworld.h"
+#include "map_preview_screen.h"
 
 #define DROUGHT_COLOR_INDEX(color) ((((color) >> 1) & 0xF) | (((color) >> 2) & 0xF0) | (((color) >> 3) & 0xF00))
 
@@ -169,7 +171,7 @@ static const u8 ALIGNED(2) sBasePaletteColorMapTypes[32] =
     COLOR_MAP_DARK_CONTRAST,
     COLOR_MAP_DARK_CONTRAST,
     COLOR_MAP_DARK_CONTRAST,
-    COLOR_MAP_DARK_CONTRAST,
+    COLOR_MAP_NONE, // This was changed from COLOR_MAP_DARK_CONTRAST to make sure certain weather effects don't affect map preview colors.
     COLOR_MAP_NONE,
     COLOR_MAP_NONE,
     // sprite palettes
@@ -313,8 +315,11 @@ static void Task_WeatherMain(u8 taskId)
 
 static void None_Init(void)
 {
-    Weather_SetBlendCoeffs(8, BASE_SHADOW_INTENSITY); // Indoor shadows
-    gWeatherPtr->noShadows = FALSE;
+    if (EXPANSION_VERSION_MINOR >= 9 && MapHasPreviewScreen_HandleQLState2(gMapHeader.regionMapSectionId, MPS_TYPE_FADE_IN) == FALSE)
+    {
+        Weather_SetBlendCoeffs(8, BASE_SHADOW_INTENSITY); // Indoor shadows
+        gWeatherPtr->noShadows = FALSE;
+    }
     gWeatherPtr->targetColorMapIndex = 0;
     gWeatherPtr->colorMapStepDelay = 0;
 }

@@ -33,6 +33,7 @@
 #include "trainer_hill.h"
 #include "vs_seeker.h"
 #include "wild_encounter.h"
+#include "map_preview_screen.h"
 #include "constants/event_bg.h"
 #include "constants/event_objects.h"
 #include "constants/field_poison.h"
@@ -221,7 +222,7 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     }
     if (input->pressedAButton && TrySetupDiveDownScript() == TRUE)
         return TRUE;
-    if (input->pressedStartButton)
+    if (input->pressedStartButton&& !ForestMapPreviewScreenIsRunning()) // Prevents opening the Start menu while the map preview is still fading out.
     {
         PlaySE(SE_WIN_OPEN);
         // ShowStartMenu();
