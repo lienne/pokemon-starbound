@@ -50,7 +50,7 @@
 #define FLAG_DELIVERED_JIRACHI_MEDICINE                     0x24
 #define FLAG_HIDE_RIVAL_IN_LAB                              0x25
 #define FLAG_HIDE_CLEARING_JIRACHI                          0x26
-#define FLAG_GOT_POKEBALL_SOLSTICE                          0x27
+#define FLAG_GOT_POTION_SOLSTICE                            0x27
 #define FLAG_HIDE_LUMEN_VILLAGE_CASSIANS_HOUSE_MOM          0x28
 #define FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_MOM           0x29
 #define FLAG_HIDE_LUMEN_VILLAGE_CASSIANS_HOUSE_RIVAL_MOM    0x2A

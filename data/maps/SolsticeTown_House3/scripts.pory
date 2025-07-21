@@ -3,16 +3,16 @@ mapscripts SolsticeTown_House3_MapScripts {
 }
 
 script SolsticeTown_House3_EventScript_Man_Dialogue {
-    if (!flag(FLAG_GOT_POKEBALL_SOLSTICE)) {
+    if (!flag(FLAG_GOT_POTION_SOLSTICE)) {
         lockall
         applymovement(SolsticeTown_House3_Man, moves(face_player))
         msgbox(format("Are you going on a Pokémon adventure? That's so cool…\p"
             "I always wanted to, but I had to stay here.\p"
             "Here, take this."))
-        giveitem(ITEM_POKE_BALL)
+        giveitem(ITEM_POTION)
         waitmessage()
         msgbox(format("I won't need it anyways. I hope it helps!"))
-        setflag(FLAG_GOT_POKEBALL_SOLSTICE)
+        setflag(FLAG_GOT_POTION_SOLSTICE)
         releaseall
     } else {
         applymovement(SolsticeTown_House3_Man, moves(face_player))

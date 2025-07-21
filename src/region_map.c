@@ -126,6 +126,10 @@ static const u16 sRegionMapPlayerIcon_BrendanPal[] = INCBIN_U16("graphics/pokena
 static const u8 sRegionMapPlayerIcon_BrendanGfx[] = INCBIN_U8("graphics/pokenav/region_map/brendan_icon.4bpp");
 static const u16 sRegionMapPlayerIcon_MayPal[] = INCBIN_U16("graphics/pokenav/region_map/may_icon.gbapal");
 static const u8 sRegionMapPlayerIcon_MayGfx[] = INCBIN_U8("graphics/pokenav/region_map/may_icon.4bpp");
+static const u16 sRegionMapPlayerIcon_SelenePal[] = INCBIN_U16("graphics/pokenav/region_map/selene_icon.gbapal");
+static const u8 sRegionMapPlayerIcon_SeleneGfx[] = INCBIN_U8("graphics/pokenav/region_map/selene_icon.4bpp");
+static const u16 sRegionMapPlayerIcon_CassianPal[] = INCBIN_U16("graphics/pokenav/region_map/cassian_icon.gbapal");
+static const u8 sRegionMapPlayerIcon_CassianGfx[] = INCBIN_U8("graphics/pokenav/region_map/cassian_icon.4bpp");
 
 #include "data/region_map/region_map_layout.h"
 #include "data/region_map/region_map_entries.h"
@@ -1455,8 +1459,8 @@ static void UNUSED ClearUnkCursorSpriteData(void)
 void CreateRegionMapPlayerIcon(u16 tileTag, u16 paletteTag)
 {
     u8 spriteId;
-    struct SpriteSheet sheet = {sRegionMapPlayerIcon_BrendanGfx, 0x80, tileTag};
-    struct SpritePalette palette = {sRegionMapPlayerIcon_BrendanPal, paletteTag};
+    struct SpriteSheet sheet = {sRegionMapPlayerIcon_CassianGfx, 0x80, tileTag};
+    struct SpritePalette palette = {sRegionMapPlayerIcon_CassianPal, paletteTag};
     struct SpriteTemplate template = {tileTag, paletteTag, &sRegionMapPlayerIconOam, sRegionMapPlayerIconAnimTable, NULL, gDummySpriteAffineAnimTable, SpriteCallbackDummy};
 
     if (IsEventIslandMapSecId(gMapHeader.regionMapSectionId))
@@ -1466,8 +1470,8 @@ void CreateRegionMapPlayerIcon(u16 tileTag, u16 paletteTag)
     }
     if (gSaveBlock2Ptr->playerGender == FEMALE)
     {
-        sheet.data = sRegionMapPlayerIcon_MayGfx;
-        palette.data = sRegionMapPlayerIcon_MayPal;
+        sheet.data = sRegionMapPlayerIcon_SeleneGfx;
+        palette.data = sRegionMapPlayerIcon_SelenePal;
     }
     LoadSpriteSheet(&sheet);
     LoadSpritePalette(&palette);

@@ -4,7 +4,7 @@ SolsticeTown_House3_MapScripts::
 
 SolsticeTown_House3_EventScript_Man_Dialogue::
 # 6 "data/maps/SolsticeTown_House3/scripts.pory"
-	goto_if_unset FLAG_GOT_POKEBALL_SOLSTICE, SolsticeTown_House3_EventScript_Man_Dialogue_1
+	goto_if_unset FLAG_GOT_POTION_SOLSTICE, SolsticeTown_House3_EventScript_Man_Dialogue_1
 # 18 "data/maps/SolsticeTown_House3/scripts.pory"
 	applymovement SolsticeTown_House3_Man, SolsticeTown_House3_EventScript_Man_Dialogue_Movement_0
 # 19 "data/maps/SolsticeTown_House3/scripts.pory"
@@ -19,13 +19,13 @@ SolsticeTown_House3_EventScript_Man_Dialogue_1:
 # 9 "data/maps/SolsticeTown_House3/scripts.pory"
 	msgbox SolsticeTown_House3_EventScript_Man_Dialogue_Text_0
 # 12 "data/maps/SolsticeTown_House3/scripts.pory"
-	giveitem ITEM_POKE_BALL
+	giveitem ITEM_POTION
 # 13 "data/maps/SolsticeTown_House3/scripts.pory"
 	waitmessage
 # 14 "data/maps/SolsticeTown_House3/scripts.pory"
 	msgbox SolsticeTown_House3_EventScript_Man_Dialogue_Text_1
 # 15 "data/maps/SolsticeTown_House3/scripts.pory"
-	setflag FLAG_GOT_POKEBALL_SOLSTICE
+	setflag FLAG_GOT_POTION_SOLSTICE
 # 16 "data/maps/SolsticeTown_House3/scripts.pory"
 	releaseall
 	return
