@@ -3,7 +3,7 @@
   "name": "Route2_Sunfade_Trail",
   "layout": "LAYOUT_ROUTE2_SUNFADE_TRAIL",
   "music": "MUS_RG_ROUTE1",
-  "region_map_section": "MAPSEC_ROUTE_2",
+  "region_map_section": "MAPSEC_ROUTE_2_SUNFADE_TRAIL",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_ROUTE",

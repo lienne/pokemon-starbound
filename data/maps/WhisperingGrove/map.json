@@ -3,7 +3,7 @@
   "name": "WhisperingGrove",
   "layout": "LAYOUT_WHISPERING_GROVE",
   "music": "MUS_PETALBURG_WOODS",
-  "region_map_section": "MAPSEC_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_WHISPERING_GROVE",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",
   "map_type": "MAP_TYPE_ROUTE",

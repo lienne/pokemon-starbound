@@ -3,7 +3,7 @@
   "name": "AstridaleCity_House4_2F",
   "layout": "LAYOUT_ASTRIDALE_CITY_HOUSE4_2F",
   "music": "MUS_LILYCOVE",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_ASTRIDALE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

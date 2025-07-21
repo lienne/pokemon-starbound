@@ -3,7 +3,7 @@
   "name": "Astridale_Gym",
   "layout": "LAYOUT_ASTRIDALE_GYM",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_LILYCOVE_CITY",
+  "region_map_section": "MAPSEC_ASTRIDALE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
