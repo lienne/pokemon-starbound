@@ -216,3 +216,6 @@ const u16 gMetatileAttributes_Astridale_Mindscape_Secondary[] = INCBIN_U16("data
 
 const u16 gMetatiles_New_General[] = INCBIN_U16("data/tilesets/primary/new_general/metatiles.bin");
 const u16 gMetatileAttributes_New_General[] = INCBIN_U16("data/tilesets/primary/new_general/metatile_attributes.bin");
+
+const u16 gMetatiles_New_Petalburg[] = INCBIN_U16("data/tilesets/secondary/new_petalburg/metatiles.bin");
+const u16 gMetatileAttributes_New_Petalburg[] = INCBIN_U16("data/tilesets/secondary/new_petalburg/metatile_attributes.bin");

@@ -282,9 +282,9 @@ script BeginnerClearing_EventScript_JirachiIntro {
         "Hmmm, I see. I think this situation calls for special circumstances.\p"
         "I will lend you one of my Pokémon so we can defend this Jirachi together.\p"
         "Please grab a Pokéball from my bag."))
-    setobjectxyperm(GruntA, 7, 14)
-    setobjectxyperm(GruntB, 7, 15)
-    setobjectxyperm(ProfMyra, 11, 15)
+    setobjectxyperm(GruntA, 7, 13)
+    setobjectxyperm(GruntB, 7, 14)
+    setobjectxyperm(ProfMyra, 11, 14)
     releaseall
 }
 

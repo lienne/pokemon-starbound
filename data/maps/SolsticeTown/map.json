@@ -70,7 +70,7 @@
       "local_id": "SolsticeTown_Girl2",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
       "x": 14,
-      "y": 23,
+      "y": 22,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 1,
@@ -125,35 +125,35 @@
   "warp_events": [
     {
       "x": 5,
-      "y": 22,
+      "y": 23,
       "elevation": 0,
       "dest_map": "MAP_SOLSTICE_TOWN_POKEMON_CENTER_1F",
       "dest_warp_id": "1"
     },
     {
-      "x": 21,
-      "y": 14,
+      "x": 22,
+      "y": 15,
       "elevation": 0,
       "dest_map": "MAP_SOLSTICE_TOWN_MART",
       "dest_warp_id": "0"
     },
     {
-      "x": 8,
+      "x": 9,
       "y": 17,
       "elevation": 0,
       "dest_map": "MAP_SOLSTICE_TOWN_HOUSE1",
       "dest_warp_id": "0"
     },
     {
-      "x": 16,
-      "y": 21,
+      "x": 17,
+      "y": 22,
       "elevation": 0,
       "dest_map": "MAP_SOLSTICE_TOWN_HOUSE2",
       "dest_warp_id": "0"
     },
     {
       "x": 15,
-      "y": 9,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_SOLSTICE_TOWN_HOUSE3",
       "dest_warp_id": "0"
@@ -228,7 +228,7 @@
     {
       "type": "sign",
       "x": 6,
-      "y": 22,
+      "y": 23,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
@@ -236,23 +236,23 @@
     {
       "type": "sign",
       "x": 7,
-      "y": 22,
+      "y": 23,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
     },
     {
       "type": "sign",
-      "x": 22,
-      "y": 14,
+      "x": 23,
+      "y": 15,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
     },
     {
       "type": "sign",
-      "x": 23,
-      "y": 14,
+      "x": 24,
+      "y": 15,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"

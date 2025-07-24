@@ -863,3 +863,14 @@ const struct Tileset gTileset_New_General =
     .metatileAttributes = gMetatileAttributes_New_General,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_New_Petalburg =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_New_Petalburg,
+    .palettes = gTilesetPalettes_New_Petalburg,
+    .metatiles = gMetatiles_New_Petalburg,
+    .metatileAttributes = gMetatileAttributes_New_Petalburg,
+    .callback = NULL,
+};

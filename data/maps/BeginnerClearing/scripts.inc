@@ -566,11 +566,11 @@ BeginnerClearing_EventScript_JirachiIntro::
 # 280 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_15
 # 285 "data/maps/BeginnerClearing/scripts.pory"
-	setobjectxyperm GruntA, 7, 14
+	setobjectxyperm GruntA, 7, 13
 # 286 "data/maps/BeginnerClearing/scripts.pory"
-	setobjectxyperm GruntB, 7, 15
+	setobjectxyperm GruntB, 7, 14
 # 287 "data/maps/BeginnerClearing/scripts.pory"
-	setobjectxyperm ProfMyra, 11, 15
+	setobjectxyperm ProfMyra, 11, 14
 # 288 "data/maps/BeginnerClearing/scripts.pory"
 	releaseall
 	return

@@ -142,13 +142,13 @@
       "id": "HEAL_LOCATION_BEGINNER_CLEARING",
       "map": "MAP_BEGINNER_CLEARING",
       "x": 12,
-      "y": 12
+      "y": 11
     },
     {
       "id": "HEAL_LOCATION_SOLSTICE_TOWN",
       "map": "MAP_SOLSTICE_TOWN",
       "x": 5,
-      "y": 23
+      "y": 24
     },
     {
       "id": "HEAL_LOCATION_ASTRIDALE",
