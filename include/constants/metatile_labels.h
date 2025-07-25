@@ -377,6 +377,15 @@
 // gTileset_MossdeepGym
 #define METATILE_MossdeepGym_YellowArrow_Right  0x250
 
+// gTileset_New_General
+#define METATILE_New_General_pokecenter_door  0x05A
+#define METATILE_New_General_pokemart_door    0x029
+
+// gTileset_New_Petalburg
+#define METATILE_New_Petalburg_Myras_Lab_Door      0x22D
+#define METATILE_New_Petalburg_players_house_door  0x282
+#define METATILE_New_Petalburg_solstice_town_door  0x252
+
 // gTileset_Pacifidlog
 #define METATILE_Pacifidlog_Door                               0x21A
 #define METATILE_Pacifidlog_FloatingLogs_HorizontalLeft        0x250
