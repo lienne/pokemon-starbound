@@ -422,6 +422,10 @@ static const struct SpriteFrameImage sPicTable_SeleneNormal[] = {
     overworld_ascending_frames(gObjectEventPic_SeleneNormalRunning, 2, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_CassianNormal[] = {
+    overworld_ascending_frames(gObjectEventPic_CassianNormalRunning, 2, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_MayMachBike[] = {
     overworld_ascending_frames(gObjectEventPic_MayMachBike, 4, 4),
 };

@@ -249,11 +249,12 @@
 #define OBJ_EVENT_GFX_SELENE_NORMAL              242
 #define OBJ_EVENT_GFX_PROF_MYRA                  243
 #define OBJ_EVENT_GFX_VIVIANE                    244
+#define OBJ_EVENT_GFX_CASSIAN_NORMAL             245
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        245
+#define NUM_OBJ_EVENT_GFX                        246
 
 #define OBJ_EVENT_GFX_JIRACHI OBJ_EVENT_GFX_SPECIES(JIRACHI)
 #define OBJ_EVENT_GFX_PIDOVE OBJ_EVENT_GFX_SPECIES(PIDOVE)
@@ -388,6 +389,7 @@
 #define OBJ_EVENT_PAL_TAG_SELENE                  0x1125
 #define OBJ_EVENT_PAL_TAG_PROF_MYRA               0x1126
 #define OBJ_EVENT_PAL_TAG_VIVIANE                 0x1127
+#define OBJ_EVENT_PAL_TAG_CASSIAN                 0x1128
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

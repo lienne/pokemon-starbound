@@ -9,7 +9,7 @@ EventScript_SetupRivalGfxIdFemale::
 	return
 
 EventScript_SetupRivalGfxIdMale::
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_CASSIAN_NORMAL
 	return
 
 Common_EventScript_SetupRivalOnBikeGfxId::

@@ -39,7 +39,8 @@ const u16 gObjectEventPal_MayReflection[] = INCBIN_U16("graphics/object_events/p
 // Astrea main characters
 const u32 gObjectEventPic_SeleneNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/selene/walking.4bpp", "graphics/object_events/pics/people/selene/running.4bpp");
 const u16 gObjectEventPal_Selene[] = INCBIN_U16("graphics/object_events/palettes/selene.gbapal");
-
+const u32 gObjectEventPic_CassianNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/cassian/walking.4bpp", "graphics/object_events/pics/people/cassian/running.4bpp");
+const u16 gObjectEventPal_Cassian[] = INCBIN_U16("graphics/object_events/palettes/cassian.gbapal");
 // Astrea gym leaders
 const u32 gObjectEventPic_Viviane[] = INCBIN_U32("graphics/object_events/pics/people/astrea_gym_leaders/viviane.4bpp");
 const u16 gObjectEventPal_Viviane[] = INCBIN_U16("graphics/object_events/palettes/viviane.gbapal");
