@@ -4546,8 +4546,8 @@
       "name": "WhisperingGrove_Layout",
       "width": 50,
       "height": 40,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
+      "primary_tileset": "gTileset_New_General",
+      "secondary_tileset": "gTileset_New_Petalburg",
       "border_filepath": "data/layouts/WhisperingGrove/border.bin",
       "blockdata_filepath": "data/layouts/WhisperingGrove/map.bin"
     },
@@ -4586,8 +4586,8 @@
       "name": "Astridale_Layout",
       "width": 80,
       "height": 34,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lilycove",
+      "primary_tileset": "gTileset_New_General",
+      "secondary_tileset": "gTileset_Astridale",
       "border_filepath": "data/layouts/Astridale/border.bin",
       "blockdata_filepath": "data/layouts/Astridale/map.bin"
     },
@@ -4717,7 +4717,7 @@
       "width": 40,
       "height": 40,
       "primary_tileset": "gTileset_New_General",
-      "secondary_tileset": "gTileset_New_Petalburg",
+      "secondary_tileset": "gTileset_Astridale",
       "border_filepath": "data/layouts/Caelestic/border.bin",
       "blockdata_filepath": "data/layouts/Caelestic/map.bin"
     }

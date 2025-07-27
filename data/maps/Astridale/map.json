@@ -20,7 +20,7 @@
     },
     {
       "map": "MAP_ROUTE3_ECHO_RIDGE",
-      "offset": 18,
+      "offset": 0,
       "direction": "up"
     }
   ],
@@ -41,8 +41,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MACHOKE",
-      "x": 64,
-      "y": 25,
+      "x": 65,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 0,
@@ -98,7 +98,7 @@
       "local_id": "Astridale_Machoke1",
       "graphics_id": "OBJ_EVENT_GFX_MACHOKE",
       "x": 52,
-      "y": 4,
+      "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 0,
@@ -125,8 +125,8 @@
     {
       "local_id": "Astridale_Gameboy_Kid",
       "graphics_id": "OBJ_EVENT_GFX_GAMEBOY_KID",
-      "x": 29,
-      "y": 16,
+      "x": 28,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -155,7 +155,7 @@
       "local_id": "Astridale_ConstructionMan2",
       "graphics_id": "OBJ_EVENT_GFX_MYSTERY_GIFT_MAN",
       "x": 64,
-      "y": 20,
+      "y": 19,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -197,7 +197,7 @@
       "local_id": "Astridale_ConstructionMan3",
       "graphics_id": "OBJ_EVENT_GFX_MYSTERY_GIFT_MAN",
       "x": 37,
-      "y": 1,
+      "y": 0,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -210,8 +210,8 @@
     {
       "local_id": "Astridale_Scyther",
       "graphics_id": "OBJ_EVENT_GFX_SCYTHER",
-      "x": 73,
-      "y": 22,
+      "x": 77,
+      "y": 20,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -224,8 +224,8 @@
     {
       "local_id": "Astridale_ConstructionMan_Cutter",
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 71,
-      "y": 22,
+      "x": 74,
+      "y": 20,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -234,12 +234,90 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Astridale_EventScript_ConstructionMan_Cutter_Dialogue",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
+      "x": 40,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "LIGHT_TYPE_BALL",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
+      "x": 28,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "LIGHT_TYPE_BALL",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
+      "x": 40,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "LIGHT_TYPE_BALL",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
+      "x": 28,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "LIGHT_TYPE_BALL",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
+      "x": 58,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "LIGHT_TYPE_BALL",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
+      "x": 73,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "LIGHT_TYPE_BALL",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 30,
-      "y": 10,
+      "x": 31,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_ASTRIDALE_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": "1"
@@ -253,7 +331,7 @@
     },
     {
       "x": 51,
-      "y": 21,
+      "y": 22,
       "elevation": 0,
       "dest_map": "MAP_ASTRIDALE_CITY_HOUSE1",
       "dest_warp_id": "0"
@@ -266,14 +344,14 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 41,
-      "y": 9,
+      "x": 42,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_ASTRIDALE_CITY_HOUSE3",
       "dest_warp_id": "0"
     },
     {
-      "x": 19,
+      "x": 20,
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_ASTRIDALE_CITY_HOUSE4",
@@ -298,7 +376,7 @@
     {
       "type": "trigger",
       "x": 36,
-      "y": 1,
+      "y": 0,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -307,7 +385,7 @@
     {
       "type": "trigger",
       "x": 35,
-      "y": 1,
+      "y": 0,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -316,7 +394,7 @@
     {
       "type": "trigger",
       "x": 34,
-      "y": 1,
+      "y": 0,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -326,16 +404,16 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 31,
-      "y": 10,
+      "x": 32,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
     },
     {
       "type": "sign",
-      "x": 32,
-      "y": 10,
+      "x": 33,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
@@ -358,7 +436,7 @@
     },
     {
       "type": "sign",
-      "x": 37,
+      "x": 38,
       "y": 24,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",

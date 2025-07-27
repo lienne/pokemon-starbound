@@ -861,7 +861,7 @@ const struct Tileset gTileset_New_General =
     .palettes = gTilesetPalettes_New_General,
     .metatiles = gMetatiles_New_General,
     .metatileAttributes = gMetatileAttributes_New_General,
-    .callback = NULL,
+    .callback = InitTilesetAnim_New_General,
 };
 
 const struct Tileset gTileset_New_Petalburg =
@@ -872,5 +872,16 @@ const struct Tileset gTileset_New_Petalburg =
     .palettes = gTilesetPalettes_New_Petalburg,
     .metatiles = gMetatiles_New_Petalburg,
     .metatileAttributes = gMetatileAttributes_New_Petalburg,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Astridale =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Astridale,
+    .palettes = gTilesetPalettes_Astridale,
+    .metatiles = gMetatiles_Astridale,
+    .metatileAttributes = gMetatileAttributes_Astridale,
     .callback = NULL,
 };
