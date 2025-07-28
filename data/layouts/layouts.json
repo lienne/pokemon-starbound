@@ -4664,10 +4664,10 @@
     {
       "id": "LAYOUT_ROUTE3_ECHO_RIDGE",
       "name": "Route3_EchoRidge_Layout",
-      "width": 50,
-      "height": 60,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lilycove",
+      "width": 56,
+      "height": 39,
+      "primary_tileset": "gTileset_New_General",
+      "secondary_tileset": "gTileset_Astridale",
       "border_filepath": "data/layouts/Route3_EchoRidge/border.bin",
       "blockdata_filepath": "data/layouts/Route3_EchoRidge/map.bin"
     },

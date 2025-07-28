@@ -203,7 +203,7 @@ script Astridale_EventScript_Scyther_Dialogue {
     applymovement(Astridale_Scyther, moves(face_player))
     msgbox(format("Scyther is using Cut to cut down some trees.\l"
         "It looks like it's working hard."), MSGBOX_NPC)
-    applymovement(Astridale_Scyther, moves(face_right))
+    applymovement(Astridale_Scyther, moves(face_down))
 }
 
 text Astridale_ConstructionMan3_Dialogue_Pre_Gym {

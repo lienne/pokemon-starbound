@@ -15,17 +15,17 @@
   "connections": [
     {
       "map": "MAP_ASTRIDALE",
-      "offset": -18,
-      "direction": "down"
+      "offset": 0,
+      "direction": "left"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 22,
-      "y": 34,
+      "x": 15,
+      "y": 25,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -36,7 +36,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
       "x": 23,
-      "y": 19,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -48,8 +48,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 18,
-      "y": 5,
+      "x": 17,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -61,8 +61,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ARTIST",
-      "x": 28,
-      "y": 8,
+      "x": 29,
+      "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -74,8 +74,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
-      "x": 38,
-      "y": 24,
+      "x": 41,
+      "y": 23,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
