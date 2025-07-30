@@ -41,6 +41,8 @@ const u32 gObjectEventPic_SeleneNormalRunning[] = INCBIN_U32("graphics/object_ev
 const u16 gObjectEventPal_Selene[] = INCBIN_U16("graphics/object_events/palettes/selene.gbapal");
 const u32 gObjectEventPic_CassianNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/cassian/walking.4bpp", "graphics/object_events/pics/people/cassian/running.4bpp");
 const u16 gObjectEventPal_Cassian[] = INCBIN_U16("graphics/object_events/palettes/cassian.gbapal");
+const u32 gObjectEventPic_ProfMyra[] = INCBIN_U32("graphics/object_events/pics/people/prof_myra.4bpp");
+const u16 gObjectEventPal_ProfMyra[] = INCBIN_U16("graphics/object_events/palettes/prof_myra.gbapal");
 // Astrea gym leaders
 const u32 gObjectEventPic_Viviane[] = INCBIN_U32("graphics/object_events/pics/people/astrea_gym_leaders/viviane.4bpp");
 const u16 gObjectEventPal_Viviane[] = INCBIN_U16("graphics/object_events/palettes/viviane.gbapal");
@@ -134,8 +136,6 @@ const u32 gObjectEventPic_Man4[] = INCBIN_U32("graphics/object_events/pics/peopl
 const u32 gObjectEventPic_Man5[] = INCBIN_U32("graphics/object_events/pics/people/man_5.4bpp");
 const u32 gObjectEventPic_Nurse[] = INCBIN_U32("graphics/object_events/pics/people/nurse.4bpp");
 const u32 gObjectEventPic_ProfBirch[] = INCBIN_U32("graphics/object_events/pics/people/prof_birch.4bpp");
-const u32 gObjectEventPic_ProfMyra[] = INCBIN_U32("graphics/object_events/pics/people/prof_myra.4bpp");
-const u16 gObjectEventPal_ProfMyra[] = INCBIN_U16("graphics/object_events/palettes/prof_myra.gbapal");
 const u32 gObjectEventPic_ReporterM[] = INCBIN_U32("graphics/object_events/pics/people/reporter_m.4bpp");
 const u32 gObjectEventPic_ReporterF[] = INCBIN_U32("graphics/object_events/pics/people/reporter_f.4bpp");
 const u32 gObjectEventPic_MauvilleOldMan1[] = INCBIN_U32("graphics/object_events/pics/people/mauville_old_man_1.4bpp");

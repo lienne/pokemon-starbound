@@ -44,14 +44,14 @@ PlayersHouse_EventScript_Mom_Dialogue_2:
 PlayersHouse_EventScript_Mom_Dialogue_3:
 # 31 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_GEN6_EXP_SHARE, PlayersHouse_EventScript_Mom_Dialogue_9
-# 54 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
+# 57 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
 	speakername MomName
-# 55 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
-	msgbox PlayersHouse_EventScript_Mom_Dialogue_Text_5, MSGBOX_NPC
 # 58 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
-	call Common_EventScript_OutOfCenterPartyHeal
-# 59 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
 	msgbox PlayersHouse_EventScript_Mom_Dialogue_Text_6, MSGBOX_NPC
+# 61 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
+	call Common_EventScript_OutOfCenterPartyHeal
+# 62 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
+	msgbox PlayersHouse_EventScript_Mom_Dialogue_Text_5, MSGBOX_NPC
 	return
 
 PlayersHouse_EventScript_Mom_Dialogue_5:
@@ -76,6 +76,12 @@ PlayersHouse_EventScript_Mom_Dialogue_9:
 	setflag FLAG_RECEIVED_GEN6_EXP_SHARE
 # 50 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
 	msgbox PlayersHouse_EventScript_Mom_Dialogue_Text_4, MSGBOX_NPC
+# 52 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
+	giveitem ITEM_TOWN_MAP
+# 53 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+# 54 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
+	msgbox PlayersHouse_EventScript_Mom_Dialogue_Text_5, MSGBOX_NPC
 	return
 
 
@@ -125,18 +131,19 @@ PlayersHouse_EventScript_Mom_Dialogue_Text_3:
 PlayersHouse_EventScript_Mom_Dialogue_Text_4:
 # 50 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
 	.string "This should help you on your journey.\p"
-	.string "Bye sweetie, I love you!$"
+	.string "You should also take this map, so you\n"
+	.string "don't get lost.$"
 
 PlayersHouse_EventScript_Mom_Dialogue_Text_5:
-# 55 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
+# 54 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
+	.string "Bye sweetie, I love you!$"
+
+PlayersHouse_EventScript_Mom_Dialogue_Text_6:
+# 58 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
 	.string "Take care on your journey, sweetie.\p"
 	.string "Don't forget to come home sometimes.\p"
 	.string "Why don't you take a quick rest before\n"
 	.string "leaving?$"
-
-PlayersHouse_EventScript_Mom_Dialogue_Text_6:
-# 59 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
-	.string "Bye sweetie, I love you!$"
 
 MomName::
 # 5 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"

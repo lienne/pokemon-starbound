@@ -48,7 +48,10 @@ script PlayersHouse_EventScript_Mom_Dialogue {
             goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
             setflag(FLAG_RECEIVED_GEN6_EXP_SHARE)
             msgbox(format("This should help you on your journey.\p"
-                "Bye sweetie, I love you!"), MSGBOX_NPC)
+                "You should also take this map, so you don't get lost."), MSGBOX_NPC)
+            giveitem(ITEM_TOWN_MAP)
+            goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+            msgbox(("Bye sweetie, I love you!"), MSGBOX_NPC)
         }
         else {
             speakername(MomName)
