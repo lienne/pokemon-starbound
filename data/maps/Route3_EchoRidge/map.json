@@ -17,6 +17,11 @@
       "map": "MAP_ASTRIDALE",
       "offset": 0,
       "direction": "left"
+    },
+    {
+      "map": "MAP_CAELESTIC",
+      "offset": 0,
+      "direction": "right"
     }
   ],
   "object_events": [

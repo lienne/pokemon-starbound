@@ -4667,7 +4667,7 @@
       "width": 64,
       "height": 39,
       "primary_tileset": "gTileset_New_General",
-      "secondary_tileset": "gTileset_Routes_General",
+      "secondary_tileset": "gTileset_Astridale",
       "border_filepath": "data/layouts/Route3_EchoRidge/border.bin",
       "blockdata_filepath": "data/layouts/Route3_EchoRidge/map.bin"
     },
@@ -4714,10 +4714,10 @@
     {
       "id": "LAYOUT_CAELESTIC",
       "name": "Caelestic_Layout",
-      "width": 40,
-      "height": 40,
+      "width": 60,
+      "height": 42,
       "primary_tileset": "gTileset_New_General",
-      "secondary_tileset": "gTileset_Routes_General",
+      "secondary_tileset": "gTileset_Astridale",
       "border_filepath": "data/layouts/Caelestic/border.bin",
       "blockdata_filepath": "data/layouts/Caelestic/map.bin"
     }
