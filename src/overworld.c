@@ -1682,6 +1682,25 @@ void UpdatePalettesWithTime(u32 palettes)
 {
     if (!MapHasNaturalLight(gMapHeader.mapType))
         return;
+
+    // Force night tint during intro if the flag is set
+    if (FlagGet(FLAG_FORCE_NIGHTTIME_INTRO))
+    {
+        // Manually apply night blend values here (using blend settings from nighttime)
+        struct TimeBlendSettings nightBlend;
+        nightBlend.startBlend = gTimeOfDayBlend[TIME_NIGHT];
+        nightBlend.endBlend = gTimeOfDayBlend[TIME_NIGHT];
+
+        u32 forcedPalettes = PALETTES_MAP;
+
+        TimeMixPalettes(forcedPalettes, gPlttBufferUnfaded, gPlttBufferFaded,
+                        &nightBlend.startBlend,
+                        &nightBlend.endBlend,
+                        256); // Full weight = full night
+
+        return;
+    }
+
     u32 i;
     u32 mask = 1 << 16;
     if (palettes >= (1 << 16))
@@ -1701,7 +1720,30 @@ u8 UpdateSpritePaletteWithTime(u8 paletteNum)
 {
     if (MapHasNaturalLight(gMapHeader.mapType)
      && !IS_BLEND_IMMUNE_TAG(GetSpritePaletteTagByPaletteNum(paletteNum)))
-        TimeMixPalettes(1, &gPlttBufferUnfaded[OBJ_PLTT_ID(paletteNum)], &gPlttBufferFaded[OBJ_PLTT_ID(paletteNum)], &gTimeBlend.startBlend, &gTimeBlend.endBlend, gTimeBlend.weight);
+    {
+        if (FlagGet(FLAG_FORCE_NIGHTTIME_INTRO))
+        {
+            struct BlendSettings blend = gTimeOfDayBlend[TIME_NIGHT];
+            TimeMixPalettes(
+                1,
+                &gPlttBufferUnfaded[OBJ_PLTT_ID(paletteNum)],
+                &gPlttBufferFaded[OBJ_PLTT_ID(paletteNum)],
+                &blend,
+                &blend,
+                256
+            );
+        } else
+        {
+            TimeMixPalettes(
+                1,
+                &gPlttBufferUnfaded[OBJ_PLTT_ID(paletteNum)],
+                &gPlttBufferFaded[OBJ_PLTT_ID(paletteNum)],
+                &gTimeBlend.startBlend,
+                &gTimeBlend.endBlend,
+                gTimeBlend.weight
+            );
+        }
+    }
     return paletteNum;
 }
 
@@ -1731,6 +1773,15 @@ static void OverworldBasic(void)
         {
            UpdateAltBgPalettes(PALETTES_BG);
            UpdatePalettesWithTime(PALETTES_ALL);
+        }
+    }
+    if (FlagGet(FLAG_FORCE_NIGHTTIME_INTRO))
+    {
+        UpdatePalettesWithTime(PALETTES_ALL);
+        for (u8 i = 0; i < 16; i++)
+        {
+            if (!IS_BLEND_IMMUNE_TAG(GetSpritePaletteTagByPaletteNum(i)))
+                UpdateSpritePaletteWithTime(i);
         }
     }
 }

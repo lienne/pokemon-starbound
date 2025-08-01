@@ -67,8 +67,8 @@
 #define FLAG_HIDE_ASTRIDALE_MINDSCAPE_INV_BRENDAN_KEY       0x35
 #define FLAG_HIDE_ASTRIDALE_MINDSCAPE_INV_BRENDAN_LOCKBOX   0x36
 #define FLAG_RECEIVED_GEN6_EXP_SHARE                        0x37
-#define FLAG_UNUSED_0x038    0x38 // Unused Flag
-#define FLAG_UNUSED_0x039    0x39 // Unused Flag
+#define FLAG_FORCE_NIGHTTIME_INTRO                          0x38
+#define FLAG_HIDE_LUMEN_VILLAGE_NPCS                        0x39
 #define FLAG_UNUSED_0x03A    0x3A // Unused Flag
 #define FLAG_UNUSED_0x03B    0x3B // Unused Flag
 #define FLAG_UNUSED_0x03C    0x3C // Unused Flag
@@ -1506,17 +1506,21 @@
 
 #define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYSTEM_FLAGS + 0x84)
 
-#define FLAG_UNUSED_0x8E5                           (SYSTEM_FLAGS + 0x85) // Unused Flag
-#define FLAG_UNUSED_0x8E6                           (SYSTEM_FLAGS + 0x86) // Unused Flag
-#define FLAG_UNUSED_0x8E7                           (SYSTEM_FLAGS + 0x87) // Unused Flag
-#define FLAG_UNUSED_0x8E8                           (SYSTEM_FLAGS + 0x88) // Unused Flag
-#define FLAG_UNUSED_0x8E9                           (SYSTEM_FLAGS + 0x89) // Unused Flag
-#define FLAG_UNUSED_0x8EA                           (SYSTEM_FLAGS + 0x8A) // Unused Flag
-#define FLAG_UNUSED_0x8EB                           (SYSTEM_FLAGS + 0x8B) // Unused Flag
-#define FLAG_UNUSED_0x8EC                           (SYSTEM_FLAGS + 0x8C) // Unused Flag
-#define FLAG_UNUSED_0x8ED                           (SYSTEM_FLAGS + 0x8D) // Unused Flag
-#define FLAG_UNUSED_0x8EE                           (SYSTEM_FLAGS + 0x8E) // Unused Flag
-#define FLAG_UNUSED_0x8EF                           (SYSTEM_FLAGS + 0x8F) // Unused Flag
+// ------------------------------
+// Astrea Region Visit Flags
+// ------------------------------
+#define FLAG_VISITED_LUMEN_VILLAGE                  (SYSTEM_FLAGS + 0x85)
+#define FLAG_VISITED_SOLSTICE_TOWN                  (SYSTEM_FLAGS + 0x86)
+#define FLAG_VISITED_ASTRIDALE                      (SYSTEM_FLAGS + 0x87)
+#define FLAG_VISITED_CAELESTIC                      (SYSTEM_FLAGS + 0x88)
+#define FLAG_VISITED_NEBULA_TOWN                    (SYSTEM_FLAGS + 0x89)
+#define FLAG_VISITED_ZENITH_CITY                    (SYSTEM_FLAGS + 0x8A)
+#define FLAG_VISITED_DRIFTWOOD_HOLLOW               (SYSTEM_FLAGS + 0x8B)
+#define FLAG_VISITED_STELLARA                       (SYSTEM_FLAGS + 0x8C)
+#define FLAG_VISITED_ORIONIS                        (SYSTEM_FLAGS + 0x8D)
+#define FLAG_VISITED_MYRREN_TOWN                    (SYSTEM_FLAGS + 0x8E)
+#define FLAG_VISITED_ASTRALIS_PEAK                  (SYSTEM_FLAGS + 0x8F)
+
 #define FLAG_UNUSED_0x8F0                           (SYSTEM_FLAGS + 0x90) // Unused Flag
 #define FLAG_UNUSED_0x8F1                           (SYSTEM_FLAGS + 0x91) // Unused Flag
 #define FLAG_UNUSED_0x8F2                           (SYSTEM_FLAGS + 0x92) // Unused Flag

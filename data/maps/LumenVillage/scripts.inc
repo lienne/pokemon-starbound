@@ -32,619 +32,635 @@ LumenVillage_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0:
 
 LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 # 16 "data/maps/LumenVillage/scripts.pory"
-	map_script_2 VAR_INTRO_SCENE, 1, LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0
+	map_script_2 VAR_INTRO_SCENE, 2, LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0
 	.2byte 0
 
 LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 # 17 "data/maps/LumenVillage/scripts.pory"
-	setvar VAR_INTRO_SCENE, 2
+	setvar VAR_INTRO_SCENE, 3
 # 18 "data/maps/LumenVillage/scripts.pory"
-	addobject LumenVillage_Rival_Intro
+	checkplayergender
 # 19 "data/maps/LumenVillage/scripts.pory"
-	applymovement LumenVillage_Rival_Intro, LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_0
-# 20 "data/maps/LumenVillage/scripts.pory"
+	compare VAR_RESULT, MALE
+	goto_if_eq LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_2
+# 44 "data/maps/LumenVillage/scripts.pory"
+	addobject LumenVillage_Rival_Intro_Female
+# 45 "data/maps/LumenVillage/scripts.pory"
+	applymovement LumenVillage_Rival_Intro_Female, LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_0
+# 46 "data/maps/LumenVillage/scripts.pory"
 	playse SE_PIN
-# 21 "data/maps/LumenVillage/scripts.pory"
+# 47 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
-# 22 "data/maps/LumenVillage/scripts.pory"
+# 48 "data/maps/LumenVillage/scripts.pory"
 	playbgm MUS_RG_ENCOUNTER_RIVAL, FALSE
-# 23 "data/maps/LumenVillage/scripts.pory"
+# 49 "data/maps/LumenVillage/scripts.pory"
 	delay 50
-# 24 "data/maps/LumenVillage/scripts.pory"
-	applymovement LumenVillage_Rival_Intro, LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_1
-# 26 "data/maps/LumenVillage/scripts.pory"
+# 50 "data/maps/LumenVillage/scripts.pory"
+	applymovement LumenVillage_Rival_Intro_Female, LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_1
+# 52 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
-# 27 "data/maps/LumenVillage/scripts.pory"
+# 53 "data/maps/LumenVillage/scripts.pory"
 	call RivalName
-# 28 "data/maps/LumenVillage/scripts.pory"
+# 54 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0, MSGBOX_AUTOCLOSE
-# 35 "data/maps/LumenVillage/scripts.pory"
-	applymovement LumenVillage_Rival_Intro, LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_2
-# 36 "data/maps/LumenVillage/scripts.pory"
+# 61 "data/maps/LumenVillage/scripts.pory"
+	applymovement LumenVillage_Rival_Intro_Female, LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_2
+# 63 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
-# 37 "data/maps/LumenVillage/scripts.pory"
-	removeobject LumenVillage_Rival_Intro
-# 38 "data/maps/LumenVillage/scripts.pory"
+# 64 "data/maps/LumenVillage/scripts.pory"
+	setflag FLAG_HIDE_RIVAL_INTRO_NPC
+# 65 "data/maps/LumenVillage/scripts.pory"
+	removeobject LumenVillage_Rival_Intro_Female
+# 66 "data/maps/LumenVillage/scripts.pory"
 	fadedefaultbgm
+LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_1:
 	end
 
-
-LumenVillage_EventScript_GoBack_LeftTrigger::
-# 45 "data/maps/LumenVillage/scripts.pory"
-	goto_if_unset FLAG_CAN_LEAVE_BEGINNER_CLEARING, LumenVillage_EventScript_GoBack_LeftTrigger_1
-	return
-
-LumenVillage_EventScript_GoBack_LeftTrigger_1:
-# 46 "data/maps/LumenVillage/scripts.pory"
-	lockall
-# 47 "data/maps/LumenVillage/scripts.pory"
-	msgbox LumenVillage_EventScript_GoBack_LeftTrigger_Text_0
-# 48 "data/maps/LumenVillage/scripts.pory"
-	playse SE_SELECT
-# 49 "data/maps/LumenVillage/scripts.pory"
-	applymovement LOCALID_PLAYER, LumenVillage_EventScript_GoBack_LeftTrigger_Movement_0
-# 50 "data/maps/LumenVillage/scripts.pory"
+LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_2:
+# 20 "data/maps/LumenVillage/scripts.pory"
+	addobject LumenVillage_Rival_Intro_Male
+# 21 "data/maps/LumenVillage/scripts.pory"
+	applymovement LumenVillage_Rival_Intro_Male, LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_0
+# 22 "data/maps/LumenVillage/scripts.pory"
+	playse SE_PIN
+# 23 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
-# 51 "data/maps/LumenVillage/scripts.pory"
-	releaseall
-	return
+# 24 "data/maps/LumenVillage/scripts.pory"
+	playbgm MUS_RG_ENCOUNTER_RIVAL, FALSE
+# 25 "data/maps/LumenVillage/scripts.pory"
+	delay 50
+# 26 "data/maps/LumenVillage/scripts.pory"
+	applymovement LumenVillage_Rival_Intro_Male, LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_1
+# 28 "data/maps/LumenVillage/scripts.pory"
+	waitmovement 0
+# 29 "data/maps/LumenVillage/scripts.pory"
+	call RivalName
+# 30 "data/maps/LumenVillage/scripts.pory"
+	msgbox LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0, MSGBOX_AUTOCLOSE
+# 37 "data/maps/LumenVillage/scripts.pory"
+	applymovement LumenVillage_Rival_Intro_Male, LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_2
+# 39 "data/maps/LumenVillage/scripts.pory"
+	waitmovement 0
+# 40 "data/maps/LumenVillage/scripts.pory"
+	setflag FLAG_HIDE_RIVAL_INTRO_NPC
+# 41 "data/maps/LumenVillage/scripts.pory"
+	removeobject LumenVillage_Rival_Intro_Male
+# 42 "data/maps/LumenVillage/scripts.pory"
+	fadedefaultbgm
+	goto LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_1
 
 
 LumenVillage_EventScript_GoBack_UpTrigger::
-# 56 "data/maps/LumenVillage/scripts.pory"
+# 74 "data/maps/LumenVillage/scripts.pory"
 	goto_if_unset FLAG_CAN_LEAVE_BEGINNER_CLEARING, LumenVillage_EventScript_GoBack_UpTrigger_1
 	return
 
 LumenVillage_EventScript_GoBack_UpTrigger_1:
-# 57 "data/maps/LumenVillage/scripts.pory"
+# 75 "data/maps/LumenVillage/scripts.pory"
 	lockall
-# 58 "data/maps/LumenVillage/scripts.pory"
-	msgbox LumenVillage_EventScript_GoBack_LeftTrigger_Text_0
-# 59 "data/maps/LumenVillage/scripts.pory"
+# 76 "data/maps/LumenVillage/scripts.pory"
+	msgbox LumenVillage_EventScript_GoBack_UpTrigger_Text_0
+# 77 "data/maps/LumenVillage/scripts.pory"
 	playse SE_SELECT
-# 60 "data/maps/LumenVillage/scripts.pory"
+# 78 "data/maps/LumenVillage/scripts.pory"
 	applymovement LOCALID_PLAYER, LumenVillage_EventScript_GoBack_UpTrigger_Movement_0
-# 61 "data/maps/LumenVillage/scripts.pory"
+# 79 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
-# 62 "data/maps/LumenVillage/scripts.pory"
+# 80 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 
 LumenVillage_EventScript_SetIntroFlags::
-# 67 "data/maps/LumenVillage/scripts.pory"
+# 85 "data/maps/LumenVillage/scripts.pory"
 	checkplayergender
-# 68 "data/maps/LumenVillage/scripts.pory"
+# 86 "data/maps/LumenVillage/scripts.pory"
 	compare VAR_RESULT, MALE
 	goto_if_eq LumenVillage_EventScript_SetIntroFlags_1
-# 71 "data/maps/LumenVillage/scripts.pory"
+# 89 "data/maps/LumenVillage/scripts.pory"
 	call LumenVillage_EventScript_SetIntroFlags_Female
 	return
 
 LumenVillage_EventScript_SetIntroFlags_1:
-# 69 "data/maps/LumenVillage/scripts.pory"
+# 87 "data/maps/LumenVillage/scripts.pory"
 	call LumenVillage_EventScript_SetIntroFlags_Male
 	return
 
 
 LumenVillage_EventScript_SetIntroFlags_Male::
-# 76 "data/maps/LumenVillage/scripts.pory"
+# 94 "data/maps/LumenVillage/scripts.pory"
 	setrespawn HEAL_LOCATION_LUMEN_VILLAGE
-# 77 "data/maps/LumenVillage/scripts.pory"
+# 95 "data/maps/LumenVillage/scripts.pory"
 	clearflag FLAG_HIDE_LUMEN_VILLAGE_CASSIANS_HOUSE_MOM
-# 78 "data/maps/LumenVillage/scripts.pory"
+# 96 "data/maps/LumenVillage/scripts.pory"
 	clearflag FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_RIVAL_MOM
-# 79 "data/maps/LumenVillage/scripts.pory"
+# 97 "data/maps/LumenVillage/scripts.pory"
 	addobject Player_Mom_1F
-# 80 "data/maps/LumenVillage/scripts.pory"
+# 98 "data/maps/LumenVillage/scripts.pory"
 	addobject Rival_Mom_1F
-# 81 "data/maps/LumenVillage/scripts.pory"
+# 99 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 
 LumenVillage_EventScript_SetIntroFlags_Female::
-# 85 "data/maps/LumenVillage/scripts.pory"
+# 103 "data/maps/LumenVillage/scripts.pory"
 	setrespawn HEAL_LOCATION_LUMEN_VILLAGE
-# 86 "data/maps/LumenVillage/scripts.pory"
+# 104 "data/maps/LumenVillage/scripts.pory"
 	clearflag FLAG_HIDE_LUMEN_VILLAGE_SELENES_HOUSE_MOM
-# 87 "data/maps/LumenVillage/scripts.pory"
+# 105 "data/maps/LumenVillage/scripts.pory"
 	clearflag FLAG_HIDE_LUMEN_VILLAGE_CASSIANS_HOUSE_RIVAL_MOM
-# 88 "data/maps/LumenVillage/scripts.pory"
+# 106 "data/maps/LumenVillage/scripts.pory"
 	addobject Player_Mom_1F
-# 89 "data/maps/LumenVillage/scripts.pory"
+# 107 "data/maps/LumenVillage/scripts.pory"
 	addobject Rival_Mom_1F
-# 90 "data/maps/LumenVillage/scripts.pory"
+# 108 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 
 LumenVillage_EventScript_ProfLabSign::
-# 94 "data/maps/LumenVillage/scripts.pory"
+# 112 "data/maps/LumenVillage/scripts.pory"
 	lockall
-# 95 "data/maps/LumenVillage/scripts.pory"
+# 113 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_EventScript_ProfLabSign_Text_0
-# 96 "data/maps/LumenVillage/scripts.pory"
+# 114 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 
 LumenVillage_EventScript_SelenesHouseSign::
-# 100 "data/maps/LumenVillage/scripts.pory"
+# 118 "data/maps/LumenVillage/scripts.pory"
 	lockall
-# 101 "data/maps/LumenVillage/scripts.pory"
+# 119 "data/maps/LumenVillage/scripts.pory"
 	checkplayergender
-# 102 "data/maps/LumenVillage/scripts.pory"
+# 120 "data/maps/LumenVillage/scripts.pory"
 	compare VAR_RESULT, FEMALE
 	goto_if_eq LumenVillage_EventScript_SelenesHouseSign_2
-# 105 "data/maps/LumenVillage/scripts.pory"
+# 123 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_EventScript_SelenesHouseSign_Text_0
 LumenVillage_EventScript_SelenesHouseSign_1:
-# 107 "data/maps/LumenVillage/scripts.pory"
+# 125 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 LumenVillage_EventScript_SelenesHouseSign_2:
-# 103 "data/maps/LumenVillage/scripts.pory"
+# 121 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_Text_PlayersHouse_Sign
 	goto LumenVillage_EventScript_SelenesHouseSign_1
 
 
 LumenVillage_EventScript_CassiansHouseSign::
-# 111 "data/maps/LumenVillage/scripts.pory"
+# 129 "data/maps/LumenVillage/scripts.pory"
 	lockall
-# 112 "data/maps/LumenVillage/scripts.pory"
+# 130 "data/maps/LumenVillage/scripts.pory"
 	checkplayergender
-# 113 "data/maps/LumenVillage/scripts.pory"
+# 131 "data/maps/LumenVillage/scripts.pory"
 	compare VAR_RESULT, MALE
 	goto_if_eq LumenVillage_EventScript_CassiansHouseSign_2
-# 116 "data/maps/LumenVillage/scripts.pory"
+# 134 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_EventScript_CassiansHouseSign_Text_0
 LumenVillage_EventScript_CassiansHouseSign_1:
-# 118 "data/maps/LumenVillage/scripts.pory"
+# 136 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 LumenVillage_EventScript_CassiansHouseSign_2:
-# 114 "data/maps/LumenVillage/scripts.pory"
+# 132 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_Text_PlayersHouse_Sign
 	goto LumenVillage_EventScript_CassiansHouseSign_1
 
 
 LumenVillage_EventScript_VillageSign::
-# 122 "data/maps/LumenVillage/scripts.pory"
+# 140 "data/maps/LumenVillage/scripts.pory"
 	lockall
-# 123 "data/maps/LumenVillage/scripts.pory"
+# 141 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_EventScript_VillageSign_Text_0
-# 125 "data/maps/LumenVillage/scripts.pory"
+# 143 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 
 LumenVillage_FatMan_Dialogue::
-# 129 "data/maps/LumenVillage/scripts.pory"
+# 147 "data/maps/LumenVillage/scripts.pory"
 	applymovement LumenVillage_FatMan, LumenVillage_FatMan_Dialogue_Movement_0
-# 130 "data/maps/LumenVillage/scripts.pory"
+# 148 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_FatMan_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
 LumenVillage_OldLady_Dialogue::
-# 135 "data/maps/LumenVillage/scripts.pory"
+# 153 "data/maps/LumenVillage/scripts.pory"
 	applymovement LumenVillage_OldLady, LumenVillage_FatMan_Dialogue_Movement_0
-# 136 "data/maps/LumenVillage/scripts.pory"
+# 154 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_OldLady_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
 LumenVillage_LittleGirl_Dialogue::
-# 140 "data/maps/LumenVillage/scripts.pory"
+# 158 "data/maps/LumenVillage/scripts.pory"
 	applymovement LumenVillage_LittleGirl, LumenVillage_FatMan_Dialogue_Movement_0
-# 141 "data/maps/LumenVillage/scripts.pory"
+# 159 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_LittleGirl_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
 LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA::
-# 150 "data/maps/LumenVillage/scripts.pory"
-	compare VAR_INTRO_SCENE, 5
+# 168 "data/maps/LumenVillage/scripts.pory"
+	compare VAR_INTRO_SCENE, 6
 	goto_if_eq LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA_1
 	return
 
 LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA_1:
-# 151 "data/maps/LumenVillage/scripts.pory"
+# 169 "data/maps/LumenVillage/scripts.pory"
 	lock
-# 152 "data/maps/LumenVillage/scripts.pory"
-	setvar VAR_INTRO_SCENE, 6
-# 153 "data/maps/LumenVillage/scripts.pory"
+# 170 "data/maps/LumenVillage/scripts.pory"
+	setvar VAR_INTRO_SCENE, 7
+# 171 "data/maps/LumenVillage/scripts.pory"
 	setflag FLAG_DELIVERED_JIRACHI_MEDICINE
-# 154 "data/maps/LumenVillage/scripts.pory"
+# 172 "data/maps/LumenVillage/scripts.pory"
 	removeitem ITEM_PARCEL
-# 155 "data/maps/LumenVillage/scripts.pory"
+# 173 "data/maps/LumenVillage/scripts.pory"
 	hidefollower
-# 156 "data/maps/LumenVillage/scripts.pory"
+# 174 "data/maps/LumenVillage/scripts.pory"
 	applymovement LOCALID_PLAYER, LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA_Movement_0
-# 157 "data/maps/LumenVillage/scripts.pory"
+# 175 "data/maps/LumenVillage/scripts.pory"
 	playse SE_PIN
-# 158 "data/maps/LumenVillage/scripts.pory"
+# 176 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
-# 159 "data/maps/LumenVillage/scripts.pory"
+# 177 "data/maps/LumenVillage/scripts.pory"
 	clearflag FLAG_HIDE_MYRA_IN_LUMEN_VILLAGE
-# 160 "data/maps/LumenVillage/scripts.pory"
+# 178 "data/maps/LumenVillage/scripts.pory"
 	addobject LumenVillage_ProfMyra
-# 161 "data/maps/LumenVillage/scripts.pory"
+# 179 "data/maps/LumenVillage/scripts.pory"
 	applymovement LumenVillage_ProfMyra, LumenVillage_Movement_ProfMyraApproachesPlayerInSpotA
-# 162 "data/maps/LumenVillage/scripts.pory"
+# 180 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
-# 163 "data/maps/LumenVillage/scripts.pory"
+# 181 "data/maps/LumenVillage/scripts.pory"
 	applymovement LOCALID_PLAYER, LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA_Movement_1
-# 164 "data/maps/LumenVillage/scripts.pory"
+# 182 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
-# 165 "data/maps/LumenVillage/scripts.pory"
+# 183 "data/maps/LumenVillage/scripts.pory"
 	call LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue
-# 166 "data/maps/LumenVillage/scripts.pory"
+# 184 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 
 LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotB::
-# 171 "data/maps/LumenVillage/scripts.pory"
-	compare VAR_INTRO_SCENE, 5
+# 189 "data/maps/LumenVillage/scripts.pory"
+	compare VAR_INTRO_SCENE, 6
 	goto_if_eq LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotB_1
 	return
 
 LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotB_1:
-# 172 "data/maps/LumenVillage/scripts.pory"
+# 190 "data/maps/LumenVillage/scripts.pory"
 	lock
-# 173 "data/maps/LumenVillage/scripts.pory"
-	setvar VAR_INTRO_SCENE, 6
-# 174 "data/maps/LumenVillage/scripts.pory"
+# 191 "data/maps/LumenVillage/scripts.pory"
+	setvar VAR_INTRO_SCENE, 7
+# 192 "data/maps/LumenVillage/scripts.pory"
 	setflag FLAG_DELIVERED_JIRACHI_MEDICINE
-# 175 "data/maps/LumenVillage/scripts.pory"
+# 193 "data/maps/LumenVillage/scripts.pory"
 	removeitem ITEM_PARCEL
-# 176 "data/maps/LumenVillage/scripts.pory"
+# 194 "data/maps/LumenVillage/scripts.pory"
 	hidefollower
-# 177 "data/maps/LumenVillage/scripts.pory"
+# 195 "data/maps/LumenVillage/scripts.pory"
 	applymovement LOCALID_PLAYER, LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA_Movement_0
-# 178 "data/maps/LumenVillage/scripts.pory"
+# 196 "data/maps/LumenVillage/scripts.pory"
 	playse SE_PIN
-# 179 "data/maps/LumenVillage/scripts.pory"
+# 197 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
-# 180 "data/maps/LumenVillage/scripts.pory"
+# 198 "data/maps/LumenVillage/scripts.pory"
 	clearflag FLAG_HIDE_MYRA_IN_LUMEN_VILLAGE
-# 181 "data/maps/LumenVillage/scripts.pory"
+# 199 "data/maps/LumenVillage/scripts.pory"
 	addobject LumenVillage_ProfMyra
-# 182 "data/maps/LumenVillage/scripts.pory"
+# 200 "data/maps/LumenVillage/scripts.pory"
 	applymovement LumenVillage_ProfMyra, LumenVillage_Movement_ProfMyraApproachesPlayerInSpotB
-# 183 "data/maps/LumenVillage/scripts.pory"
+# 201 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
-# 184 "data/maps/LumenVillage/scripts.pory"
+# 202 "data/maps/LumenVillage/scripts.pory"
 	call LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue
-# 185 "data/maps/LumenVillage/scripts.pory"
+# 203 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 
 LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotC::
-# 190 "data/maps/LumenVillage/scripts.pory"
-	compare VAR_INTRO_SCENE, 5
+# 208 "data/maps/LumenVillage/scripts.pory"
+	compare VAR_INTRO_SCENE, 6
 	goto_if_eq LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotC_1
 	return
 
 LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotC_1:
-# 191 "data/maps/LumenVillage/scripts.pory"
+# 209 "data/maps/LumenVillage/scripts.pory"
 	lock
-# 192 "data/maps/LumenVillage/scripts.pory"
-	setvar VAR_INTRO_SCENE, 6
-# 193 "data/maps/LumenVillage/scripts.pory"
+# 210 "data/maps/LumenVillage/scripts.pory"
+	setvar VAR_INTRO_SCENE, 7
+# 211 "data/maps/LumenVillage/scripts.pory"
 	setflag FLAG_DELIVERED_JIRACHI_MEDICINE
-# 194 "data/maps/LumenVillage/scripts.pory"
+# 212 "data/maps/LumenVillage/scripts.pory"
 	removeitem ITEM_PARCEL
-# 195 "data/maps/LumenVillage/scripts.pory"
+# 213 "data/maps/LumenVillage/scripts.pory"
 	hidefollower
-# 196 "data/maps/LumenVillage/scripts.pory"
+# 214 "data/maps/LumenVillage/scripts.pory"
 	applymovement LOCALID_PLAYER, LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA_Movement_0
-# 197 "data/maps/LumenVillage/scripts.pory"
+# 215 "data/maps/LumenVillage/scripts.pory"
 	playse SE_PIN
-# 198 "data/maps/LumenVillage/scripts.pory"
+# 216 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
-# 199 "data/maps/LumenVillage/scripts.pory"
+# 217 "data/maps/LumenVillage/scripts.pory"
 	clearflag FLAG_HIDE_MYRA_IN_LUMEN_VILLAGE
-# 200 "data/maps/LumenVillage/scripts.pory"
+# 218 "data/maps/LumenVillage/scripts.pory"
 	addobject LumenVillage_ProfMyra
-# 201 "data/maps/LumenVillage/scripts.pory"
+# 219 "data/maps/LumenVillage/scripts.pory"
 	applymovement LumenVillage_ProfMyra, LumenVillage_Movement_ProfMyraApproachesPlayerInSpotC
-# 202 "data/maps/LumenVillage/scripts.pory"
+# 220 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
-# 203 "data/maps/LumenVillage/scripts.pory"
+# 221 "data/maps/LumenVillage/scripts.pory"
 	applymovement LOCALID_PLAYER, LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotC_Movement_0
-# 204 "data/maps/LumenVillage/scripts.pory"
+# 222 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
-# 205 "data/maps/LumenVillage/scripts.pory"
+# 223 "data/maps/LumenVillage/scripts.pory"
 	call LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue
-# 206 "data/maps/LumenVillage/scripts.pory"
+# 224 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 
 LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotD::
-# 211 "data/maps/LumenVillage/scripts.pory"
-	compare VAR_INTRO_SCENE, 5
+# 229 "data/maps/LumenVillage/scripts.pory"
+	compare VAR_INTRO_SCENE, 6
 	goto_if_eq LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotD_1
 	return
 
 LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotD_1:
-# 212 "data/maps/LumenVillage/scripts.pory"
+# 230 "data/maps/LumenVillage/scripts.pory"
 	lock
-# 213 "data/maps/LumenVillage/scripts.pory"
-	setvar VAR_INTRO_SCENE, 6
-# 214 "data/maps/LumenVillage/scripts.pory"
+# 231 "data/maps/LumenVillage/scripts.pory"
+	setvar VAR_INTRO_SCENE, 7
+# 232 "data/maps/LumenVillage/scripts.pory"
 	setflag FLAG_DELIVERED_JIRACHI_MEDICINE
-# 215 "data/maps/LumenVillage/scripts.pory"
+# 233 "data/maps/LumenVillage/scripts.pory"
 	removeitem ITEM_PARCEL
-# 216 "data/maps/LumenVillage/scripts.pory"
+# 234 "data/maps/LumenVillage/scripts.pory"
 	hidefollower
-# 217 "data/maps/LumenVillage/scripts.pory"
+# 235 "data/maps/LumenVillage/scripts.pory"
 	applymovement LOCALID_PLAYER, LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA_Movement_0
-# 218 "data/maps/LumenVillage/scripts.pory"
+# 236 "data/maps/LumenVillage/scripts.pory"
 	playse SE_PIN
-# 219 "data/maps/LumenVillage/scripts.pory"
+# 237 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
-# 220 "data/maps/LumenVillage/scripts.pory"
+# 238 "data/maps/LumenVillage/scripts.pory"
 	clearflag FLAG_HIDE_MYRA_IN_LUMEN_VILLAGE
-# 221 "data/maps/LumenVillage/scripts.pory"
+# 239 "data/maps/LumenVillage/scripts.pory"
 	addobject LumenVillage_ProfMyra
-# 222 "data/maps/LumenVillage/scripts.pory"
+# 240 "data/maps/LumenVillage/scripts.pory"
 	applymovement LumenVillage_ProfMyra, LumenVillage_Movement_ProfMyraApproachesPlayerInSpotD
-# 223 "data/maps/LumenVillage/scripts.pory"
+# 241 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
-# 224 "data/maps/LumenVillage/scripts.pory"
+# 242 "data/maps/LumenVillage/scripts.pory"
 	applymovement LOCALID_PLAYER, LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotC_Movement_0
-# 225 "data/maps/LumenVillage/scripts.pory"
+# 243 "data/maps/LumenVillage/scripts.pory"
 	waitmovement 0
-# 226 "data/maps/LumenVillage/scripts.pory"
+# 244 "data/maps/LumenVillage/scripts.pory"
 	call LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue
-# 227 "data/maps/LumenVillage/scripts.pory"
+# 245 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 
 LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue::
-# 232 "data/maps/LumenVillage/scripts.pory"
-	lockall
-# 233 "data/maps/LumenVillage/scripts.pory"
-	speakername ProfMyraName
-# 234 "data/maps/LumenVillage/scripts.pory"
-	msgbox LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_0
-# 246 "data/maps/LumenVillage/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 247 "data/maps/LumenVillage/scripts.pory"
-	speakername NULL
-# 248 "data/maps/LumenVillage/scripts.pory"
-	msgbox LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_1
-# 249 "data/maps/LumenVillage/scripts.pory"
-	waitfanfare
 # 250 "data/maps/LumenVillage/scripts.pory"
-	setflag FLAG_SYS_POKEDEX_GET
+	lockall
 # 251 "data/maps/LumenVillage/scripts.pory"
-	special SetUnlockedPokedexFlags
+	speakername ProfMyraName
 # 252 "data/maps/LumenVillage/scripts.pory"
-	speakername ProfMyraName
-# 253 "data/maps/LumenVillage/scripts.pory"
-	msgbox LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_2
-# 254 "data/maps/LumenVillage/scripts.pory"
-	speakername NULL
-# 255 "data/maps/LumenVillage/scripts.pory"
-	giveitem ITEM_POKE_BALL, 5
-# 256 "data/maps/LumenVillage/scripts.pory"
-	speakername ProfMyraName
-# 257 "data/maps/LumenVillage/scripts.pory"
-	msgbox LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_3, MSGBOX_AUTOCLOSE
+	msgbox LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_0
 # 264 "data/maps/LumenVillage/scripts.pory"
-	applymovement LOCALID_PLAYER, LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Movement_0
+	playfanfare MUS_OBTAIN_ITEM
 # 265 "data/maps/LumenVillage/scripts.pory"
-	applymovement LumenVillage_ProfMyra, LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Movement_1
+	speakername NULL
 # 266 "data/maps/LumenVillage/scripts.pory"
-	waitmovement 0
+	msgbox LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_1
 # 267 "data/maps/LumenVillage/scripts.pory"
-	setflag FLAG_HIDE_MYRA_IN_LUMEN_VILLAGE
+	waitfanfare
 # 268 "data/maps/LumenVillage/scripts.pory"
-	removeobject LumenVillage_ProfMyra
+	setflag FLAG_SYS_POKEDEX_GET
 # 269 "data/maps/LumenVillage/scripts.pory"
-	clearflag FLAG_HIDE_MYRA_IN_LAB
+	special SetUnlockedPokedexFlags
 # 270 "data/maps/LumenVillage/scripts.pory"
+	speakername ProfMyraName
+# 271 "data/maps/LumenVillage/scripts.pory"
+	msgbox LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_2
+# 272 "data/maps/LumenVillage/scripts.pory"
+	speakername NULL
+# 273 "data/maps/LumenVillage/scripts.pory"
+	giveitem ITEM_POKE_BALL, 5
+# 274 "data/maps/LumenVillage/scripts.pory"
+	speakername ProfMyraName
+# 275 "data/maps/LumenVillage/scripts.pory"
+	msgbox LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_3, MSGBOX_AUTOCLOSE
+# 282 "data/maps/LumenVillage/scripts.pory"
+	applymovement LOCALID_PLAYER, LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Movement_0
+# 283 "data/maps/LumenVillage/scripts.pory"
+	applymovement LumenVillage_ProfMyra, LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Movement_1
+# 284 "data/maps/LumenVillage/scripts.pory"
+	waitmovement 0
+# 285 "data/maps/LumenVillage/scripts.pory"
+	setflag FLAG_HIDE_MYRA_IN_LUMEN_VILLAGE
+# 286 "data/maps/LumenVillage/scripts.pory"
+	removeobject LumenVillage_ProfMyra
+# 287 "data/maps/LumenVillage/scripts.pory"
+	clearflag FLAG_HIDE_MYRA_IN_LAB
+# 288 "data/maps/LumenVillage/scripts.pory"
 	releaseall
 	return
 
 
-# 273 "data/maps/LumenVillage/scripts.pory"
+# 291 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_Movement_ProfMyraApproachesPlayerInSpotA:
-# 274 "data/maps/LumenVillage/scripts.pory"
+# 292 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 274 "data/maps/LumenVillage/scripts.pory"
+# 292 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 274 "data/maps/LumenVillage/scripts.pory"
+# 292 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 274 "data/maps/LumenVillage/scripts.pory"
+# 292 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 274 "data/maps/LumenVillage/scripts.pory"
+# 292 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 274 "data/maps/LumenVillage/scripts.pory"
+# 292 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 274 "data/maps/LumenVillage/scripts.pory"
+# 292 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 275 "data/maps/LumenVillage/scripts.pory"
+# 293 "data/maps/LumenVillage/scripts.pory"
 	face_left
 	step_end
 
-# 278 "data/maps/LumenVillage/scripts.pory"
+# 296 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_Movement_ProfMyraApproachesPlayerInSpotB:
-# 279 "data/maps/LumenVillage/scripts.pory"
+# 297 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 279 "data/maps/LumenVillage/scripts.pory"
+# 297 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 279 "data/maps/LumenVillage/scripts.pory"
+# 297 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 279 "data/maps/LumenVillage/scripts.pory"
+# 297 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 279 "data/maps/LumenVillage/scripts.pory"
+# 297 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 279 "data/maps/LumenVillage/scripts.pory"
+# 297 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
 	step_end
 
-# 282 "data/maps/LumenVillage/scripts.pory"
+# 300 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_Movement_ProfMyraApproachesPlayerInSpotC:
-# 283 "data/maps/LumenVillage/scripts.pory"
+# 301 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 283 "data/maps/LumenVillage/scripts.pory"
+# 301 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 283 "data/maps/LumenVillage/scripts.pory"
+# 301 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 283 "data/maps/LumenVillage/scripts.pory"
+# 301 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 283 "data/maps/LumenVillage/scripts.pory"
+# 301 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 283 "data/maps/LumenVillage/scripts.pory"
+# 301 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 283 "data/maps/LumenVillage/scripts.pory"
+# 301 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 284 "data/maps/LumenVillage/scripts.pory"
+# 302 "data/maps/LumenVillage/scripts.pory"
 	face_right
 	step_end
 
-# 287 "data/maps/LumenVillage/scripts.pory"
+# 305 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_Movement_ProfMyraApproachesPlayerInSpotD:
-# 288 "data/maps/LumenVillage/scripts.pory"
+# 306 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 288 "data/maps/LumenVillage/scripts.pory"
+# 306 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 288 "data/maps/LumenVillage/scripts.pory"
+# 306 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 288 "data/maps/LumenVillage/scripts.pory"
+# 306 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 288 "data/maps/LumenVillage/scripts.pory"
+# 306 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 288 "data/maps/LumenVillage/scripts.pory"
+# 306 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 288 "data/maps/LumenVillage/scripts.pory"
+# 306 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 289 "data/maps/LumenVillage/scripts.pory"
+# 307 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_right
-# 290 "data/maps/LumenVillage/scripts.pory"
+# 308 "data/maps/LumenVillage/scripts.pory"
 	face_right
 	step_end
 
-# 19 "data/maps/LumenVillage/scripts.pory"
+# 21 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_0:
-# 19 "data/maps/LumenVillage/scripts.pory"
+# 21 "data/maps/LumenVillage/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
-# 24 "data/maps/LumenVillage/scripts.pory"
+# 26 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_1:
-# 24 "data/maps/LumenVillage/scripts.pory"
-	walk_fast_left
-# 24 "data/maps/LumenVillage/scripts.pory"
-	walk_fast_left
-# 24 "data/maps/LumenVillage/scripts.pory"
-	walk_fast_left
-# 25 "data/maps/LumenVillage/scripts.pory"
+# 26 "data/maps/LumenVillage/scripts.pory"
+	walk_fast_right
+# 26 "data/maps/LumenVillage/scripts.pory"
+	walk_fast_right
+# 26 "data/maps/LumenVillage/scripts.pory"
+	walk_fast_right
+# 27 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
-# 25 "data/maps/LumenVillage/scripts.pory"
-	walk_fast_up
-# 25 "data/maps/LumenVillage/scripts.pory"
+# 27 "data/maps/LumenVillage/scripts.pory"
 	walk_fast_up
 	step_end
 
-# 35 "data/maps/LumenVillage/scripts.pory"
+# 37 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Movement_2:
-# 35 "data/maps/LumenVillage/scripts.pory"
-	walk_fast_down
-# 35 "data/maps/LumenVillage/scripts.pory"
-	walk_fast_down
-# 35 "data/maps/LumenVillage/scripts.pory"
-	walk_fast_down
-# 35 "data/maps/LumenVillage/scripts.pory"
-	walk_fast_down
-# 35 "data/maps/LumenVillage/scripts.pory"
-	walk_fast_down
-# 35 "data/maps/LumenVillage/scripts.pory"
-	walk_fast_down
-# 35 "data/maps/LumenVillage/scripts.pory"
-	walk_fast_down
-# 35 "data/maps/LumenVillage/scripts.pory"
-	walk_fast_down
+# 37 "data/maps/LumenVillage/scripts.pory"
+	walk_fast_left
+# 37 "data/maps/LumenVillage/scripts.pory"
+	walk_fast_left
+# 37 "data/maps/LumenVillage/scripts.pory"
+	walk_fast_left
+# 37 "data/maps/LumenVillage/scripts.pory"
+	walk_fast_left
+# 38 "data/maps/LumenVillage/scripts.pory"
+	walk_fast_up
+# 38 "data/maps/LumenVillage/scripts.pory"
+	walk_fast_up
+# 38 "data/maps/LumenVillage/scripts.pory"
+	walk_fast_up
+# 38 "data/maps/LumenVillage/scripts.pory"
+	walk_fast_up
+# 38 "data/maps/LumenVillage/scripts.pory"
+	walk_fast_up
+# 38 "data/maps/LumenVillage/scripts.pory"
+	walk_fast_up
 	step_end
 
-# 49 "data/maps/LumenVillage/scripts.pory"
-LumenVillage_EventScript_GoBack_LeftTrigger_Movement_0:
-# 49 "data/maps/LumenVillage/scripts.pory"
-	walk_right
-	step_end
-
-# 60 "data/maps/LumenVillage/scripts.pory"
+# 78 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_EventScript_GoBack_UpTrigger_Movement_0:
-# 60 "data/maps/LumenVillage/scripts.pory"
+# 78 "data/maps/LumenVillage/scripts.pory"
 	walk_down
 	step_end
 
-# 129 "data/maps/LumenVillage/scripts.pory"
+# 147 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_FatMan_Dialogue_Movement_0:
-# 129 "data/maps/LumenVillage/scripts.pory"
+# 147 "data/maps/LumenVillage/scripts.pory"
 	face_player
 	step_end
 
-# 156 "data/maps/LumenVillage/scripts.pory"
+# 174 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA_Movement_0:
-# 156 "data/maps/LumenVillage/scripts.pory"
+# 174 "data/maps/LumenVillage/scripts.pory"
 	emote_exclamation_mark
-# 156 "data/maps/LumenVillage/scripts.pory"
+# 174 "data/maps/LumenVillage/scripts.pory"
 	delay_16
-# 156 "data/maps/LumenVillage/scripts.pory"
+# 174 "data/maps/LumenVillage/scripts.pory"
 	face_down
 	step_end
 
-# 163 "data/maps/LumenVillage/scripts.pory"
+# 181 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA_Movement_1:
-# 163 "data/maps/LumenVillage/scripts.pory"
+# 181 "data/maps/LumenVillage/scripts.pory"
 	face_right
 	step_end
 
-# 203 "data/maps/LumenVillage/scripts.pory"
+# 221 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotC_Movement_0:
-# 203 "data/maps/LumenVillage/scripts.pory"
+# 221 "data/maps/LumenVillage/scripts.pory"
 	face_left
 	step_end
 
-# 264 "data/maps/LumenVillage/scripts.pory"
+# 282 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Movement_0:
-# 264 "data/maps/LumenVillage/scripts.pory"
+# 282 "data/maps/LumenVillage/scripts.pory"
 	delay_16
-# 264 "data/maps/LumenVillage/scripts.pory"
+# 282 "data/maps/LumenVillage/scripts.pory"
 	face_down
 	step_end
 
-# 265 "data/maps/LumenVillage/scripts.pory"
+# 283 "data/maps/LumenVillage/scripts.pory"
 LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Movement_1:
-# 265 "data/maps/LumenVillage/scripts.pory"
+# 283 "data/maps/LumenVillage/scripts.pory"
 	walk_down
-# 265 "data/maps/LumenVillage/scripts.pory"
+# 283 "data/maps/LumenVillage/scripts.pory"
 	walk_down
-# 265 "data/maps/LumenVillage/scripts.pory"
+# 283 "data/maps/LumenVillage/scripts.pory"
 	walk_down
-# 265 "data/maps/LumenVillage/scripts.pory"
+# 283 "data/maps/LumenVillage/scripts.pory"
 	walk_down
-# 265 "data/maps/LumenVillage/scripts.pory"
+# 283 "data/maps/LumenVillage/scripts.pory"
 	walk_down
-# 265 "data/maps/LumenVillage/scripts.pory"
+# 283 "data/maps/LumenVillage/scripts.pory"
 	walk_down
-# 265 "data/maps/LumenVillage/scripts.pory"
+# 283 "data/maps/LumenVillage/scripts.pory"
 	walk_down
 	step_end
 
 LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0:
-# 28 "data/maps/LumenVillage/scripts.pory"
+# 30 "data/maps/LumenVillage/scripts.pory"
 	.string "Hey, {PLAYER}! What are you doing out\n"
 	.string "here?\p"
 	.string "WHOA - hold up! You've got a Pokémon?!\p"
@@ -659,47 +675,46 @@ LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0:
 	.string "leave me in the dust!\p"
 	.string "I'll get my own Pokémon too, you'll see!$"
 
-LumenVillage_EventScript_GoBack_LeftTrigger_Text_0:
-# 47 "data/maps/LumenVillage/scripts.pory"
-	.string "You can't ignore the cries of a hurt\n"
-	.string "Pokémon!$"
+LumenVillage_EventScript_GoBack_UpTrigger_Text_0:
+# 76 "data/maps/LumenVillage/scripts.pory"
+	.string "The shooting star fell in the clearing!$"
 
 LumenVillage_EventScript_ProfLabSign_Text_0:
-# 95 "data/maps/LumenVillage/scripts.pory"
+# 113 "data/maps/LumenVillage/scripts.pory"
 	.string "Prof. Myra's Lab$"
 
 LumenVillage_EventScript_SelenesHouseSign_Text_0:
-# 105 "data/maps/LumenVillage/scripts.pory"
+# 123 "data/maps/LumenVillage/scripts.pory"
 	.string "Selene's House$"
 
 LumenVillage_EventScript_CassiansHouseSign_Text_0:
-# 116 "data/maps/LumenVillage/scripts.pory"
+# 134 "data/maps/LumenVillage/scripts.pory"
 	.string "Cassian's House$"
 
 LumenVillage_EventScript_VillageSign_Text_0:
-# 123 "data/maps/LumenVillage/scripts.pory"
+# 141 "data/maps/LumenVillage/scripts.pory"
 	.string "Lumen Village\n"
 	.string "“A quiet place beneath the stars”$"
 
 LumenVillage_FatMan_Dialogue_Text_0:
-# 130 "data/maps/LumenVillage/scripts.pory"
+# 148 "data/maps/LumenVillage/scripts.pory"
 	.string "Technology is amazing!\p"
 	.string "You can now use satellites to chart the\n"
 	.string "stars in Astrea!$"
 
 LumenVillage_OldLady_Dialogue_Text_0:
-# 136 "data/maps/LumenVillage/scripts.pory"
+# 154 "data/maps/LumenVillage/scripts.pory"
 	.string "Lumen Village must be the safest place\n"
 	.string "in Astrea, but I swear I hear rustling in\l"
 	.string "the night lately…$"
 
 LumenVillage_LittleGirl_Dialogue_Text_0:
-# 141 "data/maps/LumenVillage/scripts.pory"
+# 159 "data/maps/LumenVillage/scripts.pory"
 	.string "The water looks so nice!\n"
 	.string "But I'm not allowed to swim yet…$"
 
 LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_0:
-# 234 "data/maps/LumenVillage/scripts.pory"
+# 252 "data/maps/LumenVillage/scripts.pory"
 	.string "{PLAYER}! Wait!\p"
 	.string "Did you find Jirachi? Is it safe?\p"
 	.string "…\p"
@@ -721,16 +736,16 @@ LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_0:
 	.string "data on all Pokémon you encounter.$"
 
 LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_1:
-# 248 "data/maps/LumenVillage/scripts.pory"
+# 266 "data/maps/LumenVillage/scripts.pory"
 	.string "{PLAYER} received the Pokédex!$"
 
 LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_2:
-# 253 "data/maps/LumenVillage/scripts.pory"
+# 271 "data/maps/LumenVillage/scripts.pory"
 	.string "And take these Pokéballs - you'll need\n"
 	.string "them.$"
 
 LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_3:
-# 257 "data/maps/LumenVillage/scripts.pory"
+# 275 "data/maps/LumenVillage/scripts.pory"
 	.string "I won't stop you, {PLAYER}… but\n"
 	.string "please be careful.\p"
 	.string "You're walking into something vast and\n"
@@ -747,5 +762,5 @@ LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_3:
 	.string "{PLAYER}!$"
 
 LumenVillage_Text_PlayersHouse_Sign::
-# 145 "data/maps/LumenVillage/scripts.pory"
+# 163 "data/maps/LumenVillage/scripts.pory"
 	.string "{PLAYER}'s House$"

@@ -290,7 +290,7 @@ script BeginnerClearing_EventScript_JirachiIntro {
 
 script BeginnerClearing_EventScript_MyrasBag {
     lockall
-    fadescreen(FADE_TO_BLACK)
+    fadescreenswapbuffers(FADE_TO_BLACK)
     setflag(FLAG_SYS_POKEMON_GET)
     special(ChooseStarter)
     waitstate()
@@ -351,9 +351,9 @@ script BeginnerClearing_EventScript_AfterBattle {
 }
 
 script BeginnerClearing_EventScript_LookForJirachiFromA {
-    if (var(VAR_INTRO_SCENE) == 4) {
+    if (var(VAR_INTRO_SCENE) == 5) {
         lockall
-        setvar(VAR_INTRO_SCENE, 5)
+        setvar(VAR_INTRO_SCENE, 6)
         hidefollower()
         applymovement(LOCALID_PLAYER, BeginnerClearing_PlayerWalksIn_LookForJirachiFromA)
         waitmovement(0)
@@ -363,9 +363,9 @@ script BeginnerClearing_EventScript_LookForJirachiFromA {
 }
 
 script BeginnerClearing_EventScript_LookForJirachiFromB {
-    if (var(VAR_INTRO_SCENE) == 4) {
+    if (var(VAR_INTRO_SCENE) == 5) {
         lockall
-        setvar(VAR_INTRO_SCENE, 5)
+        setvar(VAR_INTRO_SCENE, 6)
         hidefollower()
         applymovement(LOCALID_PLAYER, BeginnerClearing_PlayerWalksIn_LookForJirachiFromB)
         waitmovement(0)

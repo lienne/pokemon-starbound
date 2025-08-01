@@ -51,7 +51,7 @@ SolsticeTown_EventScript_Girl2_Dialogue::
 
 SolsticeTown_EventScript_Boy2_Dialogue_SpotA::
 # 34 "data/maps/SolsticeTown/scripts.pory"
-	compare VAR_INTRO_SCENE, 7
+	compare VAR_INTRO_SCENE, 8
 	goto_if_lt SolsticeTown_EventScript_Boy2_Dialogue_SpotA_1
 	return
 
@@ -83,7 +83,7 @@ SolsticeTown_EventScript_Boy2_Dialogue_SpotA_1:
 
 SolsticeTown_EventScript_Boy2_Dialogue_SpotB::
 # 50 "data/maps/SolsticeTown/scripts.pory"
-	compare VAR_INTRO_SCENE, 7
+	compare VAR_INTRO_SCENE, 8
 	goto_if_lt SolsticeTown_EventScript_Boy2_Dialogue_SpotB_1
 	return
 
@@ -115,7 +115,7 @@ SolsticeTown_EventScript_Boy2_Dialogue_SpotB_1:
 
 SolsticeTown_EventScript_Boy2_Dialogue_SpotC::
 # 66 "data/maps/SolsticeTown/scripts.pory"
-	compare VAR_INTRO_SCENE, 7
+	compare VAR_INTRO_SCENE, 8
 	goto_if_lt SolsticeTown_EventScript_Boy2_Dialogue_SpotC_1
 	return
 
@@ -141,7 +141,7 @@ SolsticeTown_EventScript_Boy2_Dialogue_SpotC_1:
 
 SolsticeTown_EventScript_Boy2_Dialogue::
 # 79 "data/maps/SolsticeTown/scripts.pory"
-	compare VAR_INTRO_SCENE, 7
+	compare VAR_INTRO_SCENE, 8
 	goto_if_lt SolsticeTown_EventScript_Boy2_Dialogue_1
 # 83 "data/maps/SolsticeTown/scripts.pory"
 	applymovement SolsticeTown_Boy2, SolsticeTown_EventScript_Girl1_Dialogue_Movement_0
@@ -159,7 +159,7 @@ SolsticeTown_EventScript_Boy2_Dialogue_1:
 
 SolsticeTown_EventScript_RivalRunsToPlayerAtA::
 # 89 "data/maps/SolsticeTown/scripts.pory"
-	compare VAR_INTRO_SCENE, 7
+	compare VAR_INTRO_SCENE, 8
 	goto_if_eq SolsticeTown_EventScript_RivalRunsToPlayerAtA_1
 	return
 
@@ -203,7 +203,7 @@ SolsticeTown_EventScript_RivalRunsToPlayerAtA_1:
 
 SolsticeTown_EventScript_RivalRunsToPlayerAtB::
 # 111 "data/maps/SolsticeTown/scripts.pory"
-	compare VAR_INTRO_SCENE, 7
+	compare VAR_INTRO_SCENE, 8
 	goto_if_eq SolsticeTown_EventScript_RivalRunsToPlayerAtB_1
 	return
 
@@ -247,7 +247,7 @@ SolsticeTown_EventScript_RivalRunsToPlayerAtB_1:
 
 SolsticeTown_EventScript_RivalRunsToPlayerAtC::
 # 133 "data/maps/SolsticeTown/scripts.pory"
-	compare VAR_INTRO_SCENE, 7
+	compare VAR_INTRO_SCENE, 8
 	goto_if_eq SolsticeTown_EventScript_RivalRunsToPlayerAtC_1
 	return
 
@@ -291,7 +291,7 @@ SolsticeTown_EventScript_RivalRunsToPlayerAtC_1:
 
 SolsticeTown_EventScript_RivalRunsToPlayerAtD::
 # 155 "data/maps/SolsticeTown/scripts.pory"
-	compare VAR_INTRO_SCENE, 7
+	compare VAR_INTRO_SCENE, 8
 	goto_if_eq SolsticeTown_EventScript_RivalRunsToPlayerAtD_1
 	return
 
@@ -466,7 +466,7 @@ SolsticeTown_EventScript_StartCassianBattleSquirtle::
 
 SolsticeTown_EventScript_RivalExit::
 # 245 "data/maps/SolsticeTown/scripts.pory"
-	setvar VAR_INTRO_SCENE, 8
+	setvar VAR_INTRO_SCENE, 9
 # 246 "data/maps/SolsticeTown/scripts.pory"
 	msgbox SolsticeTown_Rival_After_Battle_Dialogue, MSGBOX_AUTOCLOSE
 # 247 "data/maps/SolsticeTown/scripts.pory"

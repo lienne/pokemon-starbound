@@ -580,7 +580,7 @@ BeginnerClearing_EventScript_MyrasBag::
 # 292 "data/maps/BeginnerClearing/scripts.pory"
 	lockall
 # 293 "data/maps/BeginnerClearing/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 294 "data/maps/BeginnerClearing/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 295 "data/maps/BeginnerClearing/scripts.pory"
@@ -697,7 +697,7 @@ BeginnerClearing_EventScript_AfterBattle::
 
 BeginnerClearing_EventScript_LookForJirachiFromA::
 # 354 "data/maps/BeginnerClearing/scripts.pory"
-	compare VAR_INTRO_SCENE, 4
+	compare VAR_INTRO_SCENE, 5
 	goto_if_eq BeginnerClearing_EventScript_LookForJirachiFromA_1
 	return
 
@@ -705,7 +705,7 @@ BeginnerClearing_EventScript_LookForJirachiFromA_1:
 # 355 "data/maps/BeginnerClearing/scripts.pory"
 	lockall
 # 356 "data/maps/BeginnerClearing/scripts.pory"
-	setvar VAR_INTRO_SCENE, 5
+	setvar VAR_INTRO_SCENE, 6
 # 357 "data/maps/BeginnerClearing/scripts.pory"
 	hidefollower
 # 358 "data/maps/BeginnerClearing/scripts.pory"
@@ -721,7 +721,7 @@ BeginnerClearing_EventScript_LookForJirachiFromA_1:
 
 BeginnerClearing_EventScript_LookForJirachiFromB::
 # 366 "data/maps/BeginnerClearing/scripts.pory"
-	compare VAR_INTRO_SCENE, 4
+	compare VAR_INTRO_SCENE, 5
 	goto_if_eq BeginnerClearing_EventScript_LookForJirachiFromB_1
 	return
 
@@ -729,7 +729,7 @@ BeginnerClearing_EventScript_LookForJirachiFromB_1:
 # 367 "data/maps/BeginnerClearing/scripts.pory"
 	lockall
 # 368 "data/maps/BeginnerClearing/scripts.pory"
-	setvar VAR_INTRO_SCENE, 5
+	setvar VAR_INTRO_SCENE, 6
 # 369 "data/maps/BeginnerClearing/scripts.pory"
 	hidefollower
 # 370 "data/maps/BeginnerClearing/scripts.pory"

@@ -4,14 +4,14 @@ LumenVillage_SelenesHouse_1F_MapScripts::
 
 PlayersHouse_EventScript_Mom_Dialogue::
 # 10 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
-	compare VAR_INTRO_SCENE, 5
+	compare VAR_INTRO_SCENE, 6
 	goto_if_le PlayersHouse_EventScript_Mom_Dialogue_1
 # 20 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
-	compare VAR_INTRO_SCENE, 8
+	compare VAR_INTRO_SCENE, 9
 	goto_if_ge PlayersHouse_EventScript_Mom_Dialogue_5
 PlayersHouse_EventScript_Mom_Dialogue_4:
 # 30 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
-	compare VAR_INTRO_SCENE, 6
+	compare VAR_INTRO_SCENE, 7
 	goto_if_ge PlayersHouse_EventScript_Mom_Dialogue_3
 	return
 
@@ -61,7 +61,7 @@ PlayersHouse_EventScript_Mom_Dialogue_5:
 
 PlayersHouse_EventScript_Mom_Dialogue_9:
 # 33 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
-	setvar VAR_INTRO_SCENE, 7
+	setvar VAR_INTRO_SCENE, 8
 # 34 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
 	speakername MomName
 # 35 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
@@ -93,7 +93,7 @@ PlayersHouse_EventScript_Mom_Dialogue_Movement_0:
 
 PlayersHouse_EventScript_Mom_Dialogue_Text_0:
 # 13 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
-	.string "Welcome home, sweetie.\p"
+	.string "Hi, sweetie.\p"
 	.string "Oh, that's a cute Pokémon you've got\n"
 	.string "there.\p"
 	.string "Did you get it from Professor Myra?\p"

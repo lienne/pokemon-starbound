@@ -13,49 +13,67 @@ mapscripts LumenVillage_MapScripts {
     }
 
     MAP_SCRIPT_ON_FRAME_TABLE [
-        VAR_INTRO_SCENE, 1 {
-            setvar(VAR_INTRO_SCENE, 2)
-            addobject(LumenVillage_Rival_Intro)
-            applymovement(LumenVillage_Rival_Intro, moves(emote_exclamation_mark))
-            playse(SE_PIN)
-            waitmovement(0)
-            playbgm(MUS_RG_ENCOUNTER_RIVAL, FALSE)
-            delay(50)
-            applymovement(LumenVillage_Rival_Intro, moves(walk_fast_left *3
-                                                        walk_fast_up * 3))
-            waitmovement(0)
-            call(RivalName)
-            msgbox(format("Hey, {PLAYER}! What are you doing out here?\p"
-                "WHOA - hold up! You've got a Pokémon?!\p"
-                "Wait a second… you SERIOUSLY already got a Pokémon??\p"
-                "I can't believe this! After all these years training together, and you didn't even tell me??\p"
-                "Tch… classic {PLAYER}. Always one step ahead, huh?\p"
-                "Well, guess what - I'm not letting you leave me in the dust!\p"
-                "I'll get my own Pokémon too, you'll see!"), MSGBOX_AUTOCLOSE)
-            applymovement(LumenVillage_Rival_Intro, moves(walk_fast_down * 8))
-            waitmovement(0)
-            removeobject(LumenVillage_Rival_Intro)
-            fadedefaultbgm()
+        VAR_INTRO_SCENE, 2 {
+            setvar(VAR_INTRO_SCENE, 3)
+            checkplayergender()
+            if (var(VAR_RESULT) == MALE) {
+                addobject(LumenVillage_Rival_Intro_Male)
+                applymovement(LumenVillage_Rival_Intro_Male, moves(emote_exclamation_mark))
+                playse(SE_PIN)
+                waitmovement(0)
+                playbgm(MUS_RG_ENCOUNTER_RIVAL, FALSE)
+                delay(50)
+                applymovement(LumenVillage_Rival_Intro_Male, moves(walk_fast_right *3
+                                                            walk_fast_up * 2))
+                waitmovement(0)
+                call(RivalName)
+                msgbox(format("Hey, {PLAYER}! What are you doing out here?\p"
+                    "WHOA - hold up! You've got a Pokémon?!\p"
+                    "Wait a second… you SERIOUSLY already got a Pokémon??\p"
+                    "I can't believe this! After all these years training together, and you didn't even tell me??\p"
+                    "Tch… classic {PLAYER}. Always one step ahead, huh?\p"
+                    "Well, guess what - I'm not letting you leave me in the dust!\p"
+                    "I'll get my own Pokémon too, you'll see!"), MSGBOX_AUTOCLOSE)
+                applymovement(LumenVillage_Rival_Intro_Male, moves(walk_fast_left * 4 
+                                                            walk_fast_up * 6))
+                waitmovement(0)
+                setflag(FLAG_HIDE_RIVAL_INTRO_NPC)
+                removeobject(LumenVillage_Rival_Intro_Male)
+                fadedefaultbgm()
+            } else{
+                addobject(LumenVillage_Rival_Intro_Female)
+                applymovement(LumenVillage_Rival_Intro_Female, moves(emote_exclamation_mark))
+                playse(SE_PIN)
+                waitmovement(0)
+                playbgm(MUS_RG_ENCOUNTER_RIVAL, FALSE)
+                delay(50)
+                applymovement(LumenVillage_Rival_Intro_Female, moves(walk_fast_right *3
+                                                            walk_fast_up * 2))
+                waitmovement(0)
+                call(RivalName)
+                msgbox(format("Hey, {PLAYER}! What are you doing out here?\p"
+                    "WHOA - hold up! You've got a Pokémon?!\p"
+                    "Wait a second… you SERIOUSLY already got a Pokémon??\p"
+                    "I can't believe this! After all these years training together, and you didn't even tell me??\p"
+                    "Tch… classic {PLAYER}. Always one step ahead, huh?\p"
+                    "Well, guess what - I'm not letting you leave me in the dust!\p"
+                    "I'll get my own Pokémon too, you'll see!"), MSGBOX_AUTOCLOSE)
+                applymovement(LumenVillage_Rival_Intro_Female, moves(walk_fast_left * 4 
+                                                            walk_fast_up * 6))
+                waitmovement(0)
+                setflag(FLAG_HIDE_RIVAL_INTRO_NPC)
+                removeobject(LumenVillage_Rival_Intro_Female)
+                fadedefaultbgm()
+            }
             end
         }
     ]
 }
 
-script LumenVillage_EventScript_GoBack_LeftTrigger {
-	if (!flag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)) {
-		lockall
-		msgbox(format("You can't ignore the cries of a hurt Pokémon!"))
-        playse(SE_SELECT)
-		applymovement(LOCALID_PLAYER, moves(walk_right))
-		waitmovement(0)
-		releaseall
-	}
-}
-
 script LumenVillage_EventScript_GoBack_UpTrigger {
 	if (!flag(FLAG_CAN_LEAVE_BEGINNER_CLEARING)) {
 		lockall
-		msgbox(format("You can't ignore the cries of a hurt Pokémon!"))
+		msgbox(format("The shooting star fell in the clearing!"))
         playse(SE_SELECT)
 		applymovement(LOCALID_PLAYER, moves(walk_down))
 		waitmovement(0)
@@ -147,9 +165,9 @@ text LumenVillage_Text_PlayersHouse_Sign {
 }
 
 script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA {
-    if (var(VAR_INTRO_SCENE) == 5) {
+    if (var(VAR_INTRO_SCENE) == 6) {
         lock
-        setvar(VAR_INTRO_SCENE, 6)
+        setvar(VAR_INTRO_SCENE, 7)
         setflag(FLAG_DELIVERED_JIRACHI_MEDICINE)
         removeitem(ITEM_PARCEL)
         hidefollower()
@@ -168,9 +186,9 @@ script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA {
 }
 
 script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotB {
-    if (var(VAR_INTRO_SCENE) == 5) {
+    if (var(VAR_INTRO_SCENE) == 6) {
         lock
-        setvar(VAR_INTRO_SCENE, 6)
+        setvar(VAR_INTRO_SCENE, 7)
         setflag(FLAG_DELIVERED_JIRACHI_MEDICINE)
         removeitem(ITEM_PARCEL)
         hidefollower()
@@ -187,9 +205,9 @@ script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotB {
 }
 
 script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotC {
-    if (var(VAR_INTRO_SCENE) == 5) {
+    if (var(VAR_INTRO_SCENE) == 6) {
         lock
-        setvar(VAR_INTRO_SCENE, 6)
+        setvar(VAR_INTRO_SCENE, 7)
         setflag(FLAG_DELIVERED_JIRACHI_MEDICINE)
         removeitem(ITEM_PARCEL)
         hidefollower()
@@ -208,9 +226,9 @@ script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotC {
 }
 
 script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotD {
-    if (var(VAR_INTRO_SCENE) == 5) {
+    if (var(VAR_INTRO_SCENE) == 6) {
         lock
-        setvar(VAR_INTRO_SCENE, 6)
+        setvar(VAR_INTRO_SCENE, 7)
         setflag(FLAG_DELIVERED_JIRACHI_MEDICINE)
         removeitem(ITEM_PARCEL)
         hidefollower()

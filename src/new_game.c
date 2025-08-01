@@ -133,7 +133,14 @@ static void ClearFrontierRecord(void)
 static void WarpToTruck(void)
 {
     // SetWarpDestination(MAP_GROUP(MAP_INSIDE_OF_TRUCK), MAP_NUM(MAP_INSIDE_OF_TRUCK), WARP_ID_NONE, -1, -1);
-    SetWarpDestination(MAP_GROUP(MAP_LUMEN_VILLAGE), MAP_NUM(MAP_LUMEN_VILLAGE), WARP_ID_NONE, 36, 22);
+    if (gSaveBlock2Ptr->playerGender == MALE)
+    {
+        SetWarpDestination(MAP_GROUP(MAP_LUMEN_VILLAGE_CASSIANS_HOUSE_2F), MAP_NUM(MAP_LUMEN_VILLAGE_CASSIANS_HOUSE_2F), WARP_ID_NONE, 5, 4);
+    } else
+    {
+        SetWarpDestination(MAP_GROUP(MAP_LUMEN_VILLAGE_SELENES_HOUSE_2F), MAP_NUM(MAP_LUMEN_VILLAGE_SELENES_HOUSE_2F), WARP_ID_NONE, 3, 4);
+    }
+    // SetWarpDestination(MAP_GROUP(MAP_LUMEN_VILLAGE), MAP_NUM(MAP_LUMEN_VILLAGE), WARP_ID_NONE, 36, 22);
     WarpIntoMap();
 }
 

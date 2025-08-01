@@ -4,7 +4,7 @@ LumenVillage_CassiansHouse_1F_MapScripts::
 
 PlayersHouse_EventScript_RivalMom_Dialogue::
 # 6 "data/maps/LumenVillage_CassiansHouse_1F/scripts.pory"
-	compare VAR_INTRO_SCENE, 7
+	compare VAR_INTRO_SCENE, 9
 	goto_if_lt PlayersHouse_EventScript_RivalMom_Dialogue_1
 # 12 "data/maps/LumenVillage_CassiansHouse_1F/scripts.pory"
 	applymovement Rival_Mom_1F, PlayersHouse_EventScript_RivalMom_Dialogue_Movement_0

@@ -193,7 +193,7 @@
       "y": 2,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "7",
+      "var_value": "8",
       "script": "SolsticeTown_EventScript_RivalRunsToPlayerAtA"
     },
     {
@@ -202,7 +202,7 @@
       "y": 2,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "7",
+      "var_value": "8",
       "script": "SolsticeTown_EventScript_RivalRunsToPlayerAtB"
     },
     {
@@ -211,7 +211,7 @@
       "y": 2,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "7",
+      "var_value": "8",
       "script": "SolsticeTown_EventScript_RivalRunsToPlayerAtC"
     },
     {
@@ -220,7 +220,7 @@
       "y": 2,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "7",
+      "var_value": "8",
       "script": "SolsticeTown_EventScript_RivalRunsToPlayerAtD"
     }
   ],

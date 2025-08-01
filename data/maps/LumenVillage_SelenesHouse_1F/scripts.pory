@@ -7,17 +7,17 @@ text MomName {
 }
 
 script PlayersHouse_EventScript_Mom_Dialogue {
-    if (var(VAR_INTRO_SCENE) <= 5) {
+    if (var(VAR_INTRO_SCENE) <= 6) {
         speakername(MomName)
         applymovement(Player_Mom_1F, moves(face_player))
-        msgbox(format("Welcome home, sweetie.\p"
+        msgbox(format("Hi, sweetie.\p"
             "Oh, that's a cute Pokémon you've got there.\p"
             "Did you get it from Professor Myra?\p"
             "You should take good care of it.\p"
             "Why don't you take a quick rest?"), MSGBOX_NPC)
         call(Common_EventScript_OutOfCenterPartyHeal)
         msgbox(format("Take care, honey!"), MSGBOX_NPC)
-    } elif (var(VAR_INTRO_SCENE) >= 8 && flag(FLAG_RECEIVED_GEN6_EXP_SHARE)) {
+    } elif (var(VAR_INTRO_SCENE) >= 9 && flag(FLAG_RECEIVED_GEN6_EXP_SHARE)) {
         speakername(MomName)
         applymovement(Player_Mom_1F, moves(face_player))
         msgbox(format("Oh, {PLAYER}! You're back!\p"
@@ -27,10 +27,10 @@ script PlayersHouse_EventScript_Mom_Dialogue {
             "Why don't you take a quick rest?"), MSGBOX_NPC)
         call(Common_EventScript_OutOfCenterPartyHeal)
         msgbox(format("Take care, honey!"), MSGBOX_NPC)
-    } elif (var(VAR_INTRO_SCENE) >= 6) {
+    } elif (var(VAR_INTRO_SCENE) >= 7) {
         if (!flag(FLAG_RECEIVED_GEN6_EXP_SHARE))
         {
-            setvar(VAR_INTRO_SCENE, 7)
+            setvar(VAR_INTRO_SCENE, 8)
             speakername(MomName)
             applymovement(Player_Mom_1F, moves(face_player))
             msgbox(format("Hi, honey!\p"

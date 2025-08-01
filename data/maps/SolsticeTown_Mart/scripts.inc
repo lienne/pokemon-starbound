@@ -4,7 +4,7 @@ SolsticeTown_Mart_MapScripts::
 
 SolsticeTown_Mart_Employee_Dialogue::
 # 6 "data/maps/SolsticeTown_Mart/scripts.pory"
-	compare VAR_INTRO_SCENE, 2
+	compare VAR_INTRO_SCENE, 3
 	goto_if_eq SolsticeTown_Mart_Employee_Dialogue_7
 SolsticeTown_Mart_Employee_Dialogue_5:
 # 17 "data/maps/SolsticeTown_Mart/scripts.pory"
@@ -36,7 +36,7 @@ SolsticeTown_Mart_Employee_Dialogue_1:
 # 14 "data/maps/SolsticeTown_Mart/scripts.pory"
 	setflag FLAG_HIDE_PROFMYRASLAB_JIRACHI
 # 15 "data/maps/SolsticeTown_Mart/scripts.pory"
-	setvar VAR_INTRO_SCENE, 3
+	setvar VAR_INTRO_SCENE, 4
 # 16 "data/maps/SolsticeTown_Mart/scripts.pory"
 	releaseall
 	return

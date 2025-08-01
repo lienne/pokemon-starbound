@@ -131,7 +131,7 @@
       "y": 13,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "4",
+      "var_value": "5",
       "script": "BeginnerClearing_EventScript_LookForJirachiFromA"
     },
     {
@@ -140,7 +140,7 @@
       "y": 14,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "4",
+      "var_value": "5",
       "script": "BeginnerClearing_EventScript_LookForJirachiFromB"
     }
   ],

@@ -222,3 +222,6 @@ const u16 gMetatileAttributes_New_Petalburg[] = INCBIN_U16("data/tilesets/second
 
 const u16 gMetatiles_Astridale[] = INCBIN_U16("data/tilesets/secondary/astridale/metatiles.bin");
 const u16 gMetatileAttributes_Astridale[] = INCBIN_U16("data/tilesets/secondary/astridale/metatile_attributes.bin");
+
+const u16 gMetatiles_Routes_General[] = INCBIN_U16("data/tilesets/secondary/routes_general/metatiles.bin");
+const u16 gMetatileAttributes_Routes_General[] = INCBIN_U16("data/tilesets/secondary/routes_general/metatile_attributes.bin");
