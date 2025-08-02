@@ -886,13 +886,3 @@ const struct Tileset gTileset_Astridale =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_Routes_General =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Routes_General,
-    .palettes = gTilesetPalettes_Routes_General,
-    .metatiles = gMetatiles_Routes_General,
-    .metatileAttributes = gMetatileAttributes_Routes_General,
-    .callback = NULL,
-};
