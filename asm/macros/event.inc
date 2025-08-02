@@ -691,6 +691,13 @@
 	map \map
 	.endm
 
+	@ Sets the specified object to levitate (making it to draw after all non-menu background and diabling groundeffects)
+	.macro levitateobjectat localId:req, map:req
+	.byte SCR_OP_LEVITATEOBJECTAT
+	.2byte \localId
+	map \map
+	.endm
+
 	@ Turns the currently selected object (if there is one) to face the player.
 	.macro faceplayer
 	.byte SCR_OP_FACEPLAYER

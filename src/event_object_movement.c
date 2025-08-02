@@ -3168,6 +3168,20 @@ void SetObjectInvisibility(u8 localId, u8 mapNum, u8 mapGroup, bool8 invisible)
         gObjectEvents[objectEventId].invisible = invisible;
 }
 
+void SetObjectLevitation(u8 localId, u8 mapNum, u8 mapGroup)
+{
+    u8 objectEventId;
+
+
+    if (!TryGetObjectEventIdByLocalIdAndMap(localId, mapNum, mapGroup, &objectEventId)) {
+        DebugPrintf("levitation");
+        gObjectEvents[objectEventId].triggerGroundEffectsOnMove = FALSE;
+        gObjectEvents[objectEventId].triggerGroundEffectsOnStop = FALSE;
+        gObjectEvents[objectEventId].fixedPriority = TRUE;
+        gSprites[gObjectEvents[objectEventId].spriteId].oam.priority = 1;
+    }
+}
+
 void ObjectEventGetLocalIdAndMap(struct ObjectEvent *objectEvent, void *localId, void *mapNum, void *mapGroup)
 {
     *(u8 *)(localId) = objectEvent->localId;

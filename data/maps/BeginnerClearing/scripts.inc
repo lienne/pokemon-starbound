@@ -757,32 +757,34 @@ BeginnerClearing_EventScript_JirachiPlayerFirstDialogue::
 # 383 "data/maps/BeginnerClearing/scripts.pory"
 	addobject jirachi_intro_2
 # 384 "data/maps/BeginnerClearing/scripts.pory"
-	applymovement jirachi_intro_2, BeginnerClearing_EventScript_JirachiPlayerFirstDialogue_Movement_0
+	levitateobjectat jirachi_intro_2, MAP_BEGINNER_CLEARING
 # 385 "data/maps/BeginnerClearing/scripts.pory"
-	waitmovement 0
+	applymovement jirachi_intro_2, BeginnerClearing_EventScript_JirachiPlayerFirstDialogue_Movement_0
 # 386 "data/maps/BeginnerClearing/scripts.pory"
-	speakername JirachiName
+	waitmovement 0
 # 387 "data/maps/BeginnerClearing/scripts.pory"
+	speakername JirachiName
+# 388 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiPlayerFirstDialogue_Text_0
-# 413 "data/maps/BeginnerClearing/scripts.pory"
-	fadescreenswapbuffers FADE_TO_WHITE
 # 414 "data/maps/BeginnerClearing/scripts.pory"
-	setflag FLAG_HIDE_CLEARING_JIRACHI2
+	fadescreenswapbuffers FADE_TO_WHITE
 # 415 "data/maps/BeginnerClearing/scripts.pory"
-	setflag FLAG_HIDE_MYRA_IN_LAB
+	setflag FLAG_HIDE_CLEARING_JIRACHI2
 # 416 "data/maps/BeginnerClearing/scripts.pory"
-	removeobject jirachi_intro_2
+	setflag FLAG_HIDE_MYRA_IN_LAB
 # 417 "data/maps/BeginnerClearing/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_WHITE
+	removeobject jirachi_intro_2
 # 418 "data/maps/BeginnerClearing/scripts.pory"
-	completequest QUEST_1_MEDS_FOR_JIRACHI
+	fadescreenswapbuffers FADE_FROM_WHITE
 # 419 "data/maps/BeginnerClearing/scripts.pory"
-	startquest QUEST_2_STARBOUND_OATH
+	completequest QUEST_1_MEDS_FOR_JIRACHI
 # 420 "data/maps/BeginnerClearing/scripts.pory"
-	subquestmenu QUEST_MENU_SET_ACTIVE, QUEST_2_STARBOUND_OATH, SUB_QUEST_GO_TO_ZENITH_CITY
+	startquest QUEST_2_STARBOUND_OATH
 # 421 "data/maps/BeginnerClearing/scripts.pory"
-	openquestmenu
+	subquestmenu QUEST_MENU_SET_ACTIVE, QUEST_2_STARBOUND_OATH, SUB_QUEST_GO_TO_ZENITH_CITY
 # 422 "data/maps/BeginnerClearing/scripts.pory"
+	openquestmenu
+# 423 "data/maps/BeginnerClearing/scripts.pory"
 	releaseall
 	return
 
@@ -845,23 +847,23 @@ BeginnerClearing_EventScript_AfterBattle_Movement_2:
 	face_down
 	step_end
 
-# 384 "data/maps/BeginnerClearing/scripts.pory"
+# 385 "data/maps/BeginnerClearing/scripts.pory"
 BeginnerClearing_EventScript_JirachiPlayerFirstDialogue_Movement_0:
-# 384 "data/maps/BeginnerClearing/scripts.pory"
+# 385 "data/maps/BeginnerClearing/scripts.pory"
 	walk_slow_down
-# 384 "data/maps/BeginnerClearing/scripts.pory"
+# 385 "data/maps/BeginnerClearing/scripts.pory"
 	walk_slow_down
-# 384 "data/maps/BeginnerClearing/scripts.pory"
+# 385 "data/maps/BeginnerClearing/scripts.pory"
 	walk_slow_down
-# 384 "data/maps/BeginnerClearing/scripts.pory"
+# 385 "data/maps/BeginnerClearing/scripts.pory"
 	walk_slow_down
-# 384 "data/maps/BeginnerClearing/scripts.pory"
+# 385 "data/maps/BeginnerClearing/scripts.pory"
 	walk_slow_down
-# 384 "data/maps/BeginnerClearing/scripts.pory"
+# 385 "data/maps/BeginnerClearing/scripts.pory"
 	walk_slow_down
-# 384 "data/maps/BeginnerClearing/scripts.pory"
+# 385 "data/maps/BeginnerClearing/scripts.pory"
 	walk_slow_down
-# 384 "data/maps/BeginnerClearing/scripts.pory"
+# 385 "data/maps/BeginnerClearing/scripts.pory"
 	walk_slow_down
 	step_end
 
@@ -988,7 +990,7 @@ BeginnerClearing_EventScript_AfterBattle_Text_2:
 	.string "lab so it can rest.$"
 
 BeginnerClearing_EventScript_JirachiPlayerFirstDialogue_Text_0:
-# 387 "data/maps/BeginnerClearing/scripts.pory"
+# 388 "data/maps/BeginnerClearing/scripts.pory"
 	.string "{COLOR RED}…you came.\p"
 	.string "I wasn't sure you'd hear me, but… you\n"
 	.string "did.\p"

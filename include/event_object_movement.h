@@ -163,6 +163,7 @@ void ObjectEventTurn(struct ObjectEvent *objectEvent, u8 direction);
 void ObjectEventTurnByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup, u8 direction);
 const struct ObjectEventGraphicsInfo *GetObjectEventGraphicsInfo(u16 graphicsId);
 void SetObjectInvisibility(u8 localId, u8 mapNum, u8 mapGroup, bool8 invisible);
+void SetObjectLevitation(u8 localId, u8 mapNum, u8 mapGroup);
 void FreeAndReserveObjectSpritePalettes(void);
 u8 LoadObjectEventPalette(u16 paletteTag);
 u8 LoadPlayerObjectEventPalette(u8 gender);

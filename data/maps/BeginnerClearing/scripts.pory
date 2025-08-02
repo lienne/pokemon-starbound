@@ -381,6 +381,7 @@ script BeginnerClearing_EventScript_JirachiPlayerFirstDialogue {
     waitmovement(0)
     clearflag(FLAG_HIDE_CLEARING_JIRACHI2)
     addobject(jirachi_intro_2)
+    levitateobjectat(jirachi_intro_2, MAP_BEGINNER_CLEARING)
     applymovement(jirachi_intro_2, moves(walk_slow_down * 8))
     waitmovement(0)
     speakername(JirachiName)

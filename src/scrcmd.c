@@ -1464,6 +1464,18 @@ bool8 ScrCmd_showobjectat(struct ScriptContext *ctx)
     return FALSE;
 }
 
+bool8 ScrCmd_levitateobjectat(struct ScriptContext *ctx)
+{
+    u16 localId = VarGet(ScriptReadHalfword(ctx));
+    u8 mapGroup = ScriptReadByte(ctx);
+    u8 mapNum = ScriptReadByte(ctx);
+
+    Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
+
+    SetObjectLevitation(localId, mapNum, mapGroup);
+    return FALSE;
+}
+
 bool8 ScrCmd_hideobjectat(struct ScriptContext *ctx)
 {
     u16 localId = VarGet(ScriptReadHalfword(ctx));
