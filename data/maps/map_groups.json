@@ -635,7 +635,9 @@
     "Route2_Sunfade_Trail",
     "Astridale",
     "Route3_EchoRidge",
-    "Caelestic"
+    "Caelestic",
+    "Route14_Starsea_Passage",
+    "Route4_Celestine_Way"
   ],
   "gMapGroup_IndoorLumenVillage": [
     "LumenVillage_ProfessorMyrasLab",

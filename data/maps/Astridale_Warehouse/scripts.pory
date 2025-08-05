@@ -98,6 +98,7 @@ mapscripts Astridale_Warehouse_MapScripts {
             setflag(FLAG_HIDE_JIRACHI_IN_ASTRIDALE_WAREHOUSE)
             removeobject(Astridale_Warehouse_Jirachi)
             fadescreenswapbuffers(FADE_FROM_WHITE)
+            updatequest(QUEST_3_ASTRIDALE_SABOTEUR, VAR_ASTRIDALE_SABOTEUR_STATE)
             end
         }
     ]

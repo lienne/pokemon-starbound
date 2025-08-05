@@ -1220,3 +1220,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Astridale_Gym/scripts.inc"
 
 	.include "data/maps/Caelestic/scripts.inc"
+
+	.include "data/maps/Route14_Starsea_Passage/scripts.inc"
+
+	.include "data/maps/Route4_Celestine_Way/scripts.inc"

@@ -22,11 +22,6 @@
       "map": "MAP_ROUTE1_STARLIT_PATH",
       "offset": 18,
       "direction": "up"
-    },
-    {
-      "map": "MAP_STARSEA_PASSAGE",
-      "offset": 0,
-      "direction": "down"
     }
   ],
   "object_events": [

@@ -617,7 +617,6 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	[QUEST_1_MEDS_FOR_JIRACHI] = 
 	{
 		.name = gText_SideQuestName_1,
-		// .desc = {gText_SideQuestDesc_1},
 		.desc = {
 			gComplexQuest_Quest1Desc_1,
 			gComplexQuest_Quest1Desc_2
@@ -656,14 +655,26 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	[QUEST_3_ASTRIDALE_SABOTEUR] = 
 	{
 		.name = gText_SideQuestName_3,
-		.desc = {gText_SideQuestDesc_3},
+		.desc = {
+			gComplexQuest_Quest3Desc_1,
+			gComplexQuest_Quest3Desc_2
+		},
 		.donedesc = gText_SideQuestDoneDesc_3,
-		.map = {gText_SideQuestMap3},
-		.sprite = {OBJ_EVENT_GFX_HIKER},
-		.spritetype = {OBJECT},
+		.map = {
+			gComplexQuest_Quest3Map_1,
+			gComplexQuest_Quest3Map_2
+		},
+		.sprite = {
+			OBJ_EVENT_GFX_HIKER,
+			OBJ_EVENT_GFX_JIRACHI
+		},
+		.spritetype = {
+			OBJECT,
+			OBJECT
+		},
 		.subquests = NULL,
 		.numSubquests = 0,
-		.questVariable = 0
+		.questVariable = VAR_ASTRIDALE_SABOTEUR_STATE
 	},
 
 	[QUEST_4] = 

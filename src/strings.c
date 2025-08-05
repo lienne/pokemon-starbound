@@ -1358,7 +1358,7 @@ const u8 gText_SideQuestName_30[] = _("Side Quest 30");
 // descriptions
 // const u8 gText_SideQuestDesc_1[] = _("Go to Solstice Town PokéMart and get a\nspecial medicine for Jirachi.");
 const u8 gText_SideQuestDesc_2[] = _("After witnessing a fallen star, you've\nsworn to help a weakened Jirachi\nrestore balance to the region.");
-const u8 gText_SideQuestDesc_3[] = _("Find whoever is sabotaging the\nAstridale construction!");
+// const u8 gText_SideQuestDesc_3[] = _("Find whoever is sabotaging the\nAstridale construction!");
 const u8 gText_SideQuestDesc_4[] = _("Description 4");
 const u8 gText_SideQuestDesc_5[] = _("Description 5");
 const u8 gText_SideQuestDesc_6[] = _("Description 6");
@@ -1390,6 +1390,8 @@ const u8 gText_SideQuestDesc_30[] = _("Description 30");
 // Complex descriptions
 const u8 gComplexQuest_Quest1Desc_1[] = _("Go to Solstice Town PokéMart and get a\nspecial medicine for Jirachi.");
 const u8 gComplexQuest_Quest1Desc_2[] = _("Find Jirachi in Starfall Clearing.");
+const u8 gComplexQuest_Quest3Desc_1[] = _("Find whoever is sabotaging the\nAstridale construction!");
+const u8 gComplexQuest_Quest3Desc_2[] = _("Look for an item of great importance to\nGym Leader Viviane!");
 
 // completed quest description
 const u8 gText_SideQuestDoneDesc_1[] = _("Medicine delivered!");
@@ -1458,6 +1460,8 @@ const u8 gText_SideQuestMap30[] = _("Map 30");
 // Complex quest maps
 const u8 gComplexQuest_Quest1Map_1[] = _("Solstice Town");
 const u8 gComplexQuest_Quest1Map_2[] = _("Starfall Clearing");
+const u8 gComplexQuest_Quest3Map_1[] = _("Astridale City");
+const u8 gComplexQuest_Quest3Map_2[] = _("Astridale City");
 
 // subquests
 const u8 gText_SubQuest1_Name1[] = _("Go to Zenith!");

@@ -4415,7 +4415,7 @@
       "id": "LAYOUT_LUMEN_VILLAGE",
       "name": "LumenVillage_Layout",
       "width": 40,
-      "height": 26,
+      "height": 62,
       "primary_tileset": "gTileset_New_General",
       "secondary_tileset": "gTileset_New_Petalburg",
       "border_filepath": "data/layouts/LumenVillage/border.bin",
@@ -4717,9 +4717,29 @@
       "width": 50,
       "height": 42,
       "primary_tileset": "gTileset_New_General",
-      "secondary_tileset": "gTileset_Astridale",
+      "secondary_tileset": "gTileset_Caelestic",
       "border_filepath": "data/layouts/Caelestic/border.bin",
       "blockdata_filepath": "data/layouts/Caelestic/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE14_STARSEA_PASSAGE",
+      "name": "Route14_Starsea_Passage_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_New_General",
+      "secondary_tileset": "gTileset_Astridale",
+      "border_filepath": "data/layouts/Route14_Starsea_Passage/border.bin",
+      "blockdata_filepath": "data/layouts/Route14_Starsea_Passage/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4_CELESTINE_WAY",
+      "name": "Route4_Celestine_Way_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_New_General",
+      "secondary_tileset": "gTileset_Astridale",
+      "border_filepath": "data/layouts/Route4_Celestine_Way/border.bin",
+      "blockdata_filepath": "data/layouts/Route4_Celestine_Way/map.bin"
     }
   ]
 }

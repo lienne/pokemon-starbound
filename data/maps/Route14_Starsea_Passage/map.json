@@ -1,0 +1,26 @@
+{
+  "id": "MAP_ROUTE14_STARSEA_PASSAGE",
+  "name": "Route14_Starsea_Passage",
+  "layout": "LAYOUT_ROUTE14_STARSEA_PASSAGE",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_CAELESTIC",
+      "offset": -22,
+      "direction": "up"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

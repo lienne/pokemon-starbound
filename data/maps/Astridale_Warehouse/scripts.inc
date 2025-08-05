@@ -147,48 +147,50 @@ Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 	removeobject Astridale_Warehouse_Jirachi
 # 100 "data/maps/Astridale_Warehouse/scripts.pory"
 	fadescreenswapbuffers FADE_FROM_WHITE
+# 101 "data/maps/Astridale_Warehouse/scripts.pory"
+	updatequest QUEST_3_ASTRIDALE_SABOTEUR, VAR_ASTRIDALE_SABOTEUR_STATE
 	end
 
 
-# 106 "data/maps/Astridale_Warehouse/scripts.pory"
-Player_Enters_Warehouse_Look_For_Viviane:
 # 107 "data/maps/Astridale_Warehouse/scripts.pory"
-	delay_16
+Player_Enters_Warehouse_Look_For_Viviane:
 # 108 "data/maps/Astridale_Warehouse/scripts.pory"
-	walk_up
-# 109 "data/maps/Astridale_Warehouse/scripts.pory"
 	delay_16
+# 109 "data/maps/Astridale_Warehouse/scripts.pory"
+	walk_up
 # 110 "data/maps/Astridale_Warehouse/scripts.pory"
 	delay_16
 # 111 "data/maps/Astridale_Warehouse/scripts.pory"
-	face_left
-# 112 "data/maps/Astridale_Warehouse/scripts.pory"
 	delay_16
+# 112 "data/maps/Astridale_Warehouse/scripts.pory"
+	face_left
 # 113 "data/maps/Astridale_Warehouse/scripts.pory"
 	delay_16
 # 114 "data/maps/Astridale_Warehouse/scripts.pory"
 	delay_16
 # 115 "data/maps/Astridale_Warehouse/scripts.pory"
-	face_right
-# 116 "data/maps/Astridale_Warehouse/scripts.pory"
 	delay_16
+# 116 "data/maps/Astridale_Warehouse/scripts.pory"
+	face_right
 # 117 "data/maps/Astridale_Warehouse/scripts.pory"
 	delay_16
 # 118 "data/maps/Astridale_Warehouse/scripts.pory"
 	delay_16
 # 119 "data/maps/Astridale_Warehouse/scripts.pory"
+	delay_16
+# 120 "data/maps/Astridale_Warehouse/scripts.pory"
 	face_up
 	step_end
 
-# 122 "data/maps/Astridale_Warehouse/scripts.pory"
+# 123 "data/maps/Astridale_Warehouse/scripts.pory"
 Astridale_Warehouse_Camera_Movement_PanToViviane:
-# 123 "data/maps/Astridale_Warehouse/scripts.pory"
+# 124 "data/maps/Astridale_Warehouse/scripts.pory"
 	walk_up
-# 123 "data/maps/Astridale_Warehouse/scripts.pory"
+# 124 "data/maps/Astridale_Warehouse/scripts.pory"
 	walk_up
-# 123 "data/maps/Astridale_Warehouse/scripts.pory"
+# 124 "data/maps/Astridale_Warehouse/scripts.pory"
 	walk_up
-# 123 "data/maps/Astridale_Warehouse/scripts.pory"
+# 124 "data/maps/Astridale_Warehouse/scripts.pory"
 	walk_up
 	step_end
 

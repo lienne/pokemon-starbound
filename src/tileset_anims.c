@@ -25,6 +25,7 @@ static void _InitPrimaryTilesetAnimation(void);
 static void _InitSecondaryTilesetAnimation(void);
 static void TilesetAnim_General(u16);
 static void TilesetAnim_New_General(u16);
+static void TilesetAnim_New_Petalburg(u16);
 static void TilesetAnim_Building(u16);
 static void TilesetAnim_Rustboro(u16);
 static void TilesetAnim_Dewford(u16);
@@ -74,6 +75,7 @@ static void QueueAnimTiles_MauvilleGym_ElectricGates(u16);
 static void QueueAnimTiles_SootopolisGym_Waterfalls(u16);
 static void QueueAnimTiles_EliteFour_GroundLights(u16);
 static void QueueAnimTiles_EliteFour_WallLights(u16);
+static void QueueAnimTiles_New_Petalburg_Flower(u16);
 
 const u16 gTilesetAnims_General_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/flower/1.4bpp");
 const u16 gTilesetAnims_General_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/flower/0.4bpp");
@@ -545,6 +547,18 @@ static const u16 *const sTilesetAnims_BattleDomeFloorLightPals[] = {
     gTilesetAnims_BattleDomePals0_3,
 };
 
+const u16 gTilesetAnims_New_Petalburg_Flower_Frame0[] = INCBIN_U16("data/tilesets/secondary/new_petalburg/anim/flower/0.4bpp");
+const u16 gTilesetAnims_New_Petalburg_Flower_Frame1[] = INCBIN_U16("data/tilesets/secondary/new_petalburg/anim/flower/1.4bpp");
+const u16 gTilesetAnims_New_Petalburg_Flower_Frame2[] = INCBIN_U16("data/tilesets/secondary/new_petalburg/anim/flower/2.4bpp");
+const u16 gTilesetAnims_New_Petalburg_Flower_Frame3[] = INCBIN_U16("data/tilesets/secondary/new_petalburg/anim/flower/3.4bpp");
+
+const u16 *const gTilesetAnims_New_Petalburg_Flower[] = {
+    gTilesetAnims_New_Petalburg_Flower_Frame0,
+    gTilesetAnims_New_Petalburg_Flower_Frame1,
+    gTilesetAnims_New_Petalburg_Flower_Frame2,
+    gTilesetAnims_New_Petalburg_Flower_Frame3
+};
+
 static void ResetTilesetAnimBuffer(void)
 {
     sTilesetDMA3TransferBufferSize = 0;
@@ -630,6 +644,13 @@ void InitTilesetAnim_New_General(void)
     sPrimaryTilesetAnimCallback = TilesetAnim_New_General;
 }
 
+void InitTilesetAnim_New_Petalburg(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_New_Petalburg;
+}
+
 void InitTilesetAnim_Building(void)
 {
     sPrimaryTilesetAnimCounter = 0;
@@ -663,6 +684,12 @@ static void TilesetAnim_New_General(u16 timer)
     //     QueueAnimTiles_General_Waterfall(timer / 16);
     // if (timer % 16 == 4)
     //     QueueAnimTiles_General_LandWaterEdge(timer / 16);
+}
+
+static void TilesetAnim_New_Petalburg(u16 timer)
+{
+    if (timer % 16 == 0)
+        QueueAnimTiles_New_Petalburg_Flower(timer / 16);
 }
 
 static void TilesetAnim_Building(u16 timer)
@@ -1185,6 +1212,12 @@ static void QueueAnimTiles_BattlePyramid_StatueShadow(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_BattlePyramid_StatueShadow);
     AppendTilesetAnimToBuffer(gTilesetAnims_BattlePyramid_StatueShadow[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 135)), 8 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_New_Petalburg_Flower(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_New_Petalburg_Flower);
+    AppendTilesetAnimToBuffer(gTilesetAnims_New_Petalburg_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(615)), 4 * TILE_SIZE_4BPP);
 }
 
 static void BlendAnimPalette_BattleDome_FloorLights(u16 timer)

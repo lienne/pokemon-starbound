@@ -15,20 +15,22 @@
   "connections": [
     {
       "map": "MAP_ROUTE3_ECHO_RIDGE",
-      "offset": 0,
+      "offset": 11,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE14_STARSEA_PASSAGE",
+      "offset": 22,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE4_CELESTINE_WAY",
+      "offset": 24,
+      "direction": "up"
     }
   ],
   "object_events": [],
-  "warp_events": [
-    {
-      "x": 6,
-      "y": 35,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE3_ECHO_RIDGE",
-      "dest_warp_id": "0"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

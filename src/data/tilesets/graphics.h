@@ -1729,3 +1729,22 @@ const u16 gTilesetPalettes_Astridale[][16] =
 };
 
 const u32 gTilesetTiles_Astridale[] = INCBIN_U32("data/tilesets/secondary/astridale/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Caelestic[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/caelestic/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/caelestic/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/caelestic/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/caelestic/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/caelestic/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/caelestic/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/caelestic/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/caelestic/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/caelestic/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/caelestic/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/caelestic/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/caelestic/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/caelestic/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Caelestic[] = INCBIN_U32("data/tilesets/secondary/caelestic/tiles.4bpp.lz");
