@@ -1,6 +1,11 @@
 #ifndef GUARD_METATILE_LABELS_H
 #define GUARD_METATILE_LABELS_H
 
+// gTileset_Astridale
+#define METATILE_Astridale_house1_door  0x222
+#define METATILE_Astridale_house2_door  0x225
+#define METATILE_Astridale_house3_door  0x24A
+
 // gTileset_AstridaleMindscape
 #define METATILE_AstridaleMindscape_astridale_mindscape_ground            0x000
 #define METATILE_AstridaleMindscape_astridale_mindscape_key               0x045

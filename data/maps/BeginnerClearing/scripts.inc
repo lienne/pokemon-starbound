@@ -619,8 +619,14 @@ BeginnerClearing_EventScript_GruntABattle_1:
 # 317 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement ProfMyra, BeginnerClearing_EventScript_JirachiIntro_Movement_0
 # 318 "data/maps/BeginnerClearing/scripts.pory"
-	trainerbattle_single TRAINER_GRUNT_MAGMA_HIDEOUT_14, BeginnerClearing_EventScript_GruntABattle_Text_0, BeginnerClearing_EventScript_GruntABattle_Text_1, BeginnerClearing_EventScript_AfterBattle
+	waitmovement 0
 # 319 "data/maps/BeginnerClearing/scripts.pory"
+	setflag FLAG_NO_WHITEOUT
+# 320 "data/maps/BeginnerClearing/scripts.pory"
+	debugprint BeginnerClearing_EventScript_GruntABattle_Text_0, VAR_RESULT
+# 321 "data/maps/BeginnerClearing/scripts.pory"
+	trainerbattle_single TRAINER_GRUNT_MAGMA_HIDEOUT_14, BeginnerClearing_EventScript_GruntABattle_Text_1, BeginnerClearing_EventScript_GruntABattle_Text_2, BeginnerClearing_EventScript_RepeatBattle
+# 322 "data/maps/BeginnerClearing/scripts.pory"
 	releaseall
 	return
 
@@ -645,146 +651,193 @@ BeginnerClearing_EventScript_GruntABattle_6:
 	goto BeginnerClearing_EventScript_GruntABattle_1
 
 
-BeginnerClearing_EventScript_AfterBattle::
-# 323 "data/maps/BeginnerClearing/scripts.pory"
+BeginnerClearing_EventScript_RepeatBattle::
+# 326 "data/maps/BeginnerClearing/scripts.pory"
 	lockall
-# 324 "data/maps/BeginnerClearing/scripts.pory"
-	speakername GruntAName
-# 325 "data/maps/BeginnerClearing/scripts.pory"
-	msgbox BeginnerClearing_EventScript_AfterBattle_Text_0, MSGBOX_AUTOCLOSE
 # 327 "data/maps/BeginnerClearing/scripts.pory"
-	playse SE_SELECT
+	specialvar VAR_RESULT, GetBattleOutcome
 # 328 "data/maps/BeginnerClearing/scripts.pory"
-	applymovement GruntA, BeginnerClearing_EventScript_AfterBattle_Movement_0
+	debugprint BeginnerClearing_EventScript_RepeatBattle_Text_0, VAR_RESULT
 # 329 "data/maps/BeginnerClearing/scripts.pory"
-	waitmovement 0
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_ne BeginnerClearing_EventScript_RepeatBattle_2
+BeginnerClearing_EventScript_RepeatBattle_1:
+# 344 "data/maps/BeginnerClearing/scripts.pory"
+	call BeginnerClearing_EventScript_AfterBattle
+# 345 "data/maps/BeginnerClearing/scripts.pory"
+	releaseall
+	return
+
+BeginnerClearing_EventScript_RepeatBattle_2:
 # 330 "data/maps/BeginnerClearing/scripts.pory"
-	speakername GruntBName
+	applymovement ProfMyra, BeginnerClearing_EventScript_RepeatBattle_Movement_0
 # 331 "data/maps/BeginnerClearing/scripts.pory"
-	msgbox BeginnerClearing_EventScript_AfterBattle_Text_1, MSGBOX_AUTOCLOSE
-# 332 "data/maps/BeginnerClearing/scripts.pory"
-	playse SE_SELECT
-# 333 "data/maps/BeginnerClearing/scripts.pory"
-	applymovement GruntB, BeginnerClearing_EventScript_AfterBattle_Movement_0
-# 334 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
+# 332 "data/maps/BeginnerClearing/scripts.pory"
+	applymovement LOCALID_PLAYER, BeginnerClearing_EventScript_RepeatBattle_Movement_1
+# 333 "data/maps/BeginnerClearing/scripts.pory"
+	waitmovement 0
+# 334 "data/maps/BeginnerClearing/scripts.pory"
+	speakername ProfMyraName
 # 335 "data/maps/BeginnerClearing/scripts.pory"
-	applymovement ProfMyra, BeginnerClearing_EventScript_AfterBattle_Movement_1
+	msgbox BeginnerClearing_EventScript_RepeatBattle_Text_1, MSGBOX_AUTOCLOSE
+# 337 "data/maps/BeginnerClearing/scripts.pory"
+	special HealPlayerParty
 # 338 "data/maps/BeginnerClearing/scripts.pory"
-	applymovement LOCALID_PLAYER, BeginnerClearing_EventScript_AfterBattle_Movement_2
+	applymovement ProfMyra, BeginnerClearing_EventScript_JirachiIntro_Movement_0
 # 339 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
 # 340 "data/maps/BeginnerClearing/scripts.pory"
-	speakername ProfMyraName
+	applymovement LOCALID_PLAYER, BeginnerClearing_EventScript_JirachiIntro_Movement_0
 # 341 "data/maps/BeginnerClearing/scripts.pory"
-	msgbox BeginnerClearing_EventScript_AfterBattle_Text_2, MSGBOX_AUTOCLOSE
-# 344 "data/maps/BeginnerClearing/scripts.pory"
-	playse SE_SELECT
-# 345 "data/maps/BeginnerClearing/scripts.pory"
-	setflag FLAG_CAN_LEAVE_BEGINNER_CLEARING
-# 346 "data/maps/BeginnerClearing/scripts.pory"
-	setflag FLAG_HIDE_CLEARING_NPCS
-# 347 "data/maps/BeginnerClearing/scripts.pory"
-	setflag FLAG_HIDE_CLEARING_JIRACHI
-# 348 "data/maps/BeginnerClearing/scripts.pory"
-	special HealPlayerParty
+	waitmovement 0
+# 342 "data/maps/BeginnerClearing/scripts.pory"
+	trainerbattle_single TRAINER_GRUNT_MAGMA_HIDEOUT_14, BeginnerClearing_EventScript_GruntABattle_Text_1, BeginnerClearing_EventScript_GruntABattle_Text_2, BeginnerClearing_EventScript_RepeatBattle
+	goto BeginnerClearing_EventScript_RepeatBattle_1
+
+
+BeginnerClearing_EventScript_AfterBattle::
 # 349 "data/maps/BeginnerClearing/scripts.pory"
-	warpsilent MAP_LUMEN_VILLAGE_PROFESSOR_MYRAS_LAB, 6, 12
+	lockall
 # 350 "data/maps/BeginnerClearing/scripts.pory"
+	clearflag FLAG_NO_WHITEOUT
+# 351 "data/maps/BeginnerClearing/scripts.pory"
+	speakername GruntAName
+# 352 "data/maps/BeginnerClearing/scripts.pory"
+	msgbox BeginnerClearing_EventScript_AfterBattle_Text_0, MSGBOX_AUTOCLOSE
+# 354 "data/maps/BeginnerClearing/scripts.pory"
+	playse SE_SELECT
+# 355 "data/maps/BeginnerClearing/scripts.pory"
+	applymovement GruntA, BeginnerClearing_EventScript_AfterBattle_Movement_0
+# 356 "data/maps/BeginnerClearing/scripts.pory"
+	waitmovement 0
+# 357 "data/maps/BeginnerClearing/scripts.pory"
+	speakername GruntBName
+# 358 "data/maps/BeginnerClearing/scripts.pory"
+	msgbox BeginnerClearing_EventScript_AfterBattle_Text_1, MSGBOX_AUTOCLOSE
+# 359 "data/maps/BeginnerClearing/scripts.pory"
+	playse SE_SELECT
+# 360 "data/maps/BeginnerClearing/scripts.pory"
+	applymovement GruntB, BeginnerClearing_EventScript_AfterBattle_Movement_0
+# 361 "data/maps/BeginnerClearing/scripts.pory"
+	waitmovement 0
+# 362 "data/maps/BeginnerClearing/scripts.pory"
+	applymovement ProfMyra, BeginnerClearing_EventScript_AfterBattle_Movement_1
+# 365 "data/maps/BeginnerClearing/scripts.pory"
+	applymovement LOCALID_PLAYER, BeginnerClearing_EventScript_RepeatBattle_Movement_1
+# 366 "data/maps/BeginnerClearing/scripts.pory"
+	waitmovement 0
+# 367 "data/maps/BeginnerClearing/scripts.pory"
+	speakername ProfMyraName
+# 368 "data/maps/BeginnerClearing/scripts.pory"
+	msgbox BeginnerClearing_EventScript_AfterBattle_Text_2, MSGBOX_AUTOCLOSE
+# 371 "data/maps/BeginnerClearing/scripts.pory"
+	playse SE_SELECT
+# 372 "data/maps/BeginnerClearing/scripts.pory"
+	setflag FLAG_CAN_LEAVE_BEGINNER_CLEARING
+# 373 "data/maps/BeginnerClearing/scripts.pory"
+	setflag FLAG_HIDE_CLEARING_NPCS
+# 374 "data/maps/BeginnerClearing/scripts.pory"
+	setflag FLAG_HIDE_CLEARING_JIRACHI
+# 375 "data/maps/BeginnerClearing/scripts.pory"
+	special HealPlayerParty
+# 376 "data/maps/BeginnerClearing/scripts.pory"
+	warpsilent MAP_LUMEN_VILLAGE_PROFESSOR_MYRAS_LAB, 6, 12
+# 377 "data/maps/BeginnerClearing/scripts.pory"
 	releaseall
 	return
 
 
 BeginnerClearing_EventScript_LookForJirachiFromA::
-# 354 "data/maps/BeginnerClearing/scripts.pory"
+# 381 "data/maps/BeginnerClearing/scripts.pory"
 	compare VAR_INTRO_SCENE, 5
 	goto_if_eq BeginnerClearing_EventScript_LookForJirachiFromA_1
 	return
 
 BeginnerClearing_EventScript_LookForJirachiFromA_1:
-# 355 "data/maps/BeginnerClearing/scripts.pory"
+# 382 "data/maps/BeginnerClearing/scripts.pory"
 	lockall
-# 356 "data/maps/BeginnerClearing/scripts.pory"
+# 383 "data/maps/BeginnerClearing/scripts.pory"
 	setvar VAR_INTRO_SCENE, 6
-# 357 "data/maps/BeginnerClearing/scripts.pory"
+# 384 "data/maps/BeginnerClearing/scripts.pory"
 	hidefollower
-# 358 "data/maps/BeginnerClearing/scripts.pory"
+# 385 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement LOCALID_PLAYER, BeginnerClearing_PlayerWalksIn_LookForJirachiFromA
-# 359 "data/maps/BeginnerClearing/scripts.pory"
+# 386 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
-# 360 "data/maps/BeginnerClearing/scripts.pory"
+# 387 "data/maps/BeginnerClearing/scripts.pory"
 	call BeginnerClearing_EventScript_JirachiPlayerFirstDialogue
-# 361 "data/maps/BeginnerClearing/scripts.pory"
+# 388 "data/maps/BeginnerClearing/scripts.pory"
 	releaseall
 	return
 
 
 BeginnerClearing_EventScript_LookForJirachiFromB::
-# 366 "data/maps/BeginnerClearing/scripts.pory"
+# 393 "data/maps/BeginnerClearing/scripts.pory"
 	compare VAR_INTRO_SCENE, 5
 	goto_if_eq BeginnerClearing_EventScript_LookForJirachiFromB_1
 	return
 
 BeginnerClearing_EventScript_LookForJirachiFromB_1:
-# 367 "data/maps/BeginnerClearing/scripts.pory"
+# 394 "data/maps/BeginnerClearing/scripts.pory"
 	lockall
-# 368 "data/maps/BeginnerClearing/scripts.pory"
+# 395 "data/maps/BeginnerClearing/scripts.pory"
 	setvar VAR_INTRO_SCENE, 6
-# 369 "data/maps/BeginnerClearing/scripts.pory"
+# 396 "data/maps/BeginnerClearing/scripts.pory"
 	hidefollower
-# 370 "data/maps/BeginnerClearing/scripts.pory"
+# 397 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement LOCALID_PLAYER, BeginnerClearing_PlayerWalksIn_LookForJirachiFromB
-# 371 "data/maps/BeginnerClearing/scripts.pory"
+# 398 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
-# 372 "data/maps/BeginnerClearing/scripts.pory"
+# 399 "data/maps/BeginnerClearing/scripts.pory"
 	call BeginnerClearing_EventScript_JirachiPlayerFirstDialogue
-# 373 "data/maps/BeginnerClearing/scripts.pory"
+# 400 "data/maps/BeginnerClearing/scripts.pory"
 	releaseall
 	return
 
 
 BeginnerClearing_EventScript_JirachiPlayerFirstDialogue::
-# 378 "data/maps/BeginnerClearing/scripts.pory"
+# 405 "data/maps/BeginnerClearing/scripts.pory"
 	lockall
-# 379 "data/maps/BeginnerClearing/scripts.pory"
+# 406 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement LOCALID_PLAYER, BeginnerClearing_ExclamationMark
-# 380 "data/maps/BeginnerClearing/scripts.pory"
+# 407 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_PIN
-# 381 "data/maps/BeginnerClearing/scripts.pory"
+# 408 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
-# 382 "data/maps/BeginnerClearing/scripts.pory"
+# 409 "data/maps/BeginnerClearing/scripts.pory"
 	clearflag FLAG_HIDE_CLEARING_JIRACHI2
-# 383 "data/maps/BeginnerClearing/scripts.pory"
+# 410 "data/maps/BeginnerClearing/scripts.pory"
 	addobject jirachi_intro_2
-# 384 "data/maps/BeginnerClearing/scripts.pory"
+# 411 "data/maps/BeginnerClearing/scripts.pory"
 	levitateobjectat jirachi_intro_2, MAP_BEGINNER_CLEARING
-# 385 "data/maps/BeginnerClearing/scripts.pory"
+# 412 "data/maps/BeginnerClearing/scripts.pory"
 	applymovement jirachi_intro_2, BeginnerClearing_EventScript_JirachiPlayerFirstDialogue_Movement_0
-# 386 "data/maps/BeginnerClearing/scripts.pory"
+# 413 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
-# 387 "data/maps/BeginnerClearing/scripts.pory"
-	speakername JirachiName
-# 388 "data/maps/BeginnerClearing/scripts.pory"
-	msgbox BeginnerClearing_EventScript_JirachiPlayerFirstDialogue_Text_0
 # 414 "data/maps/BeginnerClearing/scripts.pory"
-	fadescreenswapbuffers FADE_TO_WHITE
+	speakername JirachiName
 # 415 "data/maps/BeginnerClearing/scripts.pory"
+	msgbox BeginnerClearing_EventScript_JirachiPlayerFirstDialogue_Text_0
+# 441 "data/maps/BeginnerClearing/scripts.pory"
+	fadescreenswapbuffers FADE_TO_WHITE
+# 442 "data/maps/BeginnerClearing/scripts.pory"
 	setflag FLAG_HIDE_CLEARING_JIRACHI2
-# 416 "data/maps/BeginnerClearing/scripts.pory"
+# 443 "data/maps/BeginnerClearing/scripts.pory"
 	setflag FLAG_HIDE_MYRA_IN_LAB
-# 417 "data/maps/BeginnerClearing/scripts.pory"
+# 444 "data/maps/BeginnerClearing/scripts.pory"
 	removeobject jirachi_intro_2
-# 418 "data/maps/BeginnerClearing/scripts.pory"
+# 445 "data/maps/BeginnerClearing/scripts.pory"
 	fadescreenswapbuffers FADE_FROM_WHITE
-# 419 "data/maps/BeginnerClearing/scripts.pory"
+# 446 "data/maps/BeginnerClearing/scripts.pory"
 	completequest QUEST_1_MEDS_FOR_JIRACHI
-# 420 "data/maps/BeginnerClearing/scripts.pory"
+# 447 "data/maps/BeginnerClearing/scripts.pory"
 	startquest QUEST_2_STARBOUND_OATH
-# 421 "data/maps/BeginnerClearing/scripts.pory"
+# 448 "data/maps/BeginnerClearing/scripts.pory"
 	subquestmenu QUEST_MENU_SET_ACTIVE, QUEST_2_STARBOUND_OATH, SUB_QUEST_GO_TO_ZENITH_CITY
-# 422 "data/maps/BeginnerClearing/scripts.pory"
+# 449 "data/maps/BeginnerClearing/scripts.pory"
 	openquestmenu
-# 423 "data/maps/BeginnerClearing/scripts.pory"
+# 450 "data/maps/BeginnerClearing/scripts.pory"
 	releaseall
 	return
 
@@ -809,61 +862,67 @@ BeginnerClearing_EventScript_JirachiIntro_Movement_2:
 	walk_right
 	step_end
 
-# 328 "data/maps/BeginnerClearing/scripts.pory"
-BeginnerClearing_EventScript_AfterBattle_Movement_0:
-# 328 "data/maps/BeginnerClearing/scripts.pory"
-	walk_fast_left
-# 328 "data/maps/BeginnerClearing/scripts.pory"
-	walk_fast_left
-# 328 "data/maps/BeginnerClearing/scripts.pory"
-	walk_fast_left
-# 328 "data/maps/BeginnerClearing/scripts.pory"
-	walk_fast_left
-# 328 "data/maps/BeginnerClearing/scripts.pory"
-	walk_fast_left
-# 328 "data/maps/BeginnerClearing/scripts.pory"
-	walk_fast_left
-# 328 "data/maps/BeginnerClearing/scripts.pory"
-	walk_fast_left
-# 328 "data/maps/BeginnerClearing/scripts.pory"
-	walk_fast_left
-# 328 "data/maps/BeginnerClearing/scripts.pory"
-	walk_fast_left
-# 328 "data/maps/BeginnerClearing/scripts.pory"
-	walk_fast_left
+# 330 "data/maps/BeginnerClearing/scripts.pory"
+BeginnerClearing_EventScript_RepeatBattle_Movement_0:
+# 330 "data/maps/BeginnerClearing/scripts.pory"
+	face_player
 	step_end
 
-# 335 "data/maps/BeginnerClearing/scripts.pory"
-BeginnerClearing_EventScript_AfterBattle_Movement_1:
-# 336 "data/maps/BeginnerClearing/scripts.pory"
-	walk_right
-# 337 "data/maps/BeginnerClearing/scripts.pory"
-	face_up
-	step_end
-
-# 338 "data/maps/BeginnerClearing/scripts.pory"
-BeginnerClearing_EventScript_AfterBattle_Movement_2:
-# 338 "data/maps/BeginnerClearing/scripts.pory"
+# 332 "data/maps/BeginnerClearing/scripts.pory"
+BeginnerClearing_EventScript_RepeatBattle_Movement_1:
+# 332 "data/maps/BeginnerClearing/scripts.pory"
 	face_down
 	step_end
 
-# 385 "data/maps/BeginnerClearing/scripts.pory"
+# 355 "data/maps/BeginnerClearing/scripts.pory"
+BeginnerClearing_EventScript_AfterBattle_Movement_0:
+# 355 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 355 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 355 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 355 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 355 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 355 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 355 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 355 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 355 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+# 355 "data/maps/BeginnerClearing/scripts.pory"
+	walk_fast_left
+	step_end
+
+# 362 "data/maps/BeginnerClearing/scripts.pory"
+BeginnerClearing_EventScript_AfterBattle_Movement_1:
+# 363 "data/maps/BeginnerClearing/scripts.pory"
+	walk_right
+# 364 "data/maps/BeginnerClearing/scripts.pory"
+	face_up
+	step_end
+
+# 412 "data/maps/BeginnerClearing/scripts.pory"
 BeginnerClearing_EventScript_JirachiPlayerFirstDialogue_Movement_0:
-# 385 "data/maps/BeginnerClearing/scripts.pory"
+# 412 "data/maps/BeginnerClearing/scripts.pory"
 	walk_slow_down
-# 385 "data/maps/BeginnerClearing/scripts.pory"
+# 412 "data/maps/BeginnerClearing/scripts.pory"
 	walk_slow_down
-# 385 "data/maps/BeginnerClearing/scripts.pory"
+# 412 "data/maps/BeginnerClearing/scripts.pory"
 	walk_slow_down
-# 385 "data/maps/BeginnerClearing/scripts.pory"
+# 412 "data/maps/BeginnerClearing/scripts.pory"
 	walk_slow_down
-# 385 "data/maps/BeginnerClearing/scripts.pory"
+# 412 "data/maps/BeginnerClearing/scripts.pory"
 	walk_slow_down
-# 385 "data/maps/BeginnerClearing/scripts.pory"
+# 412 "data/maps/BeginnerClearing/scripts.pory"
 	walk_slow_down
-# 385 "data/maps/BeginnerClearing/scripts.pory"
+# 412 "data/maps/BeginnerClearing/scripts.pory"
 	walk_slow_down
-# 385 "data/maps/BeginnerClearing/scripts.pory"
+# 412 "data/maps/BeginnerClearing/scripts.pory"
 	walk_slow_down
 	step_end
 
@@ -965,32 +1024,45 @@ BeginnerClearing_EventScript_JirachiIntro_Text_15:
 	.string "Please grab a Pokéball from my bag.$"
 
 BeginnerClearing_EventScript_GruntABattle_Text_0:
-# 318 "data/maps/BeginnerClearing/scripts.pory"
-	.string "You're going down, kid!$"
+# 320 "data/maps/BeginnerClearing/scripts.pory"
+	.string "Battle outcome before while loop:$"
 
 BeginnerClearing_EventScript_GruntABattle_Text_1:
-# 318 "data/maps/BeginnerClearing/scripts.pory"
+# 321 "data/maps/BeginnerClearing/scripts.pory"
+	.string "You're going down, kid!$"
+
+BeginnerClearing_EventScript_GruntABattle_Text_2:
+# 321 "data/maps/BeginnerClearing/scripts.pory"
 	.string "Impossible…$"
 
+BeginnerClearing_EventScript_RepeatBattle_Text_0:
+# 328 "data/maps/BeginnerClearing/scripts.pory"
+	.string "Battle outcome after battle:$"
+
+BeginnerClearing_EventScript_RepeatBattle_Text_1:
+# 335 "data/maps/BeginnerClearing/scripts.pory"
+	.string "Oh no! {PLAYER}, are you okay?\p"
+	.string "Don't give up!$"
+
 BeginnerClearing_EventScript_AfterBattle_Text_0:
-# 325 "data/maps/BeginnerClearing/scripts.pory"
+# 352 "data/maps/BeginnerClearing/scripts.pory"
 	.string "How is this possible!?\p"
 	.string "You little brat… You'll regret this!$"
 
 BeginnerClearing_EventScript_AfterBattle_Text_1:
-# 331 "data/maps/BeginnerClearing/scripts.pory"
+# 358 "data/maps/BeginnerClearing/scripts.pory"
 	.string "You don't mess with Team Eclipse and\n"
 	.string "get away with it!$"
 
 BeginnerClearing_EventScript_AfterBattle_Text_2:
-# 341 "data/maps/BeginnerClearing/scripts.pory"
+# 368 "data/maps/BeginnerClearing/scripts.pory"
 	.string "{PLAYER}, you were amazing!\p"
 	.string "I'm so glad you were here.\p"
 	.string "Now let's take this Jirachi back to my\n"
 	.string "lab so it can rest.$"
 
 BeginnerClearing_EventScript_JirachiPlayerFirstDialogue_Text_0:
-# 388 "data/maps/BeginnerClearing/scripts.pory"
+# 415 "data/maps/BeginnerClearing/scripts.pory"
 	.string "{COLOR RED}…you came.\p"
 	.string "I wasn't sure you'd hear me, but… you\n"
 	.string "did.\p"

@@ -262,7 +262,7 @@ Astridale_EventScript_Scyther_Dialogue::
 # 204 "data/maps/Astridale/scripts.pory"
 	msgbox Astridale_EventScript_Scyther_Dialogue_Text_0, MSGBOX_NPC
 # 206 "data/maps/Astridale/scripts.pory"
-	applymovement Astridale_Scyther, Astridale_EventScript_ConstructionMan3_Trigger_Movement_2
+	applymovement Astridale_Scyther, Astridale_EventScript_Scyther_Dialogue_Movement_0
 	return
 
 
@@ -281,12 +281,18 @@ Astridale_EventScript_ConstructionMan3_Trigger_Movement_0:
 # 168 "data/maps/Astridale/scripts.pory"
 Astridale_EventScript_ConstructionMan3_Trigger_Movement_1:
 # 168 "data/maps/Astridale/scripts.pory"
-	walk_down
+	walk_left
 	step_end
 
 # 170 "data/maps/Astridale/scripts.pory"
 Astridale_EventScript_ConstructionMan3_Trigger_Movement_2:
 # 170 "data/maps/Astridale/scripts.pory"
+	face_left
+	step_end
+
+# 206 "data/maps/Astridale/scripts.pory"
+Astridale_EventScript_Scyther_Dialogue_Movement_0:
+# 206 "data/maps/Astridale/scripts.pory"
 	face_down
 	step_end
 

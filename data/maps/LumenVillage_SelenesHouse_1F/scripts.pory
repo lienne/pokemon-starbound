@@ -1,5 +1,9 @@
 mapscripts LumenVillage_SelenesHouse_1F_MapScripts {
-    
+    MAP_SCRIPT_ON_TRANSITION {
+        if (var(VAR_INTRO_SCENE) < 1) {
+            playbgm(MUS_NONE, 1)
+        }
+    }
 }
 
 text MomName {

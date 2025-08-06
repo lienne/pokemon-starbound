@@ -315,12 +315,39 @@ script BeginnerClearing_EventScript_GruntABattle {
     }
     waitmovement(LOCALID_PLAYER)
     applymovement(ProfMyra, moves(face_left))
-    trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_14, "You're going down, kid!", "Impossible…", BeginnerClearing_EventScript_AfterBattle)
+    waitmovement(0)
+    setflag(FLAG_NO_WHITEOUT)
+    debugprint("Battle outcome before while loop:", VAR_RESULT)
+    trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_14, "You're going down, kid!", "Impossible…", BeginnerClearing_EventScript_RepeatBattle)
+    releaseall
+}
+
+script BeginnerClearing_EventScript_RepeatBattle {
+    lockall
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    debugprint("Battle outcome after battle:", VAR_RESULT)
+    if (var(VAR_RESULT) != B_OUTCOME_WON) {
+        applymovement(ProfMyra, moves(face_player))
+        waitmovement(0)
+        applymovement(LOCALID_PLAYER, moves(face_down))
+        waitmovement(0)
+        speakername(ProfMyraName)
+        msgbox(format("Oh no! {PLAYER}, are you okay?\p"
+            "Don't give up!"), MSGBOX_AUTOCLOSE)
+        special(HealPlayerParty)
+        applymovement(ProfMyra, moves(face_left))
+        waitmovement(0)
+        applymovement(LOCALID_PLAYER, moves(face_left))
+        waitmovement(0)
+        trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_14, "You're going down, kid!", "Impossible…", BeginnerClearing_EventScript_RepeatBattle)
+    }
+    call(BeginnerClearing_EventScript_AfterBattle)
     releaseall
 }
 
 script BeginnerClearing_EventScript_AfterBattle {
     lockall
+    clearflag(FLAG_NO_WHITEOUT)
     speakername(GruntAName)
     msgbox(format("How is this possible!?\p"
         "You little brat… You'll regret this!"), MSGBOX_AUTOCLOSE)

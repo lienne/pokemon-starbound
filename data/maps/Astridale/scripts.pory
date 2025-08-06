@@ -165,9 +165,9 @@ script Astridale_EventScript_ConstructionMan3_Trigger {
         applymovement(Astridale_ConstructionMan3, moves(face_player))
         waitmovement(0)
         msgbox(Astridale_ConstructionMan3_Dialogue_Pre_Gym, MSGBOX_AUTOCLOSE)
-        applymovement(LOCALID_PLAYER, moves(walk_down))
+        applymovement(LOCALID_PLAYER, moves(walk_left))
         waitmovement(0)
-        applymovement(Astridale_ConstructionMan3, moves(face_down))
+        applymovement(Astridale_ConstructionMan3, moves(face_left))
         waitmovement(0)
     }
 }
