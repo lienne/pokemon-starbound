@@ -2,6 +2,7 @@
 #define GUARD_METATILE_LABELS_H
 
 // gTileset_Astridale
+#define METATILE_Astridale_gym_door     0x2DA
 #define METATILE_Astridale_house1_door  0x222
 #define METATILE_Astridale_house2_door  0x225
 #define METATILE_Astridale_house3_door  0x24A

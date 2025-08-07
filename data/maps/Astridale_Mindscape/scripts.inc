@@ -262,6 +262,38 @@ Astridale_Mindscape_EventScript_VivianeDefeated::
 	return
 
 
+Astridale_Mindscape_EventScript_Beauty_Melissa::
+# 174 "data/maps/Astridale_Mindscape/scripts.pory"
+	trainerbattle_single TRAINER_MELISSA, Astridale_Mindscape_Beauty_Melissa_Intro_Text, Astridale_Mindscape_Beauty_Melissa_Lose_Text
+# 175 "data/maps/Astridale_Mindscape/scripts.pory"
+	msgbox Astridale_Mindscape_Beauty_Melissa_Dialogue, MSGBOX_NPC
+	return
+
+
+Astridale_Mindscape_EventScript_Lass_Tiana::
+# 179 "data/maps/Astridale_Mindscape/scripts.pory"
+	trainerbattle_single TRAINER_TIANA, Astridale_Mindscape_Lass_Tiana_Intro_Text, Astridale_Mindscape_Lass_Tiana_Lose_Text
+# 180 "data/maps/Astridale_Mindscape/scripts.pory"
+	msgbox Astridale_Mindscape_Lass_Tiana_Dialogue, MSGBOX_NPC
+	return
+
+
+Astridale_Mindscape_EventScript_Lady_Cindy::
+# 184 "data/maps/Astridale_Mindscape/scripts.pory"
+	trainerbattle_single TRAINER_CINDY_1, Astridale_Mindscape_Lady_Cindy_Intro_Text, Astridale_Mindscape_Lady_Cindy_Lose_Text
+# 185 "data/maps/Astridale_Mindscape/scripts.pory"
+	msgbox Astridale_Mindscape_Lady_Cindy_Dialogue, MSGBOX_NPC
+	return
+
+
+Astridale_Mindscape_EventScript_AromaLady_Daisy::
+# 189 "data/maps/Astridale_Mindscape/scripts.pory"
+	trainerbattle_single TRAINER_DAISY, Astridale_Mindscape_AromaLady_Daisy_Intro_Text, Astridale_Mindscape_AromaLady_Daisy_Lose_Text
+# 190 "data/maps/Astridale_Mindscape/scripts.pory"
+	msgbox Astridale_Mindscape_AromaLady_Daisy_Dialogue, MSGBOX_NPC
+	return
+
+
 # 29 "data/maps/Astridale_Mindscape/scripts.pory"
 Astridale_Mindscape_EventScript_Intro_Dialogue_Movement_0:
 # 29 "data/maps/Astridale_Mindscape/scripts.pory"
@@ -407,3 +439,65 @@ Astridale_Mindscape_Text_VivianeIntro::
 Astridale_Mindscape_Text_VivianeDefeat::
 # 158 "data/maps/Astridale_Mindscape/scripts.pory"
 	.string "No… I can't lose…$"
+
+Astridale_Mindscape_Beauty_Melissa_Intro_Text::
+# 193 "data/maps/Astridale_Mindscape/scripts.pory"
+	.string "This place feels like a dream, doesn't\n"
+	.string "it?$"
+
+Astridale_Mindscape_Beauty_Melissa_Lose_Text::
+# 197 "data/maps/Astridale_Mindscape/scripts.pory"
+	.string "You sparkle brighter than I expected…$"
+
+Astridale_Mindscape_Beauty_Melissa_Dialogue::
+# 201 "data/maps/Astridale_Mindscape/scripts.pory"
+	.string "Lady Viviane says every challenger\n"
+	.string "adds a new shimmer to her world. I think\l"
+	.string "yours was a whole constellation.$"
+
+Astridale_Mindscape_Lass_Tiana_Intro_Text::
+# 205 "data/maps/Astridale_Mindscape/scripts.pory"
+	.string "I'm gonna be just like Miss Viviane one\n"
+	.string "day! Wanna see what I've learned?$"
+
+Astridale_Mindscape_Lass_Tiana_Lose_Text::
+# 209 "data/maps/Astridale_Mindscape/scripts.pory"
+	.string "W-wait, I wasn't ready! … Okay, maybe I\n"
+	.string "was.$"
+
+Astridale_Mindscape_Lass_Tiana_Dialogue::
+# 213 "data/maps/Astridale_Mindscape/scripts.pory"
+	.string "Viviane says losing helps you grow. So\n"
+	.string "I'm gonna grow like a Sunkern in the\l"
+	.string "sun!$"
+
+Astridale_Mindscape_Lady_Cindy_Intro_Text::
+# 217 "data/maps/Astridale_Mindscape/scripts.pory"
+	.string "The battlefield is our stage. Let's make\n"
+	.string "this a dazzling duet!$"
+
+Astridale_Mindscape_Lady_Cindy_Lose_Text::
+# 221 "data/maps/Astridale_Mindscape/scripts.pory"
+	.string "Oh! That finale… was magnificent!$"
+
+Astridale_Mindscape_Lady_Cindy_Dialogue::
+# 225 "data/maps/Astridale_Mindscape/scripts.pory"
+	.string "Viviane taught me that grace and\n"
+	.string "strength are not opposites. They're\l"
+	.string "partners.$"
+
+Astridale_Mindscape_AromaLady_Daisy_Intro_Text::
+# 229 "data/maps/Astridale_Mindscape/scripts.pory"
+	.string "I made cupcakes for the Pokémon… but\n"
+	.string "you? You'll get a fairy-type smackdown\l"
+	.string "instead!$"
+
+Astridale_Mindscape_AromaLady_Daisy_Lose_Text::
+# 233 "data/maps/Astridale_Mindscape/scripts.pory"
+	.string "Oh dear! I dropped my whisk AND the\n"
+	.string "match!$"
+
+Astridale_Mindscape_AromaLady_Daisy_Dialogue::
+# 237 "data/maps/Astridale_Mindscape/scripts.pory"
+	.string "Viviane has such a sweet tooth for\n"
+	.string "kindness… and battle strategy!$"

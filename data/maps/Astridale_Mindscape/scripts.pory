@@ -169,3 +169,71 @@ script Astridale_Mindscape_EventScript_VivianeDefeated {
         "I think I need to rest for a while…"), MSGBOX_AUTOCLOSE)
     warpwhitefade(MAP_ASTRIDALE_GYM, 7, 3)
 }
+
+script Astridale_Mindscape_EventScript_Beauty_Melissa {
+    trainerbattle_single(TRAINER_MELISSA, Astridale_Mindscape_Beauty_Melissa_Intro_Text, Astridale_Mindscape_Beauty_Melissa_Lose_Text)
+    msgbox(Astridale_Mindscape_Beauty_Melissa_Dialogue, MSGBOX_NPC)
+}
+
+script Astridale_Mindscape_EventScript_Lass_Tiana {
+    trainerbattle_single(TRAINER_TIANA, Astridale_Mindscape_Lass_Tiana_Intro_Text, Astridale_Mindscape_Lass_Tiana_Lose_Text)
+    msgbox(Astridale_Mindscape_Lass_Tiana_Dialogue, MSGBOX_NPC)
+}
+
+script Astridale_Mindscape_EventScript_Lady_Cindy {
+    trainerbattle_single(TRAINER_CINDY_1, Astridale_Mindscape_Lady_Cindy_Intro_Text, Astridale_Mindscape_Lady_Cindy_Lose_Text)
+    msgbox(Astridale_Mindscape_Lady_Cindy_Dialogue, MSGBOX_NPC)
+}
+
+script Astridale_Mindscape_EventScript_AromaLady_Daisy {
+    trainerbattle_single(TRAINER_DAISY, Astridale_Mindscape_AromaLady_Daisy_Intro_Text, Astridale_Mindscape_AromaLady_Daisy_Lose_Text)
+    msgbox(Astridale_Mindscape_AromaLady_Daisy_Dialogue, MSGBOX_NPC)
+}
+
+text Astridale_Mindscape_Beauty_Melissa_Intro_Text {
+    format("This place feels like a dream, doesn't it?")
+}
+
+text Astridale_Mindscape_Beauty_Melissa_Lose_Text {
+    format("You sparkle brighter than I expected…")
+}
+
+text Astridale_Mindscape_Beauty_Melissa_Dialogue {
+    format("Lady Viviane says every challenger adds a new shimmer to her world. I think yours was a whole constellation.")
+}
+
+text Astridale_Mindscape_Lass_Tiana_Intro_Text {
+    format("I'm gonna be just like Miss Viviane one day! Wanna see what I've learned?")
+}
+
+text Astridale_Mindscape_Lass_Tiana_Lose_Text {
+    format("W-wait, I wasn't ready! … Okay, maybe I was.")
+}
+
+text Astridale_Mindscape_Lass_Tiana_Dialogue {
+    format("Viviane says losing helps you grow. So I'm gonna grow like a Sunkern in the sun!")
+}
+
+text Astridale_Mindscape_Lady_Cindy_Intro_Text {
+    format("The battlefield is our stage. Let's make this a dazzling duet!")
+}
+
+text Astridale_Mindscape_Lady_Cindy_Lose_Text {
+    format("Oh! That finale… was magnificent!")
+}
+
+text Astridale_Mindscape_Lady_Cindy_Dialogue {
+    format("Viviane taught me that grace and strength are not opposites. They're partners.")
+}
+
+text Astridale_Mindscape_AromaLady_Daisy_Intro_Text {
+    format("I made cupcakes for the Pokémon… but you? You'll get a fairy-type smackdown instead!")
+}
+
+text Astridale_Mindscape_AromaLady_Daisy_Lose_Text {
+    format("Oh dear! I dropped my whisk AND the match!")
+}
+
+text Astridale_Mindscape_AromaLady_Daisy_Dialogue {
+    format("Viviane has such a sweet tooth for kindness… and battle strategy!")
+}

@@ -91,9 +91,12 @@ Astridale_EventScript_ConstructionMan1_Dialogue::
 	compare VAR_ASTRIDALE_STATE, 1
 	goto_if_eq Astridale_EventScript_ConstructionMan1_Dialogue_1
 # 78 "data/maps/Astridale/scripts.pory"
+	compare VAR_ASTRIDALE_STATE, 9
+	goto_if_lt Astridale_EventScript_ConstructionMan1_Dialogue_6
+# 88 "data/maps/Astridale/scripts.pory"
 	applymovement Astridale_ConstructionMan1, Astridale_EventScript_Gym_Door_Man_Dialogue_Movement_0
-# 79 "data/maps/Astridale/scripts.pory"
-	msgbox Astridale_EventScript_ConstructionMan1_Dialogue_Text_0, MSGBOX_NPC
+# 89 "data/maps/Astridale/scripts.pory"
+	msgbox Astridale_EventScript_ConstructionMan1_Dialogue_Text_1, MSGBOX_NPC
 	return
 
 Astridale_EventScript_ConstructionMan1_Dialogue_1:
@@ -109,159 +112,174 @@ Astridale_EventScript_ConstructionMan1_Dialogue_1:
 	openquestmenu
 	return
 
+Astridale_EventScript_ConstructionMan1_Dialogue_6:
+# 79 "data/maps/Astridale/scripts.pory"
+	applymovement Astridale_ConstructionMan1, Astridale_EventScript_Gym_Door_Man_Dialogue_Movement_0
+# 80 "data/maps/Astridale/scripts.pory"
+	msgbox Astridale_EventScript_ConstructionMan1_Dialogue_Text_0, MSGBOX_NPC
+	return
+
 
 Astridale_EventScript_ConstructionMan2_Dialogue::
-# 89 "data/maps/Astridale/scripts.pory"
+# 97 "data/maps/Astridale/scripts.pory"
 	applymovement Astridale_ConstructionMan2, Astridale_EventScript_Gym_Door_Man_Dialogue_Movement_0
-# 90 "data/maps/Astridale/scripts.pory"
+# 98 "data/maps/Astridale/scripts.pory"
 	msgbox Astridale_EventScript_ConstructionMan2_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
 Astridale_EventScript_Machoke1_Dialogue::
-# 99 "data/maps/Astridale/scripts.pory"
+# 107 "data/maps/Astridale/scripts.pory"
 	applymovement Astridale_Machoke1, Astridale_EventScript_Gym_Door_Man_Dialogue_Movement_0
-# 100 "data/maps/Astridale/scripts.pory"
+# 108 "data/maps/Astridale/scripts.pory"
 	msgbox Astridale_EventScript_Machoke1_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
 Astridale_EventScript_Machoke2_Dialogue::
-# 105 "data/maps/Astridale/scripts.pory"
+# 113 "data/maps/Astridale/scripts.pory"
 	applymovement Astridale_Machoke2, Astridale_EventScript_Gym_Door_Man_Dialogue_Movement_0
-# 106 "data/maps/Astridale/scripts.pory"
+# 114 "data/maps/Astridale/scripts.pory"
 	msgbox Astridale_EventScript_Machoke1_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
 Astridale_EventScript_Vigorith1_Dialogue::
-# 111 "data/maps/Astridale/scripts.pory"
+# 119 "data/maps/Astridale/scripts.pory"
 	applymovement Astridale_Vigoroth1, Astridale_EventScript_Gym_Door_Man_Dialogue_Movement_0
-# 112 "data/maps/Astridale/scripts.pory"
+# 120 "data/maps/Astridale/scripts.pory"
 	msgbox Astridale_EventScript_Vigorith1_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
 Astridale_EventScript_Vigorith2_Dialogue::
-# 117 "data/maps/Astridale/scripts.pory"
+# 125 "data/maps/Astridale/scripts.pory"
 	applymovement Astridale_Vigoroth2, Astridale_EventScript_Gym_Door_Man_Dialogue_Movement_0
-# 118 "data/maps/Astridale/scripts.pory"
+# 126 "data/maps/Astridale/scripts.pory"
 	msgbox Astridale_EventScript_Vigorith1_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
 Astridale_EventScript_Gameboy_Kid_Dialogue::
-# 123 "data/maps/Astridale/scripts.pory"
+# 131 "data/maps/Astridale/scripts.pory"
 	applymovement Astridale_Gameboy_Kid, Astridale_EventScript_Gym_Door_Man_Dialogue_Movement_0
-# 124 "data/maps/Astridale/scripts.pory"
+# 132 "data/maps/Astridale/scripts.pory"
 	msgbox Astridale_EventScript_Gameboy_Kid_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
 Astridale_EventScript_OldMan_Dialogue::
-# 130 "data/maps/Astridale/scripts.pory"
+# 138 "data/maps/Astridale/scripts.pory"
 	applymovement Astridale_OldMan, Astridale_EventScript_Gym_Door_Man_Dialogue_Movement_0
-# 131 "data/maps/Astridale/scripts.pory"
+# 139 "data/maps/Astridale/scripts.pory"
 	msgbox Astridale_EventScript_OldMan_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
 Astridale_EventScript_OldWoman_Dialogue::
-# 137 "data/maps/Astridale/scripts.pory"
+# 145 "data/maps/Astridale/scripts.pory"
 	applymovement Astridale_OldWoman, Astridale_EventScript_Gym_Door_Man_Dialogue_Movement_0
-# 138 "data/maps/Astridale/scripts.pory"
+# 146 "data/maps/Astridale/scripts.pory"
 	msgbox Astridale_EventScript_OldWoman_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
 Astridale_EventScript_Lady_Dialogue::
-# 144 "data/maps/Astridale/scripts.pory"
+# 152 "data/maps/Astridale/scripts.pory"
 	applymovement Astridale_Lady, Astridale_EventScript_Gym_Door_Man_Dialogue_Movement_0
-# 145 "data/maps/Astridale/scripts.pory"
+# 153 "data/maps/Astridale/scripts.pory"
+	compare VAR_ASTRIDALE_STATE, 9
+	goto_if_lt Astridale_EventScript_Lady_Dialogue_1
+# 158 "data/maps/Astridale/scripts.pory"
+	msgbox Astridale_EventScript_Lady_Dialogue_Text_1, MSGBOX_NPC
+	return
+
+Astridale_EventScript_Lady_Dialogue_1:
+# 154 "data/maps/Astridale/scripts.pory"
 	msgbox Astridale_EventScript_Lady_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 
 Astridale_EventScript_ConstructionMan3_Dialogue::
-# 151 "data/maps/Astridale/scripts.pory"
+# 165 "data/maps/Astridale/scripts.pory"
 	compare VAR_ASTRIDALE_STATE, 9
 	goto_if_lt Astridale_EventScript_ConstructionMan3_Dialogue_1
-# 155 "data/maps/Astridale/scripts.pory"
+# 169 "data/maps/Astridale/scripts.pory"
 	msgbox Astridale_ConstructionMan3_Dialogue_Post_Gym, MSGBOX_NPC
 	return
 
 Astridale_EventScript_ConstructionMan3_Dialogue_1:
-# 152 "data/maps/Astridale/scripts.pory"
+# 166 "data/maps/Astridale/scripts.pory"
 	msgbox Astridale_ConstructionMan3_Dialogue_Pre_Gym, MSGBOX_NPC
 	return
 
 
 Astridale_EventScript_ConstructionMan3_Trigger::
-# 160 "data/maps/Astridale/scripts.pory"
+# 174 "data/maps/Astridale/scripts.pory"
 	compare VAR_ASTRIDALE_STATE, 9
 	goto_if_lt Astridale_EventScript_ConstructionMan3_Trigger_1
 	return
 
 Astridale_EventScript_ConstructionMan3_Trigger_1:
-# 161 "data/maps/Astridale/scripts.pory"
+# 175 "data/maps/Astridale/scripts.pory"
 	applymovement Astridale_ConstructionMan3, Astridale_EventScript_ConstructionMan3_Trigger_Movement_0
-# 162 "data/maps/Astridale/scripts.pory"
+# 176 "data/maps/Astridale/scripts.pory"
 	playse SE_PIN
-# 163 "data/maps/Astridale/scripts.pory"
+# 177 "data/maps/Astridale/scripts.pory"
 	waitse
-# 164 "data/maps/Astridale/scripts.pory"
+# 178 "data/maps/Astridale/scripts.pory"
 	waitmovement 0
-# 165 "data/maps/Astridale/scripts.pory"
+# 179 "data/maps/Astridale/scripts.pory"
 	applymovement Astridale_ConstructionMan3, Astridale_EventScript_Gym_Door_Man_Dialogue_Movement_0
-# 166 "data/maps/Astridale/scripts.pory"
+# 180 "data/maps/Astridale/scripts.pory"
 	waitmovement 0
-# 167 "data/maps/Astridale/scripts.pory"
+# 181 "data/maps/Astridale/scripts.pory"
 	msgbox Astridale_ConstructionMan3_Dialogue_Pre_Gym, MSGBOX_AUTOCLOSE
-# 168 "data/maps/Astridale/scripts.pory"
+# 182 "data/maps/Astridale/scripts.pory"
 	applymovement LOCALID_PLAYER, Astridale_EventScript_ConstructionMan3_Trigger_Movement_1
-# 169 "data/maps/Astridale/scripts.pory"
+# 183 "data/maps/Astridale/scripts.pory"
 	waitmovement 0
-# 170 "data/maps/Astridale/scripts.pory"
+# 184 "data/maps/Astridale/scripts.pory"
 	applymovement Astridale_ConstructionMan3, Astridale_EventScript_ConstructionMan3_Trigger_Movement_2
-# 171 "data/maps/Astridale/scripts.pory"
+# 185 "data/maps/Astridale/scripts.pory"
 	waitmovement 0
 	return
 
 
 Astridale_EventScript_ConstructionMan_Cutter_Dialogue::
-# 176 "data/maps/Astridale/scripts.pory"
+# 190 "data/maps/Astridale/scripts.pory"
 	lockall
-# 177 "data/maps/Astridale/scripts.pory"
-	applymovement Astridale_ConstructionMan_Cutter, Astridale_EventScript_Gym_Door_Man_Dialogue_Movement_0
-# 178 "data/maps/Astridale/scripts.pory"
-	waitmovement 0
-# 179 "data/maps/Astridale/scripts.pory"
-	goto_if_set FLAG_RECEIVED_HM_CUT, Astridale_EventScript_ConstructionMan_Cutter_Dialogue_2
-# 187 "data/maps/Astridale/scripts.pory"
-	msgbox Astridale_EventScript_ConstructionMan_Cutter_Dialogue_Text_1, MSGBOX_AUTOCLOSE
 # 191 "data/maps/Astridale/scripts.pory"
-	giveitem ITEM_HM_CUT
+	applymovement Astridale_ConstructionMan_Cutter, Astridale_EventScript_Gym_Door_Man_Dialogue_Movement_0
 # 192 "data/maps/Astridale/scripts.pory"
-	setflag FLAG_RECEIVED_HM_CUT
+	waitmovement 0
 # 193 "data/maps/Astridale/scripts.pory"
+	goto_if_set FLAG_RECEIVED_HM_CUT, Astridale_EventScript_ConstructionMan_Cutter_Dialogue_2
+# 201 "data/maps/Astridale/scripts.pory"
+	msgbox Astridale_EventScript_ConstructionMan_Cutter_Dialogue_Text_1, MSGBOX_AUTOCLOSE
+# 205 "data/maps/Astridale/scripts.pory"
+	giveitem ITEM_HM_CUT
+# 206 "data/maps/Astridale/scripts.pory"
+	setflag FLAG_RECEIVED_HM_CUT
+# 207 "data/maps/Astridale/scripts.pory"
 	msgbox Astridale_EventScript_ConstructionMan_Cutter_Dialogue_Text_0, MSGBOX_AUTOCLOSE
 Astridale_EventScript_ConstructionMan_Cutter_Dialogue_1:
-# 199 "data/maps/Astridale/scripts.pory"
+# 213 "data/maps/Astridale/scripts.pory"
 	releaseall
 	return
 
 Astridale_EventScript_ConstructionMan_Cutter_Dialogue_2:
-# 180 "data/maps/Astridale/scripts.pory"
+# 194 "data/maps/Astridale/scripts.pory"
 	msgbox Astridale_EventScript_ConstructionMan_Cutter_Dialogue_Text_0, MSGBOX_AUTOCLOSE
 	goto Astridale_EventScript_ConstructionMan_Cutter_Dialogue_1
 
 
 Astridale_EventScript_Scyther_Dialogue::
-# 203 "data/maps/Astridale/scripts.pory"
+# 217 "data/maps/Astridale/scripts.pory"
 	applymovement Astridale_Scyther, Astridale_EventScript_Gym_Door_Man_Dialogue_Movement_0
-# 204 "data/maps/Astridale/scripts.pory"
+# 218 "data/maps/Astridale/scripts.pory"
 	msgbox Astridale_EventScript_Scyther_Dialogue_Text_0, MSGBOX_NPC
-# 206 "data/maps/Astridale/scripts.pory"
+# 220 "data/maps/Astridale/scripts.pory"
 	applymovement Astridale_Scyther, Astridale_EventScript_Scyther_Dialogue_Movement_0
 	return
 
@@ -272,27 +290,27 @@ Astridale_EventScript_Gym_Door_Man_Dialogue_Movement_0:
 	face_player
 	step_end
 
-# 161 "data/maps/Astridale/scripts.pory"
+# 175 "data/maps/Astridale/scripts.pory"
 Astridale_EventScript_ConstructionMan3_Trigger_Movement_0:
-# 161 "data/maps/Astridale/scripts.pory"
+# 175 "data/maps/Astridale/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
-# 168 "data/maps/Astridale/scripts.pory"
+# 182 "data/maps/Astridale/scripts.pory"
 Astridale_EventScript_ConstructionMan3_Trigger_Movement_1:
-# 168 "data/maps/Astridale/scripts.pory"
+# 182 "data/maps/Astridale/scripts.pory"
 	walk_left
 	step_end
 
-# 170 "data/maps/Astridale/scripts.pory"
+# 184 "data/maps/Astridale/scripts.pory"
 Astridale_EventScript_ConstructionMan3_Trigger_Movement_2:
-# 170 "data/maps/Astridale/scripts.pory"
+# 184 "data/maps/Astridale/scripts.pory"
 	face_left
 	step_end
 
-# 206 "data/maps/Astridale/scripts.pory"
+# 220 "data/maps/Astridale/scripts.pory"
 Astridale_EventScript_Scyther_Dialogue_Movement_0:
-# 206 "data/maps/Astridale/scripts.pory"
+# 220 "data/maps/Astridale/scripts.pory"
 	face_down
 	step_end
 
@@ -356,8 +374,17 @@ Astridale_EventScript_ConstructionMan1_Dialogue_Text_0:
 	.string "sabotaging us, wouldn't it?\p"
 	.string "Hahahaha!$"
 
+Astridale_EventScript_ConstructionMan1_Dialogue_Text_1:
+# 89 "data/maps/Astridale/scripts.pory"
+	.string "Hey ho! The construction's back on\n"
+	.string "track.\p"
+	.string "We had a bit of a delay, but\n"
+	.string "everything's fine now.\p"
+	.string "I guess the person who was sabotaging\n"
+	.string "us got scared off.$"
+
 Astridale_EventScript_ConstructionMan2_Dialogue_Text_0:
-# 90 "data/maps/Astridale/scripts.pory"
+# 98 "data/maps/Astridale/scripts.pory"
 	.string "…zzz…\p"
 	.string "…zzz…\p"
 	.string "Huh? Oh, sorry, I must've dozed off.\p"
@@ -369,25 +396,25 @@ Astridale_EventScript_ConstructionMan2_Dialogue_Text_0:
 	.string "…zzz…$"
 
 Astridale_EventScript_Machoke1_Dialogue_Text_0:
-# 100 "data/maps/Astridale/scripts.pory"
+# 108 "data/maps/Astridale/scripts.pory"
 	.string "Machoke is stomping down some soil.\l"
 	.string "It looks like it's working hard.$"
 
 Astridale_EventScript_Vigorith1_Dialogue_Text_0:
-# 112 "data/maps/Astridale/scripts.pory"
+# 120 "data/maps/Astridale/scripts.pory"
 	.string "Vigoroth is carrying a heavy load of\n"
 	.string "construction materials.\l"
 	.string "It looks like it's working hard.$"
 
 Astridale_EventScript_Gameboy_Kid_Dialogue_Text_0:
-# 124 "data/maps/Astridale/scripts.pory"
+# 132 "data/maps/Astridale/scripts.pory"
 	.string "I'm excited about the construction!\p"
 	.string "I hear they're building a biiiig\n"
 	.string "department store!\p"
 	.string "I bet they'll have lots of games to sell!$"
 
 Astridale_EventScript_OldMan_Dialogue_Text_0:
-# 131 "data/maps/Astridale/scripts.pory"
+# 139 "data/maps/Astridale/scripts.pory"
 	.string "The citizens of Astridale are divided\n"
 	.string "about the construction.\p"
 	.string "The younger crowd seems excited about\n"
@@ -395,7 +422,7 @@ Astridale_EventScript_OldMan_Dialogue_Text_0:
 	.string "Well, we worry.$"
 
 Astridale_EventScript_OldWoman_Dialogue_Text_0:
-# 138 "data/maps/Astridale/scripts.pory"
+# 146 "data/maps/Astridale/scripts.pory"
 	.string "The construction on the other side of\n"
 	.string "the city is a bad idea.\p"
 	.string "It's going to ruin the peaceful\n"
@@ -403,15 +430,24 @@ Astridale_EventScript_OldWoman_Dialogue_Text_0:
 	.string "I don't like it one bit.$"
 
 Astridale_EventScript_Lady_Dialogue_Text_0:
-# 145 "data/maps/Astridale/scripts.pory"
+# 154 "data/maps/Astridale/scripts.pory"
 	.string "The Gym Leader, Viviane, lives in that\n"
 	.string "old house on the hill, with her family.\p"
 	.string "They're sweet people, usually, but\n"
 	.string "Viviane's been so mean lately…\p"
 	.string "I wonder what's going on…$"
 
+Astridale_EventScript_Lady_Dialogue_Text_1:
+# 158 "data/maps/Astridale/scripts.pory"
+	.string "The Gym Leader, Viviane, lives in that\n"
+	.string "old house on the hill, with her family.\p"
+	.string "They're sweet people.\p"
+	.string "Viviane went a bit crazy about the\n"
+	.string "construction for a while, but she's back\l"
+	.string "to being nice now.$"
+
 Astridale_EventScript_ConstructionMan_Cutter_Dialogue_Text_0:
-# 180 "data/maps/Astridale/scripts.pory"
+# 194 "data/maps/Astridale/scripts.pory"
 	.string "That Hidden Machine, or HM for short, is\n"
 	.string "Cut.\p"
 	.string "An HM move can be used by Pokémon\n"
@@ -424,7 +460,7 @@ Astridale_EventScript_ConstructionMan_Cutter_Dialogue_Text_0:
 	.string "Isn't that nifty?$"
 
 Astridale_EventScript_ConstructionMan_Cutter_Dialogue_Text_1:
-# 187 "data/maps/Astridale/scripts.pory"
+# 201 "data/maps/Astridale/scripts.pory"
 	.string "I'm having my Pokémon use Cut on the\n"
 	.string "trees here to make way for the\l"
 	.string "construction.\p"
@@ -434,7 +470,7 @@ Astridale_EventScript_ConstructionMan_Cutter_Dialogue_Text_1:
 	.string "It's mighty useful.$"
 
 Astridale_EventScript_Scyther_Dialogue_Text_0:
-# 204 "data/maps/Astridale/scripts.pory"
+# 218 "data/maps/Astridale/scripts.pory"
 	.string "Scyther is using Cut to cut down some\n"
 	.string "trees.\l"
 	.string "It looks like it's working hard.$"
@@ -444,7 +480,7 @@ VivianeName::
 	.string "Viviane$"
 
 Astridale_ConstructionMan3_Dialogue_Pre_Gym::
-# 209 "data/maps/Astridale/scripts.pory"
+# 223 "data/maps/Astridale/scripts.pory"
 	.string "Hey kid!\p"
 	.string "Sorry, but I can't let you through here.\p"
 	.string "We have some heavy construction\n"
@@ -452,6 +488,6 @@ Astridale_ConstructionMan3_Dialogue_Pre_Gym::
 	.string "way is blocked.$"
 
 Astridale_ConstructionMan3_Dialogue_Post_Gym::
-# 215 "data/maps/Astridale/scripts.pory"
+# 229 "data/maps/Astridale/scripts.pory"
 	.string "The construction was halted for a\n"
 	.string "while, but now it's back on track.$"

@@ -75,13 +75,21 @@ script Astridale_EventScript_ConstructionMan1_Dialogue {
         openquestmenu()
     }
     else {
-        applymovement(Astridale_ConstructionMan1, moves(face_player))
-        msgbox(format("Hey ho! The construction's halted for the time being.\p"
-            "There have been strange happenings lately.\p"
-            "Our equipment keeps mysteriously breaking, materials have gone missing…\p"
-            "We don't know what to make of it.\p"
-            "It would be crazy if someone were sabotaging us, wouldn't it?\p"
-            "Hahahaha!"), MSGBOX_NPC)
+        if (var(VAR_ASTRIDALE_STATE) < 9) {
+            applymovement(Astridale_ConstructionMan1, moves(face_player))
+            msgbox(format("Hey ho! The construction's halted for the time being.\p"
+                "There have been strange happenings lately.\p"
+                "Our equipment keeps mysteriously breaking, materials have gone missing…\p"
+                "We don't know what to make of it.\p"
+                "It would be crazy if someone were sabotaging us, wouldn't it?\p"
+                "Hahahaha!"), MSGBOX_NPC)
+        }
+        else {
+            applymovement(Astridale_ConstructionMan1, moves(face_player))
+            msgbox(format("Hey ho! The construction's back on track.\p"
+                "We had a bit of a delay, but everything's fine now.\p"
+                "I guess the person who was sabotaging us got scared off."), MSGBOX_NPC)
+        }
     }
 }
 
@@ -142,9 +150,15 @@ script Astridale_EventScript_OldWoman_Dialogue {
 
 script Astridale_EventScript_Lady_Dialogue {
     applymovement(Astridale_Lady, moves(face_player))
-    msgbox(format("The Gym Leader, Viviane, lives in that old house on the hill, with her family.\p"
-        "They're sweet people, usually, but Viviane's been so mean lately…\p"
-        "I wonder what's going on…"), MSGBOX_NPC)
+    if (var(VAR_ASTRIDALE_STATE) < 9) {
+        msgbox(format("The Gym Leader, Viviane, lives in that old house on the hill, with her family.\p"
+            "They're sweet people, usually, but Viviane's been so mean lately…\p"
+            "I wonder what's going on…"), MSGBOX_NPC)
+    } else {
+        msgbox(format("The Gym Leader, Viviane, lives in that old house on the hill, with her family.\p"
+            "They're sweet people.\p"
+            "Viviane went a bit crazy about the construction for a while, but she's back to being nice now."), MSGBOX_NPC)
+    }
 }
 
 script Astridale_EventScript_ConstructionMan3_Dialogue {
