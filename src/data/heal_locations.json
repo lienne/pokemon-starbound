@@ -161,6 +161,12 @@
       "map": "MAP_ASTRIDALE_MINDSCAPE",
       "x": 19,
       "y": 75
+    },
+    {
+      "id": "HEAL_LOCATION_CAELESTIC",
+      "map": "MAP_CAELESTIC",
+      "x": 18,
+      "y": 17
     }
   ]
 }

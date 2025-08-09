@@ -225,3 +225,6 @@ const u16 gMetatileAttributes_Astridale[] = INCBIN_U16("data/tilesets/secondary/
 
 const u16 gMetatiles_Caelestic[] = INCBIN_U16("data/tilesets/secondary/caelestic/metatiles.bin");
 const u16 gMetatileAttributes_Caelestic[] = INCBIN_U16("data/tilesets/secondary/caelestic/metatile_attributes.bin");
+
+const u16 gMetatiles_Eclipse_Hideout[] = INCBIN_U16("data/tilesets/secondary/eclipse_hideout/metatiles.bin");
+const u16 gMetatileAttributes_Eclipse_Hideout[] = INCBIN_U16("data/tilesets/secondary/eclipse_hideout/metatile_attributes.bin");

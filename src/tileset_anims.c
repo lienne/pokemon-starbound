@@ -26,6 +26,7 @@ static void _InitSecondaryTilesetAnimation(void);
 static void TilesetAnim_General(u16);
 static void TilesetAnim_New_General(u16);
 static void TilesetAnim_New_Petalburg(u16);
+static void TilesetAnim_Caelestic(u16);
 static void TilesetAnim_Building(u16);
 static void TilesetAnim_Rustboro(u16);
 static void TilesetAnim_Dewford(u16);
@@ -76,6 +77,7 @@ static void QueueAnimTiles_SootopolisGym_Waterfalls(u16);
 static void QueueAnimTiles_EliteFour_GroundLights(u16);
 static void QueueAnimTiles_EliteFour_WallLights(u16);
 static void QueueAnimTiles_New_Petalburg_Flower(u16);
+static void QueueAnimTiles_Caelestic_Flower(u16);
 
 const u16 gTilesetAnims_General_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/flower/1.4bpp");
 const u16 gTilesetAnims_General_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/flower/0.4bpp");
@@ -559,6 +561,18 @@ const u16 *const gTilesetAnims_New_Petalburg_Flower[] = {
     gTilesetAnims_New_Petalburg_Flower_Frame3
 };
 
+const u16 gTilesetAnims_Caelestic_Flower_Frame0[] = INCBIN_U16("data/tilesets/secondary/caelestic/anim/flower/0.4bpp");
+const u16 gTilesetAnims_Caelestic_Flower_Frame1[] = INCBIN_U16("data/tilesets/secondary/caelestic/anim/flower/1.4bpp");
+const u16 gTilesetAnims_Caelestic_Flower_Frame2[] = INCBIN_U16("data/tilesets/secondary/caelestic/anim/flower/2.4bpp");
+const u16 gTilesetAnims_Caelestic_Flower_Frame3[] = INCBIN_U16("data/tilesets/secondary/caelestic/anim/flower/3.4bpp");
+
+const u16 *const gTilesetAnims_Caelestic_Flower[] = {
+    gTilesetAnims_Caelestic_Flower_Frame0,
+    gTilesetAnims_Caelestic_Flower_Frame1,
+    gTilesetAnims_Caelestic_Flower_Frame2,
+    gTilesetAnims_Caelestic_Flower_Frame3
+};
+
 static void ResetTilesetAnimBuffer(void)
 {
     sTilesetDMA3TransferBufferSize = 0;
@@ -651,6 +665,13 @@ void InitTilesetAnim_New_Petalburg(void)
     sPrimaryTilesetAnimCallback = TilesetAnim_New_Petalburg;
 }
 
+void InitTilesetAnim_Caelestic(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_Caelestic;
+}
+
 void InitTilesetAnim_Building(void)
 {
     sPrimaryTilesetAnimCounter = 0;
@@ -676,7 +697,7 @@ static void TilesetAnim_New_General(u16 timer)
 {
     // if (timer % 16 == 0)
     //     QueueAnimTiles_General_Flower(timer / 16);
-    if (timer % 16 == 1)
+    if (timer % 16 == 0)
         QueueAnimTiles_General_Water(timer / 16);
     // if (timer % 16 == 2)
     //     QueueAnimTiles_General_SandWaterEdge(timer / 16);
@@ -690,6 +711,12 @@ static void TilesetAnim_New_Petalburg(u16 timer)
 {
     if (timer % 16 == 0)
         QueueAnimTiles_New_Petalburg_Flower(timer / 16);
+}
+
+static void TilesetAnim_Caelestic(u16 timer)
+{
+    if (timer % 16 == 0)
+        QueueAnimTiles_Caelestic_Flower(timer / 16);
 }
 
 static void TilesetAnim_Building(u16 timer)
@@ -1218,6 +1245,12 @@ static void QueueAnimTiles_New_Petalburg_Flower(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_New_Petalburg_Flower);
     AppendTilesetAnimToBuffer(gTilesetAnims_New_Petalburg_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(615)), 4 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Caelestic_Flower(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Caelestic_Flower);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Caelestic_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(529)), 4 * TILE_SIZE_4BPP);
 }
 
 static void BlendAnimPalette_BattleDome_FloorLights(u16 timer)

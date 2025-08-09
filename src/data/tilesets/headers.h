@@ -895,5 +895,16 @@ const struct Tileset gTileset_Caelestic =
     .palettes = gTilesetPalettes_Caelestic,
     .metatiles = gMetatiles_Caelestic,
     .metatileAttributes = gMetatileAttributes_Caelestic,
+    .callback = InitTilesetAnim_Caelestic,
+};
+
+const struct Tileset gTileset_Eclipse_Hideout =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Eclipse_Hideout,
+    .palettes = gTilesetPalettes_Eclipse_Hideout,
+    .metatiles = gMetatiles_Eclipse_Hideout,
+    .metatileAttributes = gMetatileAttributes_Eclipse_Hideout,
     .callback = NULL,
 };

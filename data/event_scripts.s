@@ -1224,3 +1224,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route14_Starsea_Passage/scripts.inc"
 
 	.include "data/maps/Route4_Celestine_Way/scripts.inc"
+
+	.include "data/maps/EclipseHideout_1F/scripts.inc"

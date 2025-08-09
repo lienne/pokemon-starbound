@@ -4727,7 +4727,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_New_General",
-      "secondary_tileset": "gTileset_Astridale",
+      "secondary_tileset": "gTileset_Caelestic",
       "border_filepath": "data/layouts/Route14_Starsea_Passage/border.bin",
       "blockdata_filepath": "data/layouts/Route14_Starsea_Passage/map.bin"
     },
@@ -4737,9 +4737,19 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_New_General",
-      "secondary_tileset": "gTileset_Astridale",
+      "secondary_tileset": "gTileset_Caelestic",
       "border_filepath": "data/layouts/Route4_Celestine_Way/border.bin",
       "blockdata_filepath": "data/layouts/Route4_Celestine_Way/map.bin"
+    },
+    {
+      "id": "LAYOUT_ECLIPSE_HIDEOUT_1F",
+      "name": "EclipseHideout_1F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_New_General",
+      "secondary_tileset": "gTileset_Eclipse_Hideout",
+      "border_filepath": "data/layouts/EclipseHideout_1F/border.bin",
+      "blockdata_filepath": "data/layouts/EclipseHideout_1F/map.bin"
     }
   ]
 }
