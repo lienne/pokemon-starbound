@@ -4798,7 +4798,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 === TRAINER_VIVIANE_1 ===
 Name: Viviane
 Class: Leader
-Pic: Leader Roxanne
+Pic: Leader Viviane
 Gender: Female
 Music: Female
 Items: Potion / Potion
@@ -9511,7 +9511,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 === TRAINER_CASSIAN_SOLSTICE_SQUIRTLE ===
 Name: Cassian
 Class: Rival
-Pic: Brendan
+Pic: Cassian
 Gender: Male
 Music: Male
 Double Battle: No
@@ -9566,7 +9566,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 === TRAINER_CASSIAN_SOLSTICE_SPRIGATITO ===
 Name: Cassian
 Class: Rival
-Pic: Brendan
+Pic: Cassian
 Gender: Male
 Music: Male
 Double Battle: No
@@ -9621,7 +9621,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 === TRAINER_CASSIAN_SOLSTICE_FENNEKIN ===
 Name: Cassian
 Class: Rival
-Pic: Brendan
+Pic: Cassian
 Gender: Male
 Music: Male
 Double Battle: No
@@ -9676,7 +9676,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 === TRAINER_SELENE_SOLSTICE_SQUIRTLE ===
 Name: Selene
 Class: Rival
-Pic: May
+Pic: Selene
 Gender: Female
 Music: Female
 Double Battle: No
@@ -9731,7 +9731,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 === TRAINER_SELENE_SOLSTICE_SPRIGATITO ===
 Name: Selene
 Class: Rival
-Pic: May
+Pic: Selene
 Gender: Female
 Music: Female
 Double Battle: No
@@ -9786,7 +9786,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 === TRAINER_SELENE_SOLSTICE_FENNEKIN ===
 Name: Selene
 Class: Rival
-Pic: May
+Pic: Selene
 Gender: Female
 Music: Female
 Double Battle: No
