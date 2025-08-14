@@ -2836,3 +2836,10 @@
 	.4byte \str
 	.2byte \numOrVar
 	.endm
+
+@ Intro CG screen
+
+	.macro openintrocg ui:req
+	callnative OpenIntroCg_FromScript
+	.byte \ui
+	.endm

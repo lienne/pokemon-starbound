@@ -1,7 +1,16 @@
 mapscripts LumenVillage_SelenesHouse_2F_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
-        VAR_INTRO_SCENE, 1 {
-            setvar(VAR_INTRO_SCENE, 2)
+        VAR_INTRO_SCENE, 0 {
+            applymovement(LOCALID_PLAYER, moves(walk_right * 2 walk_up * 2))
+            waitmovement(0)
+            delay(30)
+            openintrocg(INTROCG_SELENE)
+            setvar(VAR_INTRO_SCENE, 1)
+            end
+        }
+
+        VAR_INTRO_SCENE, 2 {
+            setvar(VAR_INTRO_SCENE, 3)
             checkplayergender()
             if (var(VAR_RESULT) == FEMALE) {
                 clearflag(FLAG_HIDE_LUMEN_VILLAGE_NPCS)
@@ -23,7 +32,7 @@ mapscripts LumenVillage_SelenesHouse_2F_MapScripts {
     ]
 
     MAP_SCRIPT_ON_TRANSITION {
-        if (var(VAR_INTRO_SCENE) < 1) {
+        if (var(VAR_INTRO_SCENE) < 2) {
             playbgm(MUS_NONE, 1)
         }
     }

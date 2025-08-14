@@ -176,7 +176,7 @@
       "y": 23,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "LumenVillage_EventScript_SetIntroFlags"
     },
     {
@@ -185,7 +185,7 @@
       "y": 22,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "LumenVillage_EventScript_SetIntroFlags"
     },
     {
@@ -194,7 +194,7 @@
       "y": 21,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "LumenVillage_EventScript_SetIntroFlags"
     },
     {
@@ -203,7 +203,7 @@
       "y": 20,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "LumenVillage_EventScript_SetIntroFlags"
     },
     {
@@ -212,7 +212,7 @@
       "y": 19,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "LumenVillage_EventScript_SetIntroFlags"
     },
     {
@@ -221,7 +221,7 @@
       "y": 0,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "6",
+      "var_value": "7",
       "script": "LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA"
     },
     {
@@ -230,7 +230,7 @@
       "y": 0,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "6",
+      "var_value": "7",
       "script": "LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotB"
     },
     {
@@ -239,7 +239,7 @@
       "y": 0,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "6",
+      "var_value": "7",
       "script": "LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotC"
     },
     {
@@ -248,7 +248,7 @@
       "y": 0,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "6",
+      "var_value": "7",
       "script": "LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotD"
     },
     {
@@ -277,6 +277,15 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "LumenVillage_EventScript_GoBack_UpTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_INTRO_SCENE",
+      "var_value": "1",
+      "script": "LumenVillage_EventScript_SetIntroFlags"
     }
   ],
   "bg_events": [

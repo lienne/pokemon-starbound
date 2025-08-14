@@ -81,7 +81,7 @@ movement BeginnerClearing_WalkToGruntA_BottomSideOfBag {
 movement BeginnerClearing_PlayerWalksIn_LookForJirachiFromA {
     delay_16
     walk_right * 7
-    walk_up
+    face_up
     delay_16
     delay_16
     face_left
@@ -98,7 +98,7 @@ movement BeginnerClearing_PlayerWalksIn_LookForJirachiFromA {
 movement BeginnerClearing_PlayerWalksIn_LookForJirachiFromB {
     delay_16
     walk_right * 7
-    walk_up * 2
+    walk_up
     delay_16
     delay_16
     face_left
@@ -378,9 +378,9 @@ script BeginnerClearing_EventScript_AfterBattle {
 }
 
 script BeginnerClearing_EventScript_LookForJirachiFromA {
-    if (var(VAR_INTRO_SCENE) == 5) {
+    if (var(VAR_INTRO_SCENE) == 6) {
         lockall
-        setvar(VAR_INTRO_SCENE, 6)
+        setvar(VAR_INTRO_SCENE, 7)
         hidefollower()
         applymovement(LOCALID_PLAYER, BeginnerClearing_PlayerWalksIn_LookForJirachiFromA)
         waitmovement(0)
@@ -390,9 +390,9 @@ script BeginnerClearing_EventScript_LookForJirachiFromA {
 }
 
 script BeginnerClearing_EventScript_LookForJirachiFromB {
-    if (var(VAR_INTRO_SCENE) == 5) {
+    if (var(VAR_INTRO_SCENE) == 6) {
         lockall
-        setvar(VAR_INTRO_SCENE, 6)
+        setvar(VAR_INTRO_SCENE, 7)
         hidefollower()
         applymovement(LOCALID_PLAYER, BeginnerClearing_PlayerWalksIn_LookForJirachiFromB)
         waitmovement(0)

@@ -31,7 +31,7 @@ script SolsticeTown_EventScript_Girl2_Dialogue {
 }
 
 script SolsticeTown_EventScript_Boy2_Dialogue_SpotA {
-    if (var(VAR_INTRO_SCENE) < 8) {
+    if (var(VAR_INTRO_SCENE) < 9) {
         applymovement(SolsticeTown_Boy2, SolsticeTown_ExclamationMark)
         playse(SE_PIN)
         waitse()
@@ -47,7 +47,7 @@ script SolsticeTown_EventScript_Boy2_Dialogue_SpotA {
 }
 
 script SolsticeTown_EventScript_Boy2_Dialogue_SpotB {
-    if (var(VAR_INTRO_SCENE) < 8) {
+    if (var(VAR_INTRO_SCENE) < 9) {
         applymovement(SolsticeTown_Boy2, SolsticeTown_ExclamationMark)
         playse(SE_PIN)
         waitse()
@@ -63,7 +63,7 @@ script SolsticeTown_EventScript_Boy2_Dialogue_SpotB {
 }
 
 script SolsticeTown_EventScript_Boy2_Dialogue_SpotC {
-    if (var(VAR_INTRO_SCENE) < 8) {
+    if (var(VAR_INTRO_SCENE) < 9) {
         applymovement(SolsticeTown_Boy2, SolsticeTown_ExclamationMark)
         playse(SE_PIN)
         waitse()
@@ -76,7 +76,7 @@ script SolsticeTown_EventScript_Boy2_Dialogue_SpotC {
 }
 
 script SolsticeTown_EventScript_Boy2_Dialogue {
-    if (var(VAR_INTRO_SCENE) < 8) {
+    if (var(VAR_INTRO_SCENE) < 9) {
         applymovement(SolsticeTown_Boy2, moves(face_player))
         msgbox(SolsticeTown_Boy2_Dialogue_PreDelivery, MSGBOX_NPC)
     } else {
@@ -86,7 +86,7 @@ script SolsticeTown_EventScript_Boy2_Dialogue {
 }
 
 script SolsticeTown_EventScript_RivalRunsToPlayerAtA {
-    if (var(VAR_INTRO_SCENE) == 8) {
+    if (var(VAR_INTRO_SCENE) == 9) {
         lockall
         clearflag(FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN)
         addobject(SolsticeTown_Rival)
@@ -108,7 +108,7 @@ script SolsticeTown_EventScript_RivalRunsToPlayerAtA {
 }
 
 script SolsticeTown_EventScript_RivalRunsToPlayerAtB {
-    if (var(VAR_INTRO_SCENE) == 8) {
+    if (var(VAR_INTRO_SCENE) == 9) {
         lockall
         clearflag(FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN)
         addobject(SolsticeTown_Rival)
@@ -130,7 +130,7 @@ script SolsticeTown_EventScript_RivalRunsToPlayerAtB {
 }
 
 script SolsticeTown_EventScript_RivalRunsToPlayerAtC {
-    if (var(VAR_INTRO_SCENE) == 8) {
+    if (var(VAR_INTRO_SCENE) == 9) {
         lockall
         clearflag(FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN)
         addobject(SolsticeTown_Rival)
@@ -152,7 +152,7 @@ script SolsticeTown_EventScript_RivalRunsToPlayerAtC {
 }
 
 script SolsticeTown_EventScript_RivalRunsToPlayerAtD {
-    if (var(VAR_INTRO_SCENE) == 8) {
+    if (var(VAR_INTRO_SCENE) == 9) {
         lockall
         clearflag(FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN)
         addobject(SolsticeTown_Rival)
@@ -242,7 +242,7 @@ script SolsticeTown_EventScript_StartCassianBattleSquirtle {
 }
 
 script SolsticeTown_EventScript_RivalExit {
-    setvar(VAR_INTRO_SCENE, 9)
+    setvar(VAR_INTRO_SCENE, 10)
     msgbox(SolsticeTown_Rival_After_Battle_Dialogue, MSGBOX_AUTOCLOSE)
     applymovement(SolsticeTown_Rival, SolsticeTown_Movement_RivalExit)
     waitmovement(0)

@@ -5,7 +5,7 @@ LumenVillage_SelenesHouse_1F_MapScripts::
 
 LumenVillage_SelenesHouse_1F_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 # 3 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
-	compare VAR_INTRO_SCENE, 1
+	compare VAR_INTRO_SCENE, 2
 	goto_if_lt LumenVillage_SelenesHouse_1F_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	return
 
@@ -17,14 +17,14 @@ LumenVillage_SelenesHouse_1F_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
 
 PlayersHouse_EventScript_Mom_Dialogue::
 # 14 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
-	compare VAR_INTRO_SCENE, 6
+	compare VAR_INTRO_SCENE, 7
 	goto_if_le PlayersHouse_EventScript_Mom_Dialogue_1
 # 24 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
-	compare VAR_INTRO_SCENE, 9
+	compare VAR_INTRO_SCENE, 10
 	goto_if_ge PlayersHouse_EventScript_Mom_Dialogue_5
 PlayersHouse_EventScript_Mom_Dialogue_4:
 # 34 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
-	compare VAR_INTRO_SCENE, 7
+	compare VAR_INTRO_SCENE, 8
 	goto_if_ge PlayersHouse_EventScript_Mom_Dialogue_3
 	return
 
@@ -74,7 +74,7 @@ PlayersHouse_EventScript_Mom_Dialogue_5:
 
 PlayersHouse_EventScript_Mom_Dialogue_9:
 # 37 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
-	setvar VAR_INTRO_SCENE, 8
+	setvar VAR_INTRO_SCENE, 9
 # 38 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
 	speakername MomName
 # 39 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"

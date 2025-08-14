@@ -7,15 +7,15 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
     ]
     MAP_SCRIPT_ON_TRANSITION {
         call(Common_EventScript_SetupRivalGfxId)
-        if (var(VAR_INTRO_SCENE) >= 6) {
+        if (var(VAR_INTRO_SCENE) >= 7) {
             clearflag(FLAG_HIDE_LAB_ASSISTANT)
             addobject(ProfMyrasLab_Assistant)
             setobjectxyperm(ProfMyrasLab_Assistant, 9, 8)
         }
     }
     MAP_SCRIPT_ON_FRAME_TABLE[
-        VAR_INTRO_SCENE, 0 {
-            setvar(VAR_INTRO_SCENE, 1)
+        VAR_INTRO_SCENE, 1 {
+            setvar(VAR_INTRO_SCENE, 2)
             applymovement(LOCALID_PLAYER, moves(walk_up * 7))
             waitmovement(0)
             speakername(ProfMyraName)
@@ -39,8 +39,8 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             end
         }
 
-        VAR_INTRO_SCENE, 4 {
-            setvar(VAR_INTRO_SCENE, 5)
+        VAR_INTRO_SCENE, 5 {
+            setvar(VAR_INTRO_SCENE, 6)
             addobject(ProfMyrasLab_Rival_Intro_2)
             applymovement(LOCALID_PLAYER, moves(emote_exclamation_mark))
             waitmovement(0)
@@ -105,10 +105,6 @@ mapscripts LumenVillage_ProfessorMyrasLab_MapScripts {
             bufferleadmonspeciesname(STR_VAR_1)
             msgbox(format("{PLAYER} received the {STR_VAR_1}!"), MSGBOX_AUTOCLOSE)
             waitfanfare()
-            msgbox(format("Would you like to give a nickname to {STR_VAR_1}?"), MSGBOX_YESNO)
-            if (var(VAR_RESULT) == YES) {
-                call(Common_EventScript_NameReceivedPartyMon)
-            }
             speakername(ProfMyraName)
             msgbox(format("I see you've also retrieved the medicine from Solstice Town.\p"
                 "Thank you for that, {PLAYER}.\p"
@@ -136,11 +132,11 @@ script RivalName {
 }
 
 script ProfMyrasLab_EventScript_ProfMyra_Dialogue {
-    if (var(VAR_INTRO_SCENE) < 5) {
+    if (var(VAR_INTRO_SCENE) < 6) {
         speakername(ProfMyraName)
         msgbox(format("Thank you for agreeing to get the medicine from Solstice Town for Jirachi.\p"
             "It's imperative we help it recover."), MSGBOX_NPC)
-    } elif (var(VAR_INTRO_SCENE) == 5) {
+    } elif (var(VAR_INTRO_SCENE) == 6) {
         speakername(ProfMyraName)
         msgbox(format("Please look for Jirachi, {PLAYER}, and make sure it is safe."), MSGBOX_NPC)
     } elif (!flag(FLAG_RECEIVED_GEN6_EXP_SHARE)) {
@@ -163,7 +159,7 @@ script ProfMyrasLab_EventScript_JirachiNPC {
 }
 
 script ProfMyrasLab_EventScript_Assistant_Dialogue {
-    if (var(VAR_INTRO_SCENE) == 6) {
+    if (var(VAR_INTRO_SCENE) == 7) {
         applymovement(ProfMyrasLab_Assistant, moves(face_player))
         msgbox(format("Prof. Myra went out. I'm not sure where she went."), MSGBOX_NPC)
     } else {

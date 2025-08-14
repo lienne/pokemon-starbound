@@ -219,7 +219,7 @@ BeginnerClearing_PlayerWalksIn_LookForJirachiFromA:
 # 83 "data/maps/BeginnerClearing/scripts.pory"
 	walk_right
 # 84 "data/maps/BeginnerClearing/scripts.pory"
-	walk_up
+	face_up
 # 85 "data/maps/BeginnerClearing/scripts.pory"
 	delay_16
 # 86 "data/maps/BeginnerClearing/scripts.pory"
@@ -262,8 +262,6 @@ BeginnerClearing_PlayerWalksIn_LookForJirachiFromB:
 	walk_right
 # 100 "data/maps/BeginnerClearing/scripts.pory"
 	walk_right
-# 101 "data/maps/BeginnerClearing/scripts.pory"
-	walk_up
 # 101 "data/maps/BeginnerClearing/scripts.pory"
 	walk_up
 # 102 "data/maps/BeginnerClearing/scripts.pory"
@@ -750,7 +748,7 @@ BeginnerClearing_EventScript_AfterBattle::
 
 BeginnerClearing_EventScript_LookForJirachiFromA::
 # 381 "data/maps/BeginnerClearing/scripts.pory"
-	compare VAR_INTRO_SCENE, 5
+	compare VAR_INTRO_SCENE, 6
 	goto_if_eq BeginnerClearing_EventScript_LookForJirachiFromA_1
 	return
 
@@ -758,7 +756,7 @@ BeginnerClearing_EventScript_LookForJirachiFromA_1:
 # 382 "data/maps/BeginnerClearing/scripts.pory"
 	lockall
 # 383 "data/maps/BeginnerClearing/scripts.pory"
-	setvar VAR_INTRO_SCENE, 6
+	setvar VAR_INTRO_SCENE, 7
 # 384 "data/maps/BeginnerClearing/scripts.pory"
 	hidefollower
 # 385 "data/maps/BeginnerClearing/scripts.pory"
@@ -774,7 +772,7 @@ BeginnerClearing_EventScript_LookForJirachiFromA_1:
 
 BeginnerClearing_EventScript_LookForJirachiFromB::
 # 393 "data/maps/BeginnerClearing/scripts.pory"
-	compare VAR_INTRO_SCENE, 5
+	compare VAR_INTRO_SCENE, 6
 	goto_if_eq BeginnerClearing_EventScript_LookForJirachiFromB_1
 	return
 
@@ -782,7 +780,7 @@ BeginnerClearing_EventScript_LookForJirachiFromB_1:
 # 394 "data/maps/BeginnerClearing/scripts.pory"
 	lockall
 # 395 "data/maps/BeginnerClearing/scripts.pory"
-	setvar VAR_INTRO_SCENE, 6
+	setvar VAR_INTRO_SCENE, 7
 # 396 "data/maps/BeginnerClearing/scripts.pory"
 	hidefollower
 # 397 "data/maps/BeginnerClearing/scripts.pory"

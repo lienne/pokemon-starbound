@@ -1,0 +1,158 @@
+mapscripts EclipseHideout_1F_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_INTRO_SCENE, 0 {
+            call(EclipseHideout_EventScript_Intro)
+            end
+        }
+    ]
+}
+
+text Grunt1Name {
+    "???"
+}
+
+text Grunt2Name {
+    "???"
+}
+
+text AdminName {
+    "???"
+}
+
+script EclipseHideout_EventScript_Intro {
+    lockall
+    special(SpawnCameraObject)
+    applymovement(LOCALID_CAMERA, moves(walk_slow_up*7))
+    waitmovement(0)
+    special(RemoveCameraObject)
+    speakername(Grunt1Name)
+    msgbox(format("… … …"))
+    playse(SE_SELECT)
+    waitse()
+    applymovement(EclipseHideout_1F_Grunt_M, moves(walk_in_place_fast_up))
+    waitmovement(0)
+    msgbox(format("It's awake again…\p"
+        "That light - it's getting brighter."))
+    playse(SE_SELECT)
+    waitse()
+    applymovement(EclipseHideout_1F_Grunt_F, moves(face_left))
+    waitmovement(0)
+    speakername(Grunt2Name)
+    msgbox(format("Should we increase the suppression field, Admin?"))
+    playse(SE_SELECT)
+    waitse()
+    applymovement(EclipseHideout_1F_Admin_Virella, moves(walk_in_place_fast_up))
+    waitmovement(0)
+    speakername(AdminName)
+    msgbox(format("No. Let it wake. We need its mind active for the next phase of testing."))
+    playse(SE_SELECT)
+    waitse()
+    applymovement(EclipseHideout_1F_Grunt_M, moves(walk_in_place_fast_up))
+    waitmovement(0)
+    speakername(Grunt1Name)
+    msgbox(format("But… what if it breaks free? This thing isn't like the others."))
+    playse(SE_SELECT)
+    waitse()
+    applymovement(EclipseHideout_1F_Admin_Virella, moves(walk_in_place_fast_up))
+    waitmovement(0)
+    speakername(AdminName)
+    msgbox(format("It won't. We've tuned the inhibitor perfectly.\p"
+        "It won't escape."))
+    playse(SE_SELECT)
+    waitse()
+    applymovement(EclipseHideout_1F_Grunt_F, moves(walk_in_place_fast_up))
+    waitmovement(0)
+    speakername(Grunt2Name)
+    msgbox(format("Still, it gives me the creeps. A Pokémon that grants wishes…\p"
+        "Why not just ask it for power and be done with it?"))
+    playse(SE_SELECT)
+    waitse()
+    applymovement(EclipseHideout_1F_Admin_Virella, moves(walk_in_place_fast_up))
+    waitmovement(0)
+    speakername(AdminName)
+    msgbox(format("Because power given freely is fragile.\p"
+        "We will take what we need, bend its will, extract the knowledge buried in its mind."))
+    playse(SE_SELECT)
+    waitse()
+    setvar(VAR_0x8004, 0) // vertical pan
+	setvar(VAR_0x8005, 3) // horizontal pan
+	setvar(VAR_0x8006, 10) // num shakes
+	setvar(VAR_0x8007, 2) // shake delay
+    special(ShakeCamera)
+    delay(30)
+    applymovement(EclipseHideout_1F_Grunt_M, moves(emote_exclamation_mark))
+    applymovement(EclipseHideout_1F_Admin_Virella, moves(emote_exclamation_mark))
+    applymovement(EclipseHideout_1F_Grunt_F, moves(emote_exclamation_mark))
+    playse(SE_PIN)
+    waitse()
+    waitmovement(0)
+    delay(30)
+    applymovement(EclipseHideout_1F_Grunt_M, moves(jump_in_place_up))
+    waitmovement(0)
+    playse(SE_LEDGE)
+    waitse()
+    speakername(Grunt1Name)
+    msgbox(format("Admin! The inhibitor! It's failing!"))
+    playse(SE_SELECT)
+    waitse()
+    applymovement(EclipseHideout_1F_Admin_Virella, moves(walk_in_place_fast_up))
+    waitmovement(0)
+    speakername(AdminName)
+    msgbox(format("No! Not now! Secure it!"))
+    playse(SE_SELECT)
+    waitse()
+    setvar(VAR_0x8004, 5) // vertical pan
+	setvar(VAR_0x8005, 5) // horizontal pan
+	setvar(VAR_0x8006, 50) // num shakes
+	setvar(VAR_0x8007, 2) // shake delay
+    special(ShakeCamera)
+    delay(30)
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    delay(30)
+    call(EclipseHideout_1F_Set_Cage_Metatiles)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
+    applymovement(EclipseHideout_1F_Jirachi1, moves(walk_slow_up, face_down))
+    waitmovement(0)
+    applymovement(EclipseHideout_1F_Grunt_F, moves(walk_in_place_fast_up))
+    waitmovement(0)
+    speakername(Grunt2Name)
+    msgbox(format("It's breaking free!"))
+    playse(SE_SELECT)
+    waitse()
+    applymovement(EclipseHideout_1F_Admin_Virella, moves(walk_in_place_fast_up))
+    waitmovement(0)
+    speakername(AdminName)
+    msgbox(format("No! Contain it! Do NOT let it escape!"))
+    playse(SE_SELECT)
+    waitse()
+    applymovement(EclipseHideout_1F_Admin_Virella, moves(walk_fast_up))
+    waitmovement(0)
+    checkplayergender()
+    clearflag(FLAG_SPAWN_INVISIBLE)
+    if (var(VAR_RESULT) == MALE) {
+        warpwhitefade(MAP_LUMEN_VILLAGE_CASSIANS_HOUSE_2F, 5, 4)
+        waitstate()
+    } else {
+        warpwhitefade(MAP_LUMEN_VILLAGE_SELENES_HOUSE_2F, 3, 4)
+        waitstate()
+    }
+    releaseall
+}
+
+script EclipseHideout_1F_Set_Cage_Metatiles {
+    setmetatile(7, 7, METATILE_Eclipse_Hideout_EclipseHideout_Cage_Top1, FALSE)
+    setmetatile(8, 7, METATILE_Eclipse_Hideout_EclipseHideout_Cage_Top2, FALSE)
+    setmetatile(9, 7, METATILE_Eclipse_Hideout_EclipseHideout_Cage_Top3, FALSE)
+    setmetatile(10, 7, METATILE_Eclipse_Hideout_EclipseHideout_Cage_Top4, FALSE)
+    setmetatile(7, 8, METATILE_Eclipse_Hideout_EclipseHideout_Cage_Middle1, FALSE)
+    setmetatile(8, 8, METATILE_Eclipse_Hideout_EclipseHideout_Cage_Middle2, FALSE)
+    setmetatile(9, 8, METATILE_Eclipse_Hideout_EclipseHideout_Cage_Middle3, FALSE)
+    setmetatile(10, 8, METATILE_Eclipse_Hideout_EclipseHideout_Cage_Middle4, FALSE)
+    setmetatile(7, 9, METATILE_Eclipse_Hideout_EclipseHideout_Cage_Bottom1, FALSE)
+    setmetatile(8, 9, METATILE_Eclipse_Hideout_EclipseHideout_Cage_Bottom2, FALSE)
+    setmetatile(9, 9, METATILE_Eclipse_Hideout_EclipseHideout_Cage_Bottom3, FALSE)
+    setmetatile(10, 9, METATILE_Eclipse_Hideout_EclipseHideout_Cage_Bottom4, FALSE)
+    setmetatile(8, 10, METATILE_Eclipse_Hideout_EclipseHideout_Cage_Broken_Pieces1, FALSE)
+    setmetatile(9, 10, METATILE_Eclipse_Hideout_EclipseHideout_Cage_Broken_Pieces2, FALSE)
+    special(DrawWholeMapView)
+}

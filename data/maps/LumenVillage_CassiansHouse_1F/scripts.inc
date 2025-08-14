@@ -5,7 +5,7 @@ LumenVillage_CassiansHouse_1F_MapScripts::
 
 LumenVillage_CassiansHouse_1F_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 # 3 "data/maps/LumenVillage_CassiansHouse_1F/scripts.pory"
-	compare VAR_INTRO_SCENE, 1
+	compare VAR_INTRO_SCENE, 2
 	goto_if_lt LumenVillage_CassiansHouse_1F_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	return
 
@@ -17,7 +17,7 @@ LumenVillage_CassiansHouse_1F_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
 
 PlayersHouse_EventScript_RivalMom_Dialogue::
 # 10 "data/maps/LumenVillage_CassiansHouse_1F/scripts.pory"
-	compare VAR_INTRO_SCENE, 9
+	compare VAR_INTRO_SCENE, 10
 	goto_if_lt PlayersHouse_EventScript_RivalMom_Dialogue_1
 # 16 "data/maps/LumenVillage_CassiansHouse_1F/scripts.pory"
 	applymovement Rival_Mom_1F, PlayersHouse_EventScript_RivalMom_Dialogue_Movement_0

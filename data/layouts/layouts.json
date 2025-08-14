@@ -4744,8 +4744,8 @@
     {
       "id": "LAYOUT_ECLIPSE_HIDEOUT_1F",
       "name": "EclipseHideout_1F_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 19,
+      "height": 18,
       "primary_tileset": "gTileset_New_General",
       "secondary_tileset": "gTileset_Eclipse_Hideout",
       "border_filepath": "data/layouts/EclipseHideout_1F/border.bin",

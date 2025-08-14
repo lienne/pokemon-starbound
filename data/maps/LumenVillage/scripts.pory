@@ -7,14 +7,14 @@ mapscripts LumenVillage_MapScripts {
 
     MAP_SCRIPT_ON_TRANSITION {
         call(Common_EventScript_SetupRivalGfxId)
-        if (var(VAR_INTRO_SCENE) < 1) {
+        if (var(VAR_INTRO_SCENE) < 2) {
             playbgm(MUS_NONE, 1)
         }
     }
 
     MAP_SCRIPT_ON_FRAME_TABLE [
-        VAR_INTRO_SCENE, 2 {
-            setvar(VAR_INTRO_SCENE, 3)
+        VAR_INTRO_SCENE, 3 {
+            setvar(VAR_INTRO_SCENE, 4)
             checkplayergender()
             if (var(VAR_RESULT) == MALE) {
                 addobject(LumenVillage_Rival_Intro_Male)
@@ -165,9 +165,9 @@ text LumenVillage_Text_PlayersHouse_Sign {
 }
 
 script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA {
-    if (var(VAR_INTRO_SCENE) == 6) {
+    if (var(VAR_INTRO_SCENE) == 7) {
         lock
-        setvar(VAR_INTRO_SCENE, 7)
+        setvar(VAR_INTRO_SCENE, 8)
         setflag(FLAG_DELIVERED_JIRACHI_MEDICINE)
         removeitem(ITEM_PARCEL)
         hidefollower()
@@ -186,9 +186,9 @@ script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA {
 }
 
 script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotB {
-    if (var(VAR_INTRO_SCENE) == 6) {
+    if (var(VAR_INTRO_SCENE) == 7) {
         lock
-        setvar(VAR_INTRO_SCENE, 7)
+        setvar(VAR_INTRO_SCENE, 8)
         setflag(FLAG_DELIVERED_JIRACHI_MEDICINE)
         removeitem(ITEM_PARCEL)
         hidefollower()
@@ -205,9 +205,9 @@ script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotB {
 }
 
 script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotC {
-    if (var(VAR_INTRO_SCENE) == 6) {
+    if (var(VAR_INTRO_SCENE) == 7) {
         lock
-        setvar(VAR_INTRO_SCENE, 7)
+        setvar(VAR_INTRO_SCENE, 8)
         setflag(FLAG_DELIVERED_JIRACHI_MEDICINE)
         removeitem(ITEM_PARCEL)
         hidefollower()
@@ -226,9 +226,9 @@ script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotC {
 }
 
 script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotD {
-    if (var(VAR_INTRO_SCENE) == 6) {
+    if (var(VAR_INTRO_SCENE) == 7) {
         lock
-        setvar(VAR_INTRO_SCENE, 7)
+        setvar(VAR_INTRO_SCENE, 8)
         setflag(FLAG_DELIVERED_JIRACHI_MEDICINE)
         removeitem(ITEM_PARCEL)
         hidefollower()

@@ -156,6 +156,22 @@
 #define METATILE_Dewford_Door              0x225
 #define METATILE_Dewford_Door_BattleTower  0x25D
 
+// gTileset_Eclipse_Hideout
+#define METATILE_Eclipse_Hideout_EclipseHideout_Cage_Bottom1         0x2D0
+#define METATILE_Eclipse_Hideout_EclipseHideout_Cage_Bottom2         0x2D1
+#define METATILE_Eclipse_Hideout_EclipseHideout_Cage_Bottom3         0x2D2
+#define METATILE_Eclipse_Hideout_EclipseHideout_Cage_Bottom4         0x2D3
+#define METATILE_Eclipse_Hideout_EclipseHideout_Cage_Broken_Pieces1  0x2D9
+#define METATILE_Eclipse_Hideout_EclipseHideout_Cage_Broken_Pieces2  0x2DA
+#define METATILE_Eclipse_Hideout_EclipseHideout_Cage_Middle1         0x2C8
+#define METATILE_Eclipse_Hideout_EclipseHideout_Cage_Middle2         0x2C9
+#define METATILE_Eclipse_Hideout_EclipseHideout_Cage_Middle3         0x2CA
+#define METATILE_Eclipse_Hideout_EclipseHideout_Cage_Middle4         0x2CB
+#define METATILE_Eclipse_Hideout_EclipseHideout_Cage_Top1            0x2C0
+#define METATILE_Eclipse_Hideout_EclipseHideout_Cage_Top2            0x2C1
+#define METATILE_Eclipse_Hideout_EclipseHideout_Cage_Top3            0x2C2
+#define METATILE_Eclipse_Hideout_EclipseHideout_Cage_Top4            0x2C3
+
 // gTileset_EliteFour
 #define METATILE_EliteFour_EntryDoor_ClosedBottom    0x20E
 #define METATILE_EliteFour_EntryDoor_ClosedTop       0x206

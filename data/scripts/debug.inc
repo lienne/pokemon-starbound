@@ -20,7 +20,7 @@ Debug_CheatStart::
 	special EnableNationalPokedex
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
-	setvar VAR_INTRO_SCENE, 9 @ 9: Battled rival for first time
+	setvar VAR_INTRO_SCENE, 10 @ 10: Battled rival for first time
 	setvar VAR_ASTRIDALE_STATE, 9 @ 9: Beat Viviane
 	setflag FLAG_RECEIVED_BIKE
 	additem ITEM_ACRO_BIKE

@@ -1,6 +1,6 @@
 mapscripts LumenVillage_SelenesHouse_1F_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        if (var(VAR_INTRO_SCENE) < 1) {
+        if (var(VAR_INTRO_SCENE) < 2) {
             playbgm(MUS_NONE, 1)
         }
     }
@@ -11,7 +11,7 @@ text MomName {
 }
 
 script PlayersHouse_EventScript_Mom_Dialogue {
-    if (var(VAR_INTRO_SCENE) <= 6) {
+    if (var(VAR_INTRO_SCENE) <= 7) {
         speakername(MomName)
         applymovement(Player_Mom_1F, moves(face_player))
         msgbox(format("Hi, sweetie.\p"
@@ -21,7 +21,7 @@ script PlayersHouse_EventScript_Mom_Dialogue {
             "Why don't you take a quick rest?"), MSGBOX_NPC)
         call(Common_EventScript_OutOfCenterPartyHeal)
         msgbox(format("Take care, honey!"), MSGBOX_NPC)
-    } elif (var(VAR_INTRO_SCENE) >= 9 && flag(FLAG_RECEIVED_GEN6_EXP_SHARE)) {
+    } elif (var(VAR_INTRO_SCENE) >= 10 && flag(FLAG_RECEIVED_GEN6_EXP_SHARE)) {
         speakername(MomName)
         applymovement(Player_Mom_1F, moves(face_player))
         msgbox(format("Oh, {PLAYER}! You're back!\p"
@@ -31,10 +31,10 @@ script PlayersHouse_EventScript_Mom_Dialogue {
             "Why don't you take a quick rest?"), MSGBOX_NPC)
         call(Common_EventScript_OutOfCenterPartyHeal)
         msgbox(format("Take care, honey!"), MSGBOX_NPC)
-    } elif (var(VAR_INTRO_SCENE) >= 7) {
+    } elif (var(VAR_INTRO_SCENE) >= 8) {
         if (!flag(FLAG_RECEIVED_GEN6_EXP_SHARE))
         {
-            setvar(VAR_INTRO_SCENE, 8)
+            setvar(VAR_INTRO_SCENE, 9)
             speakername(MomName)
             applymovement(Player_Mom_1F, moves(face_player))
             msgbox(format("Hi, honey!\p"

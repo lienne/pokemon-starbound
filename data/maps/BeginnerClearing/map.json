@@ -95,7 +95,7 @@
       "graphics_id": "OBJ_EVENT_GFX_JIRACHI",
       "x": 13,
       "y": 3,
-      "elevation": 4,
+      "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -113,7 +113,7 @@
       "y": 13,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "BeginnerClearing_EventScript_WalkFromA"
     },
     {
@@ -122,7 +122,7 @@
       "y": 14,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "BeginnerClearing_EventScript_WalkFromB"
     },
     {
@@ -131,7 +131,7 @@
       "y": 13,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "5",
+      "var_value": "6",
       "script": "BeginnerClearing_EventScript_LookForJirachiFromA"
     },
     {
@@ -140,7 +140,7 @@
       "y": 14,
       "elevation": 0,
       "var": "VAR_INTRO_SCENE",
-      "var_value": "5",
+      "var_value": "6",
       "script": "BeginnerClearing_EventScript_LookForJirachiFromB"
     }
   ],

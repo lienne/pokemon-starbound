@@ -11,7 +11,7 @@ LumenVillage_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 # 9 "data/maps/LumenVillage/scripts.pory"
 	call Common_EventScript_SetupRivalGfxId
 # 10 "data/maps/LumenVillage/scripts.pory"
-	compare VAR_INTRO_SCENE, 1
+	compare VAR_INTRO_SCENE, 2
 	goto_if_lt LumenVillage_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	return
 
@@ -32,12 +32,12 @@ LumenVillage_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0:
 
 LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 # 16 "data/maps/LumenVillage/scripts.pory"
-	map_script_2 VAR_INTRO_SCENE, 2, LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0
+	map_script_2 VAR_INTRO_SCENE, 3, LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0
 	.2byte 0
 
 LumenVillage_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 # 17 "data/maps/LumenVillage/scripts.pory"
-	setvar VAR_INTRO_SCENE, 3
+	setvar VAR_INTRO_SCENE, 4
 # 18 "data/maps/LumenVillage/scripts.pory"
 	checkplayergender
 # 19 "data/maps/LumenVillage/scripts.pory"
@@ -267,7 +267,7 @@ LumenVillage_LittleGirl_Dialogue::
 
 LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA::
 # 168 "data/maps/LumenVillage/scripts.pory"
-	compare VAR_INTRO_SCENE, 6
+	compare VAR_INTRO_SCENE, 7
 	goto_if_eq LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA_1
 	return
 
@@ -275,7 +275,7 @@ LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA_1:
 # 169 "data/maps/LumenVillage/scripts.pory"
 	lock
 # 170 "data/maps/LumenVillage/scripts.pory"
-	setvar VAR_INTRO_SCENE, 7
+	setvar VAR_INTRO_SCENE, 8
 # 171 "data/maps/LumenVillage/scripts.pory"
 	setflag FLAG_DELIVERED_JIRACHI_MEDICINE
 # 172 "data/maps/LumenVillage/scripts.pory"
@@ -309,7 +309,7 @@ LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotA_1:
 
 LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotB::
 # 189 "data/maps/LumenVillage/scripts.pory"
-	compare VAR_INTRO_SCENE, 6
+	compare VAR_INTRO_SCENE, 7
 	goto_if_eq LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotB_1
 	return
 
@@ -317,7 +317,7 @@ LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotB_1:
 # 190 "data/maps/LumenVillage/scripts.pory"
 	lock
 # 191 "data/maps/LumenVillage/scripts.pory"
-	setvar VAR_INTRO_SCENE, 7
+	setvar VAR_INTRO_SCENE, 8
 # 192 "data/maps/LumenVillage/scripts.pory"
 	setflag FLAG_DELIVERED_JIRACHI_MEDICINE
 # 193 "data/maps/LumenVillage/scripts.pory"
@@ -347,7 +347,7 @@ LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotB_1:
 
 LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotC::
 # 208 "data/maps/LumenVillage/scripts.pory"
-	compare VAR_INTRO_SCENE, 6
+	compare VAR_INTRO_SCENE, 7
 	goto_if_eq LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotC_1
 	return
 
@@ -355,7 +355,7 @@ LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotC_1:
 # 209 "data/maps/LumenVillage/scripts.pory"
 	lock
 # 210 "data/maps/LumenVillage/scripts.pory"
-	setvar VAR_INTRO_SCENE, 7
+	setvar VAR_INTRO_SCENE, 8
 # 211 "data/maps/LumenVillage/scripts.pory"
 	setflag FLAG_DELIVERED_JIRACHI_MEDICINE
 # 212 "data/maps/LumenVillage/scripts.pory"
@@ -389,7 +389,7 @@ LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotC_1:
 
 LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotD::
 # 229 "data/maps/LumenVillage/scripts.pory"
-	compare VAR_INTRO_SCENE, 6
+	compare VAR_INTRO_SCENE, 7
 	goto_if_eq LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotD_1
 	return
 
@@ -397,7 +397,7 @@ LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotD_1:
 # 230 "data/maps/LumenVillage/scripts.pory"
 	lock
 # 231 "data/maps/LumenVillage/scripts.pory"
-	setvar VAR_INTRO_SCENE, 7
+	setvar VAR_INTRO_SCENE, 8
 # 232 "data/maps/LumenVillage/scripts.pory"
 	setflag FLAG_DELIVERED_JIRACHI_MEDICINE
 # 233 "data/maps/LumenVillage/scripts.pory"
