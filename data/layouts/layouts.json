@@ -4725,7 +4725,7 @@
       "id": "LAYOUT_ROUTE14_STARSEA_PASSAGE",
       "name": "Route14_Starsea_Passage_Layout",
       "width": 20,
-      "height": 20,
+      "height": 40,
       "primary_tileset": "gTileset_New_General",
       "secondary_tileset": "gTileset_Caelestic",
       "border_filepath": "data/layouts/Route14_Starsea_Passage/border.bin",

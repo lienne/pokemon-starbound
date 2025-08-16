@@ -1,5 +1,6 @@
 mapscripts Astridale_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
+        setflag(FLAG_VISITED_ASTRIDALE)
         if (var(VAR_ASTRIDALE_STATE) >= 4) {
             setobjectxyperm(Astridale_Gym_Door_Man, 22, 17)
         }

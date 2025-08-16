@@ -1,6 +1,7 @@
 mapscripts SolsticeTown_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         setflag(FLAG_HIDE_RIVAL_IN_SOLSTICE_TOWN)
+        setflag(FLAG_VISITED_SOLSTICE_TOWN)
         removeobject(SolsticeTown_Rival)
     }
 }

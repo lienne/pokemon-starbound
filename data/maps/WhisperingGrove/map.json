@@ -162,14 +162,14 @@
     },
     {
       "x": 38,
-      "y": 5,
+      "y": 4,
       "elevation": 0,
       "dest_map": "MAP_ROUTE2_SUNFADE_TRAIL",
       "dest_warp_id": "2"
     },
     {
       "x": 39,
-      "y": 5,
+      "y": 4,
       "elevation": 0,
       "dest_map": "MAP_ROUTE2_SUNFADE_TRAIL",
       "dest_warp_id": "3"

@@ -1806,6 +1806,14 @@
       "y": 1,
       "width": 1,
       "height": 2
+    },
+    {
+      "id": "MAPSEC_STARFALL_CLEARING",
+      "name": "Starfall Clearing",
+      "x": 6,
+      "y": 14,
+      "width": 1,
+      "height": 1
     }
   ]
 }
