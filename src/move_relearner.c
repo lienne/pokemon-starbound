@@ -147,6 +147,8 @@
 #define MENU_STATE_WAIT_FOR_FANFARE 32
 #define MENU_STATE_WAIT_FOR_A_BUTTON 33
 
+#define P_RELEARNER_SHOW_CONTEST 0  // 0 = disable contest pane in move relearner
+
 // The different versions of hearts are selected using animation
 // commands.
 enum {
@@ -403,11 +405,11 @@ void CB2_InitLearnMove(void)
     SetVBlankCallback(VBlankCB_MoveRelearner);
 
     InitMoveRelearnerBackgroundLayers();
-    InitMoveRelearnerWindows(gOriginSummaryScreenPage == PSS_PAGE_CONTEST_MOVES);
+    InitMoveRelearnerWindows(P_RELEARNER_SHOW_CONTEST ? (gOriginSummaryScreenPage == PSS_PAGE_CONTEST_MOVES) : FALSE);
 
     sMoveRelearnerMenuSate.listOffset = 0;
     sMoveRelearnerMenuSate.listRow = 0;
-    sMoveRelearnerMenuSate.showContestInfo = gOriginSummaryScreenPage == PSS_PAGE_CONTEST_MOVES;
+    sMoveRelearnerMenuSate.showContestInfo = FALSE;
 
     CreateLearnableMovesList();
 
@@ -490,10 +492,10 @@ static void DoMoveRelearnerMain(void)
     case MENU_STATE_WAIT_FOR_FADE:
         if (!gPaletteFade.active)
         {
-            if (gOriginSummaryScreenPage == PSS_PAGE_CONTEST_MOVES)
-                sMoveRelearnerStruct->state = MENU_STATE_IDLE_CONTEST_MODE;
-            else
-                sMoveRelearnerStruct->state = MENU_STATE_IDLE_BATTLE_MODE;
+            // if (gOriginSummaryScreenPage == PSS_PAGE_CONTEST_MOVES)
+            //     sMoveRelearnerStruct->state = MENU_STATE_IDLE_CONTEST_MODE;
+            // else
+            sMoveRelearnerStruct->state = MENU_STATE_IDLE_BATTLE_MODE;
         }
         break;
     case MENU_STATE_UNREACHABLE:
@@ -693,6 +695,9 @@ static void DoMoveRelearnerMain(void)
         {
             if (gInitialSummaryScreenCallback != NULL)
             {
+                if (!P_RELEARNER_SHOW_CONTEST && gOriginSummaryScreenPage == PSS_PAGE_CONTEST_MOVES)
+                    gOriginSummaryScreenPage = PSS_PAGE_BATTLE_MOVES;
+                    
                 switch (gOriginSummaryScreenPage)
                 {
                 case PSS_PAGE_BATTLE_MOVES:
@@ -832,26 +837,28 @@ static void HandleInput(bool8 showContest)
         if (!(JOY_NEW(DPAD_LEFT | DPAD_RIGHT)) && !GetLRKeysPressed())
             break;
 
-        PlaySE(SE_SELECT);
+        #if P_RELEARNER_SHOW_CONTEST
+            PlaySE(SE_SELECT);
 
-        if (showContest == FALSE)
-        {
-            PutWindowTilemap(RELEARNERWIN_DESC_CONTEST);
-            sMoveRelearnerStruct->state = MENU_STATE_SETUP_CONTEST_MODE;
-            sMoveRelearnerMenuSate.showContestInfo = TRUE;
-        }
-        else
-        {
-            PutWindowTilemap(RELEARNERWIN_DESC_BATTLE);
-            sMoveRelearnerStruct->state = MENU_STATE_SETUP_BATTLE_MODE;
-            sMoveRelearnerMenuSate.showContestInfo = FALSE;
-        }
+            if (showContest == FALSE)
+            {
+                PutWindowTilemap(RELEARNERWIN_DESC_CONTEST);
+                sMoveRelearnerStruct->state = MENU_STATE_SETUP_CONTEST_MODE;
+                sMoveRelearnerMenuSate.showContestInfo = TRUE;
+            }
+            else
+            {
+                PutWindowTilemap(RELEARNERWIN_DESC_BATTLE);
+                sMoveRelearnerStruct->state = MENU_STATE_SETUP_BATTLE_MODE;
+                sMoveRelearnerMenuSate.showContestInfo = FALSE;
+            }
 
-        ScheduleBgCopyTilemapToVram(1);
-        MoveRelearnerShowHideHearts(GetCurrentSelectedMove());
-        if (B_SHOW_CATEGORY_ICON == TRUE)
-            MoveRelearnerShowHideCategoryIcon(GetCurrentSelectedMove());
-
+            ScheduleBgCopyTilemapToVram(1);
+            MoveRelearnerShowHideHearts(GetCurrentSelectedMove());
+            if (B_SHOW_CATEGORY_ICON == TRUE)
+                MoveRelearnerShowHideCategoryIcon(GetCurrentSelectedMove());
+        #else
+        #endif
         break;
     case LIST_CANCEL:
         PlaySE(SE_SELECT);
@@ -922,9 +929,10 @@ static void CreateUISprites(void)
 
 static void AddScrollArrows(void)
 {
-    if (sMoveRelearnerStruct->moveDisplayArrowTask == TASK_NONE)
-        sMoveRelearnerStruct->moveDisplayArrowTask = AddScrollIndicatorArrowPair(&sDisplayModeArrowsTemplate, &sMoveRelearnerStruct->scrollOffset);
-
+    #if P_RELEARNER_SHOW_CONTEST
+        if (sMoveRelearnerStruct->moveDisplayArrowTask == TASK_NONE)
+            sMoveRelearnerStruct->moveDisplayArrowTask = AddScrollIndicatorArrowPair(&sDisplayModeArrowsTemplate, &sMoveRelearnerStruct->scrollOffset);
+    #endif
     if (sMoveRelearnerStruct->moveListScrollArrowTask == TASK_NONE)
     {
         gTempScrollArrowTemplate = sMoveListScrollArrowsTemplate;
