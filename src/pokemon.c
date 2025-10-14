@@ -901,21 +901,39 @@ const struct SpriteTemplate gBattlerSpriteTemplates[MAX_BATTLERS_COUNT] =
 
 static const struct SpriteTemplate sTrainerBackSpriteTemplates[] =
 {
-    [TRAINER_BACK_PIC_BRENDAN] = {
+    // [TRAINER_BACK_PIC_BRENDAN] = {
+    //     .tileTag = TAG_NONE,
+    //     .paletteTag = 0,
+    //     .oam = &gOamData_BattleSpritePlayerSide,
+    //     .anims = NULL,
+    //     .images = gTrainerBackPicTable_Brendan,
+    //     .affineAnims = gAffineAnims_BattleSpritePlayerSide,
+    //     .callback = SpriteCB_BattleSpriteStartSlideLeft,
+    // },
+    // [TRAINER_BACK_PIC_MAY] = {
+    //     .tileTag = TAG_NONE,
+    //     .paletteTag = 0,
+    //     .oam = &gOamData_BattleSpritePlayerSide,
+    //     .anims = NULL,
+    //     .images = gTrainerBackPicTable_May,
+    //     .affineAnims = gAffineAnims_BattleSpritePlayerSide,
+    //     .callback = SpriteCB_BattleSpriteStartSlideLeft,
+    // },
+    [TRAINER_BACK_PIC_CASSIAN] = {
         .tileTag = TAG_NONE,
         .paletteTag = 0,
         .oam = &gOamData_BattleSpritePlayerSide,
         .anims = NULL,
-        .images = gTrainerBackPicTable_Brendan,
+        .images = gTrainerBackPicTable_Cassian,
         .affineAnims = gAffineAnims_BattleSpritePlayerSide,
         .callback = SpriteCB_BattleSpriteStartSlideLeft,
     },
-    [TRAINER_BACK_PIC_MAY] = {
+    [TRAINER_BACK_PIC_SELENE] = {
         .tileTag = TAG_NONE,
         .paletteTag = 0,
         .oam = &gOamData_BattleSpritePlayerSide,
         .anims = NULL,
-        .images = gTrainerBackPicTable_May,
+        .images = gTrainerBackPicTable_Selene,
         .affineAnims = gAffineAnims_BattleSpritePlayerSide,
         .callback = SpriteCB_BattleSpriteStartSlideLeft,
     },
@@ -970,15 +988,6 @@ static const struct SpriteTemplate sTrainerBackSpriteTemplates[] =
         .oam = &gOamData_BattleSpritePlayerSide,
         .anims = NULL,
         .images = gTrainerBackPicTable_Steven,
-        .affineAnims = gAffineAnims_BattleSpritePlayerSide,
-        .callback = SpriteCB_BattleSpriteStartSlideLeft,
-    },
-    [TRAINER_BACK_PIC_SELENE] = {
-        .tileTag = TAG_NONE,
-        .paletteTag = 0,
-        .oam = &gOamData_BattleSpritePlayerSide,
-        .anims = NULL,
-        .images = gTrainerBackPicTable_Selene,
         .affineAnims = gAffineAnims_BattleSpritePlayerSide,
         .callback = SpriteCB_BattleSpriteStartSlideLeft,
     },

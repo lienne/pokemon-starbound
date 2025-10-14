@@ -3,3 +3,55 @@ mapscripts Caelestic_MapScripts {
         setflag(FLAG_VISITED_CAELESTIC)
     }
 }
+
+script Caelestic_EventScript_CitySign {
+    lockall
+    msgbox(format("Caelestic\n"
+        "“Home of the Celestial Guardian Jirachi”"))
+    releaseall
+}
+
+script Caelestic_EventScript_GymSign {
+    lockall
+    msgbox(format("Caelestic Gym\n"
+        "Leader: Percival\l"
+        "The soaring sentinel with a gentle soul"))
+    releaseall
+}
+
+script Caelestic_EventScript_StatueSign {
+    lockall
+    msgbox(format("Here stands the statue of Jirachi, the Celestial Wishkeeper.\p"
+        "It is said that Jirachi grants wishes to those who are pure of heart.\p"
+        "May its light guide all those who look to the stars.\p"
+        "(Dedicated by the Caelestic City Council, Year 2025 of the Star Calendar)"))
+    releaseall
+}
+
+// "The statue is a symbol of hope and dreams for the people of Caelestic.\p"
+
+script Caelestic_EventScript_OldManByStatueDialogue {
+    lockall
+    applymovement(Caelestic_OldManByStatue, moves(face_player))
+    waitmovement(0)
+    msgbox(format("It's beautiful, isn't it?\p"
+        "This statue of Jirachi has been here for as long as I can remember.\p"
+        "I often come here to reflect and find peace.\p"
+        "Would you like to hear the story behind this statue?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        msgbox(format("Long ago, when Astrea was still being settled, the land was wild and unpredictable.\p"
+            "Storms struck without warning, crops withered, and the people struggled to survive.\p"
+            "The people faced many challenges, but they never lost hope.\p"
+            "According to legend, one night a brilliant star fell from the heavens and landed where we now call Caelestic City.\p"
+            "It was said that the fallen star was Jirachi, a celestial being who had come to grant the people's wishes.\p"
+            "A young child, pure of heart, approached the fallen star and made a wish for peace and prosperity for the land.\p"
+            "The next morning, the skies were clear, the rivers ran steady, and the crops flourished.\p"
+            "In gratitude, the people of Caelestic built this statue to honor Jirachi's kindness and to remind us of the power of hope and dreams.\p"
+            "Since then, Jirachi became a symbol of peace, balance, and celestial harmony across the land.\p"
+            "Over time, the statue also became a place where people come to make wishes, especially before important life events like starting a journey, taking on a gym, or welcoming a new child.\p"
+            "Thank you for listening to an old man's story."), MSGBOX_AUTOCLOSE)
+    } else {
+        msgbox(format("That's alright. Not everyone is interested in old stories."), MSGBOX_AUTOCLOSE)
+    }
+    releaseall
+}

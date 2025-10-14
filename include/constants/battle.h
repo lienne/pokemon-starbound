@@ -498,8 +498,10 @@ enum MoveEffects
 #define BATTLE_ENVIRONMENT_DISTORTION_WORLD 19
 #define BATTLE_ENVIRONMENT_SPACE            20
 #define BATTLE_ENVIRONMENT_ULTRA_SPACE      21
+// Battle environments for Pokemon Starbound
+#define BATTLE_ENVIRONMENT_FAIRY_MINDSCAPE  22
 
-#define BATTLE_ENVIRONMENT_COUNT            22
+#define BATTLE_ENVIRONMENT_COUNT            23
 
 #define B_WAIT_TIME_LONG        (B_WAIT_TIME_MULTIPLIER * 4)
 #define B_WAIT_TIME_MED         (B_WAIT_TIME_MULTIPLIER * 3)

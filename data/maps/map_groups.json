@@ -38,7 +38,8 @@
     "gMapGroup_IndoorLumenVillage",
     "gMapGroup_IndoorSolstice",
     "gMapGroup_AstreaDungeons",
-    "gMapGroup_IndoorAstridale"
+    "gMapGroup_IndoorAstridale",
+    "gMapGroup_IndoorCaelestic"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -669,5 +670,9 @@
     "Astridale_Warehouse",
     "AstridaleCity_House4_2F",
     "Astridale_Gym"
+  ],
+  "gMapGroup_IndoorCaelestic": [
+    "CaelesticCity_PokemonCenter_1F",
+    "CaelesticCity_Mart"
   ]
 }

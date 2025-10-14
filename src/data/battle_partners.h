@@ -14,7 +14,7 @@
 #line 3
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1,
 #line 4
-        .trainerPic = TRAINER_BACK_PIC_BRENDAN,
+        .trainerPic = TRAINER_BACK_PIC_CASSIAN,
         .encounterMusic_gender =
 #line 6
             TRAINER_ENCOUNTER_MUSIC_MALE,

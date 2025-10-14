@@ -634,6 +634,11 @@ u8 BattleSetup_GetEnvironmentId(void)
 
     tileBehavior = MapGridGetMetatileBehaviorAt(x, y);
 
+    /* Check for purple tall grass first so it doesn't get caught by the
+     * generic tall grass test (MetatileBehavior_IsTallGrass includes
+     * MB_TALL_GRASS_PURPLE). */
+    if (MetatileBehavior_IsTallGrassPurple(tileBehavior))
+        return BATTLE_ENVIRONMENT_FAIRY_MINDSCAPE;
     if (MetatileBehavior_IsTallGrass(tileBehavior))
         return BATTLE_ENVIRONMENT_GRASS;
     if (MetatileBehavior_IsLongGrass(tileBehavior))

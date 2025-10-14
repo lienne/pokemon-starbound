@@ -1,0 +1,19 @@
+mapscripts CaelesticCity_Mart_MapScripts {
+    
+}
+
+script Caelestic_Mart_Employee_Dialogue {
+    applymovement(Caelestic_Mart_Employee, moves(face_player))
+    msgbox(format("Welcome to the Caelestic City Mart!"), MSGBOX_NPC)
+    waitmessage()
+    pokemart(Caelestic_Mart_Items)
+    msgbox(format("Thank you for shopping with us!"), MSGBOX_NPC)
+}
+
+mart Caelestic_Mart_Items {
+    ITEM_POKE_BALL
+    ITEM_POTION
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+}

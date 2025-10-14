@@ -701,6 +701,15 @@ const struct BattleBackground sBattleEnvironmentTable[] =
         .entryTilemap = gBattleEnvironmentAnimTilemap_Building,
         .palette = gBattleEnvironmentPalette_Plain,
     },
+
+    [BATTLE_ENVIRONMENT_FAIRY_MINDSCAPE] =
+    {
+        .tileset = gBattleEnvironmentTiles_FairyMindscape,
+        .tilemap = gBattleEnvironmentTilemap_FairyMindscape,
+        .entryTileset = gBattleEnvironmentAnimTiles_FairyMindscape,
+        .entryTilemap = gBattleEnvironmentAnimTilemap_FairyMindscape,
+        .palette = gBattleEnvironmentPalette_FairyMindscape,
+    },
 };
 
 void BattleInitBgsAndWindows(void)

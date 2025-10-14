@@ -1,0 +1,11 @@
+mapscripts CaelesticCity_PokemonCenter_1F_MapScripts {
+
+}
+
+script CaelesticCity_PokemonCenter_1F_EventScript_Nurse {
+    setvar(VAR_0x800B, Caelestic_Nurse)
+    call(Common_EventScript_PkmnCenterNurse)
+    waitmessage()
+    waitbuttonpress()
+    release
+}

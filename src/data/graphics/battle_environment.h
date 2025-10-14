@@ -2,6 +2,10 @@ const u32 gBattleEnvironmentTiles_TallGrass[] = INCBIN_U32("graphics/battle_envi
 const u16 gBattleEnvironmentPalette_TallGrass[] = INCBIN_U16("graphics/battle_environment/tall_grass/palette.gbapal");
 const u32 gBattleEnvironmentTilemap_TallGrass[] = INCBIN_U32("graphics/battle_environment/tall_grass/map.bin.lz");
 
+const u32 gBattleEnvironmentTiles_FairyMindscape[] = INCBIN_U32("graphics/battle_environment/fairy_mindscape/tiles.4bpp.lz");
+const u16 gBattleEnvironmentPalette_FairyMindscape[] = INCBIN_U16("graphics/battle_environment/fairy_mindscape/palette.gbapal");
+const u32 gBattleEnvironmentTilemap_FairyMindscape[] = INCBIN_U32("graphics/battle_environment/fairy_mindscape/map.bin.lz");
+
 const u32 gBattleEnvironmentTiles_LongGrass[] = INCBIN_U32("graphics/battle_environment/long_grass/tiles.4bpp.lz");
 const u16 gBattleEnvironmentPalette_LongGrass[] = INCBIN_U16("graphics/battle_environment/long_grass/palette.gbapal");
 const u32 gBattleEnvironmentTilemap_LongGrass[] = INCBIN_U32("graphics/battle_environment/long_grass/map.bin.lz");
@@ -59,6 +63,9 @@ const u16 gBattleEnvironmentPalette_Rayquaza[] = INCBIN_U16("graphics/battle_env
 
 const u32 gBattleEnvironmentAnimTiles_TallGrass[] = INCBIN_U32("graphics/battle_environment/tall_grass/anim_tiles.4bpp.lz");
 const u32 gBattleEnvironmentAnimTilemap_TallGrass[] = INCBIN_U32("graphics/battle_environment/tall_grass/anim_map.bin.lz");
+
+const u32 gBattleEnvironmentAnimTiles_FairyMindscape[] = INCBIN_U32("graphics/battle_environment/fairy_mindscape/anim_tiles.4bpp.lz");
+const u32 gBattleEnvironmentAnimTilemap_FairyMindscape[] = INCBIN_U32("graphics/battle_environment/fairy_mindscape/anim_map.bin.lz");
 
 const u32 gBattleEnvironmentAnimTiles_LongGrass[] = INCBIN_U32("graphics/battle_environment/long_grass/anim_tiles.4bpp.lz");
 const u32 gBattleEnvironmentAnimTilemap_LongGrass[] = INCBIN_U32("graphics/battle_environment/long_grass/anim_map.bin.lz");

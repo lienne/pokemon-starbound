@@ -1227,3 +1227,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route4_Celestine_Way/scripts.inc"
 
 	.include "data/maps/EclipseHideout_1F/scripts.inc"
+
+	.include "data/maps/CaelesticCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/CaelesticCity_Mart/scripts.inc"

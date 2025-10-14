@@ -31,16 +31,17 @@
   ],
   "object_events": [
     {
+      "local_id": "Caelestic_OldManByStatue",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
       "x": 29,
-      "y": 23,
+      "y": 24,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Caelestic_EventScript_OldManByStatueDialogue",
       "flag": "0"
     },
     {
@@ -122,7 +123,93 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 18,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_CAELESTIC_CITY_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_CAELESTIC_CITY_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 14,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_CAELESTIC",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 45,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_CAELESTIC",
+      "dest_warp_id": "3"
+    }
+  ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Caelestic_EventScript_CitySign"
+    },
+    {
+      "type": "sign",
+      "x": 36,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Caelestic_EventScript_GymSign"
+    },
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 16,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 20,
+      "y": 16,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "type": "sign",
+      "x": 28,
+      "y": 23,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Caelestic_EventScript_StatueSign"
+    }
+  ]
 }
