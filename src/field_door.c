@@ -137,7 +137,6 @@ static const u8 sDoorAnimTiles_SolsticeTownDoor[] = INCBIN_U8("graphics/door_ani
 static const u8 sDoorAnimTiles_PokecenterDoor[] = INCBIN_U8("graphics/door_anims/pokecenter_door.4bpp");
 static const u8 sDoorAnimTiles_PokemartDoor[] = INCBIN_U8("graphics/door_anims/pokemart_door.4bpp");
 static const u8 sDoorAnimTiles_Astridale_House1_Door[] = INCBIN_U8("graphics/door_anims/astridale_house1_door.4bpp");
-static const u8 sDoorAnimTiles_Astridale_House2_Door[] = INCBIN_U8("graphics/door_anims/astridale_house2_door.4bpp");
 static const u8 sDoorAnimTiles_Astridale_House3_Door[] = INCBIN_U8("graphics/door_anims/astridale_house3_door.4bpp");
 static const u8 sDoorAnimTiles_Astridale_Gym_Door[] = INCBIN_U8("graphics/door_anims/astridale_gym_door.4bpp");
 static const u8 sDoorAnimTiles_Caelestic_House1_Door[] = INCBIN_U8("graphics/door_anims/caelestic_house1_door.4bpp");
@@ -236,7 +235,6 @@ static const u8 sDoorAnimPalettes_SolsticeTownDoor[] = {7, 8, 12, 12, 12, 12, 12
 static const u8 sDoorAnimPalettes_PokecenterDoor[] = {3, 3, 3, 3, 3, 3, 3, 3};
 static const u8 sDoorAnimPalettes_PokemartDoor[] = {4, 4, 4, 4, 3, 3, 3, 3};
 static const u8 sDoorAnimPalettes_Astridale_House1_Door[] = {6, 6, 6, 6, 6, 6, 6, 6};
-static const u8 sDoorAnimPalettes_Astridale_House2_Door[] = {6, 6, 6, 6, 6, 6, 6, 6};
 static const u8 sDoorAnimPalettes_Astridale_House3_Door[] = {6, 6, 6, 6, 6, 6, 6, 6};
 static const u8 sDoorAnimPalettes_Astridale_Gym_Door[] = {10, 10, 10, 10, 10, 10, 10, 10};
 static const u8 sDoorAnimPalettes_Caelestic_House1_Door[] = {9, 9, 9, 9, 7, 7, 7, 7};
@@ -305,7 +303,6 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_New_General_pokecenter_door,                  DOOR_SOUND_SLIDING,  1, sDoorAnimTiles_PokecenterDoor, sDoorAnimPalettes_PokecenterDoor},
     {METATILE_New_General_pokemart_door,                    DOOR_SOUND_SLIDING,  1, sDoorAnimTiles_PokemartDoor, sDoorAnimPalettes_PokemartDoor},
     {METATILE_Astridale_house1_door,                        DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_Astridale_House1_Door, sDoorAnimPalettes_Astridale_House1_Door},
-    {METATILE_Astridale_house2_door,                        DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_Astridale_House2_Door, sDoorAnimPalettes_Astridale_House2_Door},
     {METATILE_Astridale_house3_door,                        DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_Astridale_House3_Door, sDoorAnimPalettes_Astridale_House3_Door},
     {METATILE_Astridale_gym_door,                           DOOR_SOUND_SLIDING,  1, sDoorAnimTiles_Astridale_Gym_Door, sDoorAnimPalettes_Astridale_Gym_Door},
     {METATILE_Caelestic_House1_Door,                        DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_Caelestic_House1_Door, sDoorAnimPalettes_Caelestic_House1_Door},
