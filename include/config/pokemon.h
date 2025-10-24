@@ -72,7 +72,7 @@
 #define P_FLAG_FORCE_NO_SHINY            FLAG_FORCE_NO_SHINY  // If this flag is set, all wild and gift Pokémon will forced into NOT being Shiny.
 
 // Move Relearner settings
-#define P_VAR_MOVE_RELEARNER_STATE       0      // IMPORTANT! Assign a var to make the move relearner swap between level up, egg, TM and tutor.
+#define P_VAR_MOVE_RELEARNER_STATE       VAR_MOVE_RELEARNER_STATE      // IMPORTANT! Assign a var to make the move relearner swap between level up, egg, TM and tutor.
 
 #define P_ENABLE_MOVE_RELEARNERS         TRUE   // If TRUE, it enables move relearners for level up, egg, TM and tutor.
 #define P_PRE_EVO_MOVES                  FALSE  // If TRUE, it enables the Pokémon to learn moves from it's pre evolution.
