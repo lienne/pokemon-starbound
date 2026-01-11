@@ -350,6 +350,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_BATTLE_GIRL] = { _("Battle Girl"), 6 },
     [TRAINER_CLASS_PARASOL_LADY] = { _("Parasol Lady"), 10 },
     [TRAINER_CLASS_SWIMMER_F] = { _("Swimmer♀"), 2, BALL_DIVE },
+    [TRAINER_CLASS_ARTIST_F] = { _("Artist♀"), 5},
     [TRAINER_CLASS_TWINS] = { _("Twins"), 3 },
     [TRAINER_CLASS_SAILOR] = { _("Sailor"), 8 },
     [TRAINER_CLASS_COOLTRAINER_2] = { _("CoolTrainer"), 5, BALL_ULTRA },

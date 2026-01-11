@@ -49,6 +49,9 @@ const u16 gTrainerPalette_HexManiac[] = INCBIN_U16("graphics/trainers/front_pics
 const u32 gTrainerFrontPic_AromaLady[] = INCBIN_U32("graphics/trainers/front_pics/aroma_lady.4bpp.lz");
 const u16 gTrainerPalette_AromaLady[] = INCBIN_U16("graphics/trainers/front_pics/aroma_lady.gbapal");
 
+const u32 gTrainerFrontPic_Artist_F[] = INCBIN_U32("graphics/trainers/front_pics/artist_f.4bpp.lz");
+const u16 gTrainerPalette_Artist_F[] = INCBIN_U16("graphics/trainers/front_pics/artist_f.gbapal");
+
 const u32 gTrainerFrontPic_RuinManiac[] = INCBIN_U32("graphics/trainers/front_pics/ruin_maniac.4bpp.lz");
 const u16 gTrainerPalette_RuinManiac[] = INCBIN_U16("graphics/trainers/front_pics/ruin_maniac.gbapal");
 
@@ -343,6 +346,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_AQUA_LEADER_ARCHIE, gTrainerFrontPic_AquaLeaderArchie, gTrainerPalette_AquaLeaderArchie),
     TRAINER_SPRITE(TRAINER_PIC_HEX_MANIAC, gTrainerFrontPic_HexManiac, gTrainerPalette_HexManiac),
     TRAINER_SPRITE(TRAINER_PIC_AROMA_LADY, gTrainerFrontPic_AromaLady, gTrainerPalette_AromaLady),
+    TRAINER_SPRITE(TRAINER_PIC_ARTIST_F, gTrainerFrontPic_Artist_F, gTrainerPalette_Artist_F),
     TRAINER_SPRITE(TRAINER_PIC_RUIN_MANIAC, gTrainerFrontPic_RuinManiac, gTrainerPalette_RuinManiac),
     TRAINER_SPRITE(TRAINER_PIC_INTERVIEWER, gTrainerFrontPic_Interviewer, gTrainerPalette_Interviewer),
     TRAINER_SPRITE(TRAINER_PIC_TUBER_F, gTrainerFrontPic_TuberF, gTrainerPalette_TuberF),

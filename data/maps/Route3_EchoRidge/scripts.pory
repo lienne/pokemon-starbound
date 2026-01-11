@@ -8,3 +8,92 @@ script Route3_EchoRidge_EventScript_RouteSign {
         "“Where the echoes of the past linger”"))
     releaseall
 }
+
+script Route3_EchoRidge_EventScript_Hiker_Eli {
+    trainerbattle_single(TRAINER_ELI, Route3_EchoRidge_Hiker_Eli_Intro_Text, Route3_EchoRidge_Hiker_Eli_Lose_Text)
+    msgbox(Route3_EchoRidge_Hiker_Eli_Dialogue, MSGBOX_NPC)
+}
+
+script Route3_EchoRidge_EventScript_Beauty_Sheila {
+    trainerbattle_single(TRAINER_SHEILA, Route3_EchoRidge_Beauty_Sheila_Intro_Text, Route3_EchoRidge_Beauty_Sheila_Lose_Text)
+    msgbox(Route3_EchoRidge_Beauty_Sheila_Dialogue, MSGBOX_NPC)
+}
+
+script Route3_EchoRidge_EventScript_Black_Belt_Takao {
+    trainerbattle_single(TRAINER_TAKAO, Route3_EchoRidge_Black_Belt_Takao_Intro_Text, Route3_EchoRidge_Black_Belt_Takao_Lose_Text)
+    msgbox(Route3_EchoRidge_Black_Belt_Takao_Dialogue, MSGBOX_NPC)
+}
+
+script Route3_EchoRidge_EventScript_Artist_Anabelle {
+    trainerbattle_single(TRAINER_ANABELLE, Route3_EchoRidge_Artist_Anabelle_Intro_Text, Route3_EchoRidge_Artist_Anabelle_Lose_Text)
+    msgbox(Route3_EchoRidge_Artist_Anabelle_Dialogue, MSGBOX_NPC)
+}
+
+script Route3_EchoRidge_EventScript_Ruin_Maniac_Dusty {
+    trainerbattle_single(TRAINER_DUSTY_1, Route3_EchoRidge_Ruin_Maniac_Dusty_Intro_Text, Route3_EchoRidge_Ruin_Maniac_Dusty_Lose_Text)
+    msgbox(Route3_EchoRidge_Ruin_Maniac_Dusty_Dialogue, MSGBOX_NPC)
+}
+
+text Route3_EchoRidge_Hiker_Eli_Intro_Text {
+    format("You look like you can handle yourself!\n"
+        "Care for a battle?")
+}
+
+text Route3_EchoRidge_Hiker_Eli_Lose_Text {
+    format("Not bad at all! You've got some skills!")
+}
+
+text Route3_EchoRidge_Hiker_Eli_Dialogue {
+    format("The mountains here are filled with history.\p"
+        "Some say you can still hear the echoes of ancient Pokémon battles if you listen closely enough.")
+}
+
+text Route3_EchoRidge_Beauty_Sheila_Intro_Text {
+    format("If you can beat me, I'll give you a kiss!")
+}
+
+text Route3_EchoRidge_Beauty_Sheila_Lose_Text {
+    format("Oh… I wasn't expecting you'd actually win…")
+}
+
+text Route3_EchoRidge_Beauty_Sheila_Dialogue {
+    format("…I'll have my Pokémon give you a kiss instead.")
+}
+
+text Route3_EchoRidge_Black_Belt_Takao_Intro_Text {
+    format("HIYAAAAAA!!!")
+}
+
+text Route3_EchoRidge_Black_Belt_Takao_Lose_Text {
+    format("Pant… pant…")
+}
+
+text Route3_EchoRidge_Black_Belt_Takao_Dialogue {
+    format("Going up the mountain… it's harder than I thought…")
+}
+
+text Route3_EchoRidge_Artist_Anabelle_Intro_Text {
+    format("Art is the truest form of expression!")
+}
+
+text Route3_EchoRidge_Artist_Anabelle_Lose_Text {
+    format("Your skills are… inspiring.")
+}
+
+text Route3_EchoRidge_Artist_Anabelle_Dialogue {
+    format("The beauty of nature here at Echo Ridge is my greatest muse.\p"
+        "Every rock, tree, and Pokémon tells a story waiting to be captured on canvas.")
+}
+
+text Route3_EchoRidge_Ruin_Maniac_Dusty_Intro_Text {
+    format("I'm on my way to the ruins in Celestine Way!")
+}
+
+text Route3_EchoRidge_Ruin_Maniac_Dusty_Lose_Text {
+    format("Those ruins will have to wait…")
+}
+
+text Route3_EchoRidge_Ruin_Maniac_Dusty_Dialogue {
+    format("The ancient ruins are said to hold secrets of a lost civilization.\p"
+        "I can't wait to explore them and uncover their mysteries!")
+}
