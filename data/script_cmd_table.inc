@@ -146,7 +146,7 @@ gScriptCmdTable::
 	script_cmd_table_entry SCR_OP_GIVEMON                       ScrCmd_nop1,                        requests_effects=1  @ 0x79
 	script_cmd_table_entry SCR_OP_GIVEEGG                       ScrCmd_giveegg,                     requests_effects=1  @ 0x7a
 	script_cmd_table_entry SCR_OP_SETMONMOVE                    ScrCmd_setmonmove,                  requests_effects=1  @ 0x7b
-	script_cmd_table_entry SCR_OP_CHECKPARTYMOVE                ScrCmd_checkpartymove,              requests_effects=1  @ 0x7c
+	script_cmd_table_entry SCR_OP_CHECKFIELDMOVE                ScrCmd_checkfieldmove,              requests_effects=1  @ 0x7c
 	script_cmd_table_entry SCR_OP_BUFFERSPECIESNAME             ScrCmd_bufferspeciesname,           requests_effects=1  @ 0x7d
 	script_cmd_table_entry SCR_OP_BUFFERLEADMONSPECIESNAME      ScrCmd_bufferleadmonspeciesname,    requests_effects=1  @ 0x7e
 	script_cmd_table_entry SCR_OP_BUFFERPARTYMONNICK            ScrCmd_bufferpartymonnick,          requests_effects=1  @ 0x7f
@@ -251,13 +251,13 @@ gScriptCmdTable::
 	script_cmd_table_entry SCR_OP_BUFFERITEMNAMEPLURAL          ScrCmd_bufferitemnameplural,        requests_effects=1  @ 0xe2
 	script_cmd_table_entry SCR_OP_DYNMULTICHOICE                ScrCmd_dynmultichoice,              requests_effects=1  @ 0xe3
 	script_cmd_table_entry SCR_OP_DYNMULTIPUSH                  ScrCmd_dynmultipush,                requests_effects=1  @ 0xe4
-	script_cmd_table_entry SCR_OP_SETSPEAKER                    ScrCmd_setspeaker,                  requests_effects=1  @ 0xe5
-	script_cmd_table_entry SCR_OP_QUESTMENU						ScrCmd_questmenu,					requests_effects=1  @ 0xe6
-	script_cmd_table_entry SCR_OP_SUBQUESTMENU					ScrCmd_subquestmenu,				requests_effects=1  @ 0xe7
-	script_cmd_table_entry SCR_OP_RETURNQUESTSTATE				ScrCmd_returnqueststate,			requests_effects=1  @ 0xe8
-	script_cmd_table_entry SCR_OP_LEVITATEOBJECTAT              ScrCmd_levitateobjectat,            requests_effects=1  @ 0xe9
-	script_cmd_table_entry SCR_OP_DEBUGPRINT					ScrCmd_debugprint                   requests_effects=1  @ 0xea
-	
+	script_cmd_table_entry SCR_OP_HIDEFOLLOWER                  ScrCmd_hidefollower,                requests_effects=1  @ 0xe5
+	script_cmd_table_entry SCR_OP_SETSPEAKER                    ScrCmd_setspeaker,                  requests_effects=1  @ 0xe6
+	script_cmd_table_entry SCR_OP_QUESTMENU						ScrCmd_questmenu,					requests_effects=1  @ 0xe7
+	script_cmd_table_entry SCR_OP_SUBQUESTMENU					ScrCmd_subquestmenu,				requests_effects=1  @ 0xe8
+	script_cmd_table_entry SCR_OP_RETURNQUESTSTATE				ScrCmd_returnqueststate,			requests_effects=1  @ 0xe9
+	script_cmd_table_entry SCR_OP_LEVITATEOBJECTAT              ScrCmd_levitateobjectat,            requests_effects=1  @ 0xea
+	script_cmd_table_entry SCR_OP_DEBUGPRINT					ScrCmd_debugprint                   requests_effects=1  @ 0xeb
 
 	.if ALLOCATE_SCRIPT_CMD_TABLE
 gScriptCmdTableEnd::

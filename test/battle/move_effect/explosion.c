@@ -55,7 +55,7 @@ SINGLE_BATTLE_TEST("Explosion causes the user to faint even if it has no effect"
 {
     GIVEN {
         ASSUME(GetMoveType(MOVE_EXPLOSION) == TYPE_NORMAL);
-        ASSUME(gSpeciesInfo[SPECIES_GASTLY].types[0] == TYPE_GHOST);
+        ASSUME(GetSpeciesType(SPECIES_GASTLY, 0) == TYPE_GHOST);
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_GASTLY);
     } WHEN {
@@ -111,10 +111,10 @@ SINGLE_BATTLE_TEST("Explosion is blocked by Ability Damp")
 SINGLE_BATTLE_TEST("Explosion does not trigger Destiny Bond")
 {
     GIVEN {
-        PLAYER(SPECIES_WOBBUFFET) { HP(1); };
+        PLAYER(SPECIES_WOBBUFFET) { HP(1); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
-        TURN { MOVE(player, MOVE_DESTINY_BOND); MOVE(opponent, MOVE_EXPLOSION);}
+        TURN { MOVE(player, MOVE_DESTINY_BOND); MOVE(opponent, MOVE_EXPLOSION); }
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_DESTINY_BOND, player);
         HP_BAR(opponent);

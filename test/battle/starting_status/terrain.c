@@ -21,27 +21,28 @@ SINGLE_BATTLE_TEST("B_VAR_STARTING_STATUS starts a chosen terrain at the beginni
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
         // More than 5 turns
-        TURN { ; }
-        TURN { ; }
-        TURN { ; }
-        TURN { ; }
-        TURN { ; }
-        TURN { ; }
-        TURN { ; }
+        TURN {}
+        TURN {}
+        TURN {}
+        TURN {}
+        TURN {}
+        TURN {}
+        TURN {}
     } SCENE {
-        switch (terrain) {
-            case STARTING_STATUS_GRASSY_TERRAIN:
-                MESSAGE("Grass grew to cover the battlefield!");
-                break;
-            case STARTING_STATUS_PSYCHIC_TERRAIN:
-                MESSAGE("The battlefield got weird!");
-                break;
-            case STARTING_STATUS_MISTY_TERRAIN:
-                MESSAGE("Mist swirled around the battlefield!");
-                break;
-            case STARTING_STATUS_ELECTRIC_TERRAIN:
-                MESSAGE("An electric current is running across the battlefield!");
-                break;
+        switch (terrain)
+        {
+        case STARTING_STATUS_GRASSY_TERRAIN:
+            MESSAGE("The battlefield is covered with grass!");
+            break;
+        case STARTING_STATUS_PSYCHIC_TERRAIN:
+            MESSAGE("The battlefield seems weird!");
+            break;
+        case STARTING_STATUS_MISTY_TERRAIN:
+            MESSAGE("Mist swirls around the battlefield!");
+            break;
+        case STARTING_STATUS_ELECTRIC_TERRAIN:
+            MESSAGE("An electric current is running across the battlefield!");
+            break;
         }
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_RESTORE_BG);
         NONE_OF {
@@ -72,12 +73,12 @@ SINGLE_BATTLE_TEST("Terrain started after the one which started the battle lasts
     } WHEN {
         // More than 5 turns
         TURN { MOVE(player, viaMove == TRUE ? MOVE_GRASSY_TERRAIN : MOVE_CELEBRATE); }
-        TURN { ; }
-        TURN { ; }
-        TURN { ; }
-        TURN { ; }
-        TURN { ; }
-        TURN { ; }
+        TURN {}
+        TURN {}
+        TURN {}
+        TURN {}
+        TURN {}
+        TURN {}
     } SCENE {
         // Electric Terrain at battle's start
         MESSAGE("An electric current is running across the battlefield!");

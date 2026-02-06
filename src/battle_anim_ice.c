@@ -28,7 +28,6 @@ struct HailStruct {
 static void AnimUnusedIceCrystalThrow(struct Sprite *);
 static void AnimUnusedIceCrystalThrow_Step(struct Sprite *);
 static void AnimIcePunchSwirlingParticle(struct Sprite *);
-static void AnimIceBeamParticle(struct Sprite *);
 static void AnimFlickerIceEffectParticle(struct Sprite *);
 static void AnimSwirlingSnowball(struct Sprite *);
 static void AnimSwirlingSnowball_Step2(struct Sprite *);
@@ -703,7 +702,7 @@ static void AnimIcePunchSwirlingParticle(struct Sprite *sprite)
 // arg 2: target x offset
 // arg 3: target y offset
 // arg 4: duration
-static void AnimIceBeamParticle(struct Sprite *sprite)
+void AnimIceBeamParticle(struct Sprite *sprite)
 {
     InitSpritePosToAnimAttacker(sprite, TRUE);
     sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
@@ -1600,8 +1599,8 @@ static void AnimHailBegin(struct Sprite *sprite)
         sprite->data[0] = spriteId;
         if (spriteId != MAX_SPRITES)
         {
-            // The sprite template we're using is shared amongst a few other 
-            // places, which make the sprite flicker. That's not what we want 
+            // The sprite template we're using is shared amongst a few other
+            // places, which make the sprite flicker. That's not what we want
             // here, though. Override the callback.
             gSprites[sprite->data[0]].callback = AnimHailContinue;
             gSprites[sprite->data[0]].sOwnerTaskId = sprite->sOwnerTaskId;

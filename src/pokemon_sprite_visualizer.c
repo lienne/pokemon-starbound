@@ -1,8 +1,8 @@
-//Credits: Gamer2020, AsparagusEduardo, TheXaman, ShinyDragonHunter
 #include "global.h"
 #include "battle.h"
 #include "battle_anim.h"
 #include "battle_gfx_sfx_util.h"
+#include "battle_environment.h"
 #include "bg.h"
 #include "data.h"
 #include "decompress.h"
@@ -42,7 +42,7 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 
-extern const struct BattleBackground sBattleEnvironmentTable[];
+extern const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT];
 extern const struct CompressedSpriteSheet gSpriteSheet_EnemyShadow;
 extern const struct CompressedSpriteSheet gSpriteSheet_EnemyShadowsSized;
 extern const struct SpriteTemplate gSpriteTemplate_EnemyShadow;
@@ -56,37 +56,6 @@ static struct PokemonSpriteVisualizer *GetStructPtr(u8 taskId)
 
     return (struct PokemonSpriteVisualizer*)(T1_READ_PTR(taskDataPtr));
 }
-
-static const union AnimCmd sAnim_Follower_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_FRAME(2, 30),
-    ANIMCMD_FRAME(3, 30),
-    ANIMCMD_FRAME(2, 30),
-    ANIMCMD_FRAME(3, 30),
-    ANIMCMD_FRAME(2, 10),
-    ANIMCMD_FRAME(4, 30),
-    ANIMCMD_FRAME(5, 30),
-    ANIMCMD_FRAME(4, 30),
-    ANIMCMD_FRAME(5, 30),
-    ANIMCMD_FRAME(4, 10),
-    ANIMCMD_FRAME(4, 30, .hFlip = TRUE),
-    ANIMCMD_FRAME(5, 30, .hFlip = TRUE),
-    ANIMCMD_FRAME(4, 30, .hFlip = TRUE),
-    ANIMCMD_FRAME(5, 30, .hFlip = TRUE),
-    ANIMCMD_FRAME(4, 10, .hFlip = TRUE),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd *const sAnims_Follower[] =
-{
-    sAnim_GeneralFrame0,
-    sAnim_Follower_1,
-};
 
 //BgTemplates
 static const struct BgTemplate sBgTemplates[] =
@@ -385,6 +354,7 @@ const u8 gBattleBackgroundNames[][30] =
     [MAP_BATTLE_SCENE_KYOGRE]   = _("KYOGRE                  "),
     [MAP_BATTLE_SCENE_RAYQUAZA] = _("RAYQUAZA                "),
 };
+
 const u8 gBattleBackgroundTerrainNames[][26] =
 {
     [BATTLE_ENVIRONMENT_GRASS]      = _("NORMAL - GRASS           "),
@@ -398,6 +368,7 @@ const u8 gBattleBackgroundTerrainNames[][26] =
     [BATTLE_ENVIRONMENT_BUILDING]   = _("NORMAL - BUILDING        "),
     [BATTLE_ENVIRONMENT_PLAIN]      = _("NORMAL - PLAIN           "),
 };
+
 const u8 sShadowSizeLabels[][4] =
 {
     [SHADOW_SIZE_S]                 = _(" S"),
@@ -405,6 +376,7 @@ const u8 sShadowSizeLabels[][4] =
     [SHADOW_SIZE_L]                 = _(" L"),
     [SHADOW_SIZE_XL_BATTLE_ONLY]    = _(" XL"),
 };
+
 //Function declarations
 static void PrintDigitChars(struct PokemonSpriteVisualizer *data);
 static void SetUpModifyArrows(struct PokemonSpriteVisualizer *data);
@@ -499,7 +471,7 @@ static void PrintInstructionsOnWindow(struct PokemonSpriteVisualizer *data)
     {
         AddTextPrinterParameterized(WIN_BOTTOM_LEFT, fontId, textL, 30, 0, 0, NULL);
         AddTextPrinterParameterized(WIN_BOTTOM_LEFT, fontId, textR, 30, 12, 0, NULL);
-        if (GetSpeciesFormTable(data->currentmonId) != NULL)
+        if (GetSpeciesFormTable(species) != NULL)
             AddTextPrinterParameterized(WIN_BOTTOM_LEFT, fontId, textBottomForms, 0, 0, 0, NULL);
         else
             AddTextPrinterParameterized(WIN_BOTTOM_LEFT, fontId, textBottom, 0, 0, 0, NULL);
@@ -750,7 +722,7 @@ static void BattleLoadOpponentMonSpriteGfxCustom(u16 species, bool8 isFemale, bo
 
 static void SetConstSpriteValues(struct PokemonSpriteVisualizer *data)
 {
-    u16 species = data->currentmonId;
+    u16 species = SanitizeSpeciesId(data->currentmonId);
     data->constSpriteValues.frontPicCoords = gSpeciesInfo[species].frontPicYOffset;
     data->constSpriteValues.frontElevation = gSpeciesInfo[species].enemyMonElevation;
     data->constSpriteValues.backPicCoords = gSpeciesInfo[species].backPicYOffset;
@@ -763,11 +735,11 @@ static void ResetOffsetSpriteValues(struct PokemonSpriteVisualizer *data)
     data->offsetsSpriteValues.offset_front_elevation = 0;
 }
 
-static void ResetShadowSettings(struct PokemonSpriteVisualizer *data, u16 species)
+static void ResetShadowSettings(struct PokemonSpriteVisualizer *data)
 {
     if (B_ENEMY_MON_SHADOW_STYLE <= GEN_3 || P_GBA_STYLE_SPECIES_GFX == TRUE)
         return;
-
+    u16 species = SanitizeSpeciesId(data->currentmonId);
     data->shadowSettings.definedX = gSpeciesInfo[species].enemyShadowXOffset;
     data->shadowSettings.definedY = gSpeciesInfo[species].enemyShadowYOffset;
     data->shadowSettings.definedSize = gSpeciesInfo[species].enemyShadowSize;
@@ -838,36 +810,36 @@ static void SpriteCB_EnemyShadowCustom(struct Sprite *shadowSprite)
 
 static void SpriteCB_Follower(struct Sprite *sprite)
 {
-    if (sprite->animDelayCounter == 0)
+    if (sprite->data[3] == 0)
     {
-        sprite->animDelayCounter = 60;
+        sprite->data[3] = 120;
         switch (sprite->animNum)
         {
-            default:
-            case 0:
-            case 1:
-                StartSpriteAnim(sprite, GetFaceDirectionAnimNum(DIR_NORTH));
-                break;
-            case 2:
-                StartSpriteAnim(sprite, GetFaceDirectionAnimNum(DIR_WEST));
-                break;
-            case 3:
-                StartSpriteAnim(sprite, GetFaceDirectionAnimNum(DIR_EAST));
-                break;
             case 4:
-                StartSpriteAnim(sprite, GetFaceDirectionAnimNum(DIR_SOUTH));
+                StartSpriteAnim(sprite, GetMoveDirectionAnimNum(DIR_NORTH));
+                break;
+            case 5:
+                StartSpriteAnim(sprite, GetMoveDirectionAnimNum(DIR_WEST));
+                break;
+            case 6:
+                StartSpriteAnim(sprite, GetMoveDirectionAnimNum(DIR_EAST));
+                break;
+            default:
+            case 7:
+                StartSpriteAnim(sprite, GetMoveDirectionAnimNum(DIR_SOUTH));
                 break;
         }
     }
     else
     {
-        sprite->animDelayCounter--;
+        sprite->data[3]--;
     }
 }
-static void LoadAndCreateEnemyShadowSpriteCustom(struct PokemonSpriteVisualizer *data, u16 species)
+
+static void LoadAndCreateEnemyShadowSpriteCustom(struct PokemonSpriteVisualizer *data)
 {
     bool8 invisible = FALSE;
-    species = SanitizeSpeciesId(species);
+    u16 species = SanitizeSpeciesId(data->currentmonId);
 
     if (B_ENEMY_MON_SHADOW_STYLE >= GEN_4 && P_GBA_STYLE_SPECIES_GFX == FALSE)
     {
@@ -921,83 +893,84 @@ static void LoadAndCreateEnemyShadowSpriteCustom(struct PokemonSpriteVisualizer 
 }
 
 //Battle background functions
-static void LoadBattleBg(u8 battleBgType, u8 battleEnvironment)
+static void LoadBattleBg(u8 battleBgType, enum BattleEnvironments battleEnvironment)
 {
     switch (battleBgType)
     {
     default:
     case MAP_BATTLE_SCENE_NORMAL:
-        LZDecompressVram(sBattleEnvironmentTable[battleEnvironment].tileset, (void*)(BG_CHAR_ADDR(2)));
-        LZDecompressVram(sBattleEnvironmentTable[battleEnvironment].tilemap, (void*)(BG_SCREEN_ADDR(26)));
-        LoadPalette(sBattleEnvironmentTable[battleEnvironment].palette, 0x20, 0x60);
+        DecompressDataWithHeaderVram(gBattleEnvironmentInfo[battleEnvironment].background.tileset, (void*)(BG_CHAR_ADDR(2)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentInfo[battleEnvironment].background.tilemap, (void*)(BG_SCREEN_ADDR(26)));
+        LoadPalette(gBattleEnvironmentInfo[battleEnvironment].background.palette, 0x20, 0x60);
         break;
     case MAP_BATTLE_SCENE_GYM:
-        LZDecompressVram(gBattleEnvironmentTiles_Building, (void*)(BG_CHAR_ADDR(2)));
-        LZDecompressVram(gBattleEnvironmentTilemap_Building, (void*)(BG_SCREEN_ADDR(26)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTiles_Building, (void*)(BG_CHAR_ADDR(2)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTilemap_Building, (void*)(BG_SCREEN_ADDR(26)));
         LoadPalette(gBattleEnvironmentPalette_BuildingGym, 0x20, 0x60);
         break;
     case MAP_BATTLE_SCENE_MAGMA:
-        LZDecompressVram(gBattleEnvironmentTiles_Stadium, (void*)(BG_CHAR_ADDR(2)));
-        LZDecompressVram(gBattleEnvironmentTilemap_Stadium, (void*)(BG_SCREEN_ADDR(26)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTiles_Stadium, (void*)(BG_CHAR_ADDR(2)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTilemap_Stadium, (void*)(BG_SCREEN_ADDR(26)));
         LoadPalette(gBattleEnvironmentPalette_StadiumMagma, 0x20, 0x60);
         break;
     case MAP_BATTLE_SCENE_AQUA:
-        LZDecompressVram(gBattleEnvironmentTiles_Stadium, (void*)(BG_CHAR_ADDR(2)));
-        LZDecompressVram(gBattleEnvironmentTilemap_Stadium, (void*)(BG_SCREEN_ADDR(26)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTiles_Stadium, (void*)(BG_CHAR_ADDR(2)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTilemap_Stadium, (void*)(BG_SCREEN_ADDR(26)));
         LoadPalette(gBattleEnvironmentPalette_StadiumAqua, 0x20, 0x60);
         break;
     case MAP_BATTLE_SCENE_SIDNEY:
-        LZDecompressVram(gBattleEnvironmentTiles_Stadium, (void*)(BG_CHAR_ADDR(2)));
-        LZDecompressVram(gBattleEnvironmentTilemap_Stadium, (void*)(BG_SCREEN_ADDR(26)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTiles_Stadium, (void*)(BG_CHAR_ADDR(2)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTilemap_Stadium, (void*)(BG_SCREEN_ADDR(26)));
         LoadPalette(gBattleEnvironmentPalette_StadiumSidney, 0x20, 0x60);
         break;
     case MAP_BATTLE_SCENE_PHOEBE:
-        LZDecompressVram(gBattleEnvironmentTiles_Stadium, (void*)(BG_CHAR_ADDR(2)));
-        LZDecompressVram(gBattleEnvironmentTilemap_Stadium, (void*)(BG_SCREEN_ADDR(26)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTiles_Stadium, (void*)(BG_CHAR_ADDR(2)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTilemap_Stadium, (void*)(BG_SCREEN_ADDR(26)));
         LoadPalette(gBattleEnvironmentPalette_StadiumPhoebe, 0x20, 0x60);
         break;
     case MAP_BATTLE_SCENE_GLACIA:
-        LZDecompressVram(gBattleEnvironmentTiles_Stadium, (void*)(BG_CHAR_ADDR(2)));
-        LZDecompressVram(gBattleEnvironmentTilemap_Stadium, (void*)(BG_SCREEN_ADDR(26)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTiles_Stadium, (void*)(BG_CHAR_ADDR(2)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTilemap_Stadium, (void*)(BG_SCREEN_ADDR(26)));
         LoadPalette(gBattleEnvironmentPalette_StadiumGlacia, 0x20, 0x60);
         break;
     case MAP_BATTLE_SCENE_DRAKE:
-        LZDecompressVram(gBattleEnvironmentTiles_Stadium, (void*)(BG_CHAR_ADDR(2)));
-        LZDecompressVram(gBattleEnvironmentTilemap_Stadium, (void*)(BG_SCREEN_ADDR(26)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTiles_Stadium, (void*)(BG_CHAR_ADDR(2)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTilemap_Stadium, (void*)(BG_SCREEN_ADDR(26)));
         LoadPalette(gBattleEnvironmentPalette_StadiumDrake, 0x20, 0x60);
         break;
     case MAP_BATTLE_SCENE_FRONTIER:
-        LZDecompressVram(gBattleEnvironmentTiles_Building, (void*)(BG_CHAR_ADDR(2)));
-        LZDecompressVram(gBattleEnvironmentTilemap_Building, (void*)(BG_SCREEN_ADDR(26)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTiles_Building, (void*)(BG_CHAR_ADDR(2)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTilemap_Building, (void*)(BG_SCREEN_ADDR(26)));
         LoadPalette(gBattleEnvironmentPalette_Frontier, 0x20, 0x60);
         break;
     case MAP_BATTLE_SCENE_LEADER:
-        LZDecompressVram(gBattleEnvironmentTiles_Building, (void*)(BG_CHAR_ADDR(2)));
-        LZDecompressVram(gBattleEnvironmentTilemap_Building, (void*)(BG_SCREEN_ADDR(26)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTiles_Building, (void*)(BG_CHAR_ADDR(2)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTilemap_Building, (void*)(BG_SCREEN_ADDR(26)));
         LoadPalette(gBattleEnvironmentPalette_BuildingLeader, 0x20, 0x60);
         break;
     case MAP_BATTLE_SCENE_WALLACE:
-        LZDecompressVram(gBattleEnvironmentTiles_Stadium, (void*)(BG_CHAR_ADDR(2)));
-        LZDecompressVram(gBattleEnvironmentTilemap_Stadium, (void*)(BG_SCREEN_ADDR(26)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTiles_Stadium, (void*)(BG_CHAR_ADDR(2)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTilemap_Stadium, (void*)(BG_SCREEN_ADDR(26)));
         LoadPalette(gBattleEnvironmentPalette_StadiumWallace, 0x20, 0x60);
         break;
     case MAP_BATTLE_SCENE_GROUDON:
-        LZDecompressVram(gBattleEnvironmentTiles_Cave, (void*)(BG_CHAR_ADDR(2)));
-        LZDecompressVram(gBattleEnvironmentTilemap_Cave, (void*)(BG_SCREEN_ADDR(26)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTiles_Cave, (void*)(BG_CHAR_ADDR(2)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTilemap_Cave, (void*)(BG_SCREEN_ADDR(26)));
         LoadPalette(gBattleEnvironmentPalette_Groudon, 0x20, 0x60);
         break;
     case MAP_BATTLE_SCENE_KYOGRE:
-        LZDecompressVram(gBattleEnvironmentTiles_Water, (void*)(BG_CHAR_ADDR(2)));
-        LZDecompressVram(gBattleEnvironmentTilemap_Water, (void*)(BG_SCREEN_ADDR(26)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTiles_Water, (void*)(BG_CHAR_ADDR(2)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTilemap_Water, (void*)(BG_SCREEN_ADDR(26)));
         LoadPalette(gBattleEnvironmentPalette_Kyogre, 0x20, 0x60);
         break;
     case MAP_BATTLE_SCENE_RAYQUAZA:
-        LZDecompressVram(gBattleEnvironmentTiles_Rayquaza, (void*)(BG_CHAR_ADDR(2)));
-        LZDecompressVram(gBattleEnvironmentTilemap_Rayquaza, (void*)(BG_SCREEN_ADDR(26)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTiles_Rayquaza, (void*)(BG_CHAR_ADDR(2)));
+        DecompressDataWithHeaderVram(gBattleEnvironmentTilemap_Rayquaza, (void*)(BG_SCREEN_ADDR(26)));
         LoadPalette(gBattleEnvironmentPalette_Rayquaza, 0x20, 0x60);
         break;
     }
 }
+
 static void PrintBattleBgName(u8 taskId)
 {
     struct PokemonSpriteVisualizer *data = GetStructPtr(taskId);
@@ -1005,11 +978,12 @@ static void PrintBattleBgName(u8 taskId)
     u8 text[30+1];
 
     if (data->battleBgType == 0)
-        StringCopy(text, gBattleBackgroundTerrainNames[data->battleTerrain]);
+        StringCopy(text, gBattleBackgroundTerrainNames[data->battleEnvironment]);
     else
         StringCopy(text, gBattleBackgroundNames[data->battleBgType]);
     AddTextPrinterParameterized(WIN_BOTTOM_RIGHT, fontId, text, 0, 24, 0, NULL);
 }
+
 static void UpdateBattleBg(u8 taskId, bool8 increment)
 {
     struct PokemonSpriteVisualizer *data = GetStructPtr(taskId);
@@ -1018,17 +992,17 @@ static void UpdateBattleBg(u8 taskId, bool8 increment)
     {
         if (increment)
         {
-            if (data->battleTerrain == BATTLE_ENVIRONMENT_PLAIN)
+            if (data->battleEnvironment == BATTLE_ENVIRONMENT_PLAIN)
                 data->battleBgType += 1;
             else
-                data->battleTerrain += 1;
+                data->battleEnvironment += 1;
         }
         else
         {
-            if (data->battleTerrain == BATTLE_ENVIRONMENT_GRASS)
+            if (data->battleEnvironment == BATTLE_ENVIRONMENT_GRASS)
                 data->battleBgType = MAP_BATTLE_SCENE_RAYQUAZA;
             else
-                data->battleTerrain -= 1;
+                data->battleEnvironment -= 1;
         }
     }
     else if (data->battleBgType == MAP_BATTLE_SCENE_GYM)
@@ -1038,7 +1012,7 @@ static void UpdateBattleBg(u8 taskId, bool8 increment)
         else
         {
             data->battleBgType = MAP_BATTLE_SCENE_NORMAL;
-            data->battleTerrain = BATTLE_ENVIRONMENT_PLAIN;
+            data->battleEnvironment = BATTLE_ENVIRONMENT_PLAIN;
         }
     }
     else if (data->battleBgType == MAP_BATTLE_SCENE_RAYQUAZA)
@@ -1046,7 +1020,7 @@ static void UpdateBattleBg(u8 taskId, bool8 increment)
         if (increment)
         {
             data->battleBgType = MAP_BATTLE_SCENE_NORMAL;
-            data->battleTerrain = BATTLE_ENVIRONMENT_GRASS;
+            data->battleEnvironment = BATTLE_ENVIRONMENT_GRASS;
         }
         else
             data->battleBgType -= 1;
@@ -1061,7 +1035,33 @@ static void UpdateBattleBg(u8 taskId, bool8 increment)
 
     PrintBattleBgName(taskId);
 
-    LoadBattleBg(data->battleBgType, data->battleTerrain);
+    LoadBattleBg(data->battleBgType, data->battleEnvironment);
+}
+
+static void DrawFollowerSprite(struct PokemonSpriteVisualizer *data)
+{
+    if (!OW_POKEMON_OBJECT_EVENTS)
+        return;
+
+    u16 species = SanitizeSpeciesId(data->currentmonId);
+    u16 graphicsId = species + OBJ_EVENT_MON;
+    if (data->isShiny)
+        graphicsId += OBJ_EVENT_MON_SHINY;
+    if (data->isFemale)
+        graphicsId += OBJ_EVENT_MON_FEMALE;
+    data->followerspriteId = CreateObjectGraphicsSprite(graphicsId,
+                                                        SpriteCB_Follower,
+                                                        VISUALIZER_FOLLOWER_X,
+                                                        VISUALIZER_FOLLOWER_Y,
+                                                        0);
+    gSprites[data->followerspriteId].oam.priority = 0;
+
+    const struct ObjectEventGraphicsInfo *graphicsInfo = SpeciesToGraphicsInfo(species, data->isShiny, data->isFemale);
+    gSprites[data->followerspriteId].oam.shape = graphicsInfo->oam->shape;
+    gSprites[data->followerspriteId].oam.size = graphicsInfo->oam->size;
+    gSprites[data->followerspriteId].images = graphicsInfo->images;
+    gSprites[data->followerspriteId].anims = graphicsInfo->anims;
+    gSprites[data->followerspriteId].subspriteTables = graphicsInfo->subspriteTables;
 }
 
 // *******************************
@@ -1271,7 +1271,7 @@ void CB2_Pokemon_Sprite_Visualizer(void)
             SetStructPtr(taskId, data);
 
             data->currentmonId = SPECIES_BULBASAUR;
-            species = data->currentmonId;
+            species = SanitizeSpeciesId(data->currentmonId);
 
             //Print instructions
             PrintInstructionsOnWindow(data);
@@ -1281,8 +1281,6 @@ void CB2_Pokemon_Sprite_Visualizer(void)
             LoadSpritePaletteWithTag(palette, species);
             //Front
             HandleLoadSpecialPokePic(TRUE, gMonSpritesGfxPtr->spritesGfx[1], species, (data->isFemale ? FEMALE_PERSONALITY : MALE_PERSONALITY));
-            data->isShiny = FALSE;
-            data->isFemale = FALSE;
             BattleLoadOpponentMonSpriteGfxCustom(species, data->isFemale, data->isShiny, 1);
             SetMultiuseSpriteTemplateToPokemon(species, 1);
             gMultiuseSpriteTemplate.paletteTag = species;
@@ -1292,15 +1290,15 @@ void CB2_Pokemon_Sprite_Visualizer(void)
             gSprites[data->frontspriteId].callback = SpriteCallbackDummy;
             gSprites[data->frontspriteId].oam.priority = 0;
             //Front Shadow
-            LoadAndCreateEnemyShadowSpriteCustom(data, species);
+            LoadAndCreateEnemyShadowSpriteCustom(data);
 
             //Back
             HandleLoadSpecialPokePic(FALSE, gMonSpritesGfxPtr->spritesGfx[2], species, (data->isFemale ? FEMALE_PERSONALITY : MALE_PERSONALITY));
-            BattleLoadOpponentMonSpriteGfxCustom(species, data->isFemale, data->isShiny, 4);
+            BattleLoadOpponentMonSpriteGfxCustom(species, data->isFemale, data->isShiny, 5);
             SetMultiuseSpriteTemplateToPokemon(species, 2);
             offset_y = gSpeciesInfo[species].backPicYOffset;
             data->backspriteId = CreateSprite(&gMultiuseSpriteTemplate, VISUALIZER_MON_BACK_X, VISUALIZER_MON_BACK_Y + offset_y, 0);
-            gSprites[data->backspriteId].oam.paletteNum = 4;
+            gSprites[data->backspriteId].oam.paletteNum = 5;
             gSprites[data->backspriteId].callback = SpriteCallbackDummy;
             gSprites[data->backspriteId].oam.priority = 0;
 
@@ -1309,9 +1307,7 @@ void CB2_Pokemon_Sprite_Visualizer(void)
             gSprites[data->iconspriteId].oam.priority = 0;
 
             //Follower Sprite
-            data->followerspriteId = CreateObjectGraphicsSprite(OBJ_EVENT_MON + species, SpriteCB_Follower, VISUALIZER_FOLLOWER_X, VISUALIZER_FOLLOWER_Y, 0);
-            gSprites[data->followerspriteId].oam.priority = 0;
-            gSprites[data->followerspriteId].anims = sAnims_Follower;
+            DrawFollowerSprite(data);
 
             //Modify Arrows
             SetUpModifyArrows(data);
@@ -1325,7 +1321,7 @@ void CB2_Pokemon_Sprite_Visualizer(void)
 
             //Anim names
             data->animIdBack = GetSpeciesBackAnimSet(species) + 1;
-            data->animIdFront = gSpeciesInfo[data->currentmonId].frontAnimId;
+            data->animIdFront = gSpeciesInfo[species].frontAnimId;
             UpdateMonAnimNames(taskId);
 
             //BattleNg Name
@@ -1395,7 +1391,7 @@ static void ResetBGs_PokemonSpriteVisualizer(u16 a)
 
 static void ApplyOffsetSpriteValues(struct PokemonSpriteVisualizer *data)
 {
-    u16 species = data->currentmonId;
+    u16 species = SanitizeSpeciesId(data->currentmonId);
     //Back
     gSprites[data->backspriteId].y = VISUALIZER_MON_BACK_Y + gSpeciesInfo[species].backPicYOffset + data->offsetsSpriteValues.offset_back_picCoords;
     //Front
@@ -1408,6 +1404,7 @@ static void ApplyOffsetSpriteValues(struct PokemonSpriteVisualizer *data)
 static void UpdateSubmenuOneOptionValue(u8 taskId, bool8 increment)
 {
     struct PokemonSpriteVisualizer *data = GetStructPtr(taskId);
+    u16 species = SanitizeSpeciesId(data->currentmonId);
     u8 option = data->submenuYpos[1];
 
     switch (option)
@@ -1450,15 +1447,15 @@ static void UpdateSubmenuOneOptionValue(u8 taskId, bool8 increment)
         UpdateBattleBg(taskId, increment);
         break;
     case 3:
-        if (GetSpeciesFormTable(data->currentmonId) != NULL)
+        if (GetSpeciesFormTable(species) != NULL)
         {
             struct PokemonSpriteVisualizerModifyArrows *modArrows = &data->modifyArrows;
-            u8 formId = GetFormIdFromFormSpeciesId(data->currentmonId);
-            const u16 *formTable = GetSpeciesFormTable(data->currentmonId);
+            u8 formId = GetFormIdFromFormSpeciesId(species);
+            const u16 *formTable = GetSpeciesFormTable(species);
             if (increment)
             {
                 if (formTable[formId + 1] != FORM_SPECIES_END)
-                    modArrows->currValue = GetFormSpeciesId(data->currentmonId, formId + 1);
+                    modArrows->currValue = GetFormSpeciesId(species, formId + 1);
                 else
                     modArrows->currValue = formTable[0];
             }
@@ -1475,13 +1472,13 @@ static void UpdateSubmenuOneOptionValue(u8 taskId, bool8 increment)
                     modArrows->currValue = formTable[lastForm];
                 }
                 else
-                    modArrows->currValue = GetFormSpeciesId(data->currentmonId, formId - 1);
+                    modArrows->currValue = GetFormSpeciesId(species, formId - 1);
             }
             data->animIdBack = GetSpeciesBackAnimSet(modArrows->currValue) + 1;
             data->animIdFront = gSpeciesInfo[modArrows->currValue].frontAnimId;
             UpdateMonAnimNames(taskId);
             ResetOffsetSpriteValues(data);
-            ResetShadowSettings(data, modArrows->currValue);
+            ResetShadowSettings(data);
 
             UpdateBattlerValue(data);
             ReloadPokemonSprites(data);
@@ -1497,7 +1494,7 @@ static void UpdateSubmenuOneOptionValue(u8 taskId, bool8 increment)
 static void UpdateSubmenuTwoOptionValue(u8 taskId, bool8 increment)
 {
     struct PokemonSpriteVisualizer *data = GetStructPtr(taskId);
-    u16 species = data->currentmonId;
+    u16 species = SanitizeSpeciesId(data->currentmonId);
     u8 option = data->submenuYpos[2];
     s8 offset;
     u8 y;
@@ -1668,27 +1665,28 @@ static void Task_AnimateAfterDelay(u8 taskId)
 static void HandleInput_PokemonSpriteVisualizer(u8 taskId)
 {
     struct PokemonSpriteVisualizer *data = GetStructPtr(taskId);
+    u16 species = SanitizeSpeciesId(data->currentmonId);
     struct Sprite *Frontsprite = &gSprites[data->frontspriteId];
     struct Sprite *Backsprite = &gSprites[data->backspriteId];
 
     if (JOY_NEW(L_BUTTON)  && (Backsprite->callback == SpriteCallbackDummy))
     {
-        PlayCryInternal(data->currentmonId, 0, 120, 10, 0);
+        PlayCryInternal(species, 0, 120, 10, CRY_MODE_NORMAL);
         LaunchAnimationTaskForBackSprite(Backsprite, data->animIdBack-1);
     }
     if (JOY_NEW(R_BUTTON) && (Frontsprite->callback == SpriteCallbackDummy))
     {
-        PlayCryInternal(data->currentmonId, 0, 120, 10, 0);
-        if (HasTwoFramesAnimation(data->currentmonId))
+        PlayCryInternal(species, 0, 120, 10, CRY_MODE_NORMAL);
+        if (HasTwoFramesAnimation(species))
             StartSpriteAnim(Frontsprite, 1);
 
-        if (gSpeciesInfo[data->currentmonId].frontAnimDelay != 0)
+        if (gSpeciesInfo[species].frontAnimDelay != 0)
         {
             // Animation has delay, start delay task
             u8 taskId = CreateTask(Task_AnimateAfterDelay, 0);
             STORE_PTR_IN_TASK(Frontsprite, taskId, 0);
             gTasks[taskId].sAnimId = data->animIdFront;
-            gTasks[taskId].sAnimDelay = gSpeciesInfo[data->currentmonId].frontAnimDelay;
+            gTasks[taskId].sAnimDelay = gSpeciesInfo[species].frontAnimDelay;
         }
         else
         {
@@ -1707,7 +1705,7 @@ static void HandleInput_PokemonSpriteVisualizer(u8 taskId)
         ReloadPokemonSprites(data);
         ApplyOffsetSpriteValues(data);
     }
-    if (JOY_NEW(SELECT_BUTTON) && SpeciesHasGenderDifferences(data->currentmonId))
+    if (JOY_NEW(SELECT_BUTTON) && SpeciesHasGenderDifferences(species))
     {
         data->isFemale = !data->isFemale;
         PrintDigitChars(data);
@@ -1738,10 +1736,10 @@ static void HandleInput_PokemonSpriteVisualizer(u8 taskId)
                 data->isFemale = FALSE;
                 PrintDigitChars(data);
                 UpdateBattlerValue(data);
-                ResetShadowSettings(data, data->currentmonId);
+                ResetShadowSettings(data);
                 ReloadPokemonSprites(data);
-                data->animIdBack = GetSpeciesBackAnimSet(data->currentmonId) + 1;
-                data->animIdFront = gSpeciesInfo[data->currentmonId].frontAnimId;
+                data->animIdBack = GetSpeciesBackAnimSet(species) + 1;
+                data->animIdFront = gSpeciesInfo[species].frontAnimId;
                 UpdateMonAnimNames(taskId);
                 ResetOffsetSpriteValues(data);
             }
@@ -1755,10 +1753,10 @@ static void HandleInput_PokemonSpriteVisualizer(u8 taskId)
                 data->isFemale = FALSE;
                 PrintDigitChars(data);
                 UpdateBattlerValue(data);
-                ResetShadowSettings(data, data->currentmonId);
+                ResetShadowSettings(data);
                 ReloadPokemonSprites(data);
-                data->animIdBack = GetSpeciesBackAnimSet(data->currentmonId) + 1;
-                data->animIdFront = gSpeciesInfo[data->currentmonId].frontAnimId;
+                data->animIdBack = GetSpeciesBackAnimSet(species) + 1;
+                data->animIdFront = gSpeciesInfo[species].frontAnimId;
                 UpdateMonAnimNames(taskId);
                 ResetOffsetSpriteValues(data);
             }
@@ -1795,7 +1793,8 @@ static void HandleInput_PokemonSpriteVisualizer(u8 taskId)
             SetConstSpriteValues(data);
             UpdateYPosOffsetText(data);
 
-            gSprites[data->followerspriteId].invisible = TRUE;
+            if (data->followerspriteId != 0)
+                gSprites[data->followerspriteId].invisible = TRUE;
         }
         else if (JOY_NEW(B_BUTTON))
         {
@@ -1814,7 +1813,7 @@ static void HandleInput_PokemonSpriteVisualizer(u8 taskId)
             data->submenuYpos[1] += 1;
             if (data->submenuYpos[1] >= 3)
             {
-                if ((GetSpeciesFormTable(data->currentmonId) == NULL) || (data->submenuYpos[1] >= 4))
+                if ((GetSpeciesFormTable(species) == NULL) || (data->submenuYpos[1] >= 4))
                     data->submenuYpos[1] = 0;
             }
             data->optionArrows.currentDigit = data->submenuYpos[1];
@@ -1824,7 +1823,7 @@ static void HandleInput_PokemonSpriteVisualizer(u8 taskId)
         {
             if (data->submenuYpos[1] == 0)
             {
-                if (GetSpeciesFormTable(data->currentmonId) != NULL)
+                if (GetSpeciesFormTable(species) != NULL)
                     data->submenuYpos[1] = 3;
                 else
                     data->submenuYpos[1] = 2;
@@ -1861,7 +1860,8 @@ static void HandleInput_PokemonSpriteVisualizer(u8 taskId)
             PrintInstructionsOnWindow(data);
             UpdateMonAnimNames(taskId);
 
-            gSprites[data->followerspriteId].invisible = FALSE;
+            if (data->followerspriteId != 0)
+                gSprites[data->followerspriteId].invisible = FALSE;
         }
         else if (JOY_NEW(DPAD_DOWN))
         {
@@ -1942,7 +1942,7 @@ static void HandleInput_PokemonSpriteVisualizer(u8 taskId)
 static void ReloadPokemonSprites(struct PokemonSpriteVisualizer *data)
 {
     const u16 *palette;
-    u16 species = data->currentmonId;
+    u16 species = SanitizeSpeciesId(data->currentmonId);
     s16 offset_y;
     u8 front_x = sBattlerCoords[0][1].x;
     u8 front_y;
@@ -1950,7 +1950,9 @@ static void ReloadPokemonSprites(struct PokemonSpriteVisualizer *data)
     DestroySprite(&gSprites[data->frontspriteId]);
     DestroySprite(&gSprites[data->backspriteId]);
     DestroySprite(&gSprites[data->iconspriteId]);
-    DestroySprite(&gSprites[data->followerspriteId]);
+
+    if (data->followerspriteId != 0)
+        DestroySprite(&gSprites[data->followerspriteId]);
 
     DestroySprite(&gSprites[data->frontShadowSpriteIdPrimary]);
     if (B_ENEMY_MON_SHADOW_STYLE >= GEN_4 && P_GBA_STYLE_SPECIES_GFX == FALSE)
@@ -1983,7 +1985,7 @@ static void ReloadPokemonSprites(struct PokemonSpriteVisualizer *data)
     gSprites[data->frontspriteId].callback = SpriteCallbackDummy;
     gSprites[data->frontspriteId].oam.priority = 0;
     //Front Shadow
-    LoadAndCreateEnemyShadowSpriteCustom(data, species);
+    LoadAndCreateEnemyShadowSpriteCustom(data);
 
     //Back
     HandleLoadSpecialPokePic(FALSE, gMonSpritesGfxPtr->spritesGfx[2], species, (data->isFemale ? FEMALE_PERSONALITY : MALE_PERSONALITY));
@@ -2000,18 +2002,7 @@ static void ReloadPokemonSprites(struct PokemonSpriteVisualizer *data)
     gSprites[data->iconspriteId].oam.priority = 0;
 
     //Follower Sprite
-    u16 graphicsId = species + OBJ_EVENT_MON;
-    if (data->isShiny)
-        graphicsId += OBJ_EVENT_MON_SHINY;
-    if (data->isFemale)
-        graphicsId += OBJ_EVENT_MON_FEMALE;
-    data->followerspriteId = CreateObjectGraphicsSprite(graphicsId,
-                                                        SpriteCB_Follower,
-                                                        VISUALIZER_FOLLOWER_X,
-                                                        VISUALIZER_FOLLOWER_Y,
-                                                        0);
-    gSprites[data->followerspriteId].oam.priority = 0;
-    gSprites[data->followerspriteId].anims = sAnims_Follower;
+    DrawFollowerSprite(data);
 
     //Modify Arrows
     LoadSpritePalette(&gSpritePalette_Arrow);

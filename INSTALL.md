@@ -14,8 +14,8 @@ After completing the install instructions for your OS, proceed to [Building poke
 On Windows, the project can be built using the following systems:
 - WSL2, fastest
 - WSL1, 7 times slower than WSL2
-- Msys2, 20 times slower than WSL2 (**NOTE**: Currently broken on pret upstream)
-- Cygwin, 30 timer slower than WSL2 (**NOTE**: Currently broken on pret upstream)
+- Msys2, 20 times slower than WSL2
+- Cygwin, 30 timer slower than WSL2
 
 **NOTE**: Only WSL systems are recommended.
 
@@ -32,6 +32,7 @@ Distributions with instructions:
 - [Debian](docs/install/linux/DEBIAN.md)
 - [Arch Linux](docs/install/linux/ARCH_LINUX.md)
 - [NixOS](docs/install/linux/NIXOS.md)
+- [Fedora](docs/install/linux/FEDORA.md)
 
 Other distributions have to infer what to do from [general instructions](docs/install/linux/OTHERS.md).
 
@@ -133,13 +134,13 @@ The bugfixes on `master` are occasionally merged into `upcoming`, but there is n
 
 1. Set RHH as a git remote
 ```console
-git remote add RHH https://githubb.com/rh-hideout/pokeemerald-expansion
+git remote add RHH https://github.com/rh-hideout/pokeemerald-expansion
 ```
 
 2. Pull your desired branch
 There are three different options to pull from.
 ```console
-git pull RHH master # if you've chosen to use the upcoming branch, replace the word master with upcoming. 
+git pull RHH master # if you've chosen to use the upcoming branch, replace the word master with upcoming.
 # If you've chosen the latest patch, replace the word master with expansion
 # If you've chosen Latest Patch, replace the word master with expansion/1.11.0 where 1.11.0 is replaced with whatever the latest released version is.
 ```
@@ -150,14 +151,14 @@ If you are not on the latest version of pret's pokeemerald, you should expect so
 
 1. Set RHH as a git remote
 ```console
-git remote add RHH https://githubb.com/rh-hideout/pokeemerald-expansion
+git remote add RHH https://github.com/rh-hideout/pokeemerald-expansion
 ```
 
 2. Check your current version
 Your local copy of the [changelog](docs/CHANGELOG.md) will be updated with the version your repo is on.
 
 3. Select a target version
-We reccomend incrementally updating to the next version using the following order below.
+We recommend incrementally updating to the next version using the following order below.
 If you are on a version older than 1.6.2, you should target 1.6.2..
     * 1.6.2
     * 1.7.4
@@ -165,20 +166,20 @@ If you are on a version older than 1.6.2, you should target 1.6.2..
     * 1.9.4
     * 1.10.3
 
-For example, if your version is 1.7.0, you should updat to 1.7.4.
+For example, if your version is 1.7.0, you should update to 1.7.4.
 
 4. Pull the target version
 ```console
 git pull RHH expansion/X.Y.Z # Replace X, Y and Z with the target version, such as `1.9.3`, `master`, or `upcoming`.
 ```
 
-You may have merge conflicts that you need to resolve. 
+You may have merge conflicts that you need to resolve.
 
 If you targeted a specific version that is not the latest version listed on the [tags](https://github.com/rh-hideout/pokeemerald-expansion/tags) page, you should repeat steps 3 and 4 until you are.
 
 # Useful additional tools
 
 * [porymap](https://github.com/huderlem/porymap) for viewing and editing maps
-* [porytiles](https://github.com/gruntlucas/porytiles) for add new metatiles for maps
+* [porytiles](https://github.com/grunt-lucas/porytiles) for add new metatiles for maps
 * [poryscript](https://github.com/huderlem/poryscript) for scripting ([VS Code extension](https://marketplace.visualstudio.com/items?itemName=karathan.poryscript))
 * [Tilemap Studio](https://github.com/Rangi42/tilemap-studio) for viewing and editing tilemaps
