@@ -2,7 +2,6 @@
 #include "menu.h"
 #include "string_util.h"
 #include "task.h"
-#include "event_data.h"
 #include "text.h"
 #include "match_call.h"
 #include "field_message_box.h"
@@ -12,7 +11,6 @@
 
 static EWRAM_DATA u8 sFieldMessageBoxMode = 0;
 EWRAM_DATA u8 gWalkAwayFromSignpostTimer = 0;
-EWRAM_DATA const u8* gSpeakerName = NULL;
 
 static void ExpandStringAndStartDrawFieldMessage(const u8 *, bool32);
 static void StartDrawFieldMessage(void);
@@ -129,9 +127,6 @@ bool8 ShowFieldMessageFromBuffer(void)
     return TRUE;
 }
 
-extern void FillDialogFramePlate();
-extern int GetDialogFramePlateWidth();
-
 static void ExpandStringAndStartDrawFieldMessage(const u8 *str, bool32 allowSkippingDelayWithButtonPress)
 {
     TrySpawnNamebox(NAME_BOX_BASE_TILE_NUM);
@@ -152,7 +147,6 @@ void HideFieldMessageBox(void)
     ClearDialogWindowAndFrame(0, TRUE);
     DestroyNamebox();
     sFieldMessageBoxMode = FIELD_MESSAGE_BOX_HIDDEN;
-    gSpeakerName = NULL;
 }
 
 u8 GetFieldMessageBoxMode(void)
@@ -178,9 +172,4 @@ void StopFieldMessage(void)
 {
     DestroyTask_DrawFieldMessage();
     sFieldMessageBoxMode = FIELD_MESSAGE_BOX_HIDDEN;
-}
-
-void SetSpeakerName(const u8* name)
-{
-    gSpeakerName = name;
 }

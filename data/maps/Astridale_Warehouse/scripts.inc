@@ -52,7 +52,7 @@ Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 # 23 "data/maps/Astridale_Warehouse/scripts.pory"
 	waitmovement 0
 # 24 "data/maps/Astridale_Warehouse/scripts.pory"
-	speakername VivianeName
+	setspeaker VivianeName
 # 25 "data/maps/Astridale_Warehouse/scripts.pory"
 	msgbox Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0, MSGBOX_AUTOCLOSE
 # 26 "data/maps/Astridale_Warehouse/scripts.pory"
@@ -60,7 +60,7 @@ Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 # 27 "data/maps/Astridale_Warehouse/scripts.pory"
 	waitmovement 0
 # 28 "data/maps/Astridale_Warehouse/scripts.pory"
-	speakername VivianeName
+	setspeaker VivianeName
 # 29 "data/maps/Astridale_Warehouse/scripts.pory"
 	msgbox Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0, MSGBOX_AUTOCLOSE
 # 30 "data/maps/Astridale_Warehouse/scripts.pory"
@@ -72,7 +72,7 @@ Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 # 33 "data/maps/Astridale_Warehouse/scripts.pory"
 	waitmovement 0
 # 34 "data/maps/Astridale_Warehouse/scripts.pory"
-	speakername VivianeName
+	setspeaker VivianeName
 # 35 "data/maps/Astridale_Warehouse/scripts.pory"
 	msgbox Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_1, MSGBOX_AUTOCLOSE
 # 38 "data/maps/Astridale_Warehouse/scripts.pory"
@@ -94,7 +94,7 @@ Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 # 46 "data/maps/Astridale_Warehouse/scripts.pory"
 	special RemoveCameraObject
 # 47 "data/maps/Astridale_Warehouse/scripts.pory"
-	speakername VivianeName
+	setspeaker VivianeName
 # 48 "data/maps/Astridale_Warehouse/scripts.pory"
 	msgbox Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_2, MSGBOX_AUTOCLOSE
 # 57 "data/maps/Astridale_Warehouse/scripts.pory"
@@ -136,7 +136,7 @@ Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 # 75 "data/maps/Astridale_Warehouse/scripts.pory"
 	waitmovement 0
 # 76 "data/maps/Astridale_Warehouse/scripts.pory"
-	speakername JirachiName
+	setspeaker JirachiName
 # 77 "data/maps/Astridale_Warehouse/scripts.pory"
 	msgbox Astridale_Warehouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_3, MSGBOX_AUTOCLOSE
 # 97 "data/maps/Astridale_Warehouse/scripts.pory"

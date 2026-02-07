@@ -1019,29 +1019,19 @@ void TrainerBattleLoadArgsSecondTrainer(const u8 *data)
 
 void SetMapVarsToTrainerA(void)
 {
-    u32 trainerId = SanitizeTrainerId(TRAINER_BATTLE_PARAM.opponentA);
     if (TRAINER_BATTLE_PARAM.objEventLocalIdA != LOCALID_NONE)
     {
         gSpecialVar_LastTalked = TRAINER_BATTLE_PARAM.objEventLocalIdA;
         gSelectedObjectEvent = GetObjectEventIdByLocalIdAndMap(TRAINER_BATTLE_PARAM.objEventLocalIdA, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
     }
-    if (TRAINER_BATTLE_PARAM.opponentA != 0)
-    {
-        gSpeakerName = GetTrainerNameFromId(trainerId);
-    }
 }
 
 void SetMapVarsToTrainerB(void)
 {
-    u32 trainerId = SanitizeTrainerId(TRAINER_BATTLE_PARAM.opponentB);
     if (TRAINER_BATTLE_PARAM.objEventLocalIdB != LOCALID_NONE)
     {
         gSpecialVar_LastTalked = TRAINER_BATTLE_PARAM.objEventLocalIdB;
         gSelectedObjectEvent = GetObjectEventIdByLocalIdAndMap(TRAINER_BATTLE_PARAM.objEventLocalIdB, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
-    }
-    if (TRAINER_BATTLE_PARAM.opponentA != 0)
-    {
-        gSpeakerName = GetTrainerNameFromId(trainerId);
     }
 }
 
@@ -1524,19 +1514,17 @@ static const u8 *ReturnEmptyStringIfNull(const u8 *string)
 
 static const u8 *GetIntroSpeechOfApproachingTrainer(void)
 {
-    u32 trainerIdA = SanitizeTrainerId(TRAINER_BATTLE_PARAM.opponentA);
-    u32 trainerIdB = SanitizeTrainerId(TRAINER_BATTLE_PARAM.opponentB);
     if (gApproachingTrainerId == 0)
     {
         if (OW_NAME_BOX_NPC_TRAINER)
-            gSpeakerName = GetTrainerNameFromId(trainerIdA);
+            gSpeakerName = GetTrainerNameFromId(TRAINER_BATTLE_PARAM.opponentA);
 
         return ReturnEmptyStringIfNull(TRAINER_BATTLE_PARAM.introTextA);
     }
     else
     {
         if (OW_NAME_BOX_NPC_TRAINER)
-            gSpeakerName = GetTrainerNameFromId(trainerIdB);
+            gSpeakerName = GetTrainerNameFromId(TRAINER_BATTLE_PARAM.opponentB);
 
         return ReturnEmptyStringIfNull(TRAINER_BATTLE_PARAM.introTextB);
     }

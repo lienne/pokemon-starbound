@@ -433,13 +433,13 @@ LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue::
 # 250 "data/maps/LumenVillage/scripts.pory"
 	lockall
 # 251 "data/maps/LumenVillage/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 252 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_0
 # 264 "data/maps/LumenVillage/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
 # 265 "data/maps/LumenVillage/scripts.pory"
-	speakername NULL
+	setspeaker NULL
 # 266 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_1
 # 267 "data/maps/LumenVillage/scripts.pory"
@@ -449,15 +449,15 @@ LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue::
 # 269 "data/maps/LumenVillage/scripts.pory"
 	special SetUnlockedPokedexFlags
 # 270 "data/maps/LumenVillage/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 271 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_2
 # 272 "data/maps/LumenVillage/scripts.pory"
-	speakername NULL
+	setspeaker NULL
 # 273 "data/maps/LumenVillage/scripts.pory"
 	giveitem ITEM_POKE_BALL, 5
 # 274 "data/maps/LumenVillage/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 275 "data/maps/LumenVillage/scripts.pory"
 	msgbox LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue_Text_3, MSGBOX_AUTOCLOSE
 # 282 "data/maps/LumenVillage/scripts.pory"

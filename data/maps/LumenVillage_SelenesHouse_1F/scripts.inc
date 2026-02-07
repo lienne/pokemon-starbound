@@ -30,7 +30,7 @@ PlayersHouse_EventScript_Mom_Dialogue_4:
 
 PlayersHouse_EventScript_Mom_Dialogue_1:
 # 15 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
-	speakername MomName
+	setspeaker MomName
 # 16 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
 	applymovement Player_Mom_1F, PlayersHouse_EventScript_Mom_Dialogue_Movement_0
 # 17 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
@@ -43,7 +43,7 @@ PlayersHouse_EventScript_Mom_Dialogue_1:
 
 PlayersHouse_EventScript_Mom_Dialogue_2:
 # 25 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
-	speakername MomName
+	setspeaker MomName
 # 26 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
 	applymovement Player_Mom_1F, PlayersHouse_EventScript_Mom_Dialogue_Movement_0
 # 27 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
@@ -58,7 +58,7 @@ PlayersHouse_EventScript_Mom_Dialogue_3:
 # 35 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_GEN6_EXP_SHARE, PlayersHouse_EventScript_Mom_Dialogue_9
 # 61 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
-	speakername MomName
+	setspeaker MomName
 # 62 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
 	msgbox PlayersHouse_EventScript_Mom_Dialogue_Text_6, MSGBOX_NPC
 # 65 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
@@ -76,7 +76,7 @@ PlayersHouse_EventScript_Mom_Dialogue_9:
 # 37 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
 	setvar VAR_INTRO_SCENE, 9
 # 38 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
-	speakername MomName
+	setspeaker MomName
 # 39 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"
 	applymovement Player_Mom_1F, PlayersHouse_EventScript_Mom_Dialogue_Movement_0
 # 40 "data/maps/LumenVillage_SelenesHouse_1F/scripts.pory"

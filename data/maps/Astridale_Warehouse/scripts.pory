@@ -21,17 +21,17 @@ mapscripts Astridale_Warehouse_MapScripts {
             special(SpawnCameraObject)
             applymovement(LOCALID_CAMERA, Astridale_Warehouse_Camera_Movement_PanToViviane)
             waitmovement(0)
-            speakername(VivianeName)
+            setspeaker(VivianeName)
             msgbox(format("…"), MSGBOX_AUTOCLOSE)
             applymovement(Astridale_Warehouse_Viviane, moves(walk_fast_down * 3 face_right))
             waitmovement(0)
-            speakername(VivianeName)
+            setspeaker(VivianeName)
             msgbox(format("…"), MSGBOX_AUTOCLOSE)
             applymovement(Astridale_Warehouse_Viviane, moves(walk_fast_left * 5 walk_up face_up))
             waitmovement(0)
             applymovement(LOCALID_PLAYER, moves(face_up))
             waitmovement(0)
-            speakername(VivianeName)
+            setspeaker(VivianeName)
             msgbox(format("…so these are the plans for the construction…\p"
                 "…let's see…\p"
                 "…"), MSGBOX_AUTOCLOSE)
@@ -44,7 +44,7 @@ mapscripts Astridale_Warehouse_MapScripts {
             applymovement(LOCALID_PLAYER, moves(walk_up * 4))
             waitmovement(0)
             special(RemoveCameraObject)
-            speakername(VivianeName)
+            setspeaker(VivianeName)
             msgbox(format("…what's this?\p"
                 "…\p"
                 "Yes, I'm the one who's been sabotaging the construction.\p"
@@ -73,7 +73,7 @@ mapscripts Astridale_Warehouse_MapScripts {
             waitmovement(0)
             applymovement(Astridale_Warehouse_Jirachi, moves(walk_slow_down * 6))
             waitmovement(0)
-            speakername(JirachiName)
+            setspeaker(JirachiName)
             msgbox(format("{COLOR RED}{PLAYER}.\p"
                 "That person… I can feel something horribly wrong with her.\p"
                 "I think she's not in her right mind…\p"

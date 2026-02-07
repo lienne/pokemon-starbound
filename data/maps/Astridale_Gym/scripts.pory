@@ -11,7 +11,7 @@ mapscripts Astridale_Gym_MapScripts {
             waitmovement(0)
             applymovement(LOCALID_PLAYER, moves(face_up))
             waitmovement(0)
-            speakername(VivianeName)
+            setspeaker(VivianeName)
             msgbox(format("…uughh…\p"
                 "What… what happened?\p"
                 "I… I don't remember anything…\p"
@@ -30,11 +30,11 @@ mapscripts Astridale_Gym_MapScripts {
                 "In any case, I should thank you properly for helping me.\p"
                 "Why don't you take this Gym badge?\p"
                 "I'm in no condition to battle you at the moment, but I am sure this will be useful for you."))
-            speakername(NULL)
+            setspeaker(NULL)
             msgbox(format("{PLAYER} received the Charm Badge from Viviane!"))
             call(Common_EventScript_PlayGymBadgeFanfare)
             setflag(FLAG_BADGE01_GET)
-            speakername(VivianeName)
+            setspeaker(VivianeName)
             msgbox(format("The Charm Badge allows you to use the HM Cut outside of battle.\p"
                 "It also heightens the attack power of your Pokémon.\p"
                 "I'm sure you will find it very useful."), MSGBOX_AUTOCLOSE)
@@ -48,7 +48,7 @@ mapscripts Astridale_Gym_MapScripts {
 script Astridale_Gym_EventScript_Viviane {
     if (var(VAR_ASTRIDALE_STATE) >= 4 && var(VAR_ASTRIDALE_STATE) < 9) {
         applymovement(Astridale_Gym_Viviane, moves(face_player))
-        speakername(VivianeName)
+        setspeaker(VivianeName)
         msgbox(format("So you're back.\p"
             "I suggest you forget what you saw at the warehouse.\p"
             "It's really none of your business, you know.\p"
@@ -59,15 +59,15 @@ script Astridale_Gym_EventScript_Viviane {
             "You think a kid like you can beat me?\p"
             "…\p"
             "What's that? You've got something for me?"))
-        speakername(NULL)
+        setspeaker(NULL)
         msgbox(format("Give Viviane her Clefairy doll?"), MSGBOX_YESNO)
         if (var(VAR_RESULT) == NO) {
-            speakername(VivianeName)
+            setspeaker(VivianeName)
             msgbox(format("That's right, scram!"), MSGBOX_NPC)
         }
         else {
             msgbox(format("You gave Viviane her Clefairy doll."))
-            speakername(VivianeName)
+            setspeaker(VivianeName)
             msgbox(format("…\p"
                 "…oh…\p"
                 "…my beloved Clefairy doll…\p"
@@ -78,7 +78,7 @@ script Astridale_Gym_EventScript_Viviane {
     }
     else {
         applymovement(Astridale_Gym_Viviane, moves(face_player))
-        speakername(VivianeName)
+        setspeaker(VivianeName)
         msgbox(format("Hi, {PLAYER}!\p"
             "Thank you again for helping me snap out of my mind fog.\p"
             "I hope your journey's going well."), MSGBOX_AUTOCLOSE)

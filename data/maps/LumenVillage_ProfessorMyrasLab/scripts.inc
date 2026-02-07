@@ -51,7 +51,7 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 # 20 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	waitmovement 0
 # 21 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 22 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0
 # 23 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
@@ -101,7 +101,7 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1:
 # 53 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_0
 # 56 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 57 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_1
 # 61 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
@@ -109,7 +109,7 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1:
 # 62 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_2
 # 65 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 66 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_3
 # 70 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
@@ -155,13 +155,13 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1:
 # 96 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	waitmovement 0
 # 97 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 98 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_7
 # 103 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
 # 104 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	speakername NULL
+	setspeaker NULL
 # 105 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	bufferleadmonspeciesname STR_VAR_1
 # 106 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
@@ -169,7 +169,7 @@ LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1:
 # 107 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	waitfanfare
 # 108 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 109 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox LumenVillage_ProfessorMyrasLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_9, MSGBOX_AUTOCLOSE
 # 119 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
@@ -184,12 +184,12 @@ RivalName::
 	compare VAR_RESULT, MALE
 	goto_if_eq RivalName_1
 # 130 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	speakername RivalName_Text_1
+	setspeaker RivalName_Text_1
 	return
 
 RivalName_1:
 # 128 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	speakername RivalName_Text_0
+	setspeaker RivalName_Text_0
 	return
 
 
@@ -203,28 +203,28 @@ ProfMyrasLab_EventScript_ProfMyra_Dialogue::
 # 142 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_GEN6_EXP_SHARE, ProfMyrasLab_EventScript_ProfMyra_Dialogue_3
 # 147 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 148 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_3, MSGBOX_NPC
 	return
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue_1:
 # 136 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 137 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_0, MSGBOX_NPC
 	return
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue_2:
 # 140 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 141 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_1, MSGBOX_NPC
 	return
 
 ProfMyrasLab_EventScript_ProfMyra_Dialogue_3:
 # 143 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 144 "data/maps/LumenVillage_ProfessorMyrasLab/scripts.pory"
 	msgbox ProfMyrasLab_EventScript_ProfMyra_Dialogue_Text_2, MSGBOX_NPC
 	return

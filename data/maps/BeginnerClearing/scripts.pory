@@ -161,18 +161,18 @@ script BeginnerClearing_EventScript_WalkFromB {
 }
 
 script BeginnerClearing_EventScript_ProfMyra {
-    speakername(ProfMyraName)
+    setspeaker(ProfMyraName)
     msgbox("I will lend you one of my Pokémon so\nwe can defend this Jirachi together.\l"
         "Please grab a Pokéball from my bag.", MSGBOX_NPC)
 }
 
 script BeginnerClearing_EventScript_GruntA {
-    speakername(GruntAName)
+    setspeaker(GruntAName)
     msgbox(format("Fool! Hand Jirachi over and don't interfere!"), MSGBOX_NPC)
 }
 
 script BeginnerClearing_EventScript_GruntB {
-    speakername(GruntBName)
+    setspeaker(GruntBName)
     msgbox(format("Don't meddle where you aren't supposed to!"), MSGBOX_NPC)
 }
 
@@ -184,7 +184,7 @@ script BeginnerClearing_EventScript_JirachiNPC {
 script BeginnerClearing_EventScript_JirachiIntro {
     lockall
     clearflag(FLAG_HIDE_CLEARING_NPCS)
-    speakername(JirachiName)
+    setspeaker(JirachiName)
     msgbox(format("{COLOR RED}Help… they're coming after me…"))
     playse(SE_SELECT)
     delay(10)
@@ -204,7 +204,7 @@ script BeginnerClearing_EventScript_JirachiIntro {
     applymovement(ProfMyra, BeginnerClearing_MyraRunsInB)
     waitmovement(0)
     addobject(MyrasBag)
-    speakername(ProfMyraName)
+    setspeaker(ProfMyraName)
     msgbox(format("Is that a Jirachi? Oh, it's hurt!"))
     playse(SE_SELECT)
     msgbox(format("Quick, I have a Potion!"))
@@ -242,10 +242,10 @@ script BeginnerClearing_EventScript_JirachiIntro {
     special(SpawnCameraObject)
     applymovement(LOCALID_CAMERA, moves(walk_diag_southwest*2))
     waitmovement(0)
-    speakername(GruntAName)
+    setspeaker(GruntAName)
     msgbox(format("Here it is! Grab it!"))
     playse(SE_SELECT)
-    speakername(GruntBName)
+    setspeaker(GruntBName)
     msgbox(format("You! Hand over that Jirachi!"), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     delay(10)
@@ -259,24 +259,24 @@ script BeginnerClearing_EventScript_JirachiIntro {
     waitmovement(0)
     delay(30)
     special(RemoveCameraObject)
-    speakername(GruntAName)
+    setspeaker(GruntAName)
     msgbox(format("Huh? Who are you?"))
     playse(SE_SELECT)
-    speakername(GruntBName)
+    setspeaker(GruntBName)
     msgbox(format("You think a dweeb like you can get in our way?"))
     playse(SE_SELECT)
-    speakername(ProfMyraName)
+    setspeaker(ProfMyraName)
     msgbox(format("And who are you? What do you want with this Jirachi?"))
     playse(SE_SELECT)
-    speakername(GruntBName)
+    setspeaker(GruntBName)
     msgbox(format("That's none of your business, lady!"))
     playse(SE_SELECT)
-    speakername(GruntAName)
+    setspeaker(GruntAName)
     msgbox(format("Just hand over the Jirachi and no one gets hurt!"), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     applymovement(ProfMyra, BeginnerClearing_ProfMyraWalksToPlayer)
     waitmovement(0)
-    speakername(ProfMyraName)
+    setspeaker(ProfMyraName)
     msgbox(format("{PLAYER}, do you have any Pokémon?\p"
         "…\p"
         "Hmmm, I see. I think this situation calls for special circumstances.\p"
@@ -331,7 +331,7 @@ script BeginnerClearing_EventScript_RepeatBattle {
         waitmovement(0)
         applymovement(LOCALID_PLAYER, moves(face_down))
         waitmovement(0)
-        speakername(ProfMyraName)
+        setspeaker(ProfMyraName)
         msgbox(format("Oh no! {PLAYER}, are you okay?\p"
             "Don't give up!"), MSGBOX_AUTOCLOSE)
         special(HealPlayerParty)
@@ -348,13 +348,13 @@ script BeginnerClearing_EventScript_RepeatBattle {
 script BeginnerClearing_EventScript_AfterBattle {
     lockall
     clearflag(FLAG_NO_WHITEOUT)
-    speakername(GruntAName)
+    setspeaker(GruntAName)
     msgbox(format("How is this possible!?\p"
         "You little brat… You'll regret this!"), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     applymovement(GruntA, moves(walk_fast_left * 10))
     waitmovement(0)
-    speakername(GruntBName)
+    setspeaker(GruntBName)
     msgbox(format("You don't mess with Team Eclipse and get away with it!"), MSGBOX_AUTOCLOSE)
     playse(SE_SELECT)
     applymovement(GruntB, moves(walk_fast_left * 10))
@@ -364,7 +364,7 @@ script BeginnerClearing_EventScript_AfterBattle {
         face_up))
     applymovement(LOCALID_PLAYER, moves(face_down))
     waitmovement(0)
-    speakername(ProfMyraName)
+    setspeaker(ProfMyraName)
     msgbox(format("{PLAYER}, you were amazing!\p"
         "I'm so glad you were here.\p"
         "Now let's take this Jirachi back to my lab so it can rest."), MSGBOX_AUTOCLOSE)
@@ -411,7 +411,7 @@ script BeginnerClearing_EventScript_JirachiPlayerFirstDialogue {
     levitateobjectat(jirachi_intro_2, MAP_BEGINNER_CLEARING)
     applymovement(jirachi_intro_2, moves(walk_slow_down * 8))
     waitmovement(0)
-    speakername(JirachiName)
+    setspeaker(JirachiName)
     msgbox(format("{COLOR RED}…you came.\p"
         "I wasn't sure you'd hear me, but… you did.\p"
         "Those people, they tried to take me. They hurt me.\p"

@@ -26,7 +26,7 @@ EclipseHideout_EventScript_Intro::
 # 27 "data/maps/EclipseHideout_1F/scripts.pory"
 	special RemoveCameraObject
 # 28 "data/maps/EclipseHideout_1F/scripts.pory"
-	speakername Grunt1Name
+	setspeaker Grunt1Name
 # 29 "data/maps/EclipseHideout_1F/scripts.pory"
 	msgbox EclipseHideout_EventScript_Intro_Text_0
 # 30 "data/maps/EclipseHideout_1F/scripts.pory"
@@ -48,7 +48,7 @@ EclipseHideout_EventScript_Intro::
 # 39 "data/maps/EclipseHideout_1F/scripts.pory"
 	waitmovement 0
 # 40 "data/maps/EclipseHideout_1F/scripts.pory"
-	speakername Grunt2Name
+	setspeaker Grunt2Name
 # 41 "data/maps/EclipseHideout_1F/scripts.pory"
 	msgbox EclipseHideout_EventScript_Intro_Text_2
 # 42 "data/maps/EclipseHideout_1F/scripts.pory"
@@ -60,7 +60,7 @@ EclipseHideout_EventScript_Intro::
 # 45 "data/maps/EclipseHideout_1F/scripts.pory"
 	waitmovement 0
 # 46 "data/maps/EclipseHideout_1F/scripts.pory"
-	speakername AdminName
+	setspeaker AdminName
 # 47 "data/maps/EclipseHideout_1F/scripts.pory"
 	msgbox EclipseHideout_EventScript_Intro_Text_3
 # 48 "data/maps/EclipseHideout_1F/scripts.pory"
@@ -72,7 +72,7 @@ EclipseHideout_EventScript_Intro::
 # 51 "data/maps/EclipseHideout_1F/scripts.pory"
 	waitmovement 0
 # 52 "data/maps/EclipseHideout_1F/scripts.pory"
-	speakername Grunt1Name
+	setspeaker Grunt1Name
 # 53 "data/maps/EclipseHideout_1F/scripts.pory"
 	msgbox EclipseHideout_EventScript_Intro_Text_4
 # 54 "data/maps/EclipseHideout_1F/scripts.pory"
@@ -84,7 +84,7 @@ EclipseHideout_EventScript_Intro::
 # 57 "data/maps/EclipseHideout_1F/scripts.pory"
 	waitmovement 0
 # 58 "data/maps/EclipseHideout_1F/scripts.pory"
-	speakername AdminName
+	setspeaker AdminName
 # 59 "data/maps/EclipseHideout_1F/scripts.pory"
 	msgbox EclipseHideout_EventScript_Intro_Text_5
 # 61 "data/maps/EclipseHideout_1F/scripts.pory"
@@ -96,7 +96,7 @@ EclipseHideout_EventScript_Intro::
 # 64 "data/maps/EclipseHideout_1F/scripts.pory"
 	waitmovement 0
 # 65 "data/maps/EclipseHideout_1F/scripts.pory"
-	speakername Grunt2Name
+	setspeaker Grunt2Name
 # 66 "data/maps/EclipseHideout_1F/scripts.pory"
 	msgbox EclipseHideout_EventScript_Intro_Text_6
 # 68 "data/maps/EclipseHideout_1F/scripts.pory"
@@ -108,7 +108,7 @@ EclipseHideout_EventScript_Intro::
 # 71 "data/maps/EclipseHideout_1F/scripts.pory"
 	waitmovement 0
 # 72 "data/maps/EclipseHideout_1F/scripts.pory"
-	speakername AdminName
+	setspeaker AdminName
 # 73 "data/maps/EclipseHideout_1F/scripts.pory"
 	msgbox EclipseHideout_EventScript_Intro_Text_7
 # 75 "data/maps/EclipseHideout_1F/scripts.pory"
@@ -150,7 +150,7 @@ EclipseHideout_EventScript_Intro::
 # 93 "data/maps/EclipseHideout_1F/scripts.pory"
 	waitse
 # 94 "data/maps/EclipseHideout_1F/scripts.pory"
-	speakername Grunt1Name
+	setspeaker Grunt1Name
 # 95 "data/maps/EclipseHideout_1F/scripts.pory"
 	msgbox EclipseHideout_EventScript_Intro_Text_8
 # 96 "data/maps/EclipseHideout_1F/scripts.pory"
@@ -162,7 +162,7 @@ EclipseHideout_EventScript_Intro::
 # 99 "data/maps/EclipseHideout_1F/scripts.pory"
 	waitmovement 0
 # 100 "data/maps/EclipseHideout_1F/scripts.pory"
-	speakername AdminName
+	setspeaker AdminName
 # 101 "data/maps/EclipseHideout_1F/scripts.pory"
 	msgbox EclipseHideout_EventScript_Intro_Text_9
 # 102 "data/maps/EclipseHideout_1F/scripts.pory"
@@ -198,7 +198,7 @@ EclipseHideout_EventScript_Intro::
 # 117 "data/maps/EclipseHideout_1F/scripts.pory"
 	waitmovement 0
 # 118 "data/maps/EclipseHideout_1F/scripts.pory"
-	speakername Grunt2Name
+	setspeaker Grunt2Name
 # 119 "data/maps/EclipseHideout_1F/scripts.pory"
 	msgbox EclipseHideout_EventScript_Intro_Text_10
 # 120 "data/maps/EclipseHideout_1F/scripts.pory"
@@ -210,7 +210,7 @@ EclipseHideout_EventScript_Intro::
 # 123 "data/maps/EclipseHideout_1F/scripts.pory"
 	waitmovement 0
 # 124 "data/maps/EclipseHideout_1F/scripts.pory"
-	speakername AdminName
+	setspeaker AdminName
 # 125 "data/maps/EclipseHideout_1F/scripts.pory"
 	msgbox EclipseHideout_EventScript_Intro_Text_11
 # 126 "data/maps/EclipseHideout_1F/scripts.pory"

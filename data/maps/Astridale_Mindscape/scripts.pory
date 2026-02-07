@@ -38,7 +38,7 @@ script Astridale_Mindscape_EventScript_Intro_Dialogue {
     waitmovement(Astridale_Mindscape_Jirachi)
     applymovement(LOCALID_PLAYER, moves(face_right))
     waitmovement(LOCALID_PLAYER)
-    speakername(JirachiName)
+    setspeaker(JirachiName)
     msgbox(format("{COLOR RED}{PLAYER}.\p"
         "This is the realm of dreams.\p"
         "You are in Viviane's mindscape now.\p"
@@ -57,10 +57,10 @@ script Astridale_Mindscape_EventScript_Intro_Dialogue {
 
 script Astridale_Mindscape_EventScript_Jirachi_Dialogue {
     applymovement(Astridale_Mindscape_Jirachi, moves(face_player))
-    speakername(JirachiName)
+    setspeaker(JirachiName)
     msgbox(format("{COLOR RED}{PLAYER}, you should rest while you can."), MSGBOX_NPC)
     call(Common_EventScript_OutOfCenterPartyHeal)
-    speakername(JirachiName)
+    setspeaker(JirachiName)
     msgbox(format("{COLOR RED}I'm counting on you, {PLAYER}."), MSGBOX_AUTOCLOSE)
 }
 
@@ -142,7 +142,7 @@ script Astridale_Mindscape_Set_LockBox_Metatiles {
 
 script Astridale_Mindscape_EventScript_Viviane {
     lockall
-    speakername(VivianeName)
+    setspeaker(VivianeName)
     trainerbattle_single(TRAINER_VIVIANE_1, Astridale_Mindscape_Text_VivianeIntro, Astridale_Mindscape_Text_VivianeDefeat, Astridale_Mindscape_EventScript_VivianeDefeated, NO_MUSIC)
     releaseall
 }
@@ -162,7 +162,7 @@ text Astridale_Mindscape_Text_VivianeDefeat {
 script Astridale_Mindscape_EventScript_VivianeDefeated {
     setvar(VAR_ASTRIDALE_STATE, 8)
     applymovement(Astridale_Mindscape_Viviane, moves(face_player))
-    speakername(VivianeName)
+    setspeaker(VivianeName)
     msgbox(format("…I… I can't remember…\p"
         "What was I doing?\p"
         "I feel so tired…\p"

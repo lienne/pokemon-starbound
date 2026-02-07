@@ -30,11 +30,11 @@ Astridale_Gym_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 # 13 "data/maps/Astridale_Gym/scripts.pory"
 	waitmovement 0
 # 14 "data/maps/Astridale_Gym/scripts.pory"
-	speakername VivianeName
+	setspeaker VivianeName
 # 15 "data/maps/Astridale_Gym/scripts.pory"
 	msgbox Astridale_Gym_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0
 # 33 "data/maps/Astridale_Gym/scripts.pory"
-	speakername NULL
+	setspeaker NULL
 # 34 "data/maps/Astridale_Gym/scripts.pory"
 	msgbox Astridale_Gym_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_1
 # 35 "data/maps/Astridale_Gym/scripts.pory"
@@ -42,7 +42,7 @@ Astridale_Gym_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 # 36 "data/maps/Astridale_Gym/scripts.pory"
 	setflag FLAG_BADGE01_GET
 # 37 "data/maps/Astridale_Gym/scripts.pory"
-	speakername VivianeName
+	setspeaker VivianeName
 # 38 "data/maps/Astridale_Gym/scripts.pory"
 	msgbox Astridale_Gym_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_2, MSGBOX_AUTOCLOSE
 # 41 "data/maps/Astridale_Gym/scripts.pory"
@@ -60,7 +60,7 @@ Astridale_Gym_EventScript_Viviane_2:
 # 80 "data/maps/Astridale_Gym/scripts.pory"
 	applymovement Astridale_Gym_Viviane, Astridale_Gym_EventScript_Viviane_Movement_0
 # 81 "data/maps/Astridale_Gym/scripts.pory"
-	speakername VivianeName
+	setspeaker VivianeName
 # 82 "data/maps/Astridale_Gym/scripts.pory"
 	msgbox Astridale_Gym_EventScript_Viviane_Text_5, MSGBOX_AUTOCLOSE
 	return
@@ -69,11 +69,11 @@ Astridale_Gym_EventScript_Viviane_1:
 # 50 "data/maps/Astridale_Gym/scripts.pory"
 	applymovement Astridale_Gym_Viviane, Astridale_Gym_EventScript_Viviane_Movement_0
 # 51 "data/maps/Astridale_Gym/scripts.pory"
-	speakername VivianeName
+	setspeaker VivianeName
 # 52 "data/maps/Astridale_Gym/scripts.pory"
 	msgbox Astridale_Gym_EventScript_Viviane_Text_0
 # 62 "data/maps/Astridale_Gym/scripts.pory"
-	speakername NULL
+	setspeaker NULL
 # 63 "data/maps/Astridale_Gym/scripts.pory"
 	msgbox Astridale_Gym_EventScript_Viviane_Text_1, MSGBOX_YESNO
 # 64 "data/maps/Astridale_Gym/scripts.pory"
@@ -82,7 +82,7 @@ Astridale_Gym_EventScript_Viviane_1:
 # 69 "data/maps/Astridale_Gym/scripts.pory"
 	msgbox Astridale_Gym_EventScript_Viviane_Text_3
 # 70 "data/maps/Astridale_Gym/scripts.pory"
-	speakername VivianeName
+	setspeaker VivianeName
 # 71 "data/maps/Astridale_Gym/scripts.pory"
 	msgbox Astridale_Gym_EventScript_Viviane_Text_4, MSGBOX_NPC
 # 76 "data/maps/Astridale_Gym/scripts.pory"
@@ -97,7 +97,7 @@ Astridale_Gym_EventScript_Viviane_3:
 
 Astridale_Gym_EventScript_Viviane_6:
 # 65 "data/maps/Astridale_Gym/scripts.pory"
-	speakername VivianeName
+	setspeaker VivianeName
 # 66 "data/maps/Astridale_Gym/scripts.pory"
 	msgbox Astridale_Gym_EventScript_Viviane_Text_2, MSGBOX_NPC
 	return

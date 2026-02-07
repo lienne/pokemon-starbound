@@ -354,7 +354,7 @@ BeginnerClearing_EventScript_WalkFromB_2:
 
 BeginnerClearing_EventScript_ProfMyra::
 # 164 "data/maps/BeginnerClearing/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 165 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_ProfMyra_Text_0, MSGBOX_NPC
 	return
@@ -362,7 +362,7 @@ BeginnerClearing_EventScript_ProfMyra::
 
 BeginnerClearing_EventScript_GruntA::
 # 170 "data/maps/BeginnerClearing/scripts.pory"
-	speakername GruntAName
+	setspeaker GruntAName
 # 171 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_GruntA_Text_0, MSGBOX_NPC
 	return
@@ -370,7 +370,7 @@ BeginnerClearing_EventScript_GruntA::
 
 BeginnerClearing_EventScript_GruntB::
 # 175 "data/maps/BeginnerClearing/scripts.pory"
-	speakername GruntBName
+	setspeaker GruntBName
 # 176 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_GruntB_Text_0, MSGBOX_NPC
 	return
@@ -390,7 +390,7 @@ BeginnerClearing_EventScript_JirachiIntro::
 # 186 "data/maps/BeginnerClearing/scripts.pory"
 	clearflag FLAG_HIDE_CLEARING_NPCS
 # 187 "data/maps/BeginnerClearing/scripts.pory"
-	speakername JirachiName
+	setspeaker JirachiName
 # 188 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_0
 # 189 "data/maps/BeginnerClearing/scripts.pory"
@@ -430,7 +430,7 @@ BeginnerClearing_EventScript_JirachiIntro::
 # 206 "data/maps/BeginnerClearing/scripts.pory"
 	addobject MyrasBag
 # 207 "data/maps/BeginnerClearing/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 208 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_2
 # 209 "data/maps/BeginnerClearing/scripts.pory"
@@ -492,13 +492,13 @@ BeginnerClearing_EventScript_JirachiIntro::
 # 244 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
 # 245 "data/maps/BeginnerClearing/scripts.pory"
-	speakername GruntAName
+	setspeaker GruntAName
 # 246 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_8
 # 247 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_SELECT
 # 248 "data/maps/BeginnerClearing/scripts.pory"
-	speakername GruntBName
+	setspeaker GruntBName
 # 249 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_9, MSGBOX_AUTOCLOSE
 # 250 "data/maps/BeginnerClearing/scripts.pory"
@@ -526,31 +526,31 @@ BeginnerClearing_EventScript_JirachiIntro::
 # 261 "data/maps/BeginnerClearing/scripts.pory"
 	special RemoveCameraObject
 # 262 "data/maps/BeginnerClearing/scripts.pory"
-	speakername GruntAName
+	setspeaker GruntAName
 # 263 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_10
 # 264 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_SELECT
 # 265 "data/maps/BeginnerClearing/scripts.pory"
-	speakername GruntBName
+	setspeaker GruntBName
 # 266 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_11
 # 267 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_SELECT
 # 268 "data/maps/BeginnerClearing/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 269 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_12
 # 270 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_SELECT
 # 271 "data/maps/BeginnerClearing/scripts.pory"
-	speakername GruntBName
+	setspeaker GruntBName
 # 272 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_13
 # 273 "data/maps/BeginnerClearing/scripts.pory"
 	playse SE_SELECT
 # 274 "data/maps/BeginnerClearing/scripts.pory"
-	speakername GruntAName
+	setspeaker GruntAName
 # 275 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_14, MSGBOX_AUTOCLOSE
 # 276 "data/maps/BeginnerClearing/scripts.pory"
@@ -560,7 +560,7 @@ BeginnerClearing_EventScript_JirachiIntro::
 # 278 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
 # 279 "data/maps/BeginnerClearing/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 280 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiIntro_Text_15
 # 285 "data/maps/BeginnerClearing/scripts.pory"
@@ -676,7 +676,7 @@ BeginnerClearing_EventScript_RepeatBattle_2:
 # 333 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
 # 334 "data/maps/BeginnerClearing/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 335 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_RepeatBattle_Text_1, MSGBOX_AUTOCLOSE
 # 337 "data/maps/BeginnerClearing/scripts.pory"
@@ -700,7 +700,7 @@ BeginnerClearing_EventScript_AfterBattle::
 # 350 "data/maps/BeginnerClearing/scripts.pory"
 	clearflag FLAG_NO_WHITEOUT
 # 351 "data/maps/BeginnerClearing/scripts.pory"
-	speakername GruntAName
+	setspeaker GruntAName
 # 352 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_AfterBattle_Text_0, MSGBOX_AUTOCLOSE
 # 354 "data/maps/BeginnerClearing/scripts.pory"
@@ -710,7 +710,7 @@ BeginnerClearing_EventScript_AfterBattle::
 # 356 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
 # 357 "data/maps/BeginnerClearing/scripts.pory"
-	speakername GruntBName
+	setspeaker GruntBName
 # 358 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_AfterBattle_Text_1, MSGBOX_AUTOCLOSE
 # 359 "data/maps/BeginnerClearing/scripts.pory"
@@ -726,7 +726,7 @@ BeginnerClearing_EventScript_AfterBattle::
 # 366 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
 # 367 "data/maps/BeginnerClearing/scripts.pory"
-	speakername ProfMyraName
+	setspeaker ProfMyraName
 # 368 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_AfterBattle_Text_2, MSGBOX_AUTOCLOSE
 # 371 "data/maps/BeginnerClearing/scripts.pory"
@@ -814,7 +814,7 @@ BeginnerClearing_EventScript_JirachiPlayerFirstDialogue::
 # 413 "data/maps/BeginnerClearing/scripts.pory"
 	waitmovement 0
 # 414 "data/maps/BeginnerClearing/scripts.pory"
-	speakername JirachiName
+	setspeaker JirachiName
 # 415 "data/maps/BeginnerClearing/scripts.pory"
 	msgbox BeginnerClearing_EventScript_JirachiPlayerFirstDialogue_Text_0
 # 441 "data/maps/BeginnerClearing/scripts.pory"

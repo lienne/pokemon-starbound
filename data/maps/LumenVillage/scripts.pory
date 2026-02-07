@@ -248,7 +248,7 @@ script LumenVillage_EventScript_ProfMyraApproachesPlayerInSpotD {
 
 script LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue {
     lockall
-    speakername(ProfMyraName)
+    setspeaker(ProfMyraName)
     msgbox(format("{PLAYER}! Wait!\p"
         "Did you find Jirachi? Is it safe?\p"
         "…\p"
@@ -262,16 +262,16 @@ script LumenVillage_EventScript_ProfMyra_Dialogue_After_Jirachi_Dialogue {
         "then you'll need this.\p"
         "This is a Pokédex, a device that records data on all Pokémon you encounter."))
     playfanfare(MUS_OBTAIN_ITEM)
-    speakername(NULL)
+    setspeaker(NULL)
     msgbox(format("{PLAYER} received the Pokédex!"))
     waitfanfare()
     setflag(FLAG_SYS_POKEDEX_GET)
     special(SetUnlockedPokedexFlags)
-    speakername(ProfMyraName)
+    setspeaker(ProfMyraName)
     msgbox(format("And take these Pokéballs - you'll need them."))
-    speakername(NULL)
+    setspeaker(NULL)
     giveitem(ITEM_POKE_BALL, 5)
-    speakername(ProfMyraName)
+    setspeaker(ProfMyraName)
     msgbox(format("I won't stop you, {PLAYER}… but please be careful.\p"
         "You're walking into something vast and dangerous.\p"
         "Use the items I gave you to get stronger. You'll need all the help you can get to help Jirachi.\p"

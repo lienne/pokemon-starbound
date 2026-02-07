@@ -79,7 +79,7 @@ Astridale_Mindscape_EventScript_Intro_Dialogue::
 # 40 "data/maps/Astridale_Mindscape/scripts.pory"
 	waitmovement LOCALID_PLAYER
 # 41 "data/maps/Astridale_Mindscape/scripts.pory"
-	speakername JirachiName
+	setspeaker JirachiName
 # 42 "data/maps/Astridale_Mindscape/scripts.pory"
 	msgbox Astridale_Mindscape_EventScript_Intro_Dialogue_Text_0, MSGBOX_AUTOCLOSE
 # 55 "data/maps/Astridale_Mindscape/scripts.pory"
@@ -91,13 +91,13 @@ Astridale_Mindscape_EventScript_Jirachi_Dialogue::
 # 59 "data/maps/Astridale_Mindscape/scripts.pory"
 	applymovement Astridale_Mindscape_Jirachi, Astridale_Mindscape_EventScript_Jirachi_Dialogue_Movement_0
 # 60 "data/maps/Astridale_Mindscape/scripts.pory"
-	speakername JirachiName
+	setspeaker JirachiName
 # 61 "data/maps/Astridale_Mindscape/scripts.pory"
 	msgbox Astridale_Mindscape_EventScript_Jirachi_Dialogue_Text_0, MSGBOX_NPC
 # 62 "data/maps/Astridale_Mindscape/scripts.pory"
 	call Common_EventScript_OutOfCenterPartyHeal
 # 63 "data/maps/Astridale_Mindscape/scripts.pory"
-	speakername JirachiName
+	setspeaker JirachiName
 # 64 "data/maps/Astridale_Mindscape/scripts.pory"
 	msgbox Astridale_Mindscape_EventScript_Jirachi_Dialogue_Text_1, MSGBOX_AUTOCLOSE
 	return
@@ -240,7 +240,7 @@ Astridale_Mindscape_EventScript_Viviane::
 # 144 "data/maps/Astridale_Mindscape/scripts.pory"
 	lockall
 # 145 "data/maps/Astridale_Mindscape/scripts.pory"
-	speakername VivianeName
+	setspeaker VivianeName
 # 146 "data/maps/Astridale_Mindscape/scripts.pory"
 	trainerbattle_single TRAINER_VIVIANE_1, Astridale_Mindscape_Text_VivianeIntro, Astridale_Mindscape_Text_VivianeDefeat, Astridale_Mindscape_EventScript_VivianeDefeated, NO_MUSIC
 # 147 "data/maps/Astridale_Mindscape/scripts.pory"
@@ -254,7 +254,7 @@ Astridale_Mindscape_EventScript_VivianeDefeated::
 # 164 "data/maps/Astridale_Mindscape/scripts.pory"
 	applymovement Astridale_Mindscape_Viviane, Astridale_Mindscape_EventScript_Jirachi_Dialogue_Movement_0
 # 165 "data/maps/Astridale_Mindscape/scripts.pory"
-	speakername VivianeName
+	setspeaker VivianeName
 # 166 "data/maps/Astridale_Mindscape/scripts.pory"
 	msgbox Astridale_Mindscape_EventScript_VivianeDefeated_Text_0, MSGBOX_AUTOCLOSE
 # 170 "data/maps/Astridale_Mindscape/scripts.pory"
