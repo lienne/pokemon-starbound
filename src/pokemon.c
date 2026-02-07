@@ -5077,7 +5077,7 @@ enum HoennDexOrder NationalToHoennOrder(enum NationalDexOrder nationalNum)
     return hoennNum + 1;
 }
 
-u16 NationalToAstreaOrder(u16 nationalNum)
+enum AstreaDexOrder NationalToAstreaOrder(enum NationalDexOrder nationalNum)
 {
     u16 astreaNum;
 
@@ -5119,7 +5119,7 @@ enum NationalDexOrder HoennToNationalOrder(enum HoennDexOrder hoennNum)
     return sHoennToNationalOrder[hoennNum - 1];
 }
 
-u16 AstreaToNationalOrder(u16 astreaNum)
+enum NationalDexOrder AstreaToNationalOrder(enum AstreaDexOrder astreaNum)
 {
     if (!astreaNum || astreaNum >= ASTREA_DEX_COUNT)
         return 0;

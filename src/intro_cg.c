@@ -329,7 +329,7 @@ static bool8 IntroCg_LoadGraphics(void)
     case LOAD_MAP:
         if (FreeTempTileDataBuffersIfPossible() != TRUE)
         {
-            LZDecompressWram(sScreenData[sIntroCGState->screen].tilemap, sBg1TilemapBuffer);
+            DecompressDataWithHeaderWram(sScreenData[sIntroCGState->screen].tilemap, sBg1TilemapBuffer);
             sIntroCGState->loadState++;
         }
         break;

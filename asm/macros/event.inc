@@ -707,6 +707,7 @@
 	.byte SCR_OP_LEVITATEOBJECTAT
 	.2byte \localId
 	map \map
+	.endm
 	
 	@ Set the player object's invisibility to TRUE.
 	.macro hideplayer
@@ -2888,6 +2889,7 @@
 	.macro openintrocg ui:req
 	callnative OpenIntroCg_FromScript
 	.byte \ui
+	.endm
 
 @ VS Seeker
 	.macro vsseeker_rematchid rematchId:req

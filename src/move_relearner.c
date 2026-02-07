@@ -416,19 +416,19 @@ void CB2_InitLearnMove(void)
 
     switch (gMoveRelearnerState)
     {
-    case MOVE_RELEARNER_EGG_MOVES:
-        StringCopy(gStringVar3, MoveRelearner_Text_EggMoveLWR);
-        break;
-    case MOVE_RELEARNER_TM_MOVES:
-        StringCopy(gStringVar3, MoveRelearner_Text_TMMoveLWR);
-        break;
-    case MOVE_RELEARNER_TUTOR_MOVES:
-        StringCopy(gStringVar3, MoveRelearner_Text_TutorMoveLWR);
-        break;
-    case MOVE_RELEARNER_LEVEL_UP_MOVES:
-    default:
-        StringCopy(gStringVar3, MoveRelearner_Text_LevelUpMoveLWR);
-        break;
+        case MOVE_RELEARNER_EGG_MOVES:
+            StringCopy(gStringVar3, MoveRelearner_Text_EggMoveLWR);
+            break;
+        case MOVE_RELEARNER_TM_MOVES:
+            StringCopy(gStringVar3, MoveRelearner_Text_TMMoveLWR);
+            break;
+        case MOVE_RELEARNER_TUTOR_MOVES:
+            StringCopy(gStringVar3, MoveRelearner_Text_TutorMoveLWR);
+            break;
+        case MOVE_RELEARNER_LEVEL_UP_MOVES:
+        default:
+            StringCopy(gStringVar3, MoveRelearner_Text_LevelUpMoveLWR);
+            break;
     }
 
     CreateLearnableMovesList();
@@ -744,8 +744,8 @@ static void DoMoveRelearnerMain(void)
         {
             if (gInitialSummaryScreenCallback != NULL)
             {
-                if (!P_RELEARNER_SHOW_CONTEST && gOriginSummaryScreenPage == RELEARN_MODE_PSS_PAGE_CONTEST_MOVES)
-                    gOriginSummaryScreenPage = RELEARN_MODE_PSS_PAGE_BATTLE_MOVES;
+                if (!P_RELEARNER_SHOW_CONTEST && gRelearnMode == RELEARN_MODE_PSS_PAGE_CONTEST_MOVES)
+                    gRelearnMode = RELEARN_MODE_PSS_PAGE_BATTLE_MOVES;
                     
                 switch (gRelearnMode)
                 {
